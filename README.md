@@ -1,6 +1,6 @@
 # Usechain
 
-> Usechain official web front. 
+> Usechain official web front end. 
 
 ## Build Setup
 

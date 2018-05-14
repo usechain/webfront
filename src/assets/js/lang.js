@@ -318,7 +318,7 @@ const messages = {
           name:'Baohong SUN',
           staff:'Co-founder, CMO',
           linkin:'https://www.linkedin.com/in/baohongsun',          
-          description:'Marketing Professor at Cheung Kong Graduate School of Business, Dean’s Distinguished Chair Professor of Market, Associate Dean, Chaired Professor at Tepper Business School, Former Carnegie Mellon University, editorial board member of "Marketing Science", "Journal of Marketing" and "Journal of Marketing Research", The world economic forum on future behavior, Renmin University of China, BS, USC PhD.'
+          description:'Marketing Professor at Cheung Kong Graduate School of Business, Dean’s Distinguished Chair Professor of Market, Associate Dean, Formed Chaired Professor at Tepper Business School, Carnegie Mellon University, editorial board member of "Marketing Science", "Journal of Marketing" and "Journal of Marketing Research", The world economic forum on future behavior, Renmin University of China, BS, USC PhD.'
         },
         zhangshengli:{
           name:'Shengli ZHANG',
