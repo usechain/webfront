@@ -1,0 +1,39 @@
+.text-secondary {
+    color: #666 !important;
+}
+.text-secondary a{
+    color: #666;
+}
+.cursor_pointer{
+    cursor: pointer;
+}
+.rounded-adjust{
+    border-radius: 2rem;
+}
+.z-index-10{
+    z-index: 10;
+}
+.section{
+    padding: 4rem 0;
+}
+.nowrap{
+    white-space: nowrap;
+}
+@media screen and (max-width: 992px) {
+    .section{
+        padding: 2rem 0;
+    }
+}
+
+/*Home*/
+.section_init p{
+    white-space: nowrap;
+}
+.section_init .long_text{
+    padding-bottom: 2rem;
+}
+@media screen and (max-width: 992px) {
+    .section_init p{
+        white-space: normal
+    }
+}

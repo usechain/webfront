@@ -1,0 +1,133 @@
+  .navbar button{
+    outline: none;
+  }
+  .navbar_border {
+    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.2);
+    animation: downslide 0.4s ease-in-out forwards;
+  }
+  .navbar {
+    top: -1px;
+    z-index: 10000000;
+  }
+  .navbar{
+    background: #fff;
+  }
+  @media screen and (max-width: 992px) {
+   .navbar{
+      background: #f6f6f6;
+    }
+  }
+  
+  @keyframes downslide {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+  .dropdown .dropdown-menu {
+    top: 66%;
+    left: -8px;
+    font-size: 0.9rem;
+    border: none;
+  }
+  .dropdown .dropdown-item {
+    color: #666;
+  }
+  .menu_btn {
+    outline: none;
+    width: 30px;
+    height: 26px;
+    padding: 0;
+  }
+  .nav_menu {
+    width: 30px;
+    height: 2px;
+    background: #3c8ae6;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .nav_menu::after,
+  .nav_menu::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #3c8ae6;
+    position: absolute;
+    left: 0;
+  }
+  .nav_menu::before {
+    top: -10px;
+  }
+  .nav_menu::after {
+    bottom: -10px;
+  }
+  .change_mode {
+    background: none;
+  }
+  .change_mode::before {
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+    top: 0;
+  }
+  .change_mode::after {
+    transform: rotate(-45deg);
+    transition: all 0.3s ease;
+    top: 0;
+  }
+  .navbar-brand img {
+    width: 9vmin;
+    max-width: 3rem;
+  }
+  .has_shadow {
+    width: 50%;
+    height: 2rem;
+    position: absolute;
+    z-index: -1;
+    box-shadow: 0 6px 27px 4px #72a6ea;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5px;
+    background: #4693f8;
+  }
+  .nav-item {
+    border-top: 2px solid #fff;
+    cursor: pointer;
+  }
+  .nav-item.active {
+    border-top-color: #4693f8;
+    background-image: linear-gradient(to bottom, #d9e3f5 10%, white 80%);
+  }
+  .collapse.show,.collapsing {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 99%;
+      width: 50%;
+      box-shadow: -1px 3px 3px #ddd;
+      background: #fff;
+      border-radius: 0 0 0 .4rem;
+  }
+  .collapse.show .btn{
+    border: none;
+  }
+  .collapse.show .nav-item.active{
+    border: none;
+    background: none;
+  }
+  .collapsing .nav-item.active{
+    border: none;
+    background: none;
+  }
+  .collapse.show .nav-item.active a{
+    color: #007bff!important
+  }
+  .collapse.show .dropdown .dropdown-menu{
+    text-align: center;
+  }
+  .hover_white:hover{
+    text-decoration: none;
+    color: #fff;
+  }
