@@ -481,8 +481,7 @@ export default {
             },
             {
               value: 10,
-              // name: this.$t("message.token2"),
-              name:this.languageName==='en'?'english':'中文',              
+              name: this.$t("message.token2"),
               itemStyle: {
                 color: "#99d3df"
               }
