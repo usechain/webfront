@@ -57,12 +57,13 @@
                   <span v-html='$t("message.advantage"+item)'></span>
                 </div>
               </div>
-              <div class="form-inline mt-4 mb-2 btn_hover wow flash"  data-wow-delay='1s'>
+              <div class="form-inline mt-5 mb-2 btn_hover wow flash"  data-wow-delay='1s'>
                 <a class="d-block m-auto" target="_blank" :href='$t("message.whitepaperlink")'>
                   <div class="mx-auto my-sm-0 position-relative">
                     <div class="has_shadow" v-if="hasShadow"></div>            
                     <div class="btn btn-outline-primary rounded-adjust p-0" @mouseenter="shadowShow(1)" @mouseleave="shadowHidden(1)">
-                      <div class="hover_white w-100 h-100 d-block px-4 py-2" v-text='$t("message.whitepaper")'></div>
+                      <div class="hover_white w-100 h-100 d-block py-2" 
+                      :style="languageName==='en'?'padding:0 40px':'padding:0 1.5rem'" v-text='$t("message.whitepaper")'></div>
                     </div>
                   </div>
                 </a>
