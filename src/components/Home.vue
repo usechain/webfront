@@ -63,7 +63,7 @@
                     <div class="has_shadow" v-if="hasShadow"></div>            
                     <div class="btn btn-outline-primary rounded-adjust p-0" @mouseenter="shadowShow(1)" @mouseleave="shadowHidden(1)">
                       <div class="hover_white w-100 h-100 d-block py-2" 
-                      :style="languageName==='en'?'padding:0 40px':'padding:0 1.5rem'" v-text='$t("message.whitepaper")'></div>
+                      :style="languageName==='en'?'padding:0 32px':'padding:0 1.5rem'" v-text='$t("message.whitepaper")'></div>
                     </div>
                   </div>
                 </a>
