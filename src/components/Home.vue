@@ -68,7 +68,7 @@
                   </div>
                 </a>
               </div> 
-              <div class="form-inline mt-4 mb-2 btn_hover wow flash"  data-wow-delay='1s'>
+              <!-- <div class="form-inline mt-4 mb-2 btn_hover wow flash"  data-wow-delay='1s'>
                 <a class="d-block m-auto" target="_blank" :href='$t("message.whitepaperlink2")'>
                   <div class="mx-auto my-sm-0 position-relative">
                     <div class="has_shadow" v-if="hasShadow2"></div>            
@@ -77,7 +77,7 @@
                     </div>
                   </div>
                 </a>
-              </div> 
+              </div>  -->
           </div>
           <div class="col-md-8 col-12">
             <div class="hover_wrapper wow bounceInDown" @mouseenter="mouseEnterAnimate">
