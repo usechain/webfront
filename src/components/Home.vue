@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="d_jump"></div>
-    <nav class="navbar navbar-expand-lg px-0 py-1 py-md-0 z-index-10 w-100" 
+    <nav class="navbar navbar-expand-md px-0 py-1 py-md-0 z-index-10 w-100" 
       :class="{'navbar_border position-fixed':navBarFixed}">
       <div class="container">
         <div class="navbar-brand pr-5 pl-4" @click="jump(0)">
@@ -68,7 +68,7 @@
                   </div>
                 </a>
               </div> 
-              <!-- <div class="form-inline mt-4 mb-2 btn_hover wow flash"  data-wow-delay='1s'>
+              <div class="form-inline mt-4 mb-2 btn_hover wow flash"  data-wow-delay='1s'>
                 <a class="d-block m-auto" target="_blank" :href='$t("message.whitepaperlink2")'>
                   <div class="mx-auto my-sm-0 position-relative">
                     <div class="has_shadow" v-if="hasShadow2"></div>            
@@ -77,15 +77,16 @@
                     </div>
                   </div>
                 </a>
-              </div>  -->
+              </div> 
           </div>
           <div class="col-md-8 col-12">
             <div class="hover_wrapper wow bounceInDown" @mouseenter="mouseEnterAnimate">
               <ul class="hover_animate position-relative">
                   <li v-for="item in 8" :class='"pic_banner_hover"+item' :key="item" :style='"z-index:"+(10-item)'>
                     <img :src='"../assets/images/banner_img"+item+".png"'/></li>
-                  <li class="hover_box" style="z-index:3"></li>
+                  <!-- <li class="hover_box" style="z-index:3"></li> -->
                   <li class="pic_banner_modal" style="z-index:1">
+                    <div class="hover_box"></div>    
                     <img src="../assets/images/banner_img0.png"/>
                   </li>
               </ul>
@@ -1121,15 +1122,30 @@ export default {
   top: 76%;
   left: 53%;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
+  .section_work .hover_wrapper {
+    width: 100%;
+    height:486px;
+  }
+  .solution_text{
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 768px) {
   .section_work .hover_wrapper {
     width: 80%;
-    height: 94vmin;
+    height:590px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .section_work .hover_wrapper {
+    height: 98vmin;
     margin-bottom: 2rem;
   }
   .mwork2 {
-    padding-top: 65%;
-    padding-left: 30%;
+    width: 90%;
+    padding-top: 62%;
+    padding-left: 29%;
   }
   .mwork3 {
     width: 95%;
@@ -1309,43 +1325,71 @@ export default {
   left: 0;
   right: 0;
 }
-
 .hover_box {
-  width: 200px;
-  height: 460px !important;
-  left: 33%;
-  top: 24%;
   color: #007bff;
   border: 1px solid rgba(0, 123, 255, 0.5);
   border-width: 0 0 1px 1px;
-  transform: rotateX(-58deg) rotateY(-14deg) rotateZ(-56deg);
   z-index: 12;
+  width: 200px;
+  height: 460px !important; 
+  left: 27%;
+  top: -10%;
+  transform: rotateX(-58deg) rotateY(-14deg) rotateZ(-56deg);
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
   .hover_box {
-    transform: rotateX(-58deg) rotateY(-14deg) rotateZ(-56deg) scale(.5);
-    top: -11vmin;
-    left: 16vmin;
-    display: none;
+    left:17%;
+    top: -32%;
+    transform: rotateX(-58deg) rotateY(-14deg) rotateZ(-56deg) scale(.6);
   }
 }
-
+@media screen and (max-width: 768px) {
+  .hover_box {
+    left:22%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hover_box {
+    transform: rotateX(-58deg) rotateY(-14deg) rotateZ(-56deg) scale(.4);    
+    left:10%;
+    top:-80%;
+  }
+}
+@media screen and (max-width: 440px) {
+  .hover_box {
+    left:16%;
+    top:-60%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .hover_box {
+    left:11%;
+    top:-70%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .hover_box {
+    left:2%;
+    top:-100%;
+  }
+}
 .hover_box::before,
 .hover_box::after {
   content: "";
   z-index: -1;
   margin: -5%;
   box-shadow: inset 1px -2px 0 1px;
+  clip: rect(60px, 4px, 520px, 0px);
   animation: clipMe 6s ease-out infinite;
 }
 
 .hover_box::before {
-  /* animation-delay: -2s; */
   animation: clipBefore 6s ease-out infinite;
 }
 
 .hover_box:hover::after,
 .hover_box:hover::before {
+  clip: rect(476px, 160px, 520px, 0px);
   background-color: rgba(168, 204, 252, 0.1);
 }
 

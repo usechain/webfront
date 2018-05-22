@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg px-0 py-1 py-md-0 z-index-10 w-100" 
+  <nav class="navbar navbar-expand-md px-0 py-1 py-md-0 z-index-10 w-100" 
     :class="{'navbar_border position-fixed':navBarFixed}">
     <div class="container">
       <router-link class="navbar-brand pr-5 pl-4" to="/">

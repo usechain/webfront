@@ -93,7 +93,7 @@
     background: #4693f8;
   }
   .nav-item {
-    border-top: 2px solid #fff;
+    border-top: 2px solid rgba(0, 0, 0, 0);
     cursor: pointer;
   }
   .nav-item.active {

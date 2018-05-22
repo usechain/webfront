@@ -53,9 +53,6 @@ export default {
     var url=location.host.split('usechain.')[1];
     if(url&&url==='cn'){
         this.urlcn=true;
-        console.log('usechain.cn')          
-    }else{
-        console.log('usechain.net')          
     }
   }
 };
