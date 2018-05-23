@@ -16,7 +16,7 @@ const messages = {
         whitepaper:'项目白皮书',
         whitepaperlink: '/usechain_cn.pdf',
         whitepaper2:'技术白皮书',
-        whitepaperlink2: '#',
+        whitepaperlink2: '/usechain_tech_cn.pdf',
         featureTitle:'产品特点',        
         solutionsTitle:'解决方案',        
         mediaTitle:'媒体报道',
@@ -116,7 +116,7 @@ const messages = {
         },
         sunbaohong:{
           name:'孙宝红',
-          staff:'联合创始人，首席市场营销官',
+          staff:'联合创始人，首席战略官',
           linkin:'https://www.linkedin.com/in/baohongsun',          
           description:'长江商学院市场营销教授，杰出院长讲席教授，美洲市场副院长，前美国卡内基梅隆大学泰伯商学院卡内基-博世营销学讲席教授，美国市场营销学会和美国经济学委员会成员，《市场营销科学》，《市场营销学刊》和《市场营销》等专业学术期刊编委会成员，曾任世界经济论坛未来行为科学理事会理事。中国人民大学本科，美国南加州大学博士'
         },
@@ -152,7 +152,7 @@ const messages = {
         },
         shenhui:{
           name:'沈慧',
-          staff:'公关经理',
+          staff:'首席市场营销官',
           linkin:'https://www.linkedin.com/in/Amandashenhui',          
           description:'12年公关和营销经验，曾任联邦快递中国营销战略经理，北京信融君悦房地产顾问有限公司营销总监，长江商学院工商管理硕士（MBA）'
         },
@@ -216,7 +216,7 @@ const messages = {
         whitepaper:'Project Whitepaper',
         whitepaperlink:'/usechain_en.pdf',
         whitepaper2:'Technical Whitepaper',
-        whitepaperlink2: '#',
+        whitepaperlink2: '/usechain_tech_en.pdf',
         featureTitle:'Product Features',
         solutionsTitle:'Solutions',        
         mediaTitle:'Media Coverage',
@@ -316,7 +316,7 @@ const messages = {
         },
         sunbaohong:{
           name:'Baohong SUN',
-          staff:'Co-founder, CMO',
+          staff:'Co-founder, CSO',
           linkin:'https://www.linkedin.com/in/baohongsun',          
           description:'Marketing Professor at Cheung Kong Graduate School of Business, Dean’s Distinguished Chair Professor of Market, Associate Dean, Former Chaired Professor at Tepper Business School, Carnegie Mellon University, editorial board member of "Marketing Science", "Journal of Marketing" and "Journal of Marketing Research", The world economic forum on future behavior, Renmin University of China, BS, USC PhD.'
         },
@@ -353,7 +353,7 @@ const messages = {
         },
         shenhui:{
           name:'Amanda SHEN',
-          staff:'PR Manager',
+          staff:'CMO',
           linkin:'https://www.linkedin.com/in/Amandashenhui',          
           description:'Public Relation and marketing experience for 12 years, Marketing Strategy Manager of FedEx China, Marketing Director of Beijing XinRongJunYue real estate consultants LTD, MBA from Cheung Kong Graduate School of Business.'
         },

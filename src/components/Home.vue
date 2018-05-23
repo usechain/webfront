@@ -33,7 +33,6 @@
               </ul>
               <!-- <form class="form-inline my-2 my-lg-0 btn_hover">
                 <div class="my-2 mx-auto my-sm-0 position-relative">
-                  <div class="has_shadow" v-if="hasShadow"></div>            
                   <div class="btn btn-outline-primary rounded-adjust p-0" @mouseenter="shadowShow" @mouseleave="shadowHidden">
                     <router-link class="hover_white w-100 h-100 d-block px-4 py-2" to="/login" v-text='$t("message.login")'></router-link>
                   </div>
@@ -60,19 +59,17 @@
               <div class="form-inline mt-5 mb-2 btn_hover wow flash"  data-wow-delay='1s'>
                 <a class="d-block m-auto" target="_blank" :href='$t("message.whitepaperlink")'>
                   <div class="mx-auto my-sm-0 position-relative">
-                    <div class="has_shadow" v-if="hasShadow"></div>            
-                    <div class="btn btn-outline-primary rounded-adjust p-0" @mouseenter="shadowShow(1)" @mouseleave="shadowHidden(1)">
+                    <div class="btn btn-outline-primary rounded-adjust p-0">
                       <div class="hover_white w-100 h-100 d-block py-2" 
                       :style="languageName==='en'?'padding:0 32px':'padding:0 1.5rem'" v-text='$t("message.whitepaper")'></div>
                     </div>
                   </div>
                 </a>
               </div> 
-              <div class="form-inline mt-4 mb-2 btn_hover wow flash"  data-wow-delay='1s'>
+              <div class="form-inline mt-4 mb-4 btn_hover wow flash"  data-wow-delay='1s'>
                 <a class="d-block m-auto" target="_blank" :href='$t("message.whitepaperlink2")'>
                   <div class="mx-auto my-sm-0 position-relative">
-                    <div class="has_shadow" v-if="hasShadow2"></div>            
-                    <div class="btn btn-outline-primary rounded-adjust p-0" @mouseenter="shadowShow(2)" @mouseleave="shadowHidden(2)">
+                    <div class="btn btn-outline-primary rounded-adjust p-0">
                       <div class="hover_white w-100 h-100 d-block px-4 py-2" v-text='$t("message.whitepaper2")'></div>
                     </div>
                   </div>
@@ -84,7 +81,6 @@
               <ul class="hover_animate position-relative">
                   <li v-for="item in 8" :class='"pic_banner_hover"+item' :key="item" :style='"z-index:"+(10-item)'>
                     <img :src='"../assets/images/banner_img"+item+".png"'/></li>
-                  <!-- <li class="hover_box" style="z-index:3"></li> -->
                   <li class="pic_banner_modal" style="z-index:1">
                     <div class="hover_box"></div>    
                     <img src="../assets/images/banner_img0.png"/>
@@ -328,8 +324,8 @@ export default {
       navItemActive: 0,
       navMenuShow: false,
       navBarFixed: false,
-      hasShadow: false,
-      hasShadow2: false,
+      // hasShadow: false,
+      // hasShadow2: false,
       modalShow: false,
 
       mediaList: [
@@ -535,20 +531,20 @@ export default {
     clickMenuBtn(event) {
       this.navMenuShow = !this.navMenuShow;
     },
-    shadowShow(index) {
-      if(index===1){
-        this.hasShadow = true;
-      }else{
-        this.hasShadow2 = true;        
-      }
-    },
-    shadowHidden(index) {
-      if(index===1){
-        this.hasShadow = false;
-      }else{
-        this.hasShadow2 = false;        
-      }
-    },
+    // shadowShow(index) {
+    //   if(index===1){
+    //     this.hasShadow = true;
+    //   }else{
+    //     this.hasShadow2 = true;        
+    //   }
+    // },
+    // shadowHidden(index) {
+    //   if(index===1){
+    //     this.hasShadow = false;
+    //   }else{
+    //     this.hasShadow2 = false;        
+    //   }
+    // },
     closeModal() {
       this.modalShow = false;
       $(".transformLi").css("transform", "rotateY(0)");

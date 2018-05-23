@@ -12,7 +12,7 @@
             <div class="px-3 px-md-5"><router-link to="/clausedetail1" v-text="$t('message.privacy')">Privacy Policy</router-link></div>
             <div class="px-3 px-md-5"><router-link to="/clausedetail2" v-text="$t('message.tokenagreement')">Token Purchase Agreement</router-link></div>
         </div> 
-        <a v-if="urlcn" href="http://www.miitbeian.gov.cn" target="_blank" class="d-block text-center text_small">粤ICP备18037402号-1</a>
+        <a v-if="urlinfo" href="http://www.miitbeian.gov.cn" target="_blank" class="d-block text-center text_small">粤ICP备18037402号-1</a>
       </div>
   </div>
 </template>
@@ -41,7 +41,7 @@ export default {
               {href:'https://t.me/usechaingroup',img:'Telegram'},
               {href:'https://medium.com/@usechain/',img:'medium'},
           ],
-          urlcn:false
+          urlinfo:false
       }
   },
   watch: {
@@ -51,8 +51,11 @@ export default {
   },
   created(){
     var url=location.host.split('usechain.')[1];
-    if(url&&url==='cn'){
-        this.urlcn=true;
+    if(url==='cn' || url==='net.cn' || url==='com.cn' || url==='org.cn'){
+        this.urlinfo=true;
+        console.log('已备案')
+    }else{
+        console.log('非备案')
     }
   }
 };
