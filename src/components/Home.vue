@@ -122,23 +122,8 @@
         </div>
       </div>
     </div>
-    <div class="d_jump pb-5" id="nav2"></div>    
-    <div class="h4 py-4 text-center wow flipInY text-secondary" v-text='$t("message.tokenTitle")'></div>
-    <div class="section_token">
-      <div class="container text-center">
-        <div class="row d-flex align-items-center">
-          <div class="col-12 col-md-7 py-4 position-relative echart_wrapper">
-            <div id="echart_ch" style="width:100%;height:100%"></div>
-          </div>
-          <div class="col-12 col-md-5 py-4 pad_bottom">
-            <p class="text-white wow bounceInRight text-left" data-wow-delay='.1s' 
-            v-html='$t("message.tokenDescription")'></p>
-          </div>
-        </div>          
-      </div>     
-    </div>
-      
-    <div class="d_jump" id="nav3"></div>             
+
+    <div class="d_jump" id="nav2"></div>             
     <div class="container pt-5">
       <div class="h4 text-center wow flipInY text-secondary pt-4" v-text='$t("message.mapTitle")'></div>
       <div class="pt-5 section_map">
@@ -160,7 +145,7 @@
         </div>                
       </div>
     </div>
-    <div class="d_jump pb-4" id="nav4"></div>    
+    <div class="d_jump pb-4" id="nav3"></div>    
     <div class="pt-5">
       <div class="h4 text-center wow flipInY text-secondary" v-text='$t("message.teamTitle")'></div>
       <div class="section_team py-5">
@@ -319,7 +304,7 @@ export default {
       mapItemActive: 5,
       languageName: localStorage.local || "en",
       lanList: [{ tab: "中文", value: "ch" }, { tab: "English", value: "en" }],
-      navList: ["nav1", "nav2", "nav3", "nav4"],
+      navList: ["nav1", "nav2", "nav3"],
       navDefaultActive: 0,
       navItemActive: 0,
       navMenuShow: false,
@@ -451,100 +436,10 @@ export default {
 
       document.title =
         this.$t("message.usechaintitle") + "-" + this.$t("message.description");
-
-      $("#echart_ch").remove();
-      $(".echart_wrapper").append(
-        '<div id="echart_ch" style="width:100%;height:100%"></div>'
-      );
-      var myChart = echarts.init(document.getElementById("echart_ch"));
-      var option = {
-      tooltip: {
-        trigger: "item",
-        formatter: "{b} : {d}%",
-        position: ["20%", "0%"]
-      },
-      legend: { show: false },
-      series: [
-        {
-          type: "pie",
-          radius: "70%",
-          center: ["50%", "50%"],
-          data: [
-            {
-              value: 90,
-              name: this.$t("message.token1"),
-              itemStyle: {
-                color: "#51849b"
-              }
-            },
-            {
-              value: 10,
-              name: this.$t("message.token2"),
-              itemStyle: {
-                color: "#99d3df"
-              }
-            },
-            {
-              value: 40,
-              name: this.$t("message.token3"),
-              itemStyle: {
-                color: "#d3e3ea"
-              }
-            },
-            {
-              value: 30,
-              name: this.$t("message.token4"),
-              itemStyle: {
-                color: "#0c4d68"
-              }
-            },
-            {
-              value: 30,
-              name: this.$t("message.token5"),
-              itemStyle: {
-                color: "#2fcbe7"
-              }
-            }
-          ],
-          itemStyle: {
-            emphasis: {
-              shadowBlur: 10,
-              shadowOffsetX: 0,
-              shadowColor: "rgba(0, 0, 0, 0.5)",
-              borderWidth: 0
-            },
-            borderWidth: 1,
-            borderColor: "#fff"
-          },
-          labelLine: {
-            lineStyle: { color: "#fff" }
-          },
-          label: {
-            show: this.device === "pc" ? true : false,
-            textStyle: { color: "#fff" }
-          }
-        }
-      ]
-    };
-      myChart.setOption(option);
     },
     clickMenuBtn(event) {
       this.navMenuShow = !this.navMenuShow;
     },
-    // shadowShow(index) {
-    //   if(index===1){
-    //     this.hasShadow = true;
-    //   }else{
-    //     this.hasShadow2 = true;        
-    //   }
-    // },
-    // shadowHidden(index) {
-    //   if(index===1){
-    //     this.hasShadow = false;
-    //   }else{
-    //     this.hasShadow2 = false;        
-    //   }
-    // },
     closeModal() {
       this.modalShow = false;
       $(".transformLi").css("transform", "rotateY(0)");
@@ -617,6 +512,8 @@ export default {
         document.documentElement.scrollTop ||
         window.pageYOffset ||
         document.body.scrollTop;
+
+       
       // 平滑滚动，时长500ms，每10ms一跳，共50跳
       let step = total / 50;
       if (total > distance) {
@@ -688,108 +585,6 @@ export default {
       setInterval(function() {
         advantageAnimate();
       }, 5000);
-    }, 2000);
-
-    // 基于准备好的dom，初始化echarts实例
-    var myChart = echarts.init(document.getElementById("echart_ch"));
-
-    // 使用刚指定的配置项和数据显示图表。
-    // 指定图表的配置项和数据
-    var option = {
-      tooltip: {
-        trigger: "item",
-        formatter: "{b} : {d}%",
-        position: ["20%", "0%"]
-      },
-      legend: { show: false },
-      series: [
-        {
-          type: "pie",
-          radius: "70%",
-          center: ["50%", "50%"],
-          data: [
-            {
-              value: 90,
-              name: this.$t("message.token1"),
-              itemStyle: {
-                color: "#51849b"
-              }
-            },
-            {
-              value: 10,
-              name: this.$t("message.token2"),
-              itemStyle: {
-                color: "#99d3df"
-              }
-            },
-            {
-              value: 40,
-              name: this.$t("message.token3"),
-              itemStyle: {
-                color: "#d3e3ea"
-              }
-            },
-            {
-              value: 30,
-              name: this.$t("message.token4"),
-              itemStyle: {
-                color: "#0c4d68"
-              }
-            },
-            {
-              value: 30,
-              name: this.$t("message.token5"),
-              itemStyle: {
-                color: "#2fcbe7"
-              }
-            }
-          ],
-          itemStyle: {
-            emphasis: {
-              shadowBlur: 10,
-              shadowOffsetX: 0,
-              shadowColor: "rgba(0, 0, 0, 0.5)",
-              borderWidth: 0
-            },
-            borderWidth: 1,
-            borderColor: "#fff"
-          },
-          labelLine: {
-            lineStyle: { color: "#fff" }
-          },
-          label: {
-            show: this.device === "pc" ? true : false,
-            textStyle: { color: "#fff" }
-          }
-        }
-      ]
-    };
-    myChart.setOption(option);
-
-    var app = {};
-    app.currentIndex = -1;
-
-    setInterval(function() {
-      var dataLen = option.series[0].data.length;
-      // 取消之前高亮的图形
-      myChart.dispatchAction({
-        type: "downplay",
-        seriesIndex: 0,
-        dataIndex: app.currentIndex
-      });
-      app.currentIndex = (app.currentIndex + 1) % dataLen;
-      // 高亮当前图形
-      myChart.dispatchAction({
-        type: "highlight",
-        seriesIndex: 0,
-        dataIndex: app.currentIndex
-      });
-      // 显示 tooltip
-      myChart.dispatchAction({
-        type: "showTip",
-        seriesIndex: 0,
-        dataIndex: app.currentIndex
-      });
     }, 2000);
 
     var scrollTo = location.href.split("hrefto=")[1]; //获取地址栏中跳转位置提示
@@ -955,16 +750,6 @@ export default {
   line-height: inherit;
   bottom: 0;
   z-index: 2;
-}
-.section_token {
-  background: #3081e9;
-}
-.section_token .container {
-  background: url(../assets/images/distribution_bj.png) no-repeat center center;
-  background-size: 100% auto;
-}
-.section_token img {
-  max-width: 50vmin;
 }
 .section_team {
   background-size: 100% auto;

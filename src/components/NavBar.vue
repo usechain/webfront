@@ -52,7 +52,7 @@ export default {
     return {
       languageName: localStorage.local || "en",
       lanList: [{ tab: "中文", value: "ch" }, { tab: "English", value: "en" }],
-      navList: ["nav1", "nav2", "nav3", "nav4"],
+      navList: ["nav1", "nav2", "nav3"],
       navDefaultActive: 0,
       navItemActive: 0,
       navMenuShow: false,

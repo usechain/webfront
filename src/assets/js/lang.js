@@ -2,9 +2,8 @@ const messages = {
     ch: {
       message: {
         nav1:'产品',
-        nav2:'代币发行',
-        nav3:'路线图',
-        nav4:'团队',
+        nav2:'路线图',
+        nav3:'团队',
         login:'登录/注册',
         home:'首页',
         usechaintitle:'Usechain',
@@ -202,9 +201,8 @@ const messages = {
     en: {
       message: {
         nav1:'products',
-        nav2:'token sale',
-        nav3:'roadmap',
-        nav4:'team',
+        nav2:'roadmap',
+        nav3:'team',
         login:'loginIn/signUp',  
         home:'Home',        
         usechaintitle:'USECHAIN',
