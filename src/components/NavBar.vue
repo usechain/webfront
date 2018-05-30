@@ -15,12 +15,12 @@
         <div class="wrapper">
           <div class="text-center d-lg-flex flex-wrap w-100 py-4 py-md-0">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item p-1 py-md-2 mx-2 text-capitalize" :class="{'active':index===navItemActive}" v-for="(item,index) in navList" :key="index"
-              @mouseenter="mouseEnterItem(index)" @mouseleave="mouseLeaveItem(index)" @click="jump(index)">
-                <router-link class="nav-link text-secondary" :to="'/?hrefto='+item" v-text='$t("message."+item)'></router-link>
+              <li class="nav-item p-1 py-md-2 mx-2 text-capitalize" :class="{'active':index===navItemActive}" v-for="(item,index) in navList" :key="index">
+                <router-link class="nav-link text-secondary" 
+                :to="'/hrefto'+item" v-text='$t("message."+item)'></router-link>
               </li>
               <li class="nav-item dropdown px-2 py-md-2">
-                <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-text="languageName==='en'?'English':'中文'"></a>
+                <a class="nav-link dropdown-toggle text-secondary" href="javascript:;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-text="languageName==='en'?'English':'中文'"></a>
                 <div @click="chooseLanguage" class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <div class="dropdown-item" v-for="(item,index) in lanList" name="languageName" :data-value="item.value" :key="index" v-text="item.tab"></div>
                 </div>
@@ -53,7 +53,6 @@ export default {
       languageName: localStorage.local || "en",
       lanList: [{ tab: "中文", value: "ch" }, { tab: "English", value: "en" }],
       navList: ["nav1", "nav2", "nav3"],
-      navDefaultActive: 0,
       navItemActive: 0,
       navMenuShow: false,
       navBarFixed: false,
@@ -85,18 +84,8 @@ export default {
     shadowHidden(){
       this.hasShadow=false
     },
-    mouseEnterItem(index) {
-      this.navItemActive = index;
-    },
-    mouseLeaveItem(index) {
-      this.navItemActive = this.navDefaultActive;
-    },
     clickMenuBtn(event) {
       this.navMenuShow = !this.navMenuShow;
-    },
-    jump(index) {
-      //选中高亮
-        this.navDefaultActive = index;
     },
   },
   mounted() {

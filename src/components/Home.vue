@@ -1,13 +1,12 @@
 <template>
   <div class="home">
-    <div class="d_jump"></div>
-    <nav class="navbar navbar-expand-md px-0 py-1 py-md-0 z-index-10 w-100" 
-      :class="{'navbar_border position-fixed':navBarFixed}">
+    <nav class="navbar navbar-expand-md px-0 py-1 py-md-0 z-index-10 w-100 scrollspy-nav" 
+      data-am-scrollspynav="{offsetTop: 45}" data-am-sticky
+      :class="{'navbar_border position-fixed':navBarFixed}"
+      >
       <div class="container">
-        <div class="navbar-brand pr-5 pl-4" @click="jump(0)">
-          <router-link to="/">
-            <img class="p-md-1" src="../assets/images/logo.png"/>
-          </router-link>
+        <div class="navbar-brand pr-5 pl-4">
+          <a data-am-smooth-scroll href="javascript:;" id="homelogo"><img class="p-md-1" src="../assets/images/logo.png"/></a>
         </div>
         <button class="navbar-toggler menu_btn mr-4" type="button" id="close1"
           @click.self="clickMenuBtn" 
@@ -20,12 +19,14 @@
           <div class="wrapper">
             <div class="text-center d-lg-flex flex-wrap w-100 py-4 py-md-0">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item p-1 py-md-2 mx-2 text-capitalize" :class="{'active':index===navItemActive}" v-for="(item,index) in navList" :key="index"
-                @mouseenter="mouseEnterItem(index)" @mouseleave="mouseLeaveItem(index)" @click="jump(index+1)">
-                  <a class="nav-link text-secondary" v-text='$t("message."+item)'></a>
+                <li class="nav-item  mx-2 text-capitalize"  v-for="(item,index) in navList" :key="index">
+                  <a class="nav-link text-secondary" :id='"hrefto"+(index+1)'
+                  :class="{'am-active':index===navItemActive}"
+                  v-text='$t("message."+item)' :href='"#nav"+(index+1)'></a>
                 </li>
-                <li class="nav-item dropdown px-2 py-md-2">
-                  <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-text="languageName==='en'?'English':'中文'"></a>
+
+                <li class="nav-item dropdown px-2">
+                  <a class="nav-link dropdown-toggle text-secondary" href="javascript:;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-text="languageName==='en'?'English':'中文'"></a>
                   <div @click="chooseLanguage" class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <div class="dropdown-item" v-for="(item,index) in lanList" name="languageName" :data-value="item.value" :key="index" v-text="item.tab"></div>
                   </div>
@@ -92,7 +93,7 @@
       </div>
     </div>
     <div class="container">
-      <div class="d_jump pb-5" id="nav1"></div>  
+      <div class="pb-5" id="nav1"></div>  
       <div class="h4 text-center wow flipInY pt-4 text-secondary" v-text='$t("message.featureTitle")'></div>
       <Feature :languageName="languageName"></Feature>
     </div>
@@ -123,7 +124,7 @@
       </div>
     </div>
 
-    <div class="d_jump" id="nav2"></div>             
+    <div id="nav2"></div>             
     <div class="container pt-5">
       <div class="h4 text-center wow flipInY text-secondary pt-4" v-text='$t("message.mapTitle")'></div>
       <div class="pt-5 section_map">
@@ -145,7 +146,7 @@
         </div>                
       </div>
     </div>
-    <div class="d_jump pb-4" id="nav3"></div>    
+    <div class="pb-4" id="nav3"></div>    
     <div class="pt-5">
       <div class="h4 text-center wow flipInY text-secondary" v-text='$t("message.teamTitle")'></div>
       <div class="section_team py-5">
@@ -250,13 +251,12 @@
 <script>
 import Vue from "vue";
 import VueI18n from "vue-i18n";
-import echarts from "echarts";
+import $ from "jquery";
 import messages from "../assets/js/lang";
-import NavBar from "./NavBar";
 import Feature from "./Feature";
 import Bottom from "./Bottom";
-import $ from "jquery";
 import "../assets/css/navbar.css";
+import "../assets/js/amazeui.min.js";
 
 Vue.use(VueI18n);
 
@@ -268,7 +268,6 @@ var i18n = new VueI18n({
 export default {
   name: "Home",
   components: {
-    NavBar,
     Feature,
     Bottom
   },
@@ -283,7 +282,7 @@ export default {
         "xuzhiwen",
         "zhouhaihan",
         "zhaolin",
-        "shenhui"
+        "shenhui","songgengnan","zhangliang"
       ],
       advisorList: [
         "luliang",
@@ -309,8 +308,6 @@ export default {
       navItemActive: 0,
       navMenuShow: false,
       navBarFixed: false,
-      // hasShadow: false,
-      // hasShadow2: false,
       modalShow: false,
 
       mediaList: [
@@ -452,12 +449,6 @@ export default {
       $("#navbarSupportedContent").removeClass("show");
       this.navMenuShow = false;
     },
-    mouseEnterItem(index) {
-      this.navItemActive = index;
-    },
-    mouseLeaveItem(index) {
-      this.navItemActive = this.navDefaultActive;
-    },
     mouseEnterAnimate(event) {
       var oUl = event.target.getElementsByTagName("ul")[0];
       var l = oUl.offsetWidth / 2;
@@ -493,63 +484,6 @@ export default {
       this.modalShow = false;
       $(".front_modal").hide();
     },
-    jump(index) {
-      //选中高亮
-      if (index !== 0) {
-        this.navDefaultActive = index - 1;
-      } else {
-        this.navDefaultActive = index;
-        $("#close1")
-          .attr("aria-expanded", false)
-          .addClass("collapsed");
-        $("#navbarSupportedContent").removeClass("show");
-        this.navMenuShow = false;
-      }
-      // 用 class="d_jump" 添加锚点
-      let jump = document.querySelectorAll(".d_jump");
-      let total = jump[index].offsetTop;
-      let distance =
-        document.documentElement.scrollTop ||
-        window.pageYOffset ||
-        document.body.scrollTop;
-
-       
-      // 平滑滚动，时长500ms，每10ms一跳，共50跳
-      let step = total / 50;
-      if (total > distance) {
-        smoothDown();
-      } else {
-        let newTotal = distance - total;
-        step = newTotal / 50;
-        smoothUp();
-      }
-      function smoothDown() {
-        if (distance < total) {
-          distance += step;
-          document.body.scrollTop = distance;
-          document.documentElement.scrollTop = distance;
-          window.pageYOffset = distance;
-          setTimeout(smoothDown, 10);
-        } else {
-          document.body.scrollTop = total;
-          document.documentElement.scrollTop = total;
-          window.pageYOffset = total;
-        }
-      }
-      function smoothUp() {
-        if (distance > total) {
-          distance -= step;
-          document.body.scrollTop = distance;
-          document.documentElement.scrollTop = distance;
-          window.pageYOffset = distance;
-          setTimeout(smoothUp, 10);
-        } else {
-          document.body.scrollTop = total;
-          document.documentElement.scrollTop = total;
-          window.pageYOffset = total;
-        }
-      }
-    }
   },
   created() {
     this.$i18n.locale = localStorage.local || "en";
@@ -560,12 +494,15 @@ export default {
   },
   mounted() {
     $(".front_modal").hide();
+    
     var _this = this;
     window.onscroll = function() {
       var scrollHeight =
         document.documentElement.scrollTop || document.body.scrollTop;
       _this.navBarFixed = scrollHeight < 200 ? false : true;
       $(".transformLi").css("z-index", "");
+
+      $('.am-active').parent('li').addClass('active');
     };
 
     function advantageAnimate() {
@@ -587,10 +524,11 @@ export default {
       }, 5000);
     }, 2000);
 
-    var scrollTo = location.href.split("hrefto=")[1]; //获取地址栏中跳转位置提示
-    let anchorElement = document.getElementById(scrollTo);
-    if (scrollTo && anchorElement) {
-      anchorElement.scrollIntoView();
+    var scrollTo=this.$route.params.nav;
+    if(scrollTo){
+      window.location.href="/#"+scrollTo;
+    }else{
+      $('#homelogo').trigger('click');
     }
   }
 };
@@ -1057,10 +995,6 @@ export default {
   z-index: 99;
   width: 3rem;
 }
-.echart_wrapper {
-  width: 23rem;
-  height: 23rem;
-}
 .modalOpacity {
   position: fixed;
   width: 100%;
@@ -1192,4 +1126,5 @@ export default {
     clip: rect(476px, 4px, 520px, 0px);
   }
 }
+
 </style>

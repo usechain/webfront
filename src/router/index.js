@@ -12,6 +12,11 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'Homeinit',
+      component: Home
+    },
+    {
+      path: '/hrefto:nav',
       name: 'Home',
       component: Home
     },

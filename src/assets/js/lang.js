@@ -155,6 +155,18 @@ const messages = {
           linkin:'https://www.linkedin.com/in/Amandashenhui',          
           description:'12年公关和营销经验，曾任联邦快递中国营销战略经理，北京信融君悦房地产顾问有限公司营销总监，长江商学院工商管理硕士（MBA）'
         },
+        songgengnan:{
+          name:'宋庚男',
+          staff:'全球社区运营',
+          linkin:'https://www.linkedin.com/in/emeisy-song-745098163/',          
+          description:'拥有近10年互联网、社区运营和商务经验。8年腾讯社区运营经验，涵盖从早期PC端社区产品Discuz！到移动互联网腾讯微社区、腾讯兴趣部落等社区产品。中国知名餐饮服务赞赏平台“爱赞赏”商务总监。'
+        },
+        zhangliang:{
+          name:'张亮',
+          staff:'架构师',
+          linkin:'https://www.linkedin.com/in/%E4%BA%AE-%E5%BC%A0-95067015a/',          
+          description:'拥有多年的数字货币交易所和区块链开发经验，曾任微比特虚拟货币交易所和直布罗陀国家区块链交易所高级研发工程师。15年开始接触区块链项目，并对目前的主流的区块链技术进行过深入的研究与探索。中国科学技术大学硕士。'
+        },
         luliang:{
           name:'卢亮',
           staff:'资深顾问',
@@ -354,6 +366,18 @@ const messages = {
           staff:'CMO',
           linkin:'https://www.linkedin.com/in/Amandashenhui',          
           description:'Public Relation and marketing experience for 12 years, Marketing Strategy Manager of FedEx China, Marketing Director of Beijing XinRongJunYue real estate consultants LTD, MBA from Cheung Kong Graduate School of Business.'
+        },
+        songgengnan:{
+          name:'Gengnan SONG',
+          staff:'Global Community Developer',
+          linkin:'https://www.linkedin.com/in/emeisy-song-745098163/',          
+          description:'Nearly 10 years of professional experience in Internet, community operations and business. Over 8 years of community operations expereince at Tencent, covering products from early stage PC community product Discuz! to Tencent micro-communities on mobile Internet and Tencent Interest Tribes. She is the former Business Director at a well-known platform for evaluating catering services in China.'
+        },
+        zhangliang:{
+          name:'Liang ZHANG',
+          staff:'Technical Architect',
+          linkin:'https://www.linkedin.com/in/%E4%BA%AE-%E5%BC%A0-95067015a/',          
+          description:'Many years of experience in digital currency exchanges and blockchain development. He is the former Senior R&D Engineer at Microbit Cryptocurrency Exchange and the Gibraltar National Blockchain Exchange. He started to participate in blockchain projects since 2015, and he has had deep research of the current mainstream blockchain technology.'
         },
         luliang:{
           name:'Lucas LU',

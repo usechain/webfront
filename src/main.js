@@ -5,10 +5,10 @@ import App from './App'
 import router from './router'
 import {WOW} from 'wowjs';
 import $ from 'jquery';
-import 'animate.css'
+import 'animate.css';
 new WOW({live: false}).init();
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({
