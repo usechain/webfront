@@ -238,7 +238,7 @@ const messages = {
         work_title:'Usechain Innovative Blockchain Solutions',   
         work_introductin:'Introduce a brand-new consensus mechanism, Randomized Proof of Work to perfectly balance high performance and strong security, and apply multi-level authentication and encryption mechanism, Zero Proof, Identity Virtual Machine (IVM), Identity Network Sharding (INS), Identity Transaction Sharding (ITS), Enhanced Smart Contract, and other innovative technologies to create a new generation of Blockchain, leading Blockchain 3.0.',
         work1:'Performance and Security Balance',
-        work2:'Anonymous and Identity Balance',
+        work2:'Anonymity and Identity Balance',
         work3:'Technology and Application Balance',
         tokenDescription:'●&nbsp;Volume: 20,000,000,000 UST<br/>\
         ●&nbsp;Finite amount of UST created<br/>\
