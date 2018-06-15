@@ -57,25 +57,54 @@
                   <span v-html='$t("message.advantage"+item)'></span>
                 </div>
               </div>
+
               <div class="form-inline mt-5 mb-2 btn_hover wow flash"  data-wow-delay='1s'>
-                <a class="d-block m-auto" target="_blank" :href='$t("message.whitepaperlink")'>
+                <!-- <a class="d-block m-auto" target="_blank" :href='$t("message.whitepaperlink1")'>
                   <div class="mx-auto my-sm-0 position-relative">
                     <div class="btn btn-outline-primary rounded-adjust p-0">
                       <div class="hover_white w-100 h-100 d-block py-2" 
-                      :style="languageName==='en'?'padding:0 32px':'padding:0 1.5rem'" v-text='$t("message.whitepaper")'></div>
+                       v-text='$t("message.whitepaper1")'
+                       :style="languageName==='en'?'padding:0 32px':'padding:0 1.5rem'"
+                       ></div>
+                    </div>
+                  </div>
+                </a> -->
+                   <div class="mx-sm-auto m-md-2 my-sm-0 position-relative dropdown">
+                    <div class="btn btn-outline-primary rounded-adjust p-0" id="dropdownWhitepaper" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <div class="hover_white w-100 h-100 d-block px-4 py-2" 
+                       v-text='$t("message.whitepaper")'></div>
+                    </div>
+                    <div class="dropdown-menu" aria-labelledby="dropdownWhitepaper">
+                      <a class="dropdown-item" :href='$t("message.whitepaperlink1")' v-text='$t("message.whitepaper1")'></a>
+                      <a class="dropdown-item" :href='$t("message.whitepaperlink2")' v-text='$t("message.whitepaper2")'></a>
+                    </div>
+                  </div>
+
+
+
+              <!-- </div>  -->
+              <!-- <div class="form-inline mt-4 mb-4 btn_hover wow flash"  data-wow-delay='1s'> -->
+                <a class="d-block m-sm-auto m-md-2" target="_blank" href="https://github.com/usechain">
+                  <div class="mx-auto my-sm-0 position-relative">
+                    <div class="btn btn-outline-primary rounded-adjust p-0">
+                      <div class="hover_white w-100 h-100 d-block px-4 py-2">GITHUB</div>
                     </div>
                   </div>
                 </a>
-              </div> 
-              <div class="form-inline mt-4 mb-4 btn_hover wow flash"  data-wow-delay='1s'>
+              </div>
+              <!-- </div>  -->
+
+               <!-- <div class="form-inline mt-4 mb-4 btn_hover wow flash"  data-wow-delay='1s'>
                 <a class="d-block m-auto" target="_blank" :href='$t("message.whitepaperlink2")'>
                   <div class="mx-auto my-sm-0 position-relative">
                     <div class="btn btn-outline-primary rounded-adjust p-0">
-                      <div class="hover_white w-100 h-100 d-block px-4 py-2" v-text='$t("message.whitepaper2")'></div>
+                      <div class="hover_white w-100 h-100 d-block px-4 py-2" v-text='$t("message.whitepaper2")' 
+                      :style="languageName==='en'?'padding:0 32px':'padding:0 1.5rem'"></div>
                     </div>
                   </div>
                 </a>
-              </div> 
+              </div>  -->
+
           </div>
           <div class="col-md-8 col-12">
             <div class="hover_wrapper wow bounceInDown" @mouseenter="mouseEnterAnimate">
@@ -146,8 +175,7 @@
         </div>                
       </div>
     </div>
-    <div class="pb-4" id="nav3"></div>    
-    <div class="pt-5">
+    <div class="pt-5 mt-5 section_advisor" id="nav3">
       <div class="h4 text-center wow flipInY text-secondary" v-text='$t("message.teamTitle")'></div>
       <div class="section_team py-5">
           <ul class="clear wow fadeInUp container">
@@ -177,7 +205,7 @@
       </div>
     </div>
     
-    <div class="section section_advisor">
+    <div class="section">
       <div class="h4 text-center wow flipInY text-secondary pt-4" v-text='$t("message.advisorTitle")'></div>
         <div class="container section_team pt-5">
           <ul class="clear wow fadeInUp">
@@ -207,16 +235,19 @@
         </div>
     </div>
 
-    <!-- <div class="section_partner py-5">
-      <div class="h4 text-center wow flipInY text-white pt-4" v-text='$t("message.partnerTitle")'></div>
-      <div class="container py-5">
-         <div class="wow zoomIn text-center row p-4 p-md-0">
-          <div class="col-6 col-md-4 d-flex align-items-center" v-for="item in partnerList" :key="item">
-            <img class="w-75 px-md-2 px-lg-5 py-4" :src='"../assets/images/"+item+".png"'/>
+    <div class="section_partner py-5">
+      <div class="container">
+        <div class="h4 text-center wow flipInY text-secondary pt-4" v-text='$t("message.partnerTitle")'></div>
+        
+        <div class="justify-content-center section">
+          <div class="text-center row p-4 p-md-0">
+            <div class="col-6 col-sm-4 col-lg-3" v-for="(item,index) in 7" :key="index">
+              <img class="w-100 px-md-4 py-1 py-lg-4 wow flipInX" :data-wow-delay="'.'+index+'s'" :src='"../assets/images/partner"+item+".png"'/>
+            </div>
           </div>
-        </div>
-      </div>      
-    </div> -->
+        </div>    
+      </div>    
+    </div>
 
     <div class="container pt-5 mt-md-5">
       <!-- <div class="h4 text-center wow flipInY text-secondary" v-text='$t("message.videoTitle")'></div>
@@ -290,15 +321,8 @@ export default {
         "weishangjin",
         "maqian",
         "yanfangjun",
-        "zhushengqing"
-      ],
-      partnerList: [
-        "partner1",
-        "partner1",
-        "partner1",
-        "partner2",
-        "partner2",
-        "partner2"
+        "zhushengqing",
+        "yujianfeng"
       ],
       mapItemActive: 5,
       languageName: localStorage.local || "en",
@@ -535,6 +559,10 @@ export default {
 </script>
 
 <style scoped>
+.btn_hover{
+  display: flex;
+  justify-content: space-evenly;
+}
 .section_init {
   background: url(../assets/images/section_init_bj.png) no-repeat left bottom;
   background-size: 12rem;
@@ -698,8 +726,8 @@ export default {
 .section_advisor {
   background: #f6f6f6;
 }
-.section_partner {
-  background: #5da8ea;
+.section_partner{
+  background: #f6f6f6;
 }
 .section_map {
   text-shadow: 10px 7px 1px #e2e2e2;

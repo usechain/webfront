@@ -12,8 +12,9 @@ const messages = {
         advantage1:'身份驱动高效共识',
         advantage2:'全新架构安全稳定',
         advantage3:'多重措施隐私保护',
-        whitepaper:'项目白皮书',
-        whitepaperlink: '/usechain_cn.pdf',
+        whitepaper:'白皮书',
+        whitepaper1:'项目白皮书',
+        whitepaperlink1: '/usechain_cn.pdf',
         whitepaper2:'技术白皮书',
         whitepaperlink2: '/usechain_tech_cn.pdf',
         featureTitle:'产品特点',        
@@ -21,7 +22,7 @@ const messages = {
         mediaTitle:'媒体报道',
         mapTitle:'路线图',
         videoTitle:'录像',
-        partnerTitle:'合作伙伴',    
+        partnerTitle:'投资人 & 合作伙伴',    
         advisorTitle:'顾问团队', 
         tokenTitle:'发行方案',         
         work_title:'Usechain全新区块链解决方案',                 
@@ -111,7 +112,7 @@ const messages = {
           name:'曹辉宁',
           staff:'创始人，CEO',
           linkin:'https://www.linkedin.com/in/huiningcao',
-          description:'长江商学院金融学教授，金融系主任，中国第一个金融MBA创始人，美国财务学会会员，曾任教于加州大学伯克利分校,北卡罗来纳大学Chapel Hill分校。13岁考入中国科学技术大学少年班，美国加州大学洛杉矶分校博士、耶鲁大学博士'
+          description:'长江商学院金融学教授，金融系主任，中国第一个金融MBA创始人，美国财务学会会员，中国区块链应用研究中心常务理事，曾任教于加州大学伯克利分校,北卡罗来纳大学Chapel Hill分校。13岁考入中国科学技术大学少年班，美国加州大学洛杉矶分校博士、耶鲁大学博士'
         },
         sunbaohong:{
           name:'孙宝红',
@@ -201,7 +202,13 @@ const messages = {
           name:'朱晟卿',
           staff:'资深顾问',
           linkin:'#',   
-          description:'Distributed Credit Chain创始人兼首席执行行官。成功创办多家互联网和金融科技公司的企业家，曾任同牛科技CEO，带领团队将其一手打造成中国领先的消费金融SaaS系统服务商，每年帮助信托公司发放的贷款额迖数十亿美元资深学者，拥有牛津大学金融经济学硕士、耶鲁大学统计学硕士及南京大学统计学硕士及工程学士学位。'
+          description:'Distributed Credit Chain创始人兼首席执行官。成功创办多家互联网和金融科技公司的企业家，曾任同牛科技CEO，带领团队将其一手打造成中国领先的消费金融SaaS系统服务商，每年帮助信托公司发放的贷款额迖数十亿美元资深学者，拥有牛津大学金融经济学硕士、耶鲁大学统计学硕士及南京大学统计学硕士及工程学士学位。'
+        },
+        yujianfeng:{
+          name:'余剑锋',
+          staff:'资深顾问',
+          linkin:'#',   
+          description:'中国“千人计划”专家，宾夕法尼亚大学沃顿商学院博士，耶鲁大学硕士。现为清华大学五道口金融学院建树金融学讲席教授，清华大学国家金融研究院资产管理研究中心主任，曾任明尼苏达大学卡尔森管理学院Piper Jaffray讲席教授，香港中文大学（深圳）经管学院执行副院长。自2011年起任美国联邦储蓄银行（达拉斯）的研究员。主要从事行为金融和宏观金融的理论和实证研究，其研究成果曾获得多项奖项，其中包括Smith-Breeden一等奖。'
         },
         copyright:'Copyright © 2018 UseChain Foundation LTD',
         userteams:'用户条款',
@@ -223,8 +230,9 @@ const messages = {
         advantage1:'ID-Enabled Consensus',
         advantage2:'ID-Enabled Security',
         advantage3:'ID-Enabled Privacy',
-        whitepaper:'Project Whitepaper',
-        whitepaperlink:'/usechain_en.pdf',
+        whitepaper:'WHITEPAPER',        
+        whitepaper1:'Project Whitepaper',
+        whitepaperlink1:'/usechain_en.pdf',
         whitepaper2:'Technical Whitepaper',
         whitepaperlink2: '/usechain_tech_en.pdf',
         featureTitle:'Product Features',
@@ -232,7 +240,7 @@ const messages = {
         mediaTitle:'Media Coverage',
         mapTitle:'RoadMap',
         videoTitle:'News / Videos',
-        partnerTitle:'Partners & Investors', 
+        partnerTitle:'Investors & Partners', 
         advisorTitle:'Advisors',    
         tokenTitle:'Token Distribution',   
         work_title:'Usechain Innovative Blockchain Solutions',   
@@ -322,7 +330,7 @@ const messages = {
           name:'Henry CAO',
           staff:'Founder,CEO',
           linkin:'https://www.linkedin.com/in/huiningcao',          
-          description:"Finance Professor at Cheung Kong Graduate School of Business, Head of the Department of Finance, Founder of the first Finance MBA program in China, Member of the Finance Society of America, taught at the University of California at Berkeley, the University of North Carolina, Chapel Hill, admitted to the USTC gifted class when he was 13 years old, Yale University/ UCLA PhDs."
+          description:"Finance Professor at Cheung Kong Graduate School of Business, Head of the Department of Finance, Founder of the first Finance MBA program in China, Member of the Finance Society of America. Managing director of China Blockchain Application  Research Lab, taught at the University of California at Berkeley, the University of North Carolina, Chapel Hill, admitted to the USTC gifted class when he was 13 years old, Yale University/ UCLA PhDs."
         },
         sunbaohong:{
           name:'Baohong SUN',
@@ -414,6 +422,12 @@ const messages = {
           staff:'Senior Advisor',
           linkin:'#',   
           description:'Founder & CEO, Distributed Credit Chain. Serial entrepreneur in the internet and Fintech industry. He led a team to develop internet-based credit systems for over a dozen of trusts with multibillion USD annual loan facilitation amount. Ph.D. candidate in Finance at The London School of Economics and Political Science with research focus on finance and cryptoeconomics. MS in Financial Economics from Oxford University, MS in Statistics from Yale University, and MA in Statistic as well as bachelor’s degree in Electrical Engineering from Nanjing University.'          
+        },
+        yujianfeng:{
+          name:'Jianfeng YU',
+          staff:'Senior Advisor',
+          linkin:'#',   
+          description:'China National "Thousand Talents" Expert, PhD of the Wharton School at University of Pennsylvania. Master of Yale University. Current chair professor of finance in Tsinghua PBCSF. Director of financial asset management research center in National Finance Research Institute in Tsinghua University. Former chair professor of Carlson School of Management at University of Minnesota. Executive assistant dean of Economics and Management at The Chinese University of Hong Kong,Shen zhen.Researcher at the Federal Reserve Bank Dallas since 2011. Mainly engaged in  the theoretical and empirical research on behavioral finance and macro-finance. Research results achieved many awards, including the First Prize of Smith-Breeden.'
         },
         copyright:'Copyright © 2018 UseChain Foundation LTD',
         userteams:'Terms of User',

@@ -30,7 +30,12 @@
     top: 85%;
     left: -8px;
     font-size: 0.9rem;
-    border: none;
+    border:none;
+    text-align: center;
+  }
+  .section_init .dropdown .dropdown-menu {
+    border: 1px solid #007bff;
+    box-shadow: 1px 4px 7px #007bff;  
   }
   .dropdown .dropdown-item {
     color: #666;
