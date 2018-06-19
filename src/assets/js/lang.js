@@ -1,9 +1,13 @@
 const messages = {
     ch: {
       message: {
-        nav1:'产品',
-        nav2:'路线图',
-        nav3:'团队',
+        nav1:'首页',        
+        nav2:'产品',
+        nav3:'代币发行',
+        nav4:'路线图',
+        nav5:'团队',
+        nav6:'合作伙伴',
+
         login:'登录/注册',
         home:'首页',
         usechaintitle:'Usechain',
@@ -22,7 +26,7 @@ const messages = {
         mediaTitle:'媒体报道',
         mapTitle:'路线图',
         videoTitle:'录像',
-        partnerTitle:'投资人 & 合作伙伴',    
+        partnerTitle:'投资机构 & 合作伙伴',    
         advisorTitle:'顾问团队', 
         tokenTitle:'发行方案',         
         work_title:'Usechain全新区块链解决方案',                 
@@ -32,7 +36,6 @@ const messages = {
         work3:'技术与应用的完美平衡',
         tokenDescription:'●&nbsp;发行总量: 20,000,000,000 UST<br/>\
         ●&nbsp;UST限量发行<br/>\
-        ●&nbsp;永不增发<br/>\
         ●&nbsp;代币出售上限: 45%<br/>\
         ●&nbsp;市场&合作伙伴支持: 5% (包含其中的6%用于社区赏金计划)<br/>\
         ●&nbsp;社区激励: 20%<br/>\
@@ -219,9 +222,13 @@ const messages = {
     },
     en: {
       message: {
-        nav1:'products',
-        nav2:'roadmap',
-        nav3:'team',
+        nav1:'Home',        
+        nav2:'Products',
+        nav3:'Token Distribution',
+        nav4:'Roadmap',
+        nav5:'Team',
+        nav6:'Partners',
+
         login:'loginIn/signUp',  
         home:'Home',        
         usechaintitle:'USECHAIN',
@@ -250,7 +257,6 @@ const messages = {
         work3:'Technology and Application Balance',
         tokenDescription:'●&nbsp;Volume: 20,000,000,000 UST<br/>\
         ●&nbsp;Finite amount of UST created<br/>\
-        ●&nbsp;No inflation<br/>\
         ●&nbsp;Maximum token amount for sale: 45%<br/>\
         ●&nbsp;Marketing & Partner Support: 5% (with bounty comprising 6%)<br/>\
         ●&nbsp;Community Rewards: 20%<br/>\
