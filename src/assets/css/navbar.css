@@ -36,6 +36,7 @@
   .section_init .dropdown .dropdown-menu {
     border: 1px solid #007bff;
     box-shadow: 1px 4px 7px #007bff;  
+    margin-top: 10px;
   }
   .dropdown .dropdown-item {
     color: #666;

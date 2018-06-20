@@ -1,9 +1,7 @@
 <template>
   <div class="home">
     <nav class="navbar navbar-expand-lg px-0 py-1 py-md-0 z-index-10 w-100 scrollspy-nav" 
-      data-am-scrollspynav="{offsetTop: 45}" data-am-sticky
-      :class="{'navbar_border position-fixed':navBarFixed}"
-      >
+      data-am-scrollspynav="{offsetTop: 45}" data-am-sticky :class="{'navbar_border position-fixed':navBarFixed}">
       <div class="container">
         <div class="navbar-brand pr-5 pl-4">
           <a data-am-smooth-scroll href="javascript:;" id="homelogo"><img class="p-md-1" src="../assets/images/logo.png"/></a>
@@ -32,13 +30,6 @@
                   </div>
                 </li>
               </ul>
-              <!-- <form class="form-inline my-2 my-lg-0 btn_hover">
-                <div class="my-2 mx-auto my-sm-0 position-relative">
-                  <div class="btn btn-outline-primary rounded-adjust p-0" @mouseenter="shadowShow" @mouseleave="shadowHidden">
-                    <router-link class="hover_white w-100 h-100 d-block px-4 py-2" to="/login" v-text='$t("message.login")'></router-link>
-                  </div>
-                </div>
-              </form> -->
             </div>
           </div>
         </div>
@@ -77,6 +68,7 @@
                     <div class="dropdown-menu" aria-labelledby="dropdownWhitepaper">
                       <a class="dropdown-item" :href='$t("message.whitepaperlink1")' v-text='$t("message.whitepaper1")'></a>
                       <a class="dropdown-item" :href='$t("message.whitepaperlink2")' v-text='$t("message.whitepaper2")'></a>
+                      <div class="icon-arrow"></div>
                     </div>
                   </div>
 
@@ -258,7 +250,7 @@
         
         <div class="justify-content-center section">
           <div class="text-center row p-4 p-md-0">
-            <div class="col-6 col-sm-4 col-lg-3" v-for="(item,index) in 7" :key="index">
+            <div class="col-6 col-sm-4 col-lg-3" v-for="(item,index) in 9" :key="index">
               <img class="w-100 px-md-4 py-1 py-lg-4 wow flipInX" :data-wow-delay="'.'+index+'s'" :src='"../assets/images/partner"+item+".png"'/>
             </div>
           </div>
@@ -806,7 +798,33 @@ export default {
     margin-left: 0;
   }
 }
-
+.icon-arrow{
+  position: relative; 
+}
+.icon-arrow::before{
+    position: absolute;
+    bottom: 66px;
+    left: 50%;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 9px 10px 9px;
+    border-color: transparent transparent #007bff transparent;
+}
+.icon-arrow::after{
+    position: absolute;
+    bottom: 66px;
+    left: calc(50% + 1px );
+    content: '';
+    width: 0;
+    height: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 8px 8px 8px;
+    border-color: transparent transparent #fff transparent;
+}
 .long_text {
   font-size: 1rem;
   line-height: 2.4rem;
