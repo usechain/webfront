@@ -250,7 +250,7 @@
         
         <div class="justify-content-center section">
           <div class="text-center row p-4 p-md-0">
-            <div class="col-6 col-sm-4 col-lg-3" v-for="(item,index) in 9" :key="index">
+            <div class="col-6 col-sm-4 col-lg-3" v-for="(item,index) in 8" :key="index">
               <img class="w-100 px-md-4 py-1 py-lg-4 wow flipInX" :data-wow-delay="'.'+index+'s'" :src='"../assets/images/partner"+item+".png"'/>
             </div>
           </div>

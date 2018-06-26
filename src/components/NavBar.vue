@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-md px-0 py-1 py-md-0 z-index-10 w-100" 
+  <nav class="navbar navbar-expand-md px-0 py-1 py-md-0 z-index-10 w-100 has_bot_shadow" 
     :class="{'navbar_border position-fixed':navBarFixed}">
     <div class="container">
       <router-link class="navbar-brand pr-5 pl-4" to="/">
@@ -52,7 +52,7 @@ export default {
     return {
       languageName: localStorage.local || "en",
       lanList: [{ tab: "中文", value: "ch" }, { tab: "English", value: "en" }],
-      navList: ["nav1", "nav2", "nav3"],
+      navList: ["nav1", "nav2", "nav3","nav4","nav5","nav6"],      
       navItemActive: 0,
       navMenuShow: false,
       navBarFixed: false,
@@ -98,4 +98,10 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.has_bot_shadow{
+  box-shadow: 0 2px 3px #f2f2f2;
+}
+</style>
 

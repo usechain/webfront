@@ -40,6 +40,7 @@
   }
   .dropdown .dropdown-item {
     color: #666;
+    cursor: pointer;
   }
   .menu_btn {
     outline: none;
@@ -144,4 +145,9 @@
 
   .am-panel {
     margin-top: 20px;
+  }
+
+  .navbar-nav .nav-link:hover
+  {
+    color: #007bff!important;
   }
