@@ -250,7 +250,7 @@
         
         <div class="justify-content-center section">
           <div class="text-center row p-4 p-md-0">
-            <div class="col-6 col-sm-4 col-lg-3" v-for="(item,index) in 9" :key="index">
+            <div class="col-6 col-sm-4 col-lg-3" v-for="(item,index) in 11" :key="index">
               <img class="w-100 px-md-4 py-1 py-lg-4 wow flipInX" :data-wow-delay="'.'+index+'s'" :src='"../assets/images/partner"+item+".png"'/>
             </div>
           </div>
@@ -361,19 +361,9 @@ export default {
             "https://seekingalpha.com/pr/17144745-usechain-become-worlds-first-ever-self-sovereign-identity-blockchain"
         },
         {
-          img: "business",
-          href:
-            "https://www.bizjournals.com/albany/prnewswire/press_releases/Georgia/2018/04/29/CN80203?ana=prnews"
-        },
-        {
           img: "newswire",
           href:
             "https://www.prnewswire.com/news-releases/usechain-to-become-worlds-first-ever-self-sovereign-identity-blockchain-300638531.html"
-        },
-        {
-          img: "insider",
-          href:
-            "http://markets.businessinsider.com/news/stocks/usechain-to-become-world-s-first-ever-self-sovereign-identity-blockchain-1023213662"
         },
         {
           img: "asiaone",
@@ -386,16 +376,6 @@ export default {
             "http://www.yonhapnews.co.kr/international/2018/05/04/0611000000AKR20180504044500009.HTML"
         },
         {
-          img: "naver",
-          href:
-            "http://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=104&oid=001&aid=0010063928"
-        },
-        {
-          img: "daum",
-          href:
-            "http://v.media.daum.net/v/20180503115338874"
-        },
-        {
           img: "asahi",
           href:
             "http://www.asahi.com/and_M/information/pressrelease/Ckprw201805073644.html"
@@ -404,21 +384,6 @@ export default {
           img: "jcast",
           href:
             "https://www.j-cast.com/other/a05_prwire/2018/05/07327861.html"
-        },
-        {
-          img: "afpbb",
-          href:
-            "http://www.afpbb.com/articles/-/3173692?cx_position=7"
-        },
-        {
-          img: "yam",
-          href:
-            "http://n.yam.com/Article/20180503949762"
-        },
-        {
-          img: "taable",
-          href:
-            "http://note.taable.com/post/259d51/www.prnasia.com/story/archive/2282132_XG82132_2"
         },
         {
           img: "sohu",

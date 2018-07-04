@@ -2,8 +2,10 @@
   <div class="bottom_wrapper py-5 wow slideInUp">
       <div class="container text-secondary">
         <div class="d-flex justify-content-center py-4">
-            <div class="px-3" v-for="(item,index) in imgList" :key="index">
-                <a :href="item.href" class="d-block socialCon"><img class="rounded-circle" :src='"../assets/images/"+item.img+".png"'/></a>
+            <div class="px-1 px-md-2" v-for="(item,index) in imgList" :key="index">
+                <a :href="item.href" target="_blank" class="d-block socialCon">
+                    <img class="rounded-circle" :src='"../assets/images/"+item.img+".png"'/>
+                </a>
             </div>
         </div>
         <div v-text='$t("message.copyright")' class="text-center text_small">Copyrig</div>
@@ -38,8 +40,11 @@ export default {
           imgList:[
               {href:'https://twitter.com/usechain',img:'twitter'},
               {href:'https://www.facebook.com/UsechainFoundation/',img:'facebook'},
-              {href:'https://t.me/usechaingroup',img:'Telegram'},
+              {href:'https://t.me/usechain',img:'Telegram'},
               {href:'https://medium.com/@usechain/',img:'medium'},
+              {href:'mailto: contact@usechain.net',img:'email'},              
+              {href:'/wechat',img:'wechat'},              
+              {href:'https://weibo.com/usechain',img:'weibo'},
           ],
           recorded:false
       }

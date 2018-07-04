@@ -5,6 +5,7 @@ import Login from '@/components/Login'
 import ClauseDetail from '@/components/ClauseDetail'
 import NotFound from '@/components/NotFound'
 import Contact from '@/components/Contact'
+import Wechat from '@/components/Wechat'
 
 Vue.use(Router)
 
@@ -39,6 +40,11 @@ export default new Router({
       path: '/contact',
       name: 'Contact',
       component: Contact
+    },
+    {
+      path: '/wechat',
+      name: 'Wechat',
+      component: Wechat
     },
     {
       path:'*',
