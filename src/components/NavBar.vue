@@ -1,6 +1,6 @@
 <template>
-  <nav class="navbar navbar-expand-md px-0 py-1 py-md-0 z-index-10 w-100 has_bot_shadow" 
-    :class="{'navbar_border position-fixed':navBarFixed}">
+  <nav class="navbar navbar-expand-lg px-0 py-1 py-md-0 z-index-10 w-100 scrollspy-nav" 
+    data-am-scrollspynav="{offsetTop: 45}" data-am-sticky :class="{'navbar_border position-fixed':navBarFixed}">
     <div class="container">
       <router-link class="navbar-brand pr-5 pl-4" to="/">
         <img class="p-md-1" src="../assets/images/logo.png"/>
@@ -13,13 +13,16 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="wrapper">
-          <div class="text-center d-lg-flex flex-wrap w-100 py-4 py-md-0">
+          <div class="text-center d-lg-flex flex-wrap w-100">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item p-1 py-md-2 mx-2 text-capitalize" :class="{'active':index===navItemActive}" v-for="(item,index) in navList" :key="index">
+              <li class="nav-item mx-2 text-capitalize" :class="{'active':index===navItemActive}" v-for="(item,index) in navList" :key="index">
                 <router-link class="nav-link text-secondary" 
                 :to="'/hrefto'+item" v-text='$t("message."+item)'></router-link>
               </li>
-              <li class="nav-item dropdown px-2 py-md-2">
+              <li class="nav-item  mx-2 text-capitalize">
+                <router-link to="/token" class="nav-link text-secondary" :class="{'am-active':navActive==='token'}" v-text='$t("message.nav6")'></router-link></li>
+              <li class="nav-item  mx-2 text-capitalize"><a href="https://medium.com/@usechain" target="_blank" class="nav-link text-secondary" v-text='$t("message.nav7")'></a></li>
+              <li class="nav-item dropdown px-2">
                 <a class="nav-link dropdown-toggle text-secondary" href="javascript:;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-text="languageName==='en'?'English':'中文'"></a>
                 <div @click="chooseLanguage" class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <div class="dropdown-item" v-for="(item,index) in lanList" name="languageName" :data-value="item.value" :key="index" v-text="item.tab"></div>
@@ -48,15 +51,16 @@ var i18n = new VueI18n({
 
 export default {
   name: "NavBar",
+    props:['navActive'], 
   data() {
     return {
       languageName: localStorage.local || "en",
       lanList: [{ tab: "中文", value: "ch" }, { tab: "English", value: "en" }],
-      navList: ["nav1", "nav2", "nav3","nav4","nav5","nav6"],      
+      navList: ["nav1", "nav2", "nav3","nav4","nav5"],      
       navItemActive: 0,
       navMenuShow: false,
       navBarFixed: false,
-      hasShadow:false
+      hasShadow:false,
     };
   },
   i18n,  

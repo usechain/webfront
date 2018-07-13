@@ -4,6 +4,9 @@
 .text-secondary a{
     color: #666;
 }
+.text-small{
+    font-size: .8rem;
+}
 .cursor_pointer{
     cursor: pointer;
 }

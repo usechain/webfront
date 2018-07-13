@@ -34,8 +34,8 @@
     text-align: center;
   }
   .section_init .dropdown .dropdown-menu {
-    border: 1px solid #007bff;
-    box-shadow: 1px 4px 7px #007bff;  
+    border: 1px solid #3685e9;
+    box-shadow: 1px 4px 7px #3685e9;  
     margin-top: 10px;
   }
   .dropdown .dropdown-item {
@@ -146,8 +146,13 @@
   .am-panel {
     margin-top: 20px;
   }
-
   .navbar-nav .nav-link:hover
   {
-    color: #007bff!important;
+    color: #3685e9!important;
   }
+
+  @media screen and (max-width: 992px) {
+    .nav-link{
+       padding: .6rem 0;
+     }
+   }

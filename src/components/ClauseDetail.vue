@@ -371,7 +371,7 @@ a:hover{
   }
 }
 .btn-link{
-  color:#007bff;
+  color:#3685e9;
 }
 .btn-link:hover{
   text-decoration: none;
