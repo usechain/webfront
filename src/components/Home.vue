@@ -43,27 +43,44 @@
           <div class="col-md-4 col-12 pt-5 pt-md-0">
             <h2 class="text-secondary py-3 wow bounceInDown" v-text='$t("message.usechain")'></h2>
             <p class="h4 p-4 px-md-0 text-secondary long_text wow slideInDown" v-html='$t("message.description")'></p>
-              <div :class='{"pl-3":(languageName === "en" ? false : true)}'>
+              
+              <!-- <div :class='{"pl-3":(languageName === "en" ? false : true)}'>
                 <div class="advantage wow slideInRight nowrap" :class="'advantage'+item"
                   v-for="item in 3" :key="item" :data-wow-delay="'.'+item+'s'">
                   <img class="ml-5 ml-md-3 ml-lg-5" :src='"../assets/images/advantage"+item+".png"'/>
                   <span v-html='$t("message.advantage"+item)'></span>
                 </div>
+              </div> -->
+
+              <div class="border border-primary rounded p-4 text-center">
+                <p class="text-primary text-small pb-3 mb-0" v-html='$t("message.starttime")'></p>
+                <div class="pt-3 pb-4 border-top"  id="dateShow1">
+                  <div class="row data-show-box text-primary">
+                      <span class="date-tiem-span d h2 num">00</span>
+                      <span class="h3 dot">:</span>
+                      <span class="date-tiem-span h h2 num">00</span>
+                      <span class="h3 dot">:</span>
+                      <span class="date-tiem-span m h2 num">00</span>
+                      <span class="h3 dot">:</span>
+                      <span class="date-s-span s h2 num">00</span>
+                  </div>
+                  <div class="row text-small text-secondary">
+                    <span class="num" v-html='$t("message.timed")'></span>
+                    <span class="dot"></span>
+                    <span class="num" v-html='$t("message.timeh")'></span>
+                    <span class="dot"></span>                    
+                    <span class="num" v-html='$t("message.timem")'></span>
+                    <span class="dot"></span>                    
+                    <span class="num" v-html='$t("message.times")'></span>
+                  </div>
+                </div>
+                <a href="https://www.leekico.com/#/projects/detail?id=107" target="_blank" class="btn btn-primary w-100 btn_buyust" v-html='$t("message.buyust")'></a>
               </div>
 
               <div class="form-inline mt-5 mb-2 btn_hover wow flash"  data-wow-delay='1s'>
-                <!-- <a class="d-block m-auto" target="_blank" :href='$t("message.whitepaperlink1")'>
-                  <div class="mx-auto my-sm-0 position-relative">
-                    <div class="btn btn-outline-primary rounded-adjust p-0">
-                      <div class="hover_white w-100 h-100 d-block py-2" 
-                       v-text='$t("message.whitepaper1")'
-                       :style="languageName==='en'?'padding:0 32px':'padding:0 1.5rem'"
-                       ></div>
-                    </div>
-                  </div>
-                </a> -->
+           
                    <div class="mx-sm-auto m-md-2 my-sm-0 position-relative dropdown">
-                    <div class="btn btn-outline-primary rounded-adjust p-0" id="dropdownWhitepaper" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="btn btn-outline-secondary rounded-adjust p-0" id="dropdownWhitepaper" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <div class="hover_white w-100 h-100 d-block px-4 py-2" 
                        v-text='$t("message.whitepaper")'></div>
                     </div>
@@ -74,30 +91,14 @@
                     </div>
                   </div>
 
-
-
-              <!-- </div>  -->
-              <!-- <div class="form-inline mt-4 mb-4 btn_hover wow flash"  data-wow-delay='1s'> -->
                 <a class="d-block m-sm-auto m-md-2" target="_blank" href="https://github.com/usechain">
                   <div class="mx-auto my-sm-0 position-relative">
-                    <div class="btn btn-outline-primary rounded-adjust p-0">
+                    <div class="btn btn-outline-secondary rounded-adjust p-0">
                       <div class="hover_white w-100 h-100 d-block px-4 py-2">GITHUB</div>
                     </div>
                   </div>
                 </a>
               </div>
-              <!-- </div>  -->
-
-               <!-- <div class="form-inline mt-4 mb-4 btn_hover wow flash"  data-wow-delay='1s'>
-                <a class="d-block m-auto" target="_blank" :href='$t("message.whitepaperlink2")'>
-                  <div class="mx-auto my-sm-0 position-relative">
-                    <div class="btn btn-outline-primary rounded-adjust p-0">
-                      <div class="hover_white w-100 h-100 d-block px-4 py-2" v-text='$t("message.whitepaper2")' 
-                      :style="languageName==='en'?'padding:0 32px':'padding:0 1.5rem'"></div>
-                    </div>
-                  </div>
-                </a>
-              </div>  -->
 
           </div>
           <div class="col-md-8 col-12">
@@ -283,6 +284,7 @@ import Feature from "./Feature";
 import Bottom from "./Bottom";
 import "../assets/css/navbar.css";
 import "../assets/js/amazeui.min.js";
+import "../assets/js/leftTime.min.js";
 
 Vue.use(VueI18n);
 
@@ -317,7 +319,7 @@ export default {
         "maqian",
         "yanfangjun",
         "zhushengqing",
-        "yujianfeng"
+        "yujianfeng","caofeng"
       ],
       mapItemActive: 5,
       languageName: localStorage.local || "en",
@@ -478,6 +480,16 @@ export default {
     this.device = w < 576 ? "mobile" : "pc";
   },
   mounted() {
+    $.leftTime("2018/07/25 22:00:00",function(d){
+      if(d.status){
+        var $dateShow1=$("#dateShow1");
+        $dateShow1.find(".d").html(d.d);
+        $dateShow1.find(".h").html(d.h);
+        $dateShow1.find(".m").html(d.m);
+        $dateShow1.find(".s").html(d.s);
+      }
+    });
+
     $(".front_modal").hide();
     
     var _this = this;
@@ -1047,6 +1059,7 @@ export default {
     margin-right: 0.8rem;
   }
 }
+
 .hover_box,
 .hover_box::before,
 .hover_box::after {
@@ -1143,4 +1156,23 @@ export default {
   }
 }
 
+.btn-outline-secondary:hover{
+  background: none;
+  border-color: #3685e9;
+}
+.btn-outline-secondary:hover .hover_white{
+  color: #3685e9;
+}
+.dropdown.show .hover_white{
+  color: #3685e9;
+}
+.dropdown.show .btn-outline-secondary{
+  border-color: #3685e9;
+}
+#dateShow1 .dot{
+  width: 9%;
+}
+#dateShow1 .num{
+  width: 18%;
+}
 </style>

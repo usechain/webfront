@@ -14,6 +14,12 @@ const messages = {
         usechaintitle:'Usechain',
         usechain:'Usechain',
         description:'全球首个身份镜像区块链生态',
+        starttime:'Pre-sale 将于 2018-07-25 22:00 (UTC+10) 开始',
+        buyust:'购买 UST',
+        timed:'天', 
+        timeh:'小时', 
+        timem:'分钟', 
+        times:'秒', 
         advantage1:'身份驱动高效共识',
         advantage2:'全新架构安全稳定',
         advantage3:'多重措施隐私保护',
@@ -44,8 +50,8 @@ const messages = {
         ●&nbsp;社区激励: 20%<br/>\
         ●&nbsp;技术社区激励: 15%<br/>\
         ●&nbsp;核心团队: 15%<br/>\
-        ●&nbsp;软顶: 1350 BTC<br/>\
-        ●&nbsp;硬顶: 4500 BTC<br/>\
+        ●&nbsp;软顶: 1350 BTC（如未达到，募资部分将全额退币）<br/>\
+        ●&nbsp;硬顶: 4500 BTC（如未达到，未销售部分销毁）<br/>\
         ●&nbsp;接受币种: ETH(Ethereum), BTC(Bitcoin)',
         feature1:'基于硬件的性能提升',
         feature2:'隐私安全的身份应用',
@@ -103,7 +109,8 @@ const messages = {
           event:'●&nbsp;子链结构搭建<br/>\
           ●&nbsp;跨子链通信开发<br/>\
           ●&nbsp;Usechain生态基金建立，助推行业应用孵化<br/>\
-          ●&nbsp;多行业垂直社区建立'
+          ●&nbsp;多行业垂直社区建立<br/>\
+          ●&nbsp;公有链主网上线'
         },
         map9:{
           time:'2019年',
@@ -216,6 +223,12 @@ const messages = {
           linkin:'#',   
           description:'中国“千人计划”专家，宾夕法尼亚大学沃顿商学院博士，耶鲁大学硕士。现为清华大学五道口金融学院建树金融学讲席教授，清华大学国家金融研究院资产管理研究中心主任，曾任明尼苏达大学卡尔森管理学院Piper Jaffray讲席教授，香港中文大学（深圳）经管学院执行副院长。自2011年起任美国联邦储蓄银行（达拉斯）的研究员。主要从事行为金融和宏观金融的理论和实证研究，其研究成果曾获得多项奖项，其中包括Smith-Breeden一等奖。'
         },
+        caofeng:{
+          name:'曹峰',
+          staff:'资深顾问',
+          linkin:'#',   
+          description:'PCHAIN发起人，中国第一个区块链国际专利发明人，ChinaLedger共同发起人，CFLP中物联区块链协会首席科学家。他和团队成功完成全球第一笔区块链资产收益权转让暨中国第一笔区块链金融真实交易并获多项区块链金融创新大奖。他曾担任IBM全球下一代人机大战中国区负责人, 互联网金融首席科学家，专利评审委员会联合主席。他的创新成果已成功应用于中、美等150多个国家，曾3次获得IBM全球杰出技术成就奖，发表22篇国际顶级论文，30余项美国专利，并担任多个ACM IEEE顶级国际会议论坛主席。'
+        },
         copyright:'Copyright © 2018 UseChain Foundation LTD',
         userteams:'用户条款',
         privacy:'隐私政策',
@@ -248,6 +261,12 @@ const messages = {
         usechaintitle:'USECHAIN',
         usechain:'Usechain',
         description:'THE FIRST MIRROR IDENTITY BLOCKCHAIN',
+        starttime:'Pre-sale starts on 25th July 2018 22:00  (UCT+10)',
+        buyust:'BUY UST',       
+        timed:'Days', 
+        timeh:'Hours', 
+        timem:'Minutes', 
+        times:'Seconds', 
         advantage1:'ID-Enabled Consensus',
         advantage2:'ID-Enabled Security',
         advantage3:'ID-Enabled Privacy',
@@ -278,8 +297,8 @@ const messages = {
         ●&nbsp;Community Rewards: 20%<br/>\
         ●&nbsp;Technical Community Rewards: 15% <br/>\
         ●&nbsp;Core Team: 15%<br/>\
-        ●&nbsp;Softcap: 1350 BTC<br/>\
-        ●&nbsp;Hardcap: 4500 BTC<br/>\
+        ●&nbsp;Softcap: 1350 BTC (If it isn\'t reached, all the raised capital will be returned to the investors.)<br/>\
+        ●&nbsp;Hardcap: 4500 BTC (If it isn\'t reached, all the token unsold will be destroyed.)<br/>\
         ●&nbsp;ETH(Ethereum), BTC(Bitcoin)',
         feature1:'Hardware-Based Performance Improvement',
         feature2:'Privacy-Protected Identity Application',
@@ -328,7 +347,7 @@ const messages = {
           event:'●&nbsp;Develop software-based RPOW consensus algorithm.<br/>\
           ●&nbsp;Develop enhanced smart contracts.<br/>\
           ●&nbsp;Develop TPOS consensus algorithm.<br/>\
-          ●&nbsp;Launch beta version of main chain.<br/>\
+          ●&nbsp;Usechain testnet release.<br/>\
           ●&nbsp;Achieve 100000+ people in the community.<br/>\
           ●&nbsp;Launch the first DApp.'
         },
@@ -337,7 +356,8 @@ const messages = {
           event:'●&nbsp;Set up sub-chain structure.<br/>\
           ●&nbsp;Develop cross sub-chain communication.<br/>\
           ●&nbsp;Build Usechain eco-fund to accelerate ecosystem development.<br/>\
-          ●&nbsp;Develop multi-industry vertical community.'
+          ●&nbsp;Develop multi-industry vertical community.<br/>\
+          ●&nbsp;Usechain mainnet release.'
         },
         map9:{
           time:'2019',
@@ -450,6 +470,12 @@ const messages = {
           staff:'Senior Advisor',
           linkin:'#',   
           description:'China National "Thousand Talents" Expert, PhD of the Wharton School at University of Pennsylvania. Master of Yale University. Current chair professor of finance in Tsinghua PBCSF. Director of financial asset management research center in National Finance Research Institute in Tsinghua University. Former chair professor of Carlson School of Management at University of Minnesota. Executive assistant dean of Economics and Management at The Chinese University of Hong Kong,Shen zhen.Researcher at the Federal Reserve Bank Dallas since 2011. Mainly engaged in  the theoretical and empirical research on behavioral finance and macro-finance. Research results achieved many awards, including the First Prize of Smith-Breeden.'
+        },
+        caofeng:{
+          name:'Jeff CAO',
+          staff:'Senior Advisor',
+          linkin:'#',   
+          description:'PChain Founder. The inventor of the 1st International Blockchain patent from China, the Co-Founder of ChinaLedger, the most influential blockchain alliance of China.The Chief Scientist of Blockchain Application Committee in China Federation of Logistic and Purchasing (The 1st Gov Association in Industry), the Senior Fellow of the China Blockchain Research Alliance.Successfully accomplished the 1st blockchain based assets earning rights transfer in the world in September 2016, which is also the 1st Financial Blockchain Transaction in China.Ex-Chief Scientist of Internet Finance and cochair of the patent review board in IBM Research China，IBM Global Technical Achievement Awards three times.22 papers in ACM/IEEE top conference and 30+ international patents.'
         },
         copyright:'Copyright © 2018 UseChain Foundation LTD',
         userteams:'Terms of User',

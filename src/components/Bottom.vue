@@ -42,6 +42,7 @@ export default {
               {href:'https://www.facebook.com/UsechainFoundation/',img:'facebook'},
               {href:'https://t.me/usechain',img:'Telegram'},
               {href:'https://medium.com/@usechain/',img:'medium'},
+              {href:'https://bitcointalk.org/index.php?topic=3432061.0',img:'bitciontalk'},
               {href:'mailto: contact@usechain.net',img:'email'},              
               {href:'/wechat',img:'wechat'},              
               {href:'https://weibo.com/usechain',img:'weibo'},
