@@ -201,8 +201,6 @@ export default {
       this.input_focus=false;      
     },
     handleSubscribe(){
-        // var url='http://10.115.2.15:8088';
-        // var url='http://usechain.cn:8088';
         var url='https://kb.usechain.net'; 
         var _this=this;
 
