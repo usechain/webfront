@@ -13,7 +13,7 @@ const messages = {
         home:'首页',
         usechaintitle:'Usechain',
         usechain:'Usechain',
-        description:'全球首个身份镜像区块链生态',
+        description:'全球首个隐身镜像区块链生态',
         starttime:'Pre-sale 进行中 将于 2018-08-07 22:00 (UTC+10) 结束',
         buyust:'购买 UST',
         timed:'天', 
