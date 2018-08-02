@@ -61,7 +61,8 @@
                 <div v-show="error_cue" class="text-danger text-small" v-text='$t("message.suberror")'></div>
                 <div v-show="email_error" class="text-danger text-small" v-text='$t("message.emailerror")'></div>
             </div>
-        </div>        
+        </div>  
+        <Telegram/>  
     </div>
 </template>
 
@@ -72,6 +73,7 @@ import VueI18n from "vue-i18n";
 import echarts from "echarts";
 import axios from "axios";
 import NavBar from "./NavBar";
+import Telegram from "./Telegram";
 import messages from "../assets/js/lang";
 
 Vue.use(VueI18n);
@@ -84,7 +86,7 @@ var i18n = new VueI18n({
 export default {
   name: "token",
   components: {
-    NavBar
+    NavBar,Telegram
   },
  
   i18n,

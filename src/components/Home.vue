@@ -23,6 +23,14 @@
                   v-text='$t("message."+item)' :href='"#nav"+(index+1)'></a>                  
                 </li>
                  <li class="nav-item  mx-2 text-capitalize"><router-link to="/token" class="nav-link text-secondary" v-text='$t("message.nav6")'></router-link></li>
+                
+                <li class="nav-item dropdown px-2">
+                  <a class="nav-link dropdown-toggle text-secondary" href="javascript:;" id="whitepaperDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-text='$t("message.whitepaper")'></a>
+                  <div class="dropdown-menu" aria-labelledby="whitepaperDropdown">
+                    <a class="dropdown-item" v-for="(item,index) in whitepaperList" :key="index" v-text="item.tab" :href="item.link"></a>
+                  </div>
+                </li>
+                
                  <li class="nav-item  mx-2 text-capitalize"><a href="https://medium.com/@usechain" target="_blank" class="nav-link text-secondary" v-text='$t("message.nav7")'></a></li>
 
                 <li class="nav-item dropdown px-2">
@@ -74,10 +82,10 @@
                     <span class="num" v-html='$t("message.times")'></span>
                   </div>
                 </div>
-                <a href="https://www.leekico.com/#/projects/detail?id=107" target="_blank" class="btn btn-primary w-100 btn_buyust" v-html='$t("message.buyust")'></a>
+                <a href="https://www.leekico.com/#/projects/detail?id=107" target="_blank" class="btn btn-primary w-100 btn_buyust disabled" v-html='$t("message.buyust")'></a>
               </div>
 
-              <div class="form-inline mt-5 mb-2 btn_hover wow flash"  data-wow-delay='1s'>
+              <!-- <div class="form-inline mt-5 mb-2 btn_hover wow flash"  data-wow-delay='1s'>
            
                    <div class="mx-sm-auto m-md-2 my-sm-0 position-relative dropdown">
                     <div class="btn btn-outline-secondary rounded-adjust p-0" id="dropdownWhitepaper" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -85,8 +93,9 @@
                        v-text='$t("message.whitepaper")'></div>
                     </div>
                     <div class="dropdown-menu" aria-labelledby="dropdownWhitepaper">
-                      <a class="dropdown-item" :href='$t("message.whitepaperlink1")' v-text='$t("message.whitepaper1")'></a>
-                      <a class="dropdown-item" :href='$t("message.whitepaperlink2")' v-text='$t("message.whitepaper2")'></a>
+                      <a class="dropdown-item" @click="handleWhitepaperlink1" v-text='$t("message.whitepaper1")'></a>
+                      <a class="dropdown-item" @click="handleWhitepaperlink2" v-text='$t("message.whitepaper2")'></a>
+
                       <div class="icon-arrow"></div>
                     </div>
                   </div>
@@ -98,7 +107,7 @@
                     </div>
                   </div>
                 </a>
-              </div>
+              </div> -->
 
           </div>
           <div class="col-md-8 col-12">
@@ -237,7 +246,7 @@
         
         <div class="justify-content-center section">
           <div class="text-center row p-4 p-md-0">
-            <div class="col-6 col-sm-4 col-lg-3" v-for="(item,index) in 12" :key="index">
+            <div class="col-6 col-sm-4 col-lg-3" v-for="(item,index) in 13" :key="index">
               <img class="w-100 px-md-4 py-1 py-lg-4 wow flipInX" :data-wow-delay="'.'+index+'s'" :src='"../assets/images/partner"+item+".png"'/>
             </div>
           </div>
@@ -263,11 +272,8 @@
       </div>  
     </div>
     <Bottom :languageName="languageName"></Bottom>   
-    <div class="fix_bottom position-fixed">
-      <a href="https://t.me/usechaingroup" class="d-block w-100">
-        <img src="../assets/images/plane.png" class="w-100"/>
-      </a> 
-    </div> 
+    <Telegram/>
+   
 
     <!-- Modal -->
     <div class="modalOpacity modalOpacityNav" v-show="navMenuShow" @click="closeNavModal"></div>    
@@ -282,6 +288,7 @@ import $ from "jquery";
 import messages from "../assets/js/lang";
 import Feature from "./Feature";
 import Bottom from "./Bottom";
+import Telegram from "./Telegram";
 import "../assets/css/navbar.css";
 import "../assets/js/amazeui.min.js";
 import "../assets/js/leftTime.min.js";
@@ -297,7 +304,8 @@ export default {
   name: "Home",
   components: {
     Feature,
-    Bottom
+    Bottom,
+    Telegram
   },
   data() {
     return {
@@ -324,6 +332,15 @@ export default {
       mapItemActive: 5,
       languageName: localStorage.local || "en",
       lanList: [{ tab: "中文", value: "ch" }, { tab: "English", value: "en" }],
+      whitepaperList:[
+        { tab: "Project Whitepaper EN", link: "/usechain_en.pdf" },
+        { tab: "Project Whitepaper FR", link: "/usechain_fr.pdf" },
+        { tab: "项目白皮书 中文", link: "/usechain_cn.pdf" },
+        { tab: "프로젝트 백서  한국", link: "/usechain_kr.pdf" },
+        { tab: "Technical Whitepaper EN", link: "/usechain_tech_en.pdf" },
+        { tab: "技术白皮书  中文", link: "/usechain_tech_cn.pdf" },
+        { tab: "기술 백서  한국", link: "/usechain_tech_kr.pdf" },
+      ],
       navList: ["nav1", "nav2", "nav3","nav4","nav5"],
       navDefaultActive: 0,
       navItemActive: 0,
@@ -421,6 +438,14 @@ export default {
         this.$t("message.usechaintitle") + "-" + this.$t("message.description");
 
     },
+    // handleWhitepaperlink1(){
+    //   // console.log(this.$t("message.whitepaperlink1"));
+    //   window.location.href=this.$t("message.whitepaperlink1");
+    // },
+    // handleWhitepaperlink2(){
+    //   // console.log('二');
+    //   window.location.href=this.$t("message.whitepaperlink2");      
+    // },
     clickMenuBtn(event) {
       this.navMenuShow = !this.navMenuShow;
     },
@@ -480,7 +505,7 @@ export default {
     this.device = w < 576 ? "mobile" : "pc";
   },
   mounted() {
-    $.leftTime("2018/08/07 20:00:00",function(d){
+    $.leftTime("2018/08/01 20:00:00",function(d){
       if(d.status){
         var $dateShow1=$("#dateShow1");
         $dateShow1.find(".d").html(d.d);
@@ -1016,12 +1041,6 @@ export default {
   margin-left: -1px;
   margin-top: -10rem;
   transform: rotateY(90deg) translateZ(1px);
-}
-.fix_bottom {
-  right: 1rem;
-  bottom: 2rem;
-  z-index: 99;
-  width: 3rem;
 }
 .modalOpacity {
   position: fixed;

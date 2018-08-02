@@ -17,6 +17,7 @@
         <a v-if="recorded" href="http://www.miitbeian.gov.cn" target="_blank" class="d-block text-center text_small">粤ICP备18037402号-1</a>
       </div>
   </div>
+
 </template>
 
 <script>
@@ -46,6 +47,7 @@ export default {
               {href:'mailto: contact@usechain.net',img:'email'},              
               {href:'/wechat',img:'wechat'},              
               {href:'https://weibo.com/usechain',img:'weibo'},
+              {href:'https://github.com/usechain',img:'github'},
           ],
           recorded:false
       }
