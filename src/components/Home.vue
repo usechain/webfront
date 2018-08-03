@@ -246,8 +246,8 @@
         
         <div class="justify-content-center section">
           <div class="text-center row p-4 p-md-0">
-            <div class="col-6 col-sm-4 col-lg-3" v-for="(item,index) in 13" :key="index">
-              <img class="w-100 px-md-4 py-1 py-lg-4 wow flipInX" :data-wow-delay="'.'+index+'s'" :src='"../assets/images/partner"+item+".png"'/>
+            <div class="col-6 col-sm-4 col-lg-3" v-for="(item,index) in partnerList" :key="index">
+              <img class="w-100 px-md-4 py-1 py-lg-4 wow flipInX" :data-wow-delay="'.'+index+'s'" :src='"../assets/images/"+item+".png"'/>
             </div>
           </div>
         </div>    
@@ -328,6 +328,9 @@ export default {
         "yanfangjun",
         "zhushengqing",
         "yujianfeng","caofeng"
+      ],
+      partnerList:[
+        'xiongan','fancheng','jrr','newdo','milestone','dcc','yingxin','dfg','jike','jikeziben','naba','junmu'
       ],
       mapItemActive: 5,
       languageName: localStorage.local || "en",
