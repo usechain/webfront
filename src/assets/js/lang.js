@@ -14,8 +14,8 @@ const messages = {
         usechaintitle:'Usechain',
         usechain:'Usechain',
         description:'全球首个隐身镜像区块链生态',
-        starttime:'Pre-sale 已于 2018-08-01 成功募满，提前结束',
-        buyust:'已结束',
+        starttime:'公募 将与 2018-08-08 22:00 (UTC+10) 开始',
+        buyust:'购买UST',
         timed:'天', 
         timeh:'小时', 
         timem:'分钟', 
@@ -50,8 +50,8 @@ const messages = {
         ●&nbsp;社区激励: 20%<br/>\
         ●&nbsp;技术社区激励: 15%<br/>\
         ●&nbsp;核心团队: 15%<br/>\
-        ●&nbsp;软顶: 1350 BTC（如未达到，募资部分将全额退币）<br/>\
-        ●&nbsp;硬顶: 4500 BTC（如未达到，未销售部分销毁）<br/>\
+        ●&nbsp;软顶: 1350 BTC 或 20000 ETH<br/>\
+        ●&nbsp;硬顶: 4500 BTC 或 60000 ETH<br/>\
         ●&nbsp;接受币种: ETH(Ethereum), BTC(Bitcoin)',
         feature1:'基于硬件的性能提升',
         feature2:'隐私安全的身份应用',
@@ -234,12 +234,13 @@ const messages = {
         privacy:'隐私政策',
         tokenagreement:'代币购买协议',  
         termsheet:'条款说明',
-        time1:'基石轮',
-        time2:'早鸟轮',
-        time3:'最终轮',
+        time1:'基石',
+        time2:'私募',
+        time3:'公募',
         done:'已完成',
         privatesale:'私募',        
         plan:'登陆交易所前解锁25%，之后每两个月解锁25%，6个月内全部解锁',
+        nolockup:'不锁仓',
         subscribe:'订阅',
         subsuccess:'订阅成功',
         suberror:'您已订阅过',
@@ -261,8 +262,8 @@ const messages = {
         usechaintitle:'USECHAIN',
         usechain:'Usechain',
         description:'THE FIRST MIRROR IDENTITY BLOCKCHAIN',
-        starttime:'Pre-sale ended on 1st August 2018 successfully.',
-        buyust:'Ended',       
+        starttime:'Public Sale starts on 2018-08-08 22:00 (UTC+10)',
+        buyust:'BUY UST',       
         timed:'Days', 
         timeh:'Hours', 
         timem:'Minutes', 
@@ -297,8 +298,8 @@ const messages = {
         ●&nbsp;Community Rewards: 20%<br/>\
         ●&nbsp;Technical Community Rewards: 15% <br/>\
         ●&nbsp;Core Team: 15%<br/>\
-        ●&nbsp;Softcap: 1350 BTC (If it isn\'t reached, all the raised capital will be returned to the investors.)<br/>\
-        ●&nbsp;Hardcap: 4500 BTC (If it isn\'t reached, all the token unsold will be destroyed.)<br/>\
+        ●&nbsp;Softcap: 1350 BTC  or  20000 ETH<br/>\
+        ●&nbsp;Hardcap: 4500 BTC  or  60000 ETH<br/>\
         ●&nbsp;ETH(Ethereum), BTC(Bitcoin)',
         feature1:'Hardware-Based Performance Improvement',
         feature2:'Privacy-Protected Identity Application',
@@ -483,11 +484,12 @@ const messages = {
         tokenagreement:'Token Purchase Agreement',    
         termsheet:'Term Sheet',    
         time1:'Cornerstone',
-        time2:'Early Bird',
-        time3:'Last Call',
+        time2:'Private Sale',
+        time3:'Public Sale',
         done:'Done',        
         privatesale:'Private Sale',
         plan:'25% unlocked before exchange listing, 25% unlocked every 2 months thereafter, with total unlocked in 6 months',
+        nolockup:'No Lockup',
         subscribe:'Subscribe',
         subsuccess:'Thank you for your Subscription.',
         suberror:'You have already subscribed.',       

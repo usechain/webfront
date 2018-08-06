@@ -20,27 +20,26 @@
             <table class="table table-bordered text-white">
                 <thead>
                     <tr>
-                    <th colspan="3" v-text='$t("message.privatesale")'>私募</th>
+                    <td v-text='$t("message.time1")'>基石</td>
+                    <td v-text='$t("message.time2")'>私募</td>
+                    <td v-text='$t("message.time3")'>公募</td>
                     </tr>
                 </thead>
                 <tbody>
+                    
                     <tr>
-                    <td v-text='$t("message.time1")'>基石轮</td>
-                    <td v-text='$t("message.time2")'>早鸟轮</td>
-                    <td v-text='$t("message.time3")'>@最终轮</td>
-                    </tr>
-                    <tr>
-                    <td v-text='$t("message.done")'>2018-05-15 ~ 2018-05-31</td>
-                    <td v-text='$t("message.done")'>2018-06-01 ~ 2018-06-30</td>
-                    <td>2018-07-01 ~ 2018-07-31</td>
+                    <td v-text='$t("message.done")'></td>
+                    <td v-text='$t("message.done")'></td>
+                    <td>2018-08-08 ~ 2018-08-13</td>
                     </tr>
                     <tr>
                     <td>1BTC = 2,000,000UST</td>
                     <td>1BTC = 1,700,000UST</td>
-                    <td>1BTC = 1,400,000UST</td>
+                    <td>1ETH = 75,000UST</td>
                     </tr>
                     <tr>
-                    <td colspan="3"  v-text='$t("message.plan")'>登陆交易所前解锁25%，之后每两个月解锁25%，6个月内全部解锁</td>
+                    <td colspan="2"  v-text='$t("message.plan")'>登陆交易所前解锁25%，之后每两个月解锁25%，6个月内全部解锁</td>
+                    <td  v-text='$t("message.nolockup")'></td>
                     </tr>
                 </tbody>
             </table>

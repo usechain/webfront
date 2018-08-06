@@ -82,7 +82,7 @@
                     <span class="num" v-html='$t("message.times")'></span>
                   </div>
                 </div>
-                <a href="https://www.leekico.com/#/projects/detail?id=107" target="_blank" class="btn btn-primary w-100 btn_buyust disabled" v-html='$t("message.buyust")'></a>
+                <a href="https://www.leekico.com/#/projects/detail?id=109" target="_blank" class="btn btn-primary w-100 btn_buyust" v-html='$t("message.buyust")'></a>
               </div>
 
               <!-- <div class="form-inline mt-5 mb-2 btn_hover wow flash"  data-wow-delay='1s'>
@@ -508,7 +508,7 @@ export default {
     this.device = w < 576 ? "mobile" : "pc";
   },
   mounted() {
-    $.leftTime("2018/08/01 20:00:00",function(d){
+    $.leftTime("2018/08/08 20:00:00",function(d){
       if(d.status){
         var $dateShow1=$("#dateShow1");
         $dateShow1.find(".d").html(d.d);
