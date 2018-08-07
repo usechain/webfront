@@ -45,7 +45,7 @@
             </table>
             </div>
         </div>
-        <div class="section mb-5 text-center">
+        <!-- <div class="section mb-5 text-center">
             <div class="h4 py-4 wow flipInY text-secondary" v-text='$t("message.subTitle")'></div>
             <div class="container">
                 <div class="row" v-show="!subscribe">
@@ -60,7 +60,7 @@
                 <div v-show="error_cue" class="text-danger text-small" v-text='$t("message.suberror")'></div>
                 <div v-show="email_error" class="text-danger text-small" v-text='$t("message.emailerror")'></div>
             </div>
-        </div>  
+        </div>   -->
         <Telegram/>  
     </div>
 </template>
