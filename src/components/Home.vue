@@ -330,7 +330,7 @@ export default {
         "yujianfeng","caofeng"
       ],
       partnerList:[
-        'xiongan','fancheng','jrr','newdo','milestone','dcc','yingxin','dfg','jike','jikeziben','naba','junmu'
+        'xiongan','keyin','fancheng','jrr','newdo','milestone','dcc','yingxin','dfg','jike','jikeziben','naba','junmu'
       ],
       mapItemActive: 5,
       languageName: localStorage.local || "en",
@@ -499,6 +499,16 @@ export default {
       this.modalShow = false;
       $(".front_modal").hide();
     },
+    timestampToTime(timestamp) {
+        var date = new Date(timestamp * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+        var Y = date.getFullYear() + '/';
+        var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '/';
+        var D = (date.getDate()+1 < 10 ? '0'+(date.getDate()) : date.getDate()) + ' ';
+        var h = (date.getHours()+1 < 10 ? '0'+(date.getHours()) : date.getHours()) + ':';
+        var m = (date.getMinutes()+1 < 10 ? '0'+(date.getMinutes()) : date.getMinutes()) + ':';
+        var s = (date.getSeconds()+1 < 10 ? '0'+(date.getSeconds()) : date.getSeconds());
+        return Y+M+D+h+m+s;
+    }
   },
   created() {
     this.$i18n.locale = localStorage.local || "en";
@@ -508,7 +518,10 @@ export default {
     this.device = w < 576 ? "mobile" : "pc";
   },
   mounted() {
-    $.leftTime("2018/08/08 20:00:00",function(d){
+    var unix=this.timestampToTime(1533729600);
+    // console.log('转化为',unix);
+
+    $.leftTime(unix,function(d){
       if(d.status){
         var $dateShow1=$("#dateShow1");
         $dateShow1.find(".d").html(d.d);
