@@ -82,32 +82,8 @@
                     <span class="num" v-html='$t("message.times")'></span>
                   </div>
                 </div>
-                <a href="https://www.leekico.com/#/projects/detail?id=109" target="_blank" class="btn btn-primary w-100 btn_buyust" v-html='$t("message.buyust")'></a>
+                <a href="https://www.leekico.com/#/projects/detail?id=109" target="_blank" class="btn btn-primary w-100 btn_buyust disabled" v-html='$t("message.buyust")'></a>
               </div>
-
-              <!-- <div class="form-inline mt-5 mb-2 btn_hover wow flash"  data-wow-delay='1s'>
-           
-                   <div class="mx-sm-auto m-md-2 my-sm-0 position-relative dropdown">
-                    <div class="btn btn-outline-secondary rounded-adjust p-0" id="dropdownWhitepaper" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <div class="hover_white w-100 h-100 d-block px-4 py-2" 
-                       v-text='$t("message.whitepaper")'></div>
-                    </div>
-                    <div class="dropdown-menu" aria-labelledby="dropdownWhitepaper">
-                      <a class="dropdown-item" @click="handleWhitepaperlink1" v-text='$t("message.whitepaper1")'></a>
-                      <a class="dropdown-item" @click="handleWhitepaperlink2" v-text='$t("message.whitepaper2")'></a>
-
-                      <div class="icon-arrow"></div>
-                    </div>
-                  </div>
-
-                <a class="d-block m-sm-auto m-md-2" target="_blank" href="https://github.com/usechain">
-                  <div class="mx-auto my-sm-0 position-relative">
-                    <div class="btn btn-outline-secondary rounded-adjust p-0">
-                      <div class="hover_white w-100 h-100 d-block px-4 py-2">GITHUB</div>
-                    </div>
-                  </div>
-                </a>
-              </div> -->
 
           </div>
           <div class="col-md-8 col-12">
@@ -125,9 +101,20 @@
         </div>
       </div>
     </div>
+    
+    <div class="container pt-5">
+      <div class="h4 text-center wow flipInY text-secondary" v-text='$t("message.videoTitle")'></div>
+      <div class="section section_video" v-show="languageName!=='en'">
+        <iframe :width='videoWidth' :height="videoHeight" src='https://player.youku.com/embed/XMzc2MTE5OTc1Mg==' frameborder='0' allowfullscreen></iframe>
+      </div>
+      <div class="section section_video" v-show="languageName==='en'">
+        <iframe :width="videoWidth" :height="videoHeight" src="https://www.youtube.com/embed/2KJXgSglaWY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+
     <div class="container">
       <div class="pb-5" id="nav2"></div>  
-      <div class="h4 text-center wow flipInY pt-4 text-secondary" v-text='$t("message.featureTitle")'></div>
+      <div class="h4 text-center wow flipInY text-secondary" v-text='$t("message.featureTitle")'></div>
       <Feature :languageName="languageName"></Feature>
     </div>
     <div class="section_work text-center">
@@ -254,12 +241,7 @@
       </div>    
     </div>
 
-    <div class="container pt-5 mt-md-5">
-      <!-- <div class="h4 text-center wow flipInY text-secondary" v-text='$t("message.videoTitle")'></div>
-      <div class="section section_video wow fadeIn">
-        <img src="../assets/images/video.jpg" class="w-100"/>
-      </div> -->
-
+    <div class="container pt-5">
       <div class="h4 text-center text-secondary" v-text='$t("message.mediaTitle")'></div>
       <div class="section section_media justify-content-center">
         <div class="text-center row p-4 p-md-0">
@@ -269,8 +251,9 @@
             </a>
           </div>
         </div>
-      </div>  
+      </div> 
     </div>
+    
     <Bottom :languageName="languageName"></Bottom>   
     <Telegram/>
    
@@ -350,7 +333,6 @@ export default {
       navMenuShow: false,
       navBarFixed: false,
       modalShow: false,
-
       mediaList: [
         {
           img: "yahoo",
@@ -423,6 +405,8 @@ export default {
             "https://www.jinse.com/blockchain/189488.html"
         }
       ],
+      videoWidth:'',
+      videoHeight:'',
     };
   },
   i18n,
@@ -441,14 +425,6 @@ export default {
         this.$t("message.usechaintitle") + "-" + this.$t("message.description");
 
     },
-    // handleWhitepaperlink1(){
-    //   // console.log(this.$t("message.whitepaperlink1"));
-    //   window.location.href=this.$t("message.whitepaperlink1");
-    // },
-    // handleWhitepaperlink2(){
-    //   // console.log('二');
-    //   window.location.href=this.$t("message.whitepaperlink2");      
-    // },
     clickMenuBtn(event) {
       this.navMenuShow = !this.navMenuShow;
     },
@@ -516,6 +492,10 @@ export default {
       this.$t("message.usechaintitle") + "-" + this.$t("message.description");
     var w = document.documentElement.scrollWidth || document.body.scrollWidth;
     this.device = w < 576 ? "mobile" : "pc";
+   
+    var videow= w <576 ? "100%" : "722";
+    this.videoWidth =videow;
+    this.videoHeight = parseInt(videow*9/16)
   },
   mounted() {
     var unix=this.timestampToTime(1533729600);
@@ -1037,6 +1017,9 @@ export default {
 }
 .section_advisor .slide_back {
   background: #fff;
+}
+.section_video{
+  text-align: center;
 }
 .slide_left {
   width: 2px;
