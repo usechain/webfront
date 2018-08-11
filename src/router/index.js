@@ -7,6 +7,7 @@ import ClauseDetail from '@/components/ClauseDetail'
 import NotFound from '@/components/NotFound'
 import Contact from '@/components/Contact'
 import Wechat from '@/components/Wechat'
+import PUST from '@/components/PUST'
 
 Vue.use(Router)
 
@@ -16,6 +17,11 @@ export default new Router({
       path: '/',
       name: 'Homeinit',
       component: Home
+    },
+    {
+      path: '/pust',
+      name: 'PUST',
+      component: PUST
     },
     {
       path: '/hrefto:nav',
