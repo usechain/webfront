@@ -8,6 +8,8 @@ import NotFound from '@/components/NotFound'
 import Contact from '@/components/Contact'
 import Wechat from '@/components/Wechat'
 import PUST from '@/components/PUST'
+import PustBuy from '@/components/PustBuy'
+import PustUsechain from '@/components/PustUsechain'
 
 Vue.use(Router)
 
@@ -22,6 +24,16 @@ export default new Router({
       path: '/pust',
       name: 'PUST',
       component: PUST
+    },
+    {
+      path: '/buy_pust',
+      name: 'PustBuy',
+      component: PustBuy
+    },
+    {
+      path: '/usechain_pust',
+      name: 'PustUsechain',
+      component: PustUsechain
     },
     {
       path: '/hrefto:nav',

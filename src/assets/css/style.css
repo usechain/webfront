@@ -4,8 +4,20 @@
 .text-secondary a{
     color: #666;
 }
+.text_black{
+    color: #333;
+}
 .text-small{
     font-size: .8rem;
+}
+.text_center{
+    text-align: center;
+}
+.text_bold{
+    font-weight: bold;
+}
+.word_break{
+    word-break: break-all;
 }
 .cursor_pointer{
     cursor: pointer;

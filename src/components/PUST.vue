@@ -1,6 +1,6 @@
 <template>
     <div class="container pb-5 ">
-        <div class="h3  py-1 mt-3 text-primary text_center">
+        <div class="h3  py-1 mt-5 text-primary text_center">
             <div class="text_title py-2">UST价格下降保障合约</div>
          </div>
         <div class="add_height pt-3">
@@ -19,12 +19,12 @@
                 <span class="nowrap pr-3">1 PUST= <i>{{price}}</i>ETH </span>
             
                 <span class="nowrap" id="fnTimeCountDown" :data-end="dataend">
-                    <span class="mini">00</span>:
-                    <span class="sec">00</span>:
-                    <span class="hm">000</span>
+                    <span class="mini" v-html="pms.mini">00</span>:
+                    <span class="sec" v-html="pms.sec">00</span>:
+                    <span class="hm" v-html="pms.hm">000</span>
                 </span>
 
-                <!-- <span class="text-primary pl-3">{{lastEpochTime}}</span> -->
+                <span class="text-primary pl-3">{{lastEpochTime}}</span>
             </p>
             <p>
                 <span class="text-primary">计算器：</span>
@@ -37,8 +37,10 @@
                 <span class="col-2">ETH</span>
             </p>
             
-            <p class="row"><span class="col-1"></span>
-                剩余不足1 PUST的会退回到打币钱包地址。</p>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-11 text-secondary">剩余不足1 PUST的ETH会退回到打币钱包地址。</div>
+            </div>
         </div>
         <div class="pt-3">
             <div class="h6 text-primary word_break">打币合约地址：
@@ -51,7 +53,8 @@
                 <img src="../assets/images/pustqr.png" alt="">
             </div>
              <div class="h6 pt-2">
-                <a href="https://usechain.net/buy_pust.pdf" target="_blank" class="text-danger">购买说明文档(pdf)</a>
+                <!-- <a href="https://usechain.net/buy_pust.pdf" target="_blank" class="text-danger">购买说明文档(pdf)</a> -->
+                <router-link to="/buy_pust" class="text-danger">购买说明文档</router-link>
             </div>
              <div class="py-3 text-secondary">
                 <p class="h6 text-primary">规则：</p>
@@ -69,7 +72,8 @@
             <img src="../assets/images/pust.png" alt="" class="w-100">
         </div>
         <div class="h6 pt-5 py-2">
-            <a href="https://usechain.net/usechain_pust.pdf" target="_blank" class="text-danger">详细规则说明(pdf文档)</a>
+            <!-- <a href="https://usechain.net/usechain_pust.pdf" target="_blank" class="text-danger">详细规则说明(pdf文档)</a> -->
+            <router-link to="/usechain_pust" class="text-danger">详细规则说明</router-link>            
         </div>
         <div class="h6 text-secondary py-2">添加我们微信进群交流，注明PUST</div>
         <div class="py-3">
@@ -97,25 +101,29 @@ export default {
             topTotalSupply:'',
             totalSupply:'',
             lastEpochTime:'',//倒计时
-            over:false,//倒计时是否归0
+            // lastblockn:6122158,//最后的区块记为N
+            pms:{
+                hm: '',
+                sec: '',
+                mini: '',
+            }
         }
     },
     watch:{
-        over(curVal,oldVal){
-            // var _this=this;
-　　　　　　　if(curVal){
-                var date = new Date();
-                var dateadd=date.getTime()+150*1000;
+        epochNow(curVal,oldVal){
+            var _this=this;
+            var lastblockn=6122158;
+            if((curVal-_this.epochLast) == 0) {
+                lastblockn=_this.lastEpochBlock;
+            }else{
+                lastblockn=_this.lastEpochBlock + (curVal - _this.epochLast)* 40;
+            }
 
-                this.getFormatDate(new Date(dateadd));
-            }
-　　　　　},
-        price(curVal,oldVal){
-            if(curVal){
-                var date = new Date();
-                var dateadd=date.getTime()+10*60*1000;
-                this.getFormatDate(new Date(dateadd));
-            }
+            var date = new Date();
+            var dateadd=date.getTime()+(lastblockn-_this.blockNumber)*15*1000;
+            this.getFormatDate(new Date(dateadd));
+
+            // console.log('N:',lastblockn,'本周期倒计时:',(lastblockn-_this.blockNumber)*15);
         }
     },
     computed: {
@@ -127,12 +135,10 @@ export default {
             this.priceval=price;
 
             return (this.blockNumber && this.lastEpochBlock)?price:0.5;
-
         },
         remainPUST:function(){
             return this.topTotalSupply-this.totalSupply
         },
-
         ethnum:function(){
             var showVal=this.pustnum*this.priceval;
             var isNumber = this.isNumber(showVal);
@@ -188,7 +194,6 @@ export default {
             }
         },
         getFormatDate(date){
-            // var date = new Date();
             var seperator1 = "/";
             var seperator2 = ":";
             var month = date.getMonth() + 1;
@@ -220,85 +225,58 @@ export default {
             // return currentdate;
             this.dataend= currentdate;
         },
-        setTime(e){
-            var _this=this;
-            var o = {
-                hm: $(".hm"),
-                sec: $(".sec"),
-                mini: $(".mini"),
-            };
-            var f = {
-                haomiao: function(n){
-                    if(n < 10)return "00" + n.toString();
-                    if(n < 100)return "0" + n.toString();
-                    return n.toString();
-                },
-                zero: function(n){
-                    var _n = parseInt(n, 10);//解析字符串,返回整数
-                    if(_n > 0){
-                        if(_n <= 9){
-                            _n = "0" + _n
-                        }
-                        return String(_n);
-                    }else{
-                        return "00";
+        zero(n){
+            var _n = parseInt(n, 10);//解析字符串,返回整数
+                if(_n > 0){
+                    if(_n <= 9){
+                        _n = "0" + _n
                     }
-                },
-                dv: function(){
-                    //d = d || Date.UTC(2050, 0, 1); //如果未定义时间，则我们设定倒计时日期是2050年1月1日
-                    var _d = _this.dataend || d;
-
-                    var now = new Date(),
-                        endDate = new Date(_d);
-                    //现在将来秒差值
-                    var dur = (endDate - now.getTime()) / 1000 , mss = endDate - now.getTime() ,pms = {
-                        hm:"000",
-                        sec: "00",
-                        mini: "00",
-                    };
-                    if(mss > 0){
-                        pms.hm = f.haomiao(mss % 1000);
-                        pms.sec = f.zero(dur % 60);
-                        pms.mini = Math.floor((dur / 60)) > 0? f.zero(Math.floor((dur / 60)) % 60) : "00";
-                    }else{
-                        pms.mini=pms.sec="00";
-                        pms.hm = "000";
-                        _this.over=true;
-                        return;
-                    }
-                    return pms;
-                },
-                ui: function(){
-                    if(o.hm){
-                        o.hm.html(f.dv().hm);
-                    }
-                    if(o.sec){
-                        o.sec.html(f.dv().sec);
-                    }
-                    if(o.mini){
-                        o.mini.html(f.dv().mini);
-                    }
-                    setTimeout(f.ui, 1);
+                    return String(_n);
+                }else{
+                    return "00";
                 }
-            };
-            f.ui();
+        },
+        haomiao(n){
+            if(n < 10)return "00" + n.toString();
+            if(n < 100)return "0" + n.toString();
+            return n.toString();
+        },
+        setTime(){
+            var _this=this;
+
+            var now = new Date();
+            var endDate = new Date( _this.dataend);
+            //现在将来秒差值
+            var dur = (endDate - now.getTime()) / 1000 , mss = endDate - now.getTime();
+            if(mss > 0){
+                _this.pms={
+                    hm:_this.haomiao(mss % 1000),
+                    sec:_this.zero(dur % 60),
+                    mini:Math.floor((dur / 60)) > 0? _this.zero(Math.floor((dur / 60)) % 60) : "00",
+                }
+            }else{
+                _this.pms={
+                    mini:'00',
+                    sec:'00',
+                    hm:'000',
+                }
+            }
         }
     },
     created(){
         this.recomputed();
-
         var date = new Date();
         var dateadd=date.getTime()+10*60*1000;
         this.getFormatDate(new Date(dateadd));
     },
     mounted(){
         var _this=this;
-        
         setInterval(function(){
             _this.recomputed();
         },15000);
-
-        this.setTime();
+        setInterval(function(){
+            _this.setTime();
+        },1);
     }
 }
 </script>
@@ -310,12 +288,6 @@ export default {
 }
 p{
     color: #666;
-}
-.text_center{
-    text-align: center;
-}
-.word_break{
-    word-break: break-all;
 }
 .text_title{
     border-top: 1px solid #3685e9;
