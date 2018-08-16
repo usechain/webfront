@@ -45,7 +45,7 @@
         <div class="pt-3">
             <div class="h6 text-primary word_break">打币合约地址：
                 <span class="wallet_address">
-                    0x44433a29280b9Bec267b6d22b59BD32251652553
+                    0xe8561c5a1e52e9ea12b17bd9168c230af9be766d
                 </span>
             </div>
             <div class="text-primary py-2">打币合约地址二维码</div>
@@ -53,8 +53,8 @@
                 <img src="../assets/images/pustqr.png" alt="">
             </div>
              <div class="h6 pt-2">
-                <!-- <a href="https://usechain.net/buy_pust.pdf" target="_blank" class="text-danger">购买说明文档(pdf)</a> -->
-                <router-link to="/buy_pust" class="text-danger">购买说明文档</router-link>
+                <a href="https://usechain.net/buy_pust.pdf" target="_blank" class="text-danger pr-5">购买说明文档(pdf)</a>
+                <router-link to="/buy_pust" class="text-danger">购买说明文档(html)</router-link>
             </div>
              <div class="py-3 text-secondary">
                 <p class="h6 text-primary">规则：</p>
@@ -72,8 +72,8 @@
             <img src="../assets/images/pust.png" alt="" class="w-100">
         </div>
         <div class="h6 pt-5 py-2">
-            <!-- <a href="https://usechain.net/usechain_pust.pdf" target="_blank" class="text-danger">详细规则说明(pdf文档)</a> -->
-            <router-link to="/usechain_pust" class="text-danger">详细规则说明</router-link>            
+            <a href="https://usechain.net/usechain_pust.pdf" target="_blank" class="text-danger pr-5">详细规则说明文档(pdf)</a>
+            <router-link to="/usechain_pust" class="text-danger">详细规则说明文档(html)</router-link>            
         </div>
         <div class="h6 text-secondary py-2">添加我们微信进群交流，注明PUST</div>
         <div class="py-3">
@@ -163,23 +163,23 @@ export default {
             }).catch(function(err){ console.log(err) })
 
             //最后购买周期
-            axios.get('https://api.etherscan.io/api?module=proxy&action=eth_call&to=0x44433a29280b9Bec267b6d22b59BD32251652553&data=0xdc57d553&tag=latest&apikey=8W1ZM4YHDMESNWMS12VBY8CKCVN723V7EM')
+            axios.get('https://api.etherscan.io/api?module=proxy&action=eth_call&to=0xe8561c5a1e52e9ea12b17bd9168c230af9be766d&data=0xdc57d553&tag=latest&apikey=8W1ZM4YHDMESNWMS12VBY8CKCVN723V7EM')
                 .then(function(res){
                     _this.epochLast=parseInt(res.data.result);
             }).catch(function(err){ console.log(err) })
 
             //最后一次购买的区块链id
-            axios.get('https://api.etherscan.io/api?module=proxy&action=eth_call&to=0x44433a29280b9Bec267b6d22b59BD32251652553&data=0xc2362dd5&tag=latest&apikey=8W1ZM4YHDMESNWMS12VBY8CKCVN723V7EM')
+            axios.get('https://api.etherscan.io/api?module=proxy&action=eth_call&to=0xe8561c5a1e52e9ea12b17bd9168c230af9be766d&data=0xc2362dd5&tag=latest&apikey=8W1ZM4YHDMESNWMS12VBY8CKCVN723V7EM')
                 .then(function(res){
                     _this.lastEpochBlock=parseInt(res.data.result);
             }).catch(function(err){ console.log(err) }) 
             
             //剩余供给PUST数
-            axios.get('https://api.etherscan.io/api?module=proxy&action=eth_call&to=0x44433a29280b9Bec267b6d22b59BD32251652553&data=85c09f26&tag=latest&apikey=8W1ZM4YHDMESNWMS12VBY8CKCVN723V7EM')
+            axios.get('https://api.etherscan.io/api?module=proxy&action=eth_call&to=0xe8561c5a1e52e9ea12b17bd9168c230af9be766d&data=85c09f26&tag=latest&apikey=8W1ZM4YHDMESNWMS12VBY8CKCVN723V7EM')
                 .then(function(res){
                     _this.topTotalSupply=parseInt(res.data.result);
             }).catch(function(err){ console.log(err) }) 
-            axios.get('https://api.etherscan.io/api?module=proxy&action=eth_call&to=0x44433a29280b9Bec267b6d22b59BD32251652553&data=18160ddd&tag=latest&apikey=8W1ZM4YHDMESNWMS12VBY8CKCVN723V7EM')
+            axios.get('https://api.etherscan.io/api?module=proxy&action=eth_call&to=0xe8561c5a1e52e9ea12b17bd9168c230af9be766d&data=18160ddd&tag=latest&apikey=8W1ZM4YHDMESNWMS12VBY8CKCVN723V7EM')
                 .then(function(res){
                     _this.totalSupply=parseInt(res.data.result);
             }).catch(function(err){ console.log(err) }) 

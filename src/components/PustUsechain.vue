@@ -28,7 +28,7 @@
         <p class="text-secondary">以100000 UST，换回1个ETH。</p>
 
         <div class="h5 pt-4"><span>1.4</span> 购买PUST智能合约地址</div>
-        <p class="text-secondary pb-2">0x44433a29280b9Bec267b6d22b59BD32251652553</p>
+        <p class="text-secondary pb-2">0xe8561c5a1e52e9ea12b17bd9168c230af9be766d</p>
         <div class="pustqr"><img src="../assets/images/pustqr.png" alt=""></div>
 
         <div class="h5 pt-5"><span>1.5</span> 名词解释</div>

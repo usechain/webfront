@@ -22,7 +22,7 @@
         <p class="pt-4 py-2 text-primary">如上图所示，填入</p>
         <div class="text-secondary">
             <p>PUST 的合约地址：
-                <span class="text_black text_bold">0x44433a29280b9bec267b6d22b59bd32251652553</span>
+                <span class="text_black text_bold">0xe8561c5a1e52e9ea12b17bd9168c230af9be766d</span>
                 </p>
             <p>ETH数量：</p>
             <p>gwei：建议不要低于 5 Gwei</p>
@@ -44,7 +44,7 @@
         <div class="text-secondary">
             <p class="pt-4 py-2">如上图所示</p>
             <p>To Address填写PUST 的合约地址：</p>
-            <p class="text_black text_bold">0x44433a29280b9bec267b6d22b59bd32251652553</p>
+            <p class="text_black text_bold">0xe8561c5a1e52e9ea12b17bd9168c230af9be766d</p>
             <p>ETH数量：</p>
             <p>gas：如没有计算，不能低于250000</p>
         </div>
