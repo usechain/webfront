@@ -48,16 +48,23 @@
     <div class="section_init" id="nav1">
       <div class="container">
         <div class="row text-center">
-          <div class="col-md-4 col-12 pt-5 pt-md-0">
-            <h2 class="text-secondary py-3 wow bounceInDown" v-text='$t("message.usechain")'></h2>
+          <div class="col-12 col-md-5 pt-5 pt-md-0 video_wrap">
+            <h2 class="text-secondary pt-3 wow bounceInDown" v-text='$t("message.usechain")'></h2>
             <p class="h4 p-4 px-md-0 text-secondary long_text wow slideInDown" v-html='$t("message.description")'></p>
               
-              <div :class='{"pl-3":(languageName === "en" ? false : true)}'>
+              <!-- <div :class='{"pl-3":(languageName === "en" ? false : true)}'>
                 <div class="advantage wow slideInRight nowrap" :class="'advantage'+item"
                   v-for="item in 3" :key="item" :data-wow-delay="'.'+item+'s'">
                   <img class="ml-5 ml-md-3 ml-lg-5" :src='"../assets/images/advantage"+item+".png"'/>
                   <span v-html='$t("message.advantage"+item)'></span>
                 </div>
+              </div> -->
+
+               <div class="section_video pb-4" v-show="languageName!=='en'">
+                <iframe width='100%' :height="videoHeight"  src='https://player.youku.com/embed/XMzc2MTE5OTc1Mg==' frameborder='0' allowfullscreen></iframe>
+              </div>
+              <div class="section_video pb-4" v-show="languageName==='en'">
+                <iframe width="100%" :height="videoHeight" src="https://www.youtube.com/embed/2KJXgSglaWY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
               </div>
 
               <!-- <div class="border border-primary rounded p-4 text-center">
@@ -86,7 +93,7 @@
               </div> -->
 
           </div>
-          <div class="col-md-8 col-12">
+          <div class="col-12 col-md-7 pl-0 pr-0 pt-3">
             <div class="hover_wrapper wow bounceInDown" @mouseenter="mouseEnterAnimate">
               <ul class="hover_animate position-relative">
                   <li v-for="item in 8" :class='"pic_banner_hover"+item' :key="item" :style='"z-index:"+(10-item)'>
@@ -102,7 +109,7 @@
       </div>
     </div>
     
-    <div class="container pt-5">
+    <!-- <div class="container pt-5">
       <div class="h4 text-center wow flipInY text-secondary" v-text='$t("message.videoTitle")'></div>
       <div class="section section_video" v-show="languageName!=='en'">
         <iframe :width='videoWidth' :height="videoHeight" src='https://player.youku.com/embed/XMzc2MTE5OTc1Mg==' frameborder='0' allowfullscreen></iframe>
@@ -110,7 +117,7 @@
       <div class="section section_video" v-show="languageName==='en'">
         <iframe :width="videoWidth" :height="videoHeight" src="https://www.youtube.com/embed/2KJXgSglaWY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
-    </div>
+    </div> -->
 
     <div class="container">
       <div class="pb-5" id="nav2"></div>  
@@ -405,7 +412,7 @@ export default {
             "https://www.jinse.com/blockchain/189488.html"
         }
       ],
-      videoWidth:'',
+      // videoWidth:'',
       videoHeight:'',
     };
   },
@@ -493,9 +500,11 @@ export default {
     var w = document.documentElement.scrollWidth || document.body.scrollWidth;
     this.device = w < 576 ? "mobile" : "pc";
    
-    var videow= w <576 ? "100%" : "722";
-    this.videoWidth =videow;
-    this.videoHeight = parseInt(videow*9/16)
+    // var videow= w <576 ? "100%" : "722";
+    // var videow="100%";
+    // this.videoWidth =videow;
+    // this.videoHeight = parseInt(videow*9/16);
+    
   },
   mounted() {
     // var unix=this.timestampToTime(1533729600);
@@ -510,6 +519,10 @@ export default {
     //     $dateShow1.find(".s").html(d.s);
     //   }
     // });
+
+    var videow=$('.video_wrap').width();
+    this.videoHeight = parseInt(videow*9/16);
+    // console.log('宽',videow,this.videoHeight)
 
     $(".front_modal").hide();
     
@@ -694,7 +707,7 @@ export default {
   top: 44%;
 }
 .pic_banner_hover6 {
-  width: 52%;
+  width: 48%;
   left: 0;
   top: 0%;
 }

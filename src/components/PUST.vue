@@ -5,7 +5,7 @@
          </div>
         <div class="add_height pt-3">
             <div class="text-danger py-1">
-                注意：用户的钱包地址不能是交易所钱包，不可以充值除eth之外的资产。PUST支持imtoken 1.0版和PC版的钱包。                
+                注意：用户的钱包地址不能是交易所钱包，不可以充值除eth之外的资产。PUST支持Kcash和PC版的钱包。                
             </div>
         </div>
        
@@ -56,6 +56,11 @@
                 <a href="https://usechain.net/buy_pust.pdf" target="_blank" class="text-danger pr-5">购买说明文档(pdf)</a>
                 <router-link to="/buy_pust" class="text-danger">购买说明文档(html)</router-link>
             </div>
+            <!-- <div class="text-primary text_underline">
+                <div class="pust_all">全部PUST合约列表=></div>
+                    各期PUST不兼容，行权仅限当期购买地址
+            </div> -->
+
              <div class="py-3 text-secondary">
                 <p class="h6 text-primary">规则：</p>
                 <p>每一个PUST有权在北京时间2018.12.31日24时前，用

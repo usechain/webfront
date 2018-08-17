@@ -30,7 +30,7 @@
                     <tr>
                     <td v-text='$t("message.done")'></td>
                     <td v-text='$t("message.done")'></td>
-                    <td>2018-08-08 ~ 2018-08-13</td>
+                    <td v-text='$t("message.done")'></td>
                     </tr>
                     <tr>
                     <td>1BTC = 2,000,000UST</td>

@@ -5,7 +5,7 @@
          </div>
         <div class="pt-3">
             <div class="text-danger py-1">
-                注意：您的钱包地址不能是交易所钱包，不可以充值除eth之外的资产。PUST支持imtoken 1.0版和PC版的钱包                
+                注意：您的钱包地址不能是交易所钱包，不可以充值除eth之外的资产。PUST支持Kcash和PC版的钱包                
             </div>
         </div>
         <div class="h4 pt-3"><span>·</span> 使用 Imtoken 认购 PUST</div>
