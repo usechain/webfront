@@ -1,7 +1,8 @@
 <template>
     <div class="container pb-5 word_break">
-        <div class="h4  py-1 mt-3 text-primary text_center">
-            <div class="py-2 text_title">购买PUST操作说明书</div>
+        <div class="py-1 mt-3 text-primary text_center">
+            <div class="h4 py-2 text_title">购买PUST操作说明书</div>
+            <!-- <a href="https://usechain.net/buy_pust.pdf" target="_blank">pdf版本</a>             -->
          </div>
         <div class="pt-3">
             <div class="text-danger py-1">
@@ -23,7 +24,7 @@
         <div class="text-secondary">
             <p>PUST 的合约地址：
                 <span class="text_black text_bold">0xe8561c5a1e52e9ea12b17bd9168c230af9be766d</span>
-                </p>
+            </p>
             <p>ETH数量：</p>
             <p>gwei：建议不要低于 5 Gwei</p>
             <p>gas：不能低于250000</p>

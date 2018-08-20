@@ -1,13 +1,14 @@
 const messages = {
     ch: {
       message: {
-        nav1:'首页',        
-        nav2:'产品',
-        nav3:'路线图',
-        nav4:'团队',
-        nav5:'合作伙伴',
-        nav6:'代币销售',
-        nav7:'博客',        
+        nav1:'首页',
+        nav2:'新闻',
+        nav3:'产品',
+        nav4:'路线图',
+        nav5:'团队',
+        nav6:'合作伙伴',
+        nav7:'代币销售',
+        nav8:'博客',        
 
         login:'登录/注册',
         home:'首页',
@@ -32,7 +33,7 @@ const messages = {
         solutionsTitle:'解决方案',        
         mediaTitle:'媒体报道',
         mapTitle:'路线图',
-        // videoTitle:'录像',
+        videoTitle:'新闻 / 视频',
         partnerTitle:'投资机构 & 合作伙伴',    
         advisorTitle:'顾问团队', 
         tokenTitle:'代币分配方案',
@@ -99,7 +100,7 @@ const messages = {
           time:'2018年第三季度',
           event:'●&nbsp;基于软件的RPOW共识算法开发<br/>\
           ●&nbsp;增强智能合约开发<br/>\
-          ●&nbsp;TPOS共识算法开发<br/>\
+          ●&nbsp;共识算法开发<br/>\
           ●&nbsp;公有链测试版上线<br/>\
           ●&nbsp;核心社区突破10万人<br/>\
           ●&nbsp;首个行业DApp上线'
@@ -250,12 +251,13 @@ const messages = {
     en: {
       message: {
         nav1:'Home',        
-        nav2:'Products',
-        nav3:'Roadmap',
-        nav4:'Team',
-        nav5:'Partners',
-        nav6:'Token Sale',
-        nav7:'Blog',
+        nav2:'News',        
+        nav3:'Products',
+        nav4:'Roadmap',
+        nav5:'Team',
+        nav6:'Partners',
+        nav7:'Token Sale',
+        nav8:'Blog',
 
         login:'loginIn/signUp',  
         home:'Home',        
@@ -280,7 +282,7 @@ const messages = {
         solutionsTitle:'Solutions',        
         mediaTitle:'Media Coverage',
         mapTitle:'RoadMap',
-        // videoTitle:'News / Videos',
+        videoTitle:'News / Videos',
         partnerTitle:'Investors & Partners', 
         advisorTitle:'Advisors',    
         tokenTitle:'Token Distribution',   
@@ -347,7 +349,7 @@ const messages = {
           time:'Q3 2018',
           event:'●&nbsp;Develop software-based RPOW consensus algorithm.<br/>\
           ●&nbsp;Develop enhanced smart contracts.<br/>\
-          ●&nbsp;Develop TPOS consensus algorithm.<br/>\
+          ●&nbsp;Develop consensus algorithm.<br/>\
           ●&nbsp;Usechain testnet release.<br/>\
           ●&nbsp;Achieve 100000+ people in the community.<br/>\
           ●&nbsp;Launch the first DApp.'

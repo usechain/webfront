@@ -3,17 +3,15 @@
     <nav class="navbar navbar-expand-lg px-0 py-1 py-md-0 z-index-10 w-100 scrollspy-nav" 
       data-am-scrollspynav="{offsetTop: 45}" data-am-sticky :class="{'navbar_border position-fixed':navBarFixed}">
       <div class="container">
-        <div class="navbar-brand pr-5 pl-4">
+        <div class="navbar-brand pr-3 pl-3">
           <a data-am-smooth-scroll href="javascript:;" id="homelogo"><img class="p-md-1" src="../assets/images/logo.png"/></a>
         </div>
-        <button class="navbar-toggler menu_btn mr-4" type="button" id="close1"
-          @click.self="clickMenuBtn" 
-           data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler menu_btn mr-4" type="button" id="close1" @click.self="clickMenuBtn" 
+          data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="nav_menu position-relative" :class="{change_mode:navMenuShow}" @click.self="clickMenuBtn"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent"
-          @click.self="closeNavModal">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" @click.self="closeNavModal">
           <div class="wrapper">
             <div class="text-center d-lg-flex flex-wrap w-100">
               <ul class="navbar-nav mr-auto">
@@ -22,7 +20,7 @@
                   :class="{'am-active':index===navItemActive}"
                   v-text='$t("message."+item)' :href='"#nav"+(index+1)'></a>                  
                 </li>
-                 <li class="nav-item  mx-2 text-capitalize"><router-link to="/token" class="nav-link text-secondary" v-text='$t("message.nav6")'></router-link></li>
+                 <li class="nav-item  mx-2 text-capitalize"><router-link to="/token" class="nav-link text-secondary" v-text='$t("message.nav7")'></router-link></li>
                 
                 <li class="nav-item dropdown px-2">
                   <a class="nav-link dropdown-toggle text-secondary" href="javascript:;" id="whitepaperDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-text='$t("message.whitepaper")'></a>
@@ -31,7 +29,7 @@
                   </div>
                 </li>
                 
-                 <li class="nav-item  mx-2 text-capitalize"><a href="https://medium.com/@usechain" target="_blank" class="nav-link text-secondary" v-text='$t("message.nav7")'></a></li>
+                <li class="nav-item  mx-2 text-capitalize"><a href="https://medium.com/@usechain" target="_blank" class="nav-link text-secondary" v-text='$t("message.nav8")'></a></li>
 
                 <li class="nav-item dropdown px-2">
                   <a class="nav-link dropdown-toggle text-secondary" href="javascript:;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-text="languageName==='en'?'English':'中文'"></a>
@@ -48,23 +46,16 @@
     <div class="section_init" id="nav1">
       <div class="container">
         <div class="row text-center">
-          <div class="col-12 col-md-5 pt-5 pt-md-0 video_wrap">
-            <h2 class="text-secondary pt-3 wow bounceInDown" v-text='$t("message.usechain")'></h2>
+          <div class="col-12 col-md-4 pt-5 pt-md-0">
+            <h2 class="text-secondary py-3 pt-md-5 wow bounceInDown" v-text='$t("message.usechain")'></h2>
             <p class="h4 p-4 px-md-0 text-secondary long_text wow slideInDown" v-html='$t("message.description")'></p>
               
-              <!-- <div :class='{"pl-3":(languageName === "en" ? false : true)}'>
+              <div :class='{"pl-3":(languageName === "en" ? false : true)}'>
                 <div class="advantage wow slideInRight nowrap" :class="'advantage'+item"
                   v-for="item in 3" :key="item" :data-wow-delay="'.'+item+'s'">
                   <img class="ml-5 ml-md-3 ml-lg-5" :src='"../assets/images/advantage"+item+".png"'/>
                   <span v-html='$t("message.advantage"+item)'></span>
                 </div>
-              </div> -->
-
-               <div class="section_video pb-4" v-show="languageName!=='en'">
-                <iframe width='100%' :height="videoHeight"  src='https://player.youku.com/embed/XMzc2MTE5OTc1Mg==' frameborder='0' allowfullscreen></iframe>
-              </div>
-              <div class="section_video pb-4" v-show="languageName==='en'">
-                <iframe width="100%" :height="videoHeight" src="https://www.youtube.com/embed/2KJXgSglaWY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
               </div>
 
               <!-- <div class="border border-primary rounded p-4 text-center">
@@ -93,7 +84,7 @@
               </div> -->
 
           </div>
-          <div class="col-12 col-md-7 pl-0 pr-0 pt-3">
+          <div class="col-12 col-md-8 pl-0 pr-0 pt-3">
             <div class="hover_wrapper wow bounceInDown" @mouseenter="mouseEnterAnimate">
               <ul class="hover_animate position-relative">
                   <li v-for="item in 8" :class='"pic_banner_hover"+item' :key="item" :style='"z-index:"+(10-item)'>
@@ -109,18 +100,40 @@
       </div>
     </div>
     
-    <!-- <div class="container pt-5">
-      <div class="h4 text-center wow flipInY text-secondary" v-text='$t("message.videoTitle")'></div>
-      <div class="section section_video" v-show="languageName!=='en'">
-        <iframe :width='videoWidth' :height="videoHeight" src='https://player.youku.com/embed/XMzc2MTE5OTc1Mg==' frameborder='0' allowfullscreen></iframe>
+    <div class="pt-5" id="nav2">
+      
+      <div class="h4 pb-5 text-center text-secondary" v-text='$t("message.videoTitle")'></div>
+
+      <div class="container">
+         <!-- 评级 -->
+        <div class="justify-content-center">
+          <div class="m-auto" :style="{'width': device==='pc'?'80%':'100%'}">
+            <a href="https://www.odaily.com/post/5133336" target="_blank" class="d-block">
+              <img src="../assets/images/banner1.jpg" class="w-100" alt="">
+            </a>
+            <div class="wow flipInX my-1 section_rate">
+              <img src="https://icobench.com/rated/usechain?shape=horizontal&size=m"/>
+              <img src="../assets/images/TrackICO.png"/>
+              <img src="../assets/images/ICOMarks.png"/>
+              <img src="../assets/images/icosmasher.png"/>
+            </div>
+          </div>
+        </div>
+
+        <!-- 视频 -->
+        <div class="pb-5 section_video" v-show="languageName!=='en'">
+          <iframe :width='videoWidth' :height="videoHeight" src='https://player.youku.com/embed/XMzc2MTE5OTc1Mg==' frameborder='0' allowfullscreen></iframe>
+        </div>
+        <div class="pb-5 section_video" v-show="languageName==='en'">
+          <iframe :width="videoWidth" :height="videoHeight" src="https://www.youtube.com/embed/2KJXgSglaWY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
       </div>
-      <div class="section section_video" v-show="languageName==='en'">
-        <iframe :width="videoWidth" :height="videoHeight" src="https://www.youtube.com/embed/2KJXgSglaWY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      </div>
-    </div> -->
+      
+
+    </div>
 
     <div class="container">
-      <div class="pb-5" id="nav2"></div>  
+      <div class="pb-5" id="nav3"></div>  
       <div class="h4 text-center wow flipInY text-secondary" v-text='$t("message.featureTitle")'></div>
       <Feature :languageName="languageName"></Feature>
     </div>
@@ -151,7 +164,7 @@
       </div>
     </div>
       
-    <div class="d_jump" id="nav3"></div> 
+    <div class="d_jump" id="nav4"></div> 
                
     <div class="container pt-5">
       <div class="h4 text-center wow flipInY text-secondary pt-4" v-text='$t("message.mapTitle")'></div>
@@ -174,7 +187,7 @@
         </div>                
       </div>
     </div>
-    <div class="pt-5 mt-5 section_advisor" id="nav4">
+    <div class="pt-5 mt-5 section_advisor" id="nav5">
       <div class="h4 text-center wow flipInY text-secondary" v-text='$t("message.teamTitle")'></div>
       <div class="section_team py-5">
           <ul class="clear wow fadeInUp container">
@@ -322,7 +335,7 @@ export default {
       partnerList:[
         'xiongan','keyin','fancheng','jrr','newdo','milestone','dcc','yingxin','dfg','jike','jikeziben','naba','junmu'
       ],
-      mapItemActive: 5,
+      mapItemActive: 6,
       languageName: localStorage.local || "en",
       lanList: [{ tab: "中文", value: "ch" }, { tab: "English", value: "en" }],
       whitepaperList:[
@@ -334,7 +347,7 @@ export default {
         { tab: "技术白皮书  中文", link: "/usechain_tech_cn.pdf" },
         { tab: "기술 백서  한국", link: "/usechain_tech_kr.pdf" },
       ],
-      navList: ["nav1", "nav2", "nav3","nav4","nav5"],
+      navList: ["nav1", "nav2", "nav3","nav4","nav5","nav6"],
       navDefaultActive: 0,
       navItemActive: 0,
       navMenuShow: false,
@@ -412,7 +425,7 @@ export default {
             "https://www.jinse.com/blockchain/189488.html"
         }
       ],
-      // videoWidth:'',
+      videoWidth:'',
       videoHeight:'',
     };
   },
@@ -501,7 +514,7 @@ export default {
     this.device = w < 576 ? "mobile" : "pc";
    
     // var videow= w <576 ? "100%" : "722";
-    // var videow="100%";
+    // var videow= "100%";
     // this.videoWidth =videow;
     // this.videoHeight = parseInt(videow*9/16);
     
@@ -520,7 +533,9 @@ export default {
     //   }
     // });
 
-    var videow=$('.video_wrap').width();
+    var videow=$('.container').width();
+    
+    this.videoWidth = this.device === "pc" ? "80%" : "100%";    
     this.videoHeight = parseInt(videow*9/16);
     // console.log('宽',videow,this.videoHeight)
 
@@ -882,6 +897,17 @@ export default {
   margin: 0 auto;
   width: 500px;
   height: 700px;
+}
+.section_rate{
+  font-size: 0;
+  background: url(../assets/images/bg_rate.png) no-repeat;
+  background-size: 100% 100%; 
+}
+.section_rate img{
+  display: inline-block;
+  width: 25%;
+  height: 100%;
+  padding: 0 2%;
 }
 .mwork1 {
   width: 70%;

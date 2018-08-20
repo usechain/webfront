@@ -20,8 +20,17 @@
                 :to="'/hrefto'+item" v-text='$t("message."+item)'></router-link>
               </li>
               <li class="nav-item  mx-2 text-capitalize">
-                <router-link to="/token" class="nav-link text-secondary" :class="{'am-active':navActive==='token'}" v-text='$t("message.nav6")'></router-link></li>
-              <li class="nav-item  mx-2 text-capitalize"><a href="https://medium.com/@usechain" target="_blank" class="nav-link text-secondary" v-text='$t("message.nav7")'></a></li>
+                <router-link to="/token" class="nav-link text-secondary" :class="{'am-active':navActive==='token'}" v-text='$t("message.nav7")'></router-link></li>
+              
+              <li class="nav-item dropdown px-2">
+                <a class="nav-link dropdown-toggle text-secondary" href="javascript:;" id="whitepaperDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-text='$t("message.whitepaper")'></a>
+                <div class="dropdown-menu" aria-labelledby="whitepaperDropdown">
+                  <a class="dropdown-item" v-for="(item,index) in whitepaperList" :key="index" v-text="item.tab" :href="item.link"></a>
+                </div>
+              </li>
+              
+              <li class="nav-item  mx-2 text-capitalize"><a href="https://medium.com/@usechain" target="_blank" class="nav-link text-secondary" v-text='$t("message.nav8")'></a></li>
+              
               <li class="nav-item dropdown px-2">
                 <a class="nav-link dropdown-toggle text-secondary" href="javascript:;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-text="languageName==='en'?'English':'中文'"></a>
                 <div @click="chooseLanguage" class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -56,7 +65,16 @@ export default {
     return {
       languageName: localStorage.local || "en",
       lanList: [{ tab: "中文", value: "ch" }, { tab: "English", value: "en" }],
-      navList: ["nav1", "nav2", "nav3","nav4","nav5"],      
+      whitepaperList:[
+        { tab: "Project Whitepaper EN", link: "/usechain_en.pdf" },
+        { tab: "Project Whitepaper FR", link: "/usechain_fr.pdf" },
+        { tab: "项目白皮书 中文", link: "/usechain_cn.pdf" },
+        { tab: "프로젝트 백서  한국", link: "/usechain_kr.pdf" },
+        { tab: "Technical Whitepaper EN", link: "/usechain_tech_en.pdf" },
+        { tab: "技术白皮书  中文", link: "/usechain_tech_cn.pdf" },
+        { tab: "기술 백서  한국", link: "/usechain_tech_kr.pdf" },
+      ],
+      navList: ["nav1", "nav2", "nav3","nav4","nav5","nav6"],      
       navItemActive: 0,
       navMenuShow: false,
       navBarFixed: false,

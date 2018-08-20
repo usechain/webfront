@@ -2,6 +2,7 @@
     <div class="container pb-5">
         <div class="py-1 mt-5 text_center text-secondary">
             <div class="h4 py-2 text_title text-primary">UST降价保障PUST购买说明</div>
+            <!-- <a href="https://usechain.net/usechain_pust.pdf" target="_blank" class="text-danger pr-5">详细规则说明文档(pdf)</a> -->
             <p>2018年8月10日</p>
             <p>Usechain 团队</p>
         </div>
@@ -29,7 +30,7 @@
 
         <div class="h5 pt-4"><span>1.4</span> 购买PUST智能合约地址</div>
         <p class="text-secondary pb-2">0xe8561c5a1e52e9ea12b17bd9168c230af9be766d</p>
-        <div class="pustqr"><img src="../assets/images/pustqr.png" alt=""></div>
+        <div class="pustqr"><img src="../assets/images/pustqr2.png" alt=""></div>
 
         <div class="h5 pt-5"><span>1.5</span> 名词解释</div>
         
