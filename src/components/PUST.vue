@@ -1,23 +1,23 @@
 <template>
     <div class="container pb-5 pust_wrap">
         <div class="h4  py-1 mt-5 text-primary text_center">
-            <div class="text_title py-2">UST价格下降保障合约</div>
+            <div class="text_title py-2">UST价格下降保障合约</div> 
          </div>
 
         <div class="text-center sm_left">
             <div class="row py-3 d-inline-block">
                 <select name="" class="select_pust mr-5" v-model="select_epoch">
-                    <option value="pustqr1">PUST第1期</option>
-                    <option value="pustqr2" selected>PUST第2期</option>
+                    <option :value="item.value" v-for="(item,index) in epochList"
+                    :key="'pust'+index">PUST第{{item.value}}期</option>
                 </select>
-                <span class="word_break">合约地址：{{epochAddress}}</span>
+                <span class="word_break">合约地址：{{selected.address}}</span>
             </div>
         </div>
         
         <div class="border p-2 py-3 border-secondary rounded">
             <div class="clearfix">
                 <div class="float-left">购买 PUST：</div>
-                <router-link to="/buy_pust" class="text-danger float-right">购买说明文档</router-link>
+                <router-link :to='"/buy_pust/"+selected.value' class="text-danger float-right">购买说明文档</router-link>
             </div>
             <p class="pt-2">当前区块号：<span v-text="blockNumber"></span></p>
             <p>当前周期数：<span v-text="epochNow"></span></p>
@@ -48,29 +48,33 @@
 
             <p class="text-secondary text-small">剩余不足1PUST的ETH会退回到打币钱包地址。</p>
             <p class="text-danger pt-2">
-                注意：用户的钱包地址不能是交易所钱包，不可以充值除eth之外的资产。PUST支持Kcash和PC版的钱包。                
+                注意：用户的钱包地址不能是交易所钱包，不可以充值除eth之外的资产。PUST支持Kcash和PC版的钱包。
+                <span v-html="selected.notice"></span>                
             </p>
         </div>
     
         <div class="py-5 text-center border-bottom">
             <div class="h6">打币合约地址：</div>
-            <div class="py-2 text-primary word_break" v-html="epochAddress"></div>
+            <div class="py-2 text-primary word_break" v-html="selected.address"></div>
             <div class="h6 py-1 qrcode_address">
-                <img src="../assets/images/pustqr1.png" alt="" v-if="select_epoch==='pustqr1'">
-                <img src="../assets/images/pustqr2.png" alt="" v-if="select_epoch==='pustqr2'">
+                <img src="../assets/images/pustqr1.png" alt="" v-if="select_epoch==='1'">
+                <img src="../assets/images/pustqr2.png" alt="" v-if="select_epoch==='2'">
+                <img src="../assets/images/pustqr3.png" alt="" v-if="select_epoch==='3'">
             </div>
             <div class="text-danger py-2">各期PUST不兼容，行权仅限当期购买地址</div>
         </div>     
              <div class="text-secondary">
                 <div class="clearfix pt-5">
                     <p class="h6 text-primary float-left">规则：</p>
-                    <router-link to="/usechain_pust" class="text-danger float-right">详细规则说明文档</router-link>            
+                    <router-link :to='"/usechain_pust/"+selected.value' class="text-danger float-right">详细规则说明文档</router-link>            
                 </div>
                 
                 <p>每一个PUST有权在北京时间2018.12.31日24时前，用
                     <span class="text-primary">100000UST</span>
                     换回1 ETH.</p>
-                <p class="py-3">1PUST起始价位0.5 ETH，每个周期40个区块。每一次购买本周期会延长10个区块。周期内最先确认的和最后确认的购买者奖励大于等于20%的最小整数个PUST。下一个周期，价格按曲线下降。</p>
+                <p class="py-3">1PUST起始价位0.5 ETH，每个周期40个区块。每一次购买本周期会延长10个区块。
+                    周期内最先确认的和最后确认的购买者奖励<span v-html="selected.num"></span>个PUST。
+                    下一个周期，价格按曲线下降。</p>
                 <p>本次共放出2000 PUST供购买。</p>
             </div>
            
@@ -80,6 +84,8 @@
         <div>
             <img src="../assets/images/pust.png" alt="" class="w-100">
         </div>
+        <p class="text-secondary py-3">一个周期内，最先和最后一位购买者将获得奖励。第一笔和最后一笔交易量为X PUST，则可以获得X +奖金。
+            奖金为<span v-html="selected.pustText"></span>的PUST</p>
         
         <div class="h6 text-secondary py-2"></div>
         <div class="py-3 row text-center">
@@ -96,8 +102,10 @@
 <script>
 import $ from 'jquery';
 import axios from "axios";
+import pustEpoch from '../assets/js/config';
 
 export default {
+    name: "PUST",    
     data(){
         return{
             blockNumber:'',//当前区块链id=>  0x5d7ed9=6127321
@@ -117,8 +125,9 @@ export default {
                 sec: '',
                 mini: '',
             },
-            epochAddress:'0xe8561c5a1e52e9ea12b17bd9168c230af9be766d',
-            select_epoch:'pustqr2',
+            epochList:pustEpoch,
+            select_epoch:pustEpoch[0].value,
+            selected:pustEpoch[0],
         }
     },
     watch:{
@@ -135,12 +144,9 @@ export default {
             var dateadd=date.getTime()+(lastblockn-_this.blockNumber)*15*1000;
             this.getFormatDate(new Date(dateadd));
         },
-        select_epoch(curVal,oldVal){      
-            if(curVal==='pustqr1'){
-                this.epochAddress='0x44433a29280b9Bec267b6d22b59BD32251652553'
-            }else if(curVal==='pustqr2'){
-                this.epochAddress='0xe8561c5a1e52e9ea12b17bd9168c230af9be766d'
-            }
+        select_epoch(curVal){      
+            var rank=this.epochList.length-parseInt(curVal);
+            this.selected=this.epochList[rank];
             this.recomputed();            
         },
     },
@@ -148,14 +154,15 @@ export default {
         price:function(){
             var diffvalue=(this.blockNumber-this.lastEpochBlock)/this.initEpoch;
             var epoch=this.epochLast+parseInt(diffvalue) + 1;
-            var price=0.4*0.9995**epoch+0.1*0.99993**epoch;
+            var rate=parseInt(this.selected.epochRate);
+            var price=0.4*0.9995**(epoch+rate)+0.1*0.99993**(epoch+rate);
             this.epochNow=epoch;
             this.priceval=price;
 
             return (this.blockNumber && this.lastEpochBlock)?price:0.5;
         },
         remainPUST:function(){
-            return this.topTotalSupply-this.totalSupply
+            return (this.topTotalSupply-this.totalSupply)/parseInt(this.selected.pustRate);
         },
         ethnum:function(){
             var showVal=this.pustnum*this.priceval;
@@ -181,23 +188,23 @@ export default {
             }).catch(function(err){ console.log(err) })
 
             //最后购买周期
-            axios.get('https://api.etherscan.io/api?module=proxy&action=eth_call&to='+_this.epochAddress+'&data=0xdc57d553&tag=latest&apikey=8W1ZM4YHDMESNWMS12VBY8CKCVN723V7EM')
+            axios.get('https://api.etherscan.io/api?module=proxy&action=eth_call&to='+_this.selected.address+'&data=0xdc57d553&tag=latest&apikey=8W1ZM4YHDMESNWMS12VBY8CKCVN723V7EM')
                 .then(function(res){
                     _this.epochLast=parseInt(res.data.result);
             }).catch(function(err){ console.log(err) })
 
             //最后一次购买的区块链id
-            axios.get('https://api.etherscan.io/api?module=proxy&action=eth_call&to='+_this.epochAddress+'&data=0xc2362dd5&tag=latest&apikey=8W1ZM4YHDMESNWMS12VBY8CKCVN723V7EM')
+            axios.get('https://api.etherscan.io/api?module=proxy&action=eth_call&to='+_this.selected.address+'&data=0xc2362dd5&tag=latest&apikey=8W1ZM4YHDMESNWMS12VBY8CKCVN723V7EM')
                 .then(function(res){
                     _this.lastEpochBlock=parseInt(res.data.result);
             }).catch(function(err){ console.log(err) }) 
             
             //剩余供给PUST数
-            axios.get('https://api.etherscan.io/api?module=proxy&action=eth_call&to='+_this.epochAddress+'&data=85c09f26&tag=latest&apikey=8W1ZM4YHDMESNWMS12VBY8CKCVN723V7EM')
+            axios.get('https://api.etherscan.io/api?module=proxy&action=eth_call&to='+_this.selected.address+'&data=85c09f26&tag=latest&apikey=8W1ZM4YHDMESNWMS12VBY8CKCVN723V7EM')
                 .then(function(res){
                     _this.topTotalSupply=parseInt(res.data.result);
             }).catch(function(err){ console.log(err) }) 
-            axios.get('https://api.etherscan.io/api?module=proxy&action=eth_call&to='+_this.epochAddress+'&data=18160ddd&tag=latest&apikey=8W1ZM4YHDMESNWMS12VBY8CKCVN723V7EM')
+            axios.get('https://api.etherscan.io/api?module=proxy&action=eth_call&to='+_this.selected.address+'&data=18160ddd&tag=latest&apikey=8W1ZM4YHDMESNWMS12VBY8CKCVN723V7EM')
                 .then(function(res){
                     _this.totalSupply=parseInt(res.data.result);
             }).catch(function(err){ console.log(err) }) 

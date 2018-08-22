@@ -26,12 +26,12 @@ export default new Router({
       component: PUST
     },
     {
-      path: '/buy_pust',
+      path: '/buy_pust/:pustqr?',
       name: 'PustBuy',
       component: PustBuy
     },
     {
-      path: '/usechain_pust',
+      path: '/usechain_pust/:pustqr?',
       name: 'PustUsechain',
       component: PustUsechain
     },

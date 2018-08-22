@@ -16,7 +16,9 @@
             <p>行权方式见后续章节《行权方式》。</p>
             <p>下图描述了PUST购买流程。</p>
          </div>
-         <div><img src="../assets/images/pust.png" class="pic75" alt=""></div>
+         <div class="p-3"><img src="../assets/images/pust.png" class="pic75" alt=""></div>
+         <p class="text-secondary">一个周期内，最先和最后一位购买者将获得奖励。第一笔和最后一笔交易量为X PUST，则可以获得X +奖金。
+            奖金为<span v-html="epochNow.pustText"></span>的PUST</p>
 
         <div class="h5 pt-4"><span>1.1</span> 总量</div>
         <p class="text-secondary">本次发行PUST总量 2000枚，卖完或到最后行权时间终止。</p>
@@ -29,8 +31,12 @@
         <p class="text-secondary">以100000 UST，换回1个ETH。</p>
 
         <div class="h5 pt-4"><span>1.4</span> 购买PUST智能合约地址</div>
-        <p class="text-secondary pb-2">0xe8561c5a1e52e9ea12b17bd9168c230af9be766d</p>
-        <div class="pustqr"><img src="../assets/images/pustqr2.png" alt=""></div>
+        <p class="text-secondary pb-2" v-html="epochNow.address"></p>
+        <div class="pustqr">
+            <img src="../assets/images/pustqr1.png" alt="" v-if="routePustqr==='1'">
+            <img src="../assets/images/pustqr2.png" alt="" v-if="routePustqr==='2'">
+            <img src="../assets/images/pustqr3.png" alt="" v-if="routePustqr==='3'||routePustqr==='0'">
+        </div>
 
         <div class="h5 pt-5"><span>1.5</span> 名词解释</div>
         
@@ -43,10 +49,11 @@
         
         <div class="h4 pt-5"><span>2</span> 奖励方式</div>
 
-        <p class="text-secondary pt-2">每一个周期内，最先和最后购买者，将获得20%的奖励，按大于等于20%的最小整数发放。最后购买者的奖励会在下一个周期中计算。由于采用整数奖励，所以奖励会以阶梯方式增长。</p>
+        <p class="text-secondary pt-2">每一个周期内，最先和最后购买者，将获得20%的奖励<span v-html="epochNow.num2"></span>。
+            最后购买者的奖励会在下一个周期中计算。由于采用整数奖励，所以奖励会以阶梯方式增长。</p>
         <p class="text-secondary py-1">如果奖励数目超过了剩余供应，超出的部分不奖励。</p>
 
-        <div class="pt-2"><img src="../assets/images/pustusechain3.png" class="pic50" alt=""></div>
+        <div class="pt-2"><img src="../assets/images/reward.png" class="pic50" alt="" v-if="epochNow.rewardimg"></div>
 
         <div class="h4 pt-5"><span>3</span> 折扣方式</div>
         <p class="text-secondary py-2">PUST的价格，按如下的曲线，每个周期下降。</p>
@@ -111,7 +118,10 @@
 </template>
 
 <script>
+import pustEpoch from '../assets/js/config';
+
 export default {
+    name: "PustUsechain",    
     data(){
         return{
             tableList:[
@@ -145,7 +155,21 @@ export default {
                 {period:'3888',price:'0.133397'},
                 {period:'4032',price:'0.128657'},
                 {period:'4176',price:'0.1242'},
-            ]
+            ],
+            epochNow:'',
+            routePustqr:'',
+        }
+    },
+    created(){
+        var pustqr=this.$route.params.pustqr|| '0';
+        this.routePustqr=pustqr;
+        var pustqrNum=parseInt(pustqr);
+        var pustqrNow=pustEpoch.length-pustqrNum;
+
+        if(pustqr==='0'){
+            this.epochNow=pustEpoch[0];
+        }else{
+            this.epochNow=pustEpoch[pustqrNow];
         }
     }
 }

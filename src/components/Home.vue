@@ -108,7 +108,7 @@
          <!-- 评级 -->
         <div class="justify-content-center">
           <div class="m-auto" :style="{'width': device==='pc'?'80%':'100%'}">
-            <a href="https://www.odaily.com/post/5133336" target="_blank" class="d-block">
+            <a href="http://www.bcpress.com/2018/08/21/65805/" target="_blank" class="d-block">
               <img src="../assets/images/banner1.jpg" class="w-100" alt="">
             </a>
             <div class="wow flipInX my-1 section_rate">
