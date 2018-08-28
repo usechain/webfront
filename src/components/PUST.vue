@@ -23,7 +23,7 @@
             <p>当前周期数：<span v-text="epochNow"></span></p>
             <p>剩余额度：<span v-text="remainPUST"></span></p>
             <p><span class="text-primary">当前价格</span> ：
-                <span class="nowrap pr-3">1 PUST= <i>{{price}}</i>ETH </span>
+                <span class="nowrap pr-3">1 PUST= <i>{{price}}</i><i v-html="selected.unit"></i> </span>
             
                 <span class="nowrap" id="fnTimeCountDown" :data-end="dataend">
                     <span class="mini" v-html="pms.mini">00</span>:
@@ -37,7 +37,7 @@
             <p>
                 <span>计算器：</span>
                 <small class="text-danger" v-show="error_input">请输入正确格式</small></p>
-            <div class="row compute_wrap py-2">
+            <div class="row compute_wrap py-2" v-if="select_epoch!=='4'">
                 <span class="col-1"></span>
                 <input type="text" class="form-control col-3" v-model="pustnum"/>
                 <span class="col-2 equal">PUST =</span>
@@ -46,7 +46,42 @@
                 <span class="col-1"></span>
             </div>
 
-            <p class="text-secondary text-small">剩余不足1PUST的ETH会退回到打币钱包地址。</p>
+            <div  v-if="select_epoch==='4'">
+                <div class="d-none d-md-block">
+                    <div class="row compute_wrap py-2">
+                        <span class="col-1"></span>                 
+                        <input type="text" class="form-control col-2" v-model="pustnum"/>
+                        <span class="col-1 equal text-small">PUST=</span>
+                        <input type="text" class="form-control col-3 back_white" disabled v-model="ethnum"/>
+                        <span class="col-1 equal text-small">Gwei=</span>
+                        <input type="text" class="form-control col-3 back_white" disabled v-model="gweinum"/>
+                        <span class="col-1 equal text-small">ETH</span>
+                    </div>
+                </div>
+                <div class="d-md-none">               
+                    <div class="compute_wrap py-2">
+                        <div class="row">
+                            <span class="col-1"></span>                 
+                            <input type="text" class="form-control col-8" v-model="pustnum"/>
+                            <span class="col-2">PUST</span>  
+                        </div>
+                        
+                        <div class="row py-1">
+                            <span class="col-1">=</span>
+                            <input type="text" class="form-control col-8 back_white" disabled v-model="ethnum"/>
+                            <span class="col-2">Gwei</span>   
+                        </div>
+
+                        <div class="row">
+                            <span class="col-1">=</span>
+                            <input type="text" class="form-control col-8 back_white" disabled v-model="gweinum"/>
+                            <span class="col-2">ETH</span>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+
+            <p class="text-secondary text-small" v-html="selected.cue_calculator"></p>
             <p class="text-danger pt-2">
                 注意：用户的钱包地址不能是交易所钱包，不可以充值除eth之外的资产。PUST支持Kcash和PC版的钱包。
                 <span v-html="selected.notice"></span>                
@@ -60,6 +95,7 @@
                 <img src="../assets/images/pustqr1.png" alt="" v-if="select_epoch==='1'">
                 <img src="../assets/images/pustqr2.png" alt="" v-if="select_epoch==='2'">
                 <img src="../assets/images/pustqr3.png" alt="" v-if="select_epoch==='3'">
+                <img src="../assets/images/pustqr4.png" alt="" v-if="select_epoch==='4'">
             </div>
             <div class="text-danger py-2">各期PUST不兼容，行权仅限当期购买地址</div>
         </div>     
@@ -69,20 +105,30 @@
                     <router-link :to='"/usechain_pust/"+selected.value' class="text-danger float-right">详细规则说明文档</router-link>            
                 </div>
                 
-                <p>每一个PUST有权在北京时间2018.12.31日24时前，用
-                    <span class="text-primary">100000UST</span>
-                    换回1 ETH.</p>
-                <p class="py-3">1PUST起始价位0.5 ETH，每个周期40个区块。每一次购买本周期会延长10个区块。
+                <div v-if="select_epoch!=='4'">
+                    <p>每一个PUST有权在北京时间{{selected.time}}24时前，用<span class="text-primary">100000UST</span>换回1 ETH.</p>
+                    <p class="py-3">1PUST起始价位<span v-html="selected.beginPrice"></span>，每个周期40个区块。每一次购买本周期会延长10个区块。
                     周期内最先确认的和最后确认的购买者奖励<span v-html="selected.num"></span>个PUST。
                     下一个周期，价格按曲线下降。</p>
-                <p>本次共放出2000 PUST供购买。</p>
+                </div>
+                <div v-else>
+                    <p>1、PUST 与 UST 兑换关系为 1:1；</p>
+                    <p>2、购买 PUST 时起始价格为：2000Gwei，价格每周期逐渐下降，直到售完为止；</p>
+                    <p>3、行权时，用户输入 PUST 数量，扣除相应 UST 数量，兑换 ETH 关系：1 UST + 1 PUST =  7000 Gwei ETH；</p>
+                    <p>4、行权截止时间北京时间{{selected.time}}24时；</p>
+                    <p class="pb-3">5、每个周期40个区块。每一次购买本周期会延长10个区块。</p>
+                </div>
+
+                <p>本次共放出<span v-html="selected.totalPust"></span> 供购买。</p>
             </div>
            
             <div class="h6 text-primary pt-5">购买流程示意图</div>
         
         
         <div>
-            <img src="../assets/images/pust.png" alt="" class="w-100">
+            <img src="../assets/images/pust3.png" alt="" class="w-100" v-if="select_epoch==='3'">
+            <img src="../assets/images/pust4.png" alt="" class="w-100" v-else-if="select_epoch==='4'"> 
+            <img src="../assets/images/pust.png" alt="" class="w-100" v-else>                       
         </div>
         <p class="text-secondary py-3">一个周期内，最先和最后一位购买者将获得奖励。第一笔和最后一笔交易量为X PUST，则可以获得X +奖金。
             奖金为<span v-html="selected.pustText"></span>的PUST</p>
@@ -154,8 +200,9 @@ export default {
         price:function(){
             var diffvalue=(this.blockNumber-this.lastEpochBlock)/this.initEpoch;
             var epoch=this.epochLast+parseInt(diffvalue) + 1;
-            var rate=parseInt(this.selected.epochRate);
-            var price=0.4*0.9995**(epoch+rate)+0.1*0.99993**(epoch+rate);
+            var beginepoch=parseInt(this.selected.beginEpoch);
+            // var price=this.selected.formula1**(epoch+beginepoch)+this.selected.formula2**(epoch+beginepoch);
+            var price=this.selected.value1*this.selected.value2**(epoch+beginepoch)+this.selected.value3*this.selected.value4**(epoch+beginepoch);
             this.epochNow=epoch;
             this.priceval=price;
 
@@ -175,6 +222,12 @@ export default {
                 this.error_input=false;
                 return showVal;
             }
+        },
+        gweinum:function(){
+            var rate=10**9;
+            var showVal=this.ethnum/rate;
+            
+            return this.error_input?'':showVal;
         }
     },
     
