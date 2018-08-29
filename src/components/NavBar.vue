@@ -60,7 +60,7 @@ var i18n = new VueI18n({
 
 export default {
   name: "NavBar",
-    props:['navActive'], 
+  props:['navActive'], 
   data() {
     return {
       languageName: localStorage.local || "en",

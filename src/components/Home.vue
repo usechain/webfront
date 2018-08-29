@@ -316,12 +316,10 @@ export default {
       teamList: [
         "caohuining",
         "sunbaohong",
-        "zhangshengli",
         "zhangfeng",
         "xuzhiwen",
         "zhouhaihan",
-        "zhaolin",
-        "shenhui","songgengnan","zhangliang"
+        "zhaolin","songgengnan","zhangliang"
       ],
       advisorList: [
         "luliang",
@@ -333,7 +331,7 @@ export default {
         "yujianfeng","caofeng"
       ],
       partnerList:[
-        'xiongan','keyin','fancheng','jrr','newdo','milestone','dcc','yingxin','dfg','jike','jikeziben','naba','junmu'
+        'xiongan','keyin','fancheng','jrr','newdo','milestone','dcc','yingxin','dfg','jike','jikeziben','naba','junmu','capital'
       ],
       mapItemActive: 6,
       languageName: localStorage.local || "en",

@@ -134,12 +134,6 @@ const messages = {
           linkin:'https://www.linkedin.com/in/baohongsun',          
           description:'长江商学院市场营销教授，杰出院长讲席教授，美洲市场副院长，前美国卡内基梅隆大学泰伯商学院卡内基-博世营销学讲席教授，美国市场营销学会和美国经济学委员会成员，《市场营销科学》，《市场营销学刊》和《市场营销》等专业学术期刊编委会成员，曾任世界经济论坛未来行为科学理事会理事。中国人民大学本科，美国南加州大学博士'
         },
-        zhangshengli:{
-          name:'张胜利',
-          staff:'首席科学家',
-          linkin:'https://www.linkedin.com/in/shengli-zhang-36659184/',          
-          description:'资深区块链技术专家，无线网络技术专家，物理层网络编码(Physical layer Network Coding)的提出者。深圳大学信息工程学院教授、区块链研究中心执行副主任，斯坦福大学访问教授，中国科学技术大学学士、硕士，香港中文大学博士。电气和电子工程师协会（IEEE）高级会员，中国电子学会高级成员。拥有3项区块链相关国家发明专利，主持多个区块链科研项目'
-        },
         zhangfeng:{
           name:'张峰',
           staff:'资深金融专家',
@@ -163,12 +157,6 @@ const messages = {
           staff:'首席产品官',
           linkin:'https://www.linkedin.com/in/neil-zhao-8b56a315b/',          
           description:'拥有近10年互联网、新零售领域，多个大型综合电商、O2O、开放平台构建经验，覆盖从上游供应链到末端消费者，从垂直电商到无人便利新零售的整个消费生态圈，消费服务生态产品专家；曾任腾讯控股综合移动电商平台技术总监、中国领先O2O社区电商“爱鲜蜂”首席产品专家'
-        },
-        shenhui:{
-          name:'沈慧',
-          staff:'首席市场营销官',
-          linkin:'https://www.linkedin.com/in/Amandashenhui',          
-          description:'12年公关和营销经验，曾任联邦快递中国营销战略经理，北京信融君悦房地产顾问有限公司营销总监，长江商学院工商管理硕士（MBA）'
         },
         songgengnan:{
           name:'宋庚男',
@@ -246,6 +234,103 @@ const messages = {
         subsuccess:'订阅成功',
         suberror:'您已订阅过',
         emailerror:'请输入正确的邮箱地址',
+      },
+      pustPage:{
+        title:'UST价格下降保障合约',
+        buy:'购买 PUST：',
+        remain:'剩余额度',
+        contract:'合约地址',
+        notice:'注意：用户的钱包地址不能是交易所钱包，不可以充值除eth之外的资产。PUST支持Kcash和PC版的钱包。',
+        blocknum:'当前区块号：',
+        epochnow:'当前周期数：',
+        price:'当前价格',
+        calculator:'计算器：',
+        inputcue:'请输入正确格式',
+        address:'打币合约地址：',
+        wechat:'添加微信进交流群<br/><br/>请注明PUST',
+        purchasescheme:'购买流程示意图',
+        rule:'规则：',
+        diff:'各期PUST不兼容，行权仅限当期购买地址',
+        purchaseguide:'规则说明文档',
+        rulesinterpretations:'详细规则说明文档',
+      },
+      pustBuyPage:{
+        title:'购买PUST操作说明书',
+        notice:'注意：您的钱包地址不能是交易所钱包，不可以充值除eth之外的资产。PUST支持Kcash和PC版的钱包',
+        s1:'使用 Imtoken 认购 PUST',
+        s11:'ETH 转账，点击 ETH',
+        s12:'进入如下页面，点转账',
+        s13:'进入转账页面：',
+        s14:'如上图所示，填入',
+        address:'PUST 的合约地址：',
+        amount:'ETH数量：',
+        gwei:'gwei：建议不要低于 5 Gwei',
+        gas:'gas：不能低于250000',
+        s15:'等待矿工打包即可',
+        s2:'使用 Myetherwallet和Nano S或TREZOR 认购 PUST',
+        open:'打开',
+        s21:'如上图所示',
+        s22:'To Address填写PUST 的合约地址：',
+        s23:'ETH数量：',
+        s24:'gas：如没有计算，不能低于250000',
+        s25:'等待打包成功。',
+        s3:'查询自己认购的 PUST',
+        s31:'目前在 Imtoken2.0、Kcash 钱包是查不到 PUST 的，可以在etherscan查询。',
+        s32:'把如下URL的钱包地址替换为您自己的钱包地址。',
+        s33:'下面所示的钱包地址是0xF55E0Ca70E4Ad360A2aE12F8b2C2634ac67FB22e，替换为您自己的地址进行查询。',
+      },
+      pustUsechPage:{
+        title:'UST降价保障PUST购买说明',
+        date:'2018年8月10日',
+        team:'Usechain 团队',
+        abstract:'概述',
+        abstract1:'为了保障认购UST的用户的权益，我们推出一款UST保值合约产品PUST。用户如果购买PUST，在北京时间合约规定时间之前，每1个PUST有权以规定的UST，换回规定的ETH。不同的合约可能不一样。如果UST币值下降，则可以用PUST合约挽回损失。相当于为币值买了一份保险。如果UST币值上涨，则可以获取UST币值上涨的收益。',
+        abstract2:'我们对购买PUST的用户，可能有一定的奖励机制。详见下述章节《奖励方式》。',
+        abstract3:'PUST的购买值，采用荷兰拍卖的方式，价格不断下降。但如果不早购买，可能会被用户一次全部买走。降价方式见《折扣方式》。',
+        abstract4:'购买方式见后续章节《购买方式》。',
+        abstract5:'行权方式见后续章节《行权方式》。',
+        abstract6:'下图描述了PUST购买周期示意。',
+        total:'总量',
+        finaltime:'最终行权时间',
+        entitle:'1个PUST权利',
+        address:'购买PUST智能合约地址',
+        terminologies:'名词解释',
+        s1512:'是用户购买UST降价合约的凭证，按整数单位购买。',
+        s1513:'可以购买一个和多个PUST。1个PUST代表在合约到期之前，有权以合约规定的UST换回规定数量ETH的权利。<br/>\
+        合约可能规定最低购买值。<br/>每一期PUST由于合约不同，其符号，意义和价值都不完全一样。只能在当期合约兑换。',
+        epoch:'周期',
+        s152:'PUST的购买是分周期的。每个周期缺省40个区块，约10分钟。这个周期内，每增加一笔购买，周期长度添加10个区块，约2.5分钟。',
+        bonus:'奖励方式',
+        bonusinfo:'不同期的合约，可能有奖励。奖励的方式不一样。请关注当期合约说明文档是否有奖励以及奖励规则。',
+        discount:'折扣方式',
+        discount1:'PUST的价格，按如下示意的拟合曲线，每个周期下降。该曲线每期合约可能不同。',
+        discount2:'横轴为周期计数，纵轴为1个PUST价格。不包含奖励。',
+        
+        table:'折扣表', 
+        table1:'这是理想的折扣数字表，每周期40个区块。用户购买会导致周期长度发生变化。',
+        table2:'下面的折扣表只是一个示例供参考，每期折扣曲线不一样，折扣表也不一样。',       
+        day:'天数',
+        epochs:'周期数',
+        s4t:'购买方式',      
+        s41:'<p class="text-danger py-2">用户的钱包地址不能是交易所钱包，不可以充值除eth之外的资产。</p>\
+        <p>用户在PUST还没有被卖完以及行权最后时间到来之前进行购买。</p>\
+        <p>购买方式和买普通的以太坊通证一样。</p>\
+        <p>购买地址见 <span class="text_black">1.4购买PUST智能合约地址。</span></p>\
+        <p>用户往PUST智能合约地址转ETH，智能合约往用户钱包地址返回相应数量的PUST。如果有奖励则奖励的PUST也会发送到用户钱包。每个周期，价格会不一样。价格不断下降。</p>'  ,
+        s5t:'行权方式',    
+        s51:'行权请参考专门的行权教程。行权过程大致分为两部分：',    
+        s51t:'在UST合约授权',   
+        s511:'在 UST 合约 中授权 期权合约转移UST的数量，为用户下一步行权做准备。<br/>在UST合约授权后，在期权合约才能行权。',             
+        s52t:'用PUST合约行权',
+        s521:'行权时，<span class="text-danger"> 要求用户持有 UST 的地址 和 持有PUST的地址要一样</span>\
+        ，如果持有UST的地址里面没有 PUST，需要转入此地址相应的 PUST<br/>行权时，需要用 PUST 和 UST 兑换 ETH：',
+        s522:'<p>1、如果当前行权的时间超过合约规定的最终行权时间，则行权失败。</p>\
+        <p>2、如果用户 PUST 的数量不足，则行权失败。</p>\
+        <p>3、判断 PUST 对应的 UST 数量，这部分数量不能超过上面第一步授权的数量。</p>\
+        <p>4、尝试 期权合约调用UST合约转 UST 给指定Usechain账户，失败时状态回退，不会转出UST。</p>\
+        <p>5、转出UST后，计算 PUST 对应的 ETH 数量，同时减少用户的 PUST 余额。</p>\
+        <p>6、尝试从期权合约往用户地址转出相应的 ETH 数量， 失败时状态回退，不会转出ETH。</p>\
+        <p>7、行权转出ETH 成功后，整个流程结束。</p>',
       }
     },
     en: {
@@ -383,12 +468,6 @@ const messages = {
           linkin:'https://www.linkedin.com/in/baohongsun',          
           description:'Marketing Professor at Cheung Kong Graduate School of Business, Dean’s Distinguished Chair Professor of Market, Associate Dean, Former Chaired Professor at Tepper Business School, Carnegie Mellon University, editorial board member of "Marketing Science", "Journal of Marketing" and "Journal of Marketing Research", The world economic forum on future behavior, Renmin University of China, BS, USC PhD.'
         },
-        zhangshengli:{
-          name:'Shengli ZHANG',
-          staff:'Chief Scientist',
-          linkin:'https://www.linkedin.com/in/shengli-zhang-36659184/',          
-          description:'Senior blockchain specialist, wireless network technologist, presenter of Physical Layer Network Coding, Professor of Shenzhen University, Vice Director of the SZU Blockchain Research Institiute, Visiting Professor at Stanford University, IEEE Senior Member, Senior member of China electronics society, Holder of 3 national invention patents of blockchain, USTC BS & MS, CUHK PhD'
-        },
         zhangfeng:{
           name:'Feng ZHANG',
           staff:'Senior Financial Specialist',
@@ -413,12 +492,6 @@ const messages = {
           staff:'CPO',
           linkin:'https://www.linkedin.com/in/neil-zhao-8b56a315b/',          
           description:'Near 10 years of experience in Internet and new retail industry, experienced in platform building for horizontal e-commerce, O2O, Eco-friendly product and service specialist, Chief Product Manager of the leading O2O E-commerce Bee Quick.'
-        },
-        shenhui:{
-          name:'Amanda SHEN',
-          staff:'CMO',
-          linkin:'https://www.linkedin.com/in/Amandashenhui',          
-          description:'Public Relation and marketing experience for 12 years, Marketing Strategy Manager of FedEx China, Marketing Director of Beijing XinRongJunYue real estate consultants LTD, MBA from Cheung Kong Graduate School of Business.'
         },
         songgengnan:{
           name:'Gengnan SONG',
@@ -496,6 +569,104 @@ const messages = {
         subsuccess:'Thank you for your Subscription.',
         suberror:'You have already subscribed.',       
         emailerror:'Please enter your email.', 
+      },
+      pustPage:{
+        title:'UST Value-Preserving Insurance Contract',
+        buy:'Purchase PUST',
+        remain:'Remaining amount',
+        contract:'Contract Address',        
+        notice:'Note: The user\'s wallet address cannot be an exchange\'s wallet, and cannot hold assets other than ETH. PUST supports Kcash and PC wallets.', 
+        blocknum:'Current block number：',
+        epochnow:'Current period：',
+        price:'Current price',
+        calculator:'Calculator：',
+        inputcue:'Please type in correct format',        
+        address:'Receiver contract address：',
+        wechat:'Scan the QR code to join our WeChat group<br/><br/>(please remark PUST)',
+        purchasescheme:'Purchase Scheme',
+        rule:'Rules：',
+        diff:'Different phases of PUST are incompatible, the current phase of PUST contract.',        
+        purchaseguide:'Purchase Guide',
+        rulesinterpretations:'Rules Interpretations',               
+      },
+      pustBuyPage:{
+        title:'PUST Purchase Guide',
+        notice:'Note: The user\'s wallet address cannot be an exchange\'s wallet, and cannot hold assets other than ETH. PUST supports Kcash and PC wallets.',
+        s1:'Buy PUST via Imtoken',
+        s11:'ETH Transfer, click ETH.',
+        s12:'Click Transfer in this page.',
+        s13:'Get into transfer page.',  
+        s14:'As shown in the pic above, fill in:',
+        address:'PUST contract address：',
+        amount:'ETH amount：',
+        gwei:'gwei: suggested more than 5 Gwei',
+        gas:'gas: no less than 250,000',
+        s15:'Wait for miners to confirm.',
+        s2:'Buy PUST Via Myetherwallet and Nano S, or TREZOR',
+        open:'Link',   
+        s21:'As shown in the pic above, fill in：',   
+        s22:'Put PUST contract address in the To Address filed：',  
+        s23:'ETH amount:',
+        s24:'gas: If not calculated, type no less than 250,000 manually',
+        s25:'Waiting for the packaging',
+        s3:'Check Your PUST Balance',
+        s31:'For now you may not be able to check your PUST balance via Imtoken2.0 or Kcash. But you can check the balance via Etherscan.',
+        s32:'Replace the following URL wallet address with your own address.',
+        s33:'The following wallet address is 0xF55E0Ca70E4Ad360A2aE12F8b2C2634ac67FB22e, you may replace it with your own wallet address to check your balance.',
+      },
+      pustUsechPage:{
+        title:'UST Value-Preserving Insurance -- PUST',
+        date:'2018.8.10',
+        team:'Usechain Team',
+        abstract:'Abstract',
+        abstract1:'For the benefits of those users who have purchased UST, we have launched a UST value-preserving product called PUST. If a user purchases PUST, each PUST entitles the user to exchange fixed amount of UST for fixed amount of ETH. Different contracts may various. If the value of UST goes down, the investors may partially recover their losses via this PUST contract, which works the same as an insurance. If the value goes up, the investors will gain the increment in the value of UST.',
+        abstract2:'Possibly there will be bonus for those who purchase PUST. See <Bonus> for more details.',
+        abstract3:'In the way of Holland auction, the price of PUST keeps decreasing. However, someone may purchase all PUST at once when the price is low enough. See <Discount> for more details.',
+        abstract4:'See <Purchase> for more about payment methods.',
+        abstract5:'See <Entitlement> for more about the meaning of PUST.',
+        abstract6:'The following figure illustrates the scheme of PUST sale.',
+        total:'Total Supply',
+        finaltime:'Final Validity Period',
+        entitle:'Entitlement per PUST',
+        address:'Address of PUST Smart Contract',
+        terminologies:'Terminologies',
+        s1512:'The tokens the buyers receive when they purchase UST insurance contract.Calculated in integers.',
+        s1513:'You can purchase 1 or more PUST, but have to be integer. 1 PUST entitles the buyer to exchange a fixed amount of UST for a fixed amount of ETH before the validity period.<br/>\
+        The Contract may set a minimum purchase amount.<br/>\
+        The symbol, meaning and value in different phase of PUST contracts differed from each other. Which phase to purchase, which phase to use.',
+        epoch:'Epoch',
+        s152:'The sale consists of periods. Each period consists of 40 blocks by default, approximately 10 min. Each transaction will add 10 blocks to the current period, approximately 2.5 min.',
+        bonus:'Bonus',
+        bonusinfo:'The bonus various in different phase of contract. Please check out the interpretation document to see if there is bonus and the bonus setting.',
+        discount:'Discount',
+        discount1:'The price of PUST goes down period by period according to the following fitting curve. The curve can be differed in different phase of contracts.',
+        discount2:'with the x-axis periods and y-axis the price of 1 PUST (not including bonus).',
+        table:'Discount Table',
+        table1:'Following is the ideal discount table, assume 40 blocks for each period. The period length will vary according to transactions.',
+        table2:'The following discount table is just a example to refer, it may various in different phase of contracts due to the different discount curves.',
+        day:'Days',
+        epochs:'Epochs',        
+        s4t:'Purchase',
+        s41:'<p class="text-danger py-2">The wallet address of the user cannot be the wallet of an exchange, and cannot have assets other than ETH.</p>\
+        <p>The user can only purchase before the sale and validity period ends.</p>\
+        <p>The way of purchase is the same as purchasing any other usual ethereum tokens.</p>\
+        <p>Purchase address see <span class="text_black">1.4 Address of PUST Smart Contract.</span></p>\
+        <p>When user transfers ETH to PUST smart contract address, the smart contract will transfer the corresponding amount of PUST to the user wallet. If there is bonus, the bonus will be transferred to the user wallet as well. The price various and goes down period by period.</p>',
+        s5t:'Entitlement',
+        s51:'To entitle, see <Entitlement>. The entitle process consists of two parts:',
+        s51t:'In UST Contract:',
+        s511:'It entitles the amount of UST you may transfer in the UST contract.<br/> After this entitlement can you make the exchanges.',
+        s52t:'In PUST Contract:',
+        s521:'When you make the exchanges,<span class="text-danger"> the address holding UST must be the same as the address holding PUST</span>\
+        .If there is no PUST in the UST holding address, you will need to transfer corresponding PUST to that address.<br/>\
+        During usage, you will need to exchange PUST and UST for ETH:',
+        s522:'<p>1、If the time is already due, the exchange will fail.</p>\
+        <p>2、If the number of PUST is insufficient, it will fail.</p>\
+        <p>3、Check the number of UST according to the number of PUST held, the number of UST can not exceed the number entitled in 5.1.</p>\
+        <p>4、Try to transfer UST to certain Usechain account by calling UST contract; if it fails, UST will not be transferred.</p>\
+        <p>5、After transferring UST, compute corresponding ETH amount and decrease the PUST balance of the user.</p>\
+        <p>6、Try to transfer corresponding ETH amount from the contract address to the user address; if it fails, ETH will not be transferred.</p>\
+        <p>7、The process ends after successfully transferring ETH.</p>',
       }
     },
   };

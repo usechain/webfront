@@ -1,157 +1,171 @@
 <template>
-    <div class="container pb-5 pust_wrap">
-        <div class="h4  py-1 mt-5 text-primary text_center">
-            <div class="text_title py-2">UST价格下降保障合约</div> 
-         </div>
-
-        <div class="text-center sm_left">
-            <div class="row py-3 d-inline-block">
-                <select name="" class="select_pust mr-5" v-model="select_epoch">
-                    <option :value="item.value" v-for="(item,index) in epochList"
-                    :key="'pust'+index">PUST第{{item.value}}期</option>
-                </select>
-                <span class="word_break">合约地址：{{selected.address}}</span>
-            </div>
+    <div class="container">
+        <div class="clearfix">
+            <ChooseLanguage @chooseLanguage="chooseLanguage"></ChooseLanguage>
         </div>
-        
-        <div class="border p-2 py-3 border-secondary rounded">
-            <div class="clearfix">
-                <div class="float-left">购买 PUST：</div>
-                <router-link :to='"/buy_pust/"+selected.value' class="text-danger float-right">购买说明文档</router-link>
+        <div class=" pb-5 pust_wrap">        
+            <div class="h4  py-1 text-primary text_center">
+                <div class="text_title py-2" v-text='$t("pustPage.title")'></div> 
             </div>
-            <p class="pt-2">当前区块号：<span v-text="blockNumber"></span></p>
-            <p>当前周期数：<span v-text="epochNow"></span></p>
-            <p>剩余额度：<span v-text="remainPUST"></span></p>
-            <p><span class="text-primary">当前价格</span> ：
-                <span class="nowrap pr-3">1 PUST= <i>{{price}}</i><i v-html="selected.unit"></i> </span>
+
+            <div class="text-center sm_left">
+                <div class="row py-3 d-inline-block">
+                    <select name="" class="select_pust mr-5" v-model="select_epoch">
+                        <option :value="item.value" v-for="(item,index) in epochList" :key="'pust'+index">{{item.option}}</option>
+                    </select>
+                    <span class="word_break"><span v-text='$t("pustPage.contract")'></span>：{{selected.address}}</span>
+                </div>
+            </div>
             
-                <span class="nowrap" id="fnTimeCountDown" :data-end="dataend">
-                    <span class="mini" v-html="pms.mini">00</span>:
-                    <span class="sec" v-html="pms.sec">00</span>:
-                    <span class="hm" v-html="pms.hm">000</span>
-                </span>
+            <div class="border p-2 py-3 border-secondary rounded">
+                <div class="clearfix">
+                    <div class="float-left" v-text='$t("pustPage.buy")'></div>
+                    <router-link :to='"/buy_pust/"+selected.value' class="text-danger float-right" v-text='$t("pustPage.purchaseguide")'></router-link>
+                </div>
+                <p class="pt-2"><span v-text='$t("pustPage.blocknum")'></span><span v-text="blockNumber"></span></p>
+                <p><span v-text='$t("pustPage.epochnow")'></span><span v-text="epochNow"></span></p>
+                <p><span v-text='$t("pustPage.remain")'></span>：<span v-text="remainPUST"></span></p>
+                <p><span class="text-primary" v-text='$t("pustPage.price")'></span> ：
+                    <span class="nowrap pr-3">1 PUST= <i>{{price}}</i><i v-html="selected.unit"></i> </span>
+                
+                    <span class="nowrap" id="fnTimeCountDown" :data-end="dataend">
+                        <span class="mini" v-html="pms.mini">00</span>:
+                        <span class="sec" v-html="pms.sec">00</span>:
+                        <span class="hm" v-html="pms.hm">000</span>
+                    </span>
 
-                <span class="text-primary pl-3">{{lastEpochTime}}</span>
-            </p>
+                    <span class="text-primary pl-3">{{lastEpochTime}}</span>
+                </p>
 
-            <p>
-                <span>计算器：</span>
-                <small class="text-danger" v-show="error_input">请输入正确格式</small></p>
-            <div class="row compute_wrap py-2" v-if="select_epoch!=='4'">
-                <span class="col-1"></span>
-                <input type="text" class="form-control col-3" v-model="pustnum"/>
-                <span class="col-2 equal">PUST =</span>
-                <input type="text" class="form-control col-3 back_white" disabled v-model="ethnum"/>
-                <span class="col-2">ETH</span>
-                <span class="col-1"></span>
-            </div>
+                <p>
+                    <span v-text='$t("pustPage.calculator")'></span>
+                    <small class="text-danger" v-show="error_input" v-text='$t("pustPage.inputcue")'></small></p>
+                <div class="row compute_wrap py-2" v-if="select_epoch!=='4'">
+                    <span class="col-1"></span>
+                    <input type="text" class="form-control col-3" v-model="pustnum"/>
+                    <span class="col-2 equal">PUST =</span>
+                    <input type="text" class="form-control col-3 back_white" disabled v-model="ethnum"/>
+                    <span class="col-2">ETH</span>
+                    <span class="col-1"></span>
+                </div>
 
-            <div  v-if="select_epoch==='4'">
-                <div class="d-none d-md-block">
-                    <div class="row compute_wrap py-2">
-                        <span class="col-1"></span>                 
-                        <input type="text" class="form-control col-2" v-model="pustnum"/>
-                        <span class="col-1 equal text-small">PUST=</span>
-                        <input type="text" class="form-control col-3 back_white" disabled v-model="ethnum"/>
-                        <span class="col-1 equal text-small">Gwei=</span>
-                        <input type="text" class="form-control col-3 back_white" disabled v-model="gweinum"/>
-                        <span class="col-1 equal text-small">ETH</span>
+                <div  v-if="select_epoch==='4'">
+                    <div class="d-none d-md-block">
+                        <div class="row compute_wrap py-2">
+                            <span class="col-1"></span>                 
+                            <input type="text" class="form-control col-2" v-model="pustnum"/>
+                            <span class="col-1 equal text-small">PUST=</span>
+                            <input type="text" class="form-control col-3 back_white" disabled v-model="ethnum"/>
+                            <span class="col-1 equal text-small">Gwei=</span>
+                            <input type="text" class="form-control col-3 back_white" disabled v-model="gweinum"/>
+                            <span class="col-1 equal text-small">ETH</span>
+                        </div>
+                    </div>
+                    <div class="d-md-none">               
+                        <div class="compute_wrap py-2">
+                            <div class="row">
+                                <span class="col-1"></span>                 
+                                <input type="text" class="form-control col-8" v-model="pustnum"/>
+                                <span class="col-2">PUST</span>  
+                            </div>
+                            
+                            <div class="row py-1">
+                                <span class="col-1">=</span>
+                                <input type="text" class="form-control col-8 back_white" disabled v-model="ethnum"/>
+                                <span class="col-2">Gwei</span>   
+                            </div>
+
+                            <div class="row">
+                                <span class="col-1">=</span>
+                                <input type="text" class="form-control col-8 back_white" disabled v-model="gweinum"/>
+                                <span class="col-2">ETH</span>
+                            </div>
+                        </div> 
                     </div>
                 </div>
-                <div class="d-md-none">               
-                    <div class="compute_wrap py-2">
-                        <div class="row">
-                            <span class="col-1"></span>                 
-                            <input type="text" class="form-control col-8" v-model="pustnum"/>
-                            <span class="col-2">PUST</span>  
-                        </div>
-                        
-                        <div class="row py-1">
-                            <span class="col-1">=</span>
-                            <input type="text" class="form-control col-8 back_white" disabled v-model="ethnum"/>
-                            <span class="col-2">Gwei</span>   
-                        </div>
 
-                        <div class="row">
-                            <span class="col-1">=</span>
-                            <input type="text" class="form-control col-8 back_white" disabled v-model="gweinum"/>
-                            <span class="col-2">ETH</span>
-                        </div>
-                    </div> 
-                </div>
+                <p class="text-secondary text-small" v-html="selected.cue_calculator"></p>
+                <p class="text-danger pt-2">
+                    <span v-html='$t("pustPage.notice")'></span>
+                    <span v-html="selected.notice"></span>                
+                </p>
             </div>
-
-            <p class="text-secondary text-small" v-html="selected.cue_calculator"></p>
-            <p class="text-danger pt-2">
-                注意：用户的钱包地址不能是交易所钱包，不可以充值除eth之外的资产。PUST支持Kcash和PC版的钱包。
-                <span v-html="selected.notice"></span>                
-            </p>
-        </div>
-    
-        <div class="py-5 text-center border-bottom">
-            <div class="h6">打币合约地址：</div>
-            <div class="py-2 text-primary word_break" v-html="selected.address"></div>
-            <div class="h6 py-1 qrcode_address">
-                <img src="../assets/images/pustqr1.png" alt="" v-if="select_epoch==='1'">
-                <img src="../assets/images/pustqr2.png" alt="" v-if="select_epoch==='2'">
-                <img src="../assets/images/pustqr3.png" alt="" v-if="select_epoch==='3'">
-                <img src="../assets/images/pustqr4.png" alt="" v-if="select_epoch==='4'">
-            </div>
-            <div class="text-danger py-2">各期PUST不兼容，行权仅限当期购买地址</div>
-        </div>     
-             <div class="text-secondary">
-                <div class="clearfix pt-5">
-                    <p class="h6 text-primary float-left">规则：</p>
-                    <router-link :to='"/usechain_pust/"+selected.value' class="text-danger float-right">详细规则说明文档</router-link>            
-                </div>
-                
-                <div v-if="select_epoch!=='4'">
-                    <p>每一个PUST有权在北京时间{{selected.time}}24时前，用<span class="text-primary">100000UST</span>换回1 ETH.</p>
-                    <p class="py-3">1PUST起始价位<span v-html="selected.beginPrice"></span>，每个周期40个区块。每一次购买本周期会延长10个区块。
-                    周期内最先确认的和最后确认的购买者奖励<span v-html="selected.num"></span>个PUST。
-                    下一个周期，价格按曲线下降。</p>
-                </div>
-                <div v-else>
-                    <p>1、PUST 与 UST 兑换关系为 1:1；</p>
-                    <p>2、购买 PUST 时起始价格为：2000Gwei，价格每周期逐渐下降，直到售完为止；</p>
-                    <p>3、行权时，用户输入 PUST 数量，扣除相应 UST 数量，兑换 ETH 关系：1 UST + 1 PUST =  7000 Gwei ETH；</p>
-                    <p>4、行权截止时间北京时间{{selected.time}}24时；</p>
-                    <p class="pb-3">5、每个周期40个区块。每一次购买本周期会延长10个区块。</p>
-                </div>
-
-                <p>本次共放出<span v-html="selected.totalPust"></span> 供购买。</p>
-            </div>
-           
-            <div class="h6 text-primary pt-5">购买流程示意图</div>
         
-        
-        <div>
-            <img src="../assets/images/pust3.png" alt="" class="w-100" v-if="select_epoch==='3'">
-            <img src="../assets/images/pust4.png" alt="" class="w-100" v-else-if="select_epoch==='4'"> 
-            <img src="../assets/images/pust.png" alt="" class="w-100" v-else>                       
-        </div>
-        <p class="text-secondary py-3">一个周期内，最先和最后一位购买者将获得奖励。第一笔和最后一笔交易量为X PUST，则可以获得X +奖金。
-            奖金为<span v-html="selected.pustText"></span>的PUST</p>
-        
-        <div class="h6 text-secondary py-2"></div>
-        <div class="py-3 row text-center">
-            <div class="col-6">
-                <img src="../assets/images/qrcode_pust.png" alt="" class="qrcode">                
+            <div class="py-5 text-center border-bottom">
+                <div class="h6" v-text='$t("pustPage.address")'></div>
+                <div class="py-2 text-primary word_break" v-html="selected.address"></div>
+                <div class="h6 py-1 qrcode_address">
+                    <img src="../assets/images/pustqr1.png" alt="" v-if="select_epoch==='1'">
+                    <img src="../assets/images/pustqr2.png" alt="" v-if="select_epoch==='2'">
+                    <img src="../assets/images/pustqr3.png" alt="" v-if="select_epoch==='3'">
+                    <img src="../assets/images/pustqr4.png" alt="" v-if="select_epoch==='4'">
+                </div>
+                <div class="text-danger py-2" v-text='$t("pustPage.diff")'></div>
+            </div>     
+                <div class="text-secondary">
+                    <div class="clearfix pt-5">
+                        <p class="h6 text-primary float-left" v-text='$t("pustPage.rule")'></p>
+                        <router-link :to='"/usechain_pust/"+selected.value' class="text-danger float-right" v-text='$t("pustPage.rulesinterpretations")'></router-link>            
+                    </div>
+                    <div v-if="select_epoch!=='4'">
+                        <p  v-html="selected.ruleTime"></p>
+                        <p class="py-3" v-html="selected.rulePrice"></p>
+                    </div>
+                    <div v-else>
+                        <p>1、PUST 与 UST 兑换关系为 1:1；</p>
+                        <p>2、购买 PUST 时起始价格为：2000Gwei，价格每周期逐渐下降，直到售完为止；</p>
+                        <p>3、行权时，用户输入 PUST 数量，扣除相应 UST 数量，兑换 ETH 关系：1 UST + 1 PUST =  7000 Gwei ETH；</p>
+                        <p>4、行权截止时间北京时间2018年9月30日24时；</p>
+                        <p class="pb-3">5、每个周期40个区块。每一次购买本周期会延长10个区块。</p>
+                    </div>
+                    <p v-html="selected.totalPust"></p>
+                </div>
+                <div class="h6 text-primary pt-5" v-text='$t("pustPage.purchasescheme")'></div>        
+            <div :class="{'d-none':language==='en'}">
+                <img src="../assets/images/pust3.png" alt="" class="w-100" v-if="select_epoch==='3'">
+                <img src="../assets/images/pust4.png" alt="" class="w-100" v-else-if="select_epoch==='4'"> 
+                <img src="../assets/images/pust.png" alt="" class="w-100" v-else>                       
             </div>
-            <div class="col-6 d-flex align-items-center">
-                添加微信进交流群<br/><br/>请注明PUST
+            <div :class="{'d-none':language==='ch'}">
+                <img src="../assets/images/pust3_en.png" alt="" class="w-100" v-if="select_epoch==='3'">
+                <!-- <img src="../assets/images/pust4.png" alt="" class="w-100" v-else-if="select_epoch==='4'">  -->
+                <img src="../assets/images/pust_en.png" alt="" class="w-100" v-else>                       
+            </div>
+            <p class="text-secondary py-3" v-html="selected.pustText"></p>
+            
+            <div class="h6 text-secondary py-2"></div>
+            <div class="py-3 row text-center">
+                <div class="col-6">
+                    <img src="../assets/images/qrcode_pust.png" alt="" class="qrcode">                
+                </div>
+                <div class="col-6 d-flex align-items-center" v-html='$t("pustPage.wechat")'></div>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import $ from 'jquery';
+import Vue from "vue";
+import VueI18n from "vue-i18n";
+import $ from "jquery";
 import axios from "axios";
-import pustEpoch from '../assets/js/config';
+import messages from "../assets/js/lang";
+import {pustEpoch,pustEpoch_en} from '../assets/js/config';
+import ChooseLanguage from './ChooseLanguage';
+
+Vue.use(VueI18n);
+
+var i18n = new VueI18n({
+  locale: localStorage.local || "en",
+  messages 
+});
 
 export default {
-    name: "PUST",    
+    name: "PUST",  
+    components: {
+        ChooseLanguage,
+    },  
+    i18n,
     data(){
         return{
             blockNumber:'',//当前区块链id=>  0x5d7ed9=6127321
@@ -171,9 +185,11 @@ export default {
                 sec: '',
                 mini: '',
             },
-            epochList:pustEpoch,
-            select_epoch:pustEpoch[0].value,
-            selected:pustEpoch[0],
+            select_epoch:pustEpoch[0].value,            
+            epochList:localStorage.local==='ch'? pustEpoch : pustEpoch_en,
+            selected:localStorage.local==='ch'? pustEpoch[0] : pustEpoch_en[0],
+            language: localStorage.local || "en",
+
         }
     },
     watch:{
@@ -201,7 +217,6 @@ export default {
             var diffvalue=(this.blockNumber-this.lastEpochBlock)/this.initEpoch;
             var epoch=this.epochLast+parseInt(diffvalue) + 1;
             var beginepoch=parseInt(this.selected.beginEpoch);
-            // var price=this.selected.formula1**(epoch+beginepoch)+this.selected.formula2**(epoch+beginepoch);
             var price=this.selected.value1*this.selected.value2**(epoch+beginepoch)+this.selected.value3*this.selected.value4**(epoch+beginepoch);
             this.epochNow=epoch;
             this.priceval=price;
@@ -232,6 +247,14 @@ export default {
     },
     
     methods:{
+        chooseLanguage(lang){
+            this.$i18n.locale = lang;
+            this.language=lang;
+            var value=pustEpoch.length-parseInt(this.select_epoch);
+            this.epochList=lang==='ch'? pustEpoch : pustEpoch_en;
+            this.selected=lang==='ch'? pustEpoch[value] : pustEpoch_en[value];
+           
+        },
         recomputed(){
             var _this=this;
             //当前区块链id
@@ -280,33 +303,20 @@ export default {
             var strmin = date.getMinutes();
             var strsec = date.getSeconds();
 
-            if (month >= 1 && month <= 9) {
-                month = "0" + month;
-            }
-            if (strDate >= 0 && strDate <= 9) {
-                strDate = "0" + strDate;
-            }
-            if (strhour >= 0 && strhour <= 9) {
-                strhour = "0" + strhour;
-            }
-            if (strmin >= 0 && strmin <= 9) {
-                strmin = "0" + strmin;
-            }
-            if (strsec >= 0 && strsec <= 9) {
-                strsec = "0" + strsec;
-            }
+            if (month >= 1 && month <= 9) {month = "0" + month; }
+            if (strDate >= 0 && strDate <= 9) {strDate = "0" + strDate;}
+            if (strhour >= 0 && strhour <= 9) { strhour = "0" + strhour;}
+            if (strmin >= 0 && strmin <= 9) {strmin = "0" + strmin;}
+            if (strsec >= 0 && strsec <= 9) {strsec = "0" + strsec;}
             
             var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
-                    + " " + strhour + seperator2 + strmin
-                    + seperator2 + strsec;
+                    + " " + strhour + seperator2 + strmin + seperator2 + strsec;
             this.dataend= currentdate;
         },
         zero(n){
             var _n = parseInt(n, 10);//解析字符串,返回整数
                 if(_n > 0){
-                    if(_n <= 9){
-                        _n = "0" + _n
-                    }
+                    if(_n <= 9){_n = "0" + _n}
                     return String(_n);
                 }else{
                     return "00";
@@ -319,7 +329,6 @@ export default {
         },
         setTime(){
             var _this=this;
-
             var now = new Date();
             var endDate = new Date( _this.dataend);
             //现在将来秒差值
@@ -344,6 +353,8 @@ export default {
         var date = new Date();
         var dateadd=date.getTime()+10*60*1000;
         this.getFormatDate(new Date(dateadd));
+
+        this.$i18n.locale = localStorage.local || 'en';
     },
     mounted(){
         var _this=this;
@@ -356,7 +367,6 @@ export default {
     }
 }
 </script>
-
 
 <style scoped>
 .pust_wrap{
