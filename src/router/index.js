@@ -10,6 +10,8 @@ import Wechat from '@/components/Wechat'
 import PUST from '@/components/PUST'
 import PustBuy from '@/components/PustBuy'
 import PustUsechain from '@/components/PustUsechain'
+import Announcement from '@/components/Announcement'
+import Exchange from '@/components/Exchange'
 
 Vue.use(Router)
 
@@ -19,6 +21,16 @@ export default new Router({
       path: '/',
       name: 'Homeinit',
       component: Home
+    },
+    {
+      path: '/announcement',
+      name: 'Announcement',
+      component: Announcement
+    },
+    {
+      path: '/exchange',
+      name: 'Exchange',
+      component: Exchange
     },
     {
       path: '/pust',

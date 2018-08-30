@@ -331,6 +331,31 @@ const messages = {
         <p>5、转出UST后，计算 PUST 对应的 ETH 数量，同时减少用户的 PUST 余额。</p>\
         <p>6、尝试从期权合约往用户地址转出相应的 ETH 数量， 失败时状态回退，不会转出ETH。</p>\
         <p>7、行权转出ETH 成功后，整个流程结束。</p>',
+      },
+      exchange:{
+        title:'USE即将首发全球前五交易所HitBTC',
+        dear:'尊敬的Usechain社区成员：',
+        hello:'大家好！',
+        hitbtc:'<div class="text_indent2">在Usechain团队的努力下，USE (Usechain)将于2018年8月31日，首发登陆全球前五的交易所HitBTC：<a href="https://hitbtc.com/" target="_blank" class="text-primary">https://hitbtc.com/</a> ，\
+        本次上线为社区成员提供了USE/BTC 以及 USE／ETH交换通道。<div class="text_indent2 pt-3">USE(Usechain)将陆续登陆各国主流交易所，请社区成员持续关注，谢谢！</div></div>',
+        arrangement:'<div class="text_black pb-3">具体安排如下：</div>\
+        <div class="text_indent2">1.	2018年8月31日，HitBTC正式开启USE (Usechain)充提币功能，届时用户可以将自己钱包里的USE代币转入交易平台，以待交易开启时可以实时交易。</div>\
+        <div class="text_indent2">2.	2018年8月31日，HitBTC正式开启USE (Usechain)交易买卖。</div>',
+        team:'Usechain团队',
+        intro:'<div class="text_black">HitBTC交易平台简介：</div>\
+        <div class="text_indent2">HitBTC - 自2013年开始实施多种货币支持的全球交易平台，因其容错、正常运行时间和高可用性而备受好评。根据2018年8月27日CoinMarketCap调整交易量，HitBTC排行第四，现已成为欧洲主流资产交易所。</div>',
+        more:'更多官方资讯，请咨询Usechain官方渠道：',
+      },
+      announcement:{
+        title:'Usechain Token更名声明',
+        dear:'亲爱的Usechain社区用户:',
+        thanks:'<div class="text_indent2">感谢各位对Usechain长期的关注和支持，Usechain的发展离不开各位社区用户的积极参与。\
+        <div class="text_indent2 pt-3">众所周知，Usechain代币名称UST，而在目前二级市场流通中，存在UST(Uservice)、UST(UniverseShiel)以及UST(Ultra Salescloud) 3个同名代币。为保障投资者利益，防止Usechain社区用户未来在投资Usechain代币时发生交易错误，我们特此向全球社区用户声明：<div class="text_black pt-3 text_bold text-center">Usechain 代币名称从”UST”更名为”USE”，全称USE（Usechain）</div></div></div>',
+        forexample:'我们将以1:1比例对UST持有者进行USE空投，具体方式如下：',
+        detail:'<div class="text_indent2">我们将于北京时间<span class="text-danger">2018年8月29日晚20:00</span>对全球Usechain用户钱包地址进行快照，以1：1的比例，对UST持有者进行USE空投，并将于北京时间<span class="text_bold text_black">2018年8月30日中午12:00</span>之前到达持有者账户。<span class="text-danger">届时用户可自行查询，确认USE(Usechain)余额，无需其他任何操作。</span></div>',
+        future:'<div class="text_indent2">未来USE(Usechain)将全面取代UST(Usechain)进行交易流通。</div>',
+        spirit:'<div class="text_indent2">Usechain始终信奉区块链社区精神，以“无我”之态同社区用户共同成长。让我们携手见证Usechain的星辰大海！</div>',
+        team:'Usechain团队',
       }
     },
     en: {
@@ -667,6 +692,36 @@ const messages = {
         <p>5、After transferring UST, compute corresponding ETH amount and decrease the PUST balance of the user.</p>\
         <p>6、Try to transfer corresponding ETH amount from the contract address to the user address; if it fails, ETH will not be transferred.</p>\
         <p>7、The process ends after successfully transferring ETH.</p>',
+      },
+      exchange:{
+        title:'USE will soon be listed on top five exchange HitBTC',
+        dear:'Dear Usechain Community：',
+        hello:'',
+        hitbtc:'With the efforts of the Usechain team, On August 31, 2018, the USE digital currency will debut on the world\'s top five exchange HitBTC ：<a href="https://hitbtc.com/" target="_blank" class="text-primary">https://hitbtc.com/</a> ，the launch provides USE/BTC and USE/ETH trading pairs for community members.\
+        <div class="pt-3">USE(Usechain) will continue to list on other mainstream exchanges. Stay tuned!</div>',
+        arrangement:'<div class="text_black pb-3">The specific arrangements:</div>\
+        <div>1. August 31, 2018, HitBTC will officially open deposit and withdrawal function of USE (Usechain). Users will be allowed to transfer the USE token from ERC20 wallet to the exchange wallet.</div>\
+        <div>2. August 31, 2018, HitBTC will officially open the transaction channel of USE (Usechain).</div>',
+        team:'Usechain Team',        
+        intro:'<div class="text_black">HitBTC Introduction:</div>\
+        <div>HitBTC - HitBTC started operating the global trading platform that supports many different cryptocurrencies and has been highly acclaimed for its fault tolerance, flawless uptime and high availability. According to CoinMarketCap\'s Top 100 by Adjusted Volume on August 27, 2018, HitBTC ranked fourth. It has become a mainstream digital asset exchange in Europe.</div>',
+        more:'For more info, reach us at:',
+
+      },
+      announcement:{
+        title:'Usechain Token Symbol Rename Announcement',
+        dear:'Dear members of Usechain community:',
+        thanks:'Thank you all for paying attention and being so supportive to Usechain project. We, as team members, always keep this in heart and never stop the development of Usechain blockchain.\
+        Currently, all goes as planned, but there is one thing remained to be solved.\
+        As you all know, the Usechain token symbol was UST. According to the research, there are 3 token symbols exist with this name in the secondary market, they are : UST(Uservice）, UST（Universe Shield）, and UST(Ultra Salescloud）.\
+        <div class="pt-3">To avoid trading mistake in the market and protect our investors, we are here to announce that: <div class="text_black text_bold text-center pt-3">The Usechain token symbol is changed from “UST” to “USE”, with full name USE(Usechain).</div></div>',
+        forexample:'',
+        detail:'Execution Details:\
+        <div class="pt-3">We will airdrop USE(Usechain) to all user wallets before <span class="text-danger">Aug-30-2018 12:00:00 PM (GMT+8)</span>. The amount of USE airdropped to each user wallet is subjected to your UST balance at the time of <span class="text_black text_bold">Aug-29-2018 20:00:00 PM (GMT+8) </span>.\
+        <span class="text-danger">In this way, you will be able to check out the USE(Usechain) balance after the airdrop, no other operation required.</span></div>',
+        future:'In the near future, USE(Usechain) will take place of UST(Usechain) to list on exchanges and circulate.',
+        spirit:'Usechain embraces the idea of “No Me” in the development of blockchain and community. Thank you again for your supports and understanding. Usechain keeps on rocking!',
+        team:'Usechain Team',
       }
     },
   };

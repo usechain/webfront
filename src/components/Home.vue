@@ -108,9 +108,8 @@
          <!-- 评级 -->
         <div class="justify-content-center">
           <div class="m-auto" :style="{'width': device==='pc'?'80%':'100%'}">
-            <a href="http://www.bcpress.com/2018/08/21/65805/" target="_blank" class="d-block">
-              <img src="../assets/images/banner1.jpg" class="w-100" alt="">
-            </a>
+            <Banner></Banner>
+
             <div class="wow flipInX my-1 section_rate">
               <img src="https://icobench.com/rated/usechain?shape=horizontal&size=m"/>
               <img src="../assets/images/TrackICO.png"/>
@@ -282,6 +281,7 @@
     <div class="modalOpacity modalOpacityNav" v-show="navMenuShow" @click="closeNavModal"></div>    
     <div class="modalOpacity" v-show="modalShow" @click="closeModal"></div>
   </div>
+
 </template>
 
 <script>
@@ -290,11 +290,13 @@ import VueI18n from "vue-i18n";
 import $ from "jquery";
 import messages from "../assets/js/lang";
 import Feature from "./Feature";
+import Banner from "./Banner";
 import Bottom from "./Bottom";
 import Telegram from "./Telegram";
 import "../assets/css/navbar.css";
 import "../assets/js/amazeui.min.js";
 import "../assets/js/leftTime.min.js";
+
 
 Vue.use(VueI18n);
 
@@ -308,6 +310,7 @@ export default {
   components: {
     Feature,
     Bottom,
+    Banner,
     Telegram
   },
   data() {
@@ -530,12 +533,12 @@ export default {
     //     $dateShow1.find(".s").html(d.s);
     //   }
     // });
-
+    
     var videow=$('.container').width();
     
     this.videoWidth = this.device === "pc" ? "80%" : "100%";    
     this.videoHeight = parseInt(videow*9/16);
-    // console.log('宽',videow,this.videoHeight)
+    console.log('宽',videow,this.videoHeight)
 
     $(".front_modal").hide();
     
@@ -1230,4 +1233,5 @@ export default {
 #dateShow1 .num{
   width: 18%;
 }
+
 </style>

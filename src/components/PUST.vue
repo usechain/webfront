@@ -369,9 +369,6 @@ export default {
 </script>
 
 <style scoped>
-.pust_wrap{
-    padding: 0 10rem;
-}
 .nowrap{
     white-space: nowrap;
 }
@@ -409,14 +406,9 @@ export default {
     text-align: center;
     white-space: nowrap;
 }
-@media screen and (max-width: 992px) {
-   .pust_wrap{ padding: 0 5rem;}
-}
+
 @media screen and (max-width: 576px) {
-   .pust_wrap{ 
-       padding: 0 2rem;
-        font-size: .9rem;
-    }    
+   
     .sm_left{
         text-align: left!important;
     }

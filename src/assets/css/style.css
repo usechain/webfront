@@ -34,11 +34,28 @@
 .nowrap{
     white-space: nowrap;
 }
+.text_indent2{
+    text-indent: 2rem;
+}
+.pust_wrap{
+    padding: 0 10rem;
+}
 @media screen and (max-width: 992px) {
     .section{
         padding: 2rem 0;
     }
+    .pust_wrap{ padding: 0 5rem;}
+    .section_init p{
+        white-space: normal
+    }
 }
+@media screen and (max-width: 576px) {
+    .pust_wrap{ 
+        padding: 0 2rem;
+         font-size: .9rem;
+     }   
+}
+
 
 /*Home*/
 .section_init p{
@@ -46,9 +63,4 @@
 }
 .section_init .long_text{
     padding-bottom: 2rem;
-}
-@media screen and (max-width: 992px) {
-    .section_init p{
-        white-space: normal
-    }
 }
