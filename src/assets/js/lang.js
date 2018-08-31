@@ -44,8 +44,8 @@ const messages = {
         work1:'性能与安全的完美平衡',
         work2:'匿名与实名的完美平衡',
         work3:'技术与应用的完美平衡',
-        tokenDescription:'●&nbsp;发行总量: 20,000,000,000 UST<br/>\
-        ●&nbsp;UST限量发行<br/>\
+        tokenDescription:'●&nbsp;发行总量: 20,000,000,000 USE<br/>\
+        ●&nbsp;USE限量发行<br/>\
         ●&nbsp;代币出售上限: 45%<br/>\
         ●&nbsp;市场&合作伙伴支持: 5% (包含其中的6%用于社区赏金计划)<br/>\
         ●&nbsp;社区激励: 20%<br/>\
@@ -236,7 +236,7 @@ const messages = {
         emailerror:'请输入正确的邮箱地址',
       },
       pustPage:{
-        title:'UST价格下降保障合约',
+        title:'USE价格下降保障合约',
         buy:'购买 PUST：',
         remain:'剩余额度',
         contract:'合约地址',
@@ -280,11 +280,11 @@ const messages = {
         s33:'下面所示的钱包地址是0xF55E0Ca70E4Ad360A2aE12F8b2C2634ac67FB22e，替换为您自己的地址进行查询。',
       },
       pustUsechPage:{
-        title:'UST降价保障PUST购买说明',
+        title:'USE降价保障PUST购买说明',
         date:'2018年8月10日',
         team:'Usechain 团队',
         abstract:'概述',
-        abstract1:'为了保障认购UST的用户的权益，我们推出一款UST保值合约产品PUST。用户如果购买PUST，在北京时间合约规定时间之前，每1个PUST有权以规定的UST，换回规定的ETH。不同的合约可能不一样。如果UST币值下降，则可以用PUST合约挽回损失。相当于为币值买了一份保险。如果UST币值上涨，则可以获取UST币值上涨的收益。',
+        abstract1:'为了保障认购USE的用户的权益，我们推出一款USE保值合约产品PUST。用户如果购买PUST，在北京时间合约规定时间之前，每1个PUST有权以规定的USE，换回规定的ETH。不同的合约可能不一样。如果USE币值下降，则可以用PUST合约挽回损失。相当于为币值买了一份保险。如果USE币值上涨，则可以获取USE币值上涨的收益。',
         abstract2:'我们对购买PUST的用户，可能有一定的奖励机制。详见下述章节《奖励方式》。',
         abstract3:'PUST的购买值，采用荷兰拍卖的方式，价格不断下降。但如果不早购买，可能会被用户一次全部买走。降价方式见《折扣方式》。',
         abstract4:'购买方式见后续章节《购买方式》。',
@@ -295,8 +295,8 @@ const messages = {
         entitle:'1个PUST权利',
         address:'购买PUST智能合约地址',
         terminologies:'名词解释',
-        s1512:'是用户购买UST降价合约的凭证，按整数单位购买。',
-        s1513:'可以购买一个和多个PUST。1个PUST代表在合约到期之前，有权以合约规定的UST换回规定数量ETH的权利。<br/>\
+        s1512:'是用户购买USE降价合约的凭证，按整数单位购买。',
+        s1513:'可以购买一个和多个PUST。1个PUST代表在合约到期之前，有权以合约规定的USE换回规定数量ETH的权利。<br/>\
         合约可能规定最低购买值。<br/>每一期PUST由于合约不同，其符号，意义和价值都不完全一样。只能在当期合约兑换。',
         epoch:'周期',
         s152:'PUST的购买是分周期的。每个周期缺省40个区块，约10分钟。这个周期内，每增加一笔购买，周期长度添加10个区块，约2.5分钟。',
@@ -319,16 +319,16 @@ const messages = {
         <p>用户往PUST智能合约地址转ETH，智能合约往用户钱包地址返回相应数量的PUST。如果有奖励则奖励的PUST也会发送到用户钱包。每个周期，价格会不一样。价格不断下降。</p>'  ,
         s5t:'行权方式',    
         s51:'行权请参考专门的行权教程。行权过程大致分为两部分：',    
-        s51t:'在UST合约授权',   
-        s511:'在 UST 合约 中授权 期权合约转移UST的数量，为用户下一步行权做准备。<br/>在UST合约授权后，在期权合约才能行权。',             
+        s51t:'在USE合约授权',   
+        s511:'在 USE 合约 中授权 期权合约转移USE的数量，为用户下一步行权做准备。<br/>在USE合约授权后，在期权合约才能行权。',             
         s52t:'用PUST合约行权',
-        s521:'行权时，<span class="text-danger"> 要求用户持有 UST 的地址 和 持有PUST的地址要一样</span>\
-        ，如果持有UST的地址里面没有 PUST，需要转入此地址相应的 PUST<br/>行权时，需要用 PUST 和 UST 兑换 ETH：',
+        s521:'行权时，<span class="text-danger"> 要求用户持有 USE 的地址 和 持有PUST的地址要一样</span>\
+        ，如果持有USE的地址里面没有 PUST，需要转入此地址相应的 PUST<br/>行权时，需要用 PUST 和 USE 兑换 ETH：',
         s522:'<p>1、如果当前行权的时间超过合约规定的最终行权时间，则行权失败。</p>\
         <p>2、如果用户 PUST 的数量不足，则行权失败。</p>\
-        <p>3、判断 PUST 对应的 UST 数量，这部分数量不能超过上面第一步授权的数量。</p>\
-        <p>4、尝试 期权合约调用UST合约转 UST 给指定Usechain账户，失败时状态回退，不会转出UST。</p>\
-        <p>5、转出UST后，计算 PUST 对应的 ETH 数量，同时减少用户的 PUST 余额。</p>\
+        <p>3、判断 PUST 对应的 USE 数量，这部分数量不能超过上面第一步授权的数量。</p>\
+        <p>4、尝试 期权合约调用USE合约转 USE 给指定Usechain账户，失败时状态回退，不会转出USE。</p>\
+        <p>5、转出USE后，计算 PUST 对应的 ETH 数量，同时减少用户的 PUST 余额。</p>\
         <p>6、尝试从期权合约往用户地址转出相应的 ETH 数量， 失败时状态回退，不会转出ETH。</p>\
         <p>7、行权转出ETH 成功后，整个流程结束。</p>',
       },
@@ -350,10 +350,10 @@ const messages = {
         title:'Usechain Token更名声明',
         dear:'亲爱的Usechain社区用户:',
         thanks:'<div class="text_indent2">感谢各位对Usechain长期的关注和支持，Usechain的发展离不开各位社区用户的积极参与。\
-        <div class="text_indent2 pt-3">众所周知，Usechain代币名称UST，而在目前二级市场流通中，存在UST(Uservice)、UST(UniverseShiel)以及UST(Ultra Salescloud) 3个同名代币。为保障投资者利益，防止Usechain社区用户未来在投资Usechain代币时发生交易错误，我们特此向全球社区用户声明：<div class="text_black pt-3 text_bold text-center">Usechain 代币名称从”UST”更名为”USE”，全称USE（Usechain）</div></div></div>',
-        forexample:'我们将以1:1比例对UST持有者进行USE空投，具体方式如下：',
-        detail:'<div class="text_indent2">我们将于北京时间<span class="text-danger">2018年8月29日晚20:00</span>对全球Usechain用户钱包地址进行快照，以1：1的比例，对UST持有者进行USE空投，并将于北京时间<span class="text_bold text_black">2018年8月30日中午12:00</span>之前到达持有者账户。<span class="text-danger">届时用户可自行查询，确认USE(Usechain)余额，无需其他任何操作。</span></div>',
-        future:'<div class="text_indent2">未来USE(Usechain)将全面取代UST(Usechain)进行交易流通。</div>',
+        <div class="text_indent2 pt-3">众所周知，Usechain代币名称USE，而在目前二级市场流通中，存在UST(Uservice)、UST(UniverseShiel)以及UST(Ultra Salescloud) 3个同名代币。为保障投资者利益，防止Usechain社区用户未来在投资Usechain代币时发生交易错误，我们特此向全球社区用户声明：<div class="text_black pt-3 text_bold text-center">Usechain 代币名称从”UST”更名为”USE”，全称USE（Usechain）</div></div></div>',
+        forexample:'我们将以1:1比例对USE持有者进行USE空投，具体方式如下：',
+        detail:'<div class="text_indent2">我们将于北京时间<span class="text-danger">2018年8月29日晚20:00</span>对全球Usechain用户钱包地址进行快照，以1：1的比例，对USE持有者进行USE空投，并将于北京时间<span class="text_bold text_black">2018年8月30日中午12:00</span>之前到达持有者账户。<span class="text-danger">届时用户可自行查询，确认USE(Usechain)余额，无需其他任何操作。</span></div>',
+        future:'<div class="text_indent2">未来USE(Usechain)将全面取代USE(Usechain)进行交易流通。</div>',
         spirit:'<div class="text_indent2">Usechain始终信奉区块链社区精神，以“无我”之态同社区用户共同成长。让我们携手见证Usechain的星辰大海！</div>',
         team:'Usechain团队',
       }
@@ -403,8 +403,8 @@ const messages = {
         work1:'Performance and Security Balance',
         work2:'Anonymity and Identity Balance',
         work3:'Technology and Application Balance',
-        tokenDescription:'●&nbsp;Volume: 20,000,000,000 UST<br/>\
-        ●&nbsp;Finite amount of UST created<br/>\
+        tokenDescription:'●&nbsp;Volume: 20,000,000,000 USE<br/>\
+        ●&nbsp;Finite amount of USE created<br/>\
         ●&nbsp;Maximum token amount for sale: 45%<br/>\
         ●&nbsp;Marketing & Partner Support: 5% (with bounty comprising 6%)<br/>\
         ●&nbsp;Community Rewards: 20%<br/>\
@@ -596,7 +596,7 @@ const messages = {
         emailerror:'Please enter your email.', 
       },
       pustPage:{
-        title:'UST Value-Preserving Insurance Contract',
+        title:'USE Value-Preserving Insurance Contract',
         buy:'Purchase PUST',
         remain:'Remaining amount',
         contract:'Contract Address',        
@@ -640,11 +640,11 @@ const messages = {
         s33:'The following wallet address is 0xF55E0Ca70E4Ad360A2aE12F8b2C2634ac67FB22e, you may replace it with your own wallet address to check your balance.',
       },
       pustUsechPage:{
-        title:'UST Value-Preserving Insurance -- PUST',
+        title:'USE Value-Preserving Insurance -- PUST',
         date:'2018.8.10',
         team:'Usechain Team',
         abstract:'Abstract',
-        abstract1:'For the benefits of those users who have purchased UST, we have launched a UST value-preserving product called PUST. If a user purchases PUST, each PUST entitles the user to exchange fixed amount of UST for fixed amount of ETH. Different contracts may various. If the value of UST goes down, the investors may partially recover their losses via this PUST contract, which works the same as an insurance. If the value goes up, the investors will gain the increment in the value of UST.',
+        abstract1:'For the benefits of those users who have purchased USE, we have launched a USE value-preserving product called PUST. If a user purchases PUST, each PUST entitles the user to exchange fixed amount of USE for fixed amount of ETH. Different contracts may various. If the value of USE goes down, the investors may partially recover their losses via this PUST contract, which works the same as an insurance. If the value goes up, the investors will gain the increment in the value of USE.',
         abstract2:'Possibly there will be bonus for those who purchase PUST. See <Bonus> for more details.',
         abstract3:'In the way of Holland auction, the price of PUST keeps decreasing. However, someone may purchase all PUST at once when the price is low enough. See <Discount> for more details.',
         abstract4:'See <Purchase> for more about payment methods.',
@@ -655,7 +655,7 @@ const messages = {
         entitle:'Entitlement per PUST',
         address:'Address of PUST Smart Contract',
         terminologies:'Terminologies',
-        s1512:'The tokens the buyers receive when they purchase UST insurance contract.Calculated in integers.',
+        s1512:'The tokens the buyers receive when they purchase USE insurance contract.Calculated in integers.',
         s1513:'You can purchase 1 or more PUST, but have to be integer. 1 PUST entitles the buyer to exchange a fixed amount of UST for a fixed amount of ETH before the validity period.<br/>\
         The Contract may set a minimum purchase amount.<br/>\
         The symbol, meaning and value in different phase of PUST contracts differed from each other. Which phase to purchase, which phase to use.',
@@ -679,17 +679,17 @@ const messages = {
         <p>When user transfers ETH to PUST smart contract address, the smart contract will transfer the corresponding amount of PUST to the user wallet. If there is bonus, the bonus will be transferred to the user wallet as well. The price various and goes down period by period.</p>',
         s5t:'Entitlement',
         s51:'To entitle, see <Entitlement>. The entitle process consists of two parts:',
-        s51t:'In UST Contract:',
-        s511:'It entitles the amount of UST you may transfer in the UST contract.<br/> After this entitlement can you make the exchanges.',
+        s51t:'In USE Contract:',
+        s511:'It entitles the amount of USE you may transfer in the USE contract.<br/> After this entitlement can you make the exchanges.',
         s52t:'In PUST Contract:',
-        s521:'When you make the exchanges,<span class="text-danger"> the address holding UST must be the same as the address holding PUST</span>\
-        .If there is no PUST in the UST holding address, you will need to transfer corresponding PUST to that address.<br/>\
-        During usage, you will need to exchange PUST and UST for ETH:',
+        s521:'When you make the exchanges,<span class="text-danger"> the address holding USE must be the same as the address holding PUST</span>\
+        .If there is no PUST in the USE holding address, you will need to transfer corresponding PUST to that address.<br/>\
+        During usage, you will need to exchange PUST and USE for ETH:',
         s522:'<p>1、If the time is already due, the exchange will fail.</p>\
         <p>2、If the number of PUST is insufficient, it will fail.</p>\
-        <p>3、Check the number of UST according to the number of PUST held, the number of UST can not exceed the number entitled in 5.1.</p>\
-        <p>4、Try to transfer UST to certain Usechain account by calling UST contract; if it fails, UST will not be transferred.</p>\
-        <p>5、After transferring UST, compute corresponding ETH amount and decrease the PUST balance of the user.</p>\
+        <p>3、Check the number of USE according to the number of PUST held, the number of USE can not exceed the number entitled in 5.1.</p>\
+        <p>4、Try to transfer USE to certain Usechain account by calling USE contract; if it fails, USE will not be transferred.</p>\
+        <p>5、After transferring USE, compute corresponding ETH amount and decrease the PUST balance of the user.</p>\
         <p>6、Try to transfer corresponding ETH amount from the contract address to the user address; if it fails, ETH will not be transferred.</p>\
         <p>7、The process ends after successfully transferring ETH.</p>',
       },
@@ -713,13 +713,13 @@ const messages = {
         dear:'Dear members of Usechain community:',
         thanks:'Thank you all for paying attention and being so supportive to Usechain project. We, as team members, always keep this in heart and never stop the development of Usechain blockchain.\
         Currently, all goes as planned, but there is one thing remained to be solved.\
-        As you all know, the Usechain token symbol was UST. According to the research, there are 3 token symbols exist with this name in the secondary market, they are : UST(Uservice）, UST（Universe Shield）, and UST(Ultra Salescloud）.\
+        As you all know, the Usechain token symbol was USE. According to the research, there are 3 token symbols exist with this name in the secondary market, they are : UST(Uservice）, UST（Universe Shield）, and UST(Ultra Salescloud）.\
         <div class="pt-3">To avoid trading mistake in the market and protect our investors, we are here to announce that: <div class="text_black text_bold text-center pt-3">The Usechain token symbol is changed from “UST” to “USE”, with full name USE(Usechain).</div></div>',
         forexample:'',
         detail:'Execution Details:\
-        <div class="pt-3">We will airdrop USE(Usechain) to all user wallets before <span class="text-danger">Aug-30-2018 12:00:00 PM (GMT+8)</span>. The amount of USE airdropped to each user wallet is subjected to your UST balance at the time of <span class="text_black text_bold">Aug-29-2018 20:00:00 PM (GMT+8) </span>.\
+        <div class="pt-3">We will airdrop USE(Usechain) to all user wallets before <span class="text-danger">Aug-30-2018 12:00:00 PM (GMT+8)</span>. The amount of USE airdropped to each user wallet is subjected to your USE balance at the time of <span class="text_black text_bold">Aug-29-2018 20:00:00 PM (GMT+8) </span>.\
         <span class="text-danger">In this way, you will be able to check out the USE(Usechain) balance after the airdrop, no other operation required.</span></div>',
-        future:'In the near future, USE(Usechain) will take place of UST(Usechain) to list on exchanges and circulate.',
+        future:'In the near future, USE(Usechain) will take place of USE(Usechain) to list on exchanges and circulate.',
         spirit:'Usechain embraces the idea of “No Me” in the development of blockchain and community. Thank you again for your supports and understanding. Usechain keeps on rocking!',
         team:'Usechain Team',
       }

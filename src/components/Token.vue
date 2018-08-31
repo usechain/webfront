@@ -33,9 +33,9 @@
                     <td v-text='$t("message.done")'></td>
                     </tr>
                     <tr>
-                    <td>1BTC = 2,000,000UST</td>
-                    <td>1BTC = 1,700,000UST</td>
-                    <td>1ETH = 75,000UST</td>
+                    <td>1BTC = 2,000,000USE</td>
+                    <td>1BTC = 1,700,000USE</td>
+                    <td>1ETH = 75,000USE</td>
                     </tr>
                     <tr>
                     <td colspan="2"  v-text='$t("message.plan")'>登陆交易所前解锁25%，之后每两个月解锁25%，6个月内全部解锁</td>

@@ -108,7 +108,7 @@
          <!-- 评级 -->
         <div class="justify-content-center">
           <div class="m-auto" :style="{'width': device==='pc'?'80%':'100%'}">
-            <Banner></Banner>
+            <Banner :videoHeight="videoHeight" :languageName="languageName"></Banner>
 
             <div class="wow flipInX my-1 section_rate">
               <img src="https://icobench.com/rated/usechain?shape=horizontal&size=m"/>
@@ -341,7 +341,6 @@ export default {
       lanList: [{ tab: "中文", value: "ch" }, { tab: "English", value: "en" }],
       whitepaperList:[
         { tab: "Project Whitepaper EN", link: "/usechain_en.pdf" },
-        { tab: "Project Whitepaper FR", link: "/usechain_fr.pdf" },
         { tab: "项目白皮书 中文", link: "/usechain_cn.pdf" },
         { tab: "프로젝트 백서  한국", link: "/usechain_kr.pdf" },
         { tab: "Technical Whitepaper EN", link: "/usechain_tech_en.pdf" },

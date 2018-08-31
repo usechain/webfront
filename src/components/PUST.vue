@@ -112,9 +112,9 @@
                         <p class="py-3" v-html="selected.rulePrice"></p>
                     </div>
                     <div v-else>
-                        <p>1、PUST 与 UST 兑换关系为 1:1；</p>
+                        <p>1、PUST 与 USE 兑换关系为 1:1；</p>
                         <p>2、购买 PUST 时起始价格为：2000Gwei，价格每周期逐渐下降，直到售完为止；</p>
-                        <p>3、行权时，用户输入 PUST 数量，扣除相应 UST 数量，兑换 ETH 关系：1 UST + 1 PUST =  7000 Gwei ETH；</p>
+                        <p>3、行权时，用户输入 PUST 数量，扣除相应 USE 数量，兑换 ETH 关系：1 USE + 1 PUST =  7000 Gwei ETH；</p>
                         <p>4、行权截止时间北京时间2018年9月30日24时；</p>
                         <p class="pb-3">5、每个周期40个区块。每一次购买本周期会延长10个区块。</p>
                     </div>
