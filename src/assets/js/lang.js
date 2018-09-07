@@ -350,7 +350,7 @@ const messages = {
         title:'Usechain Token更名声明',
         dear:'亲爱的Usechain社区用户:',
         thanks:'<div class="text_indent2">感谢各位对Usechain长期的关注和支持，Usechain的发展离不开各位社区用户的积极参与。\
-        <div class="text_indent2 pt-3">众所周知，Usechain代币名称USE，而在目前二级市场流通中，存在UST(Uservice)、UST(UniverseShiel)以及UST(Ultra Salescloud) 3个同名代币。为保障投资者利益，防止Usechain社区用户未来在投资Usechain代币时发生交易错误，我们特此向全球社区用户声明：<div class="text_black pt-3 text_bold text-center">Usechain 代币名称从”UST”更名为”USE”，全称USE（Usechain）</div></div></div>',
+        <div class="text_indent2 pt-3">众所周知，Usechain代币名称UST，而在目前二级市场流通中，存在UST(Uservice)、UST(UniverseShiel)以及UST(Ultra Salescloud) 3个同名代币。为保障投资者利益，防止Usechain社区用户未来在投资Usechain代币时发生交易错误，我们特此向全球社区用户声明：<div class="text_black pt-3 text_bold text-center">Usechain 代币名称从”UST”更名为”USE”，全称USE（Usechain）</div></div></div>',
         forexample:'我们将以1:1比例对USE持有者进行USE空投，具体方式如下：',
         detail:'<div class="text_indent2">我们将于北京时间<span class="text-danger">2018年8月29日晚20:00</span>对全球Usechain用户钱包地址进行快照，以1：1的比例，对USE持有者进行USE空投，并将于北京时间<span class="text_bold text_black">2018年8月30日中午12:00</span>之前到达持有者账户。<span class="text-danger">届时用户可自行查询，确认USE(Usechain)余额，无需其他任何操作。</span></div>',
         future:'<div class="text_indent2">未来USE(Usechain)将全面取代USE(Usechain)进行交易流通。</div>',
@@ -713,7 +713,7 @@ const messages = {
         dear:'Dear members of Usechain community:',
         thanks:'Thank you all for paying attention and being so supportive to Usechain project. We, as team members, always keep this in heart and never stop the development of Usechain blockchain.\
         Currently, all goes as planned, but there is one thing remained to be solved.\
-        As you all know, the Usechain token symbol was USE. According to the research, there are 3 token symbols exist with this name in the secondary market, they are : UST(Uservice）, UST（Universe Shield）, and UST(Ultra Salescloud）.\
+        As you all know, the Usechain token symbol was UST. According to the research, there are 3 token symbols exist with this name in the secondary market, they are : UST(Uservice）, UST（Universe Shield）, and UST(Ultra Salescloud）.\
         <div class="pt-3">To avoid trading mistake in the market and protect our investors, we are here to announce that: <div class="text_black text_bold text-center pt-3">The Usechain token symbol is changed from “UST” to “USE”, with full name USE(Usechain).</div></div>',
         forexample:'',
         detail:'Execution Details:\
