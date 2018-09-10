@@ -1,128 +1,107 @@
 <template>
-    <div id="banner" :style="{'height':bannerH+'px'}">
-        <ul>
-            <li class="on">1</li>
-            <li>2</li>
-        </ul>
-        <div id="banner_list" v-if="languageName==='ch'">
-            <a href="/exchange" target="_blank" class="w-100 h-100"><img src="../assets/images/banner1.jpg" class="w-100 h-100" /></a>
-            <a href="/announcement" target="_blank" class=" w-100 h-100"><img src="../assets/images/banner2.jpg" class="w-100 h-100"/></a>
+        <div class="shutter" id="banner">
+            <div class="shutter-img" v-if="languageName==='ch'">
+                <a href="#" data-shutter-title="Iron Man">
+                    <img src="../assets/images/banner1.jpg" alt="#">
+                </a>
+                <a href="#" data-shutter-title="The Hulk">
+                    <img src="../assets/images/banner2.jpg" alt="#">
+                </a>
+            </div>
+            <div class="shutter-img" v-if="languageName==='en'">
+                <a href="#" data-shutter-title="Super Man">
+                    <img src="../assets/images/banner1_en.jpg" alt="#">
+                </a>
+                <a href="#" data-shutter-title="The your">
+                    <img src="../assets/images/banner2_en.jpg" alt="#">
+                </a>
+            </div>
+            <ul class="shutter-btn">
+                <li class="prev"></li>
+                <li class="next"></li>
+            </ul>
+            <div class="shutter-desc">
+                <!-- <p>Iron Man</p> -->
+            </div>
         </div>
-         <div id="banner_list" v-if="languageName==='en'">
-            <a href="/exchange" target="_blank" class=" w-100 h-100"><img src="../assets/images/banner1_en.jpg" class="w-100 h-100" /></a>
-            <a href="/announcement" target="_blank" class="w-100 h-100"><img src="../assets/images/banner2_en.jpg" class="w-100 h-100"/></a>
-        </div>
-    </div>
 </template>
 
 <script>
-import $ from "jquery";
+import 'jquery';
+import 'velocity-animate/velocity.js';
+import 'velocity-animate/velocity.ui.js';
+import '../assets/js/shutter.js';
 
 export default {
-  props:['languageName'], 
+    props:['languageName'], 
 
-  data(){
-    return {
-      bannerH:'',
+    mounted(){
+        var bannerW=$('#banner').width();
+        var bannerH = parseInt(bannerW*9/20);
+        
+        $('.shutter').shutter({
+            shutterW:'100%', // 容器宽度
+            shutterH: bannerH, // 容器高度
+            isAutoPlay: true, // 是否自动播放
+            playInterval: 3000, // 自动播放时间
+            curDisplay: 3, // 当前显示页
+            fullPage: false // 是否全屏展示
+        });
     }
-  },
-  mounted() {
-    var bannerW=$('#banner').width();
-    this.bannerH = parseInt(bannerW*9/20);
-
-    var t=0;
-    var n=0;
-    var count='';
-
-    count = $("#banner_list a").length;
-
-    $("#banner_list a:not(:first-child)").hide();
-
-    $("#banner li").click(function() {
-      var i = $(this).text() - 1; //获取Li元素内的值，即1，2，3，4
-      n = i;
-      if (i >= count) return;
-
-      $("#banner_list a")
-        .filter(":visible")
-        .fadeOut(500)
-        .parent()
-        .children()
-        .eq(i)
-        .fadeIn(1000);
-
-      document.getElementById("banner").style.background = "";
-
-      $(this).toggleClass("on");
-
-      $(this)
-        .siblings()
-        .removeAttr("class");
-    });
-
-    t = setInterval(function(){
-        n = n >= count - 1 ? 0 : ++n;
-        $("#banner li")
-            .eq(n)
-            .trigger("click");
-    }, 4000);
-
-    $("#banner").hover(
-      function() {
-        clearInterval(t);
-      },
-      function() {
-        t = setInterval(function(){
-            n = n >= count - 1 ? 0 : ++n;
-            $("#banner li")
-                .eq(n)
-                .trigger("click");
-        }, 4000);
-      }
-    );
-
-  }
-};
+}
 </script>
 
 <style scoped>
-#banner {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+.shutter {
+	overflow:hidden;
+	width:100%;
+	height:100%;
+	position:relative;
+	margin:0 auto;
 }
-
-#banner_list img {
-  border: 0px;
+.shutter-img {
+	z-index:1
 }
-
-#banner ul {
-  position: absolute;
-  list-style-type: none;
-  filter: Alpha(Opacity=80);
-  opacity: 0.8;
-  z-index: 1002;
-  margin: 0;
-  padding: 0;
-  bottom: 3px;
-  right: 5px;
+.shutter-img,.shutter-img a {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%
 }
-
-#banner ul li {
-  padding: 0px 8px;
-  float: left;
-  display: block;
-  color: #fff;
-  background: #2f68af;
-  cursor: pointer;
-  border: 1px solid #333;
+.shutter-img a {
+	cursor:default
 }
-
-#banner ul li.on {
-  background-color: #000;
+.shutter-img a>img {
+	width:100%;
+	height:100%
 }
-
-#banner_list a {
-  position: absolute;
+.shutter-img .created {
+	overflow:hidden;
+	position:absolute;
+	z-index:20
+}
+.shutter-btn {
+    opacity: 0;
+}
+.shutter:hover .shutter-btn{
+    opacity: 1;
+}
+.shutter-btn li {
+	position:absolute;
+	z-index:2;
+	top:50%;
+	width:49px;
+	height:49px;
+	margin-top:-25px;
+	cursor:pointer
+}
+.shutter-btn li.prev {
+	left:20px;
+	background:url(../assets/images/shutter_prevBtn.png) no-repeat 0 -49px
+}
+.shutter-btn li.next {
+	right:20px;
+	background:url(../assets/images/shutter_nextBtn.png) no-repeat 0 -49px
 }
 </style>

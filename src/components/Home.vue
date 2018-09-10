@@ -537,7 +537,7 @@ export default {
     
     this.videoWidth = this.device === "pc" ? "80%" : "100%";    
     this.videoHeight = parseInt(videow*9/16);
-    console.log('宽',videow,this.videoHeight)
+    // console.log('宽',videow,this.videoHeight)
 
     $(".front_modal").hide();
     
