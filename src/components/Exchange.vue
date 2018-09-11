@@ -45,6 +45,9 @@ export default {
 
         }
     },
+    created(){
+        this.$i18n.locale=localStorage.local || "en";
+    },
     methods:{
         chooseLanguage(lang){
             this.$i18n.locale = lang;

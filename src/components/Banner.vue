@@ -1,29 +1,35 @@
 <template>
-        <div class="shutter" id="banner">
-            <div class="shutter-img" v-if="languageName==='ch'">
-                <a href="#" data-shutter-title="Iron Man">
+    <div id="banner">
+        <div class="shutter"  v-show="languageName==='ch'">
+            <div class="shutter-img">
+                <router-link to="/exchange">
                     <img src="../assets/images/banner1.jpg" alt="#">
-                </a>
-                <a href="#" data-shutter-title="The Hulk">
+                </router-link>
+                <router-link to="/announcement">
                     <img src="../assets/images/banner2.jpg" alt="#">
-                </a>
-            </div>
-            <div class="shutter-img" v-if="languageName==='en'">
-                <a href="#" data-shutter-title="Super Man">
-                    <img src="../assets/images/banner1_en.jpg" alt="#">
-                </a>
-                <a href="#" data-shutter-title="The your">
-                    <img src="../assets/images/banner2_en.jpg" alt="#">
-                </a>
+                </router-link>
             </div>
             <ul class="shutter-btn">
                 <li class="prev"></li>
                 <li class="next"></li>
             </ul>
-            <div class="shutter-desc">
-                <!-- <p>Iron Man</p> -->
-            </div>
         </div>
+        <div class="shutter" v-show="languageName==='en'">
+            <div class="shutter-img">
+                <router-link to="/exchange">
+                    <img src="../assets/images/banner1_en.jpg" alt="#">
+                </router-link>
+                <router-link to="/announcement">
+                    <img src="../assets/images/banner2_en.jpg" alt="#">
+                </router-link>
+            </div>
+            <ul class="shutter-btn">
+                <li class="prev"></li>
+                <li class="next"></li>
+            </ul>
+        </div>
+    </div>
+        
 </template>
 
 <script>
@@ -67,10 +73,7 @@ export default {
 	left:0;
 	top:0;
 	width:100%;
-	height:100%
-}
-.shutter-img a {
-	cursor:default
+	height:100%;
 }
 .shutter-img a>img {
 	width:100%;
