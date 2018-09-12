@@ -15,17 +15,16 @@
           <div class="wrapper">
             <div class="text-center d-lg-flex flex-wrap w-100">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item  mx-2 text-capitalize"  v-for="(item,index) in navList" :key="index">
-                  <a class="nav-link text-secondary" :id='"hrefto"+(index+1)'
-                  :class="{'am-active':index===navItemActive}"
-                  v-text='$t("message."+item)' :href='"#nav"+(index+1)'></a>                  
+                <li class="nav-item mx-2 text-capitalize" v-for="(item,index) in navList" :key="index">
+                  <a class="nav-link text-secondary" :class="{'am-active':index===navItemActive}"
+                  :id='"hrefto"+(index+1)' :href='"#nav"+(index+1)' v-text='$t("message."+item)'></a>                  
                 </li>
                  <li class="nav-item  mx-2 text-capitalize"><router-link to="/token" class="nav-link text-secondary" v-text='$t("message.nav7")'></router-link></li>
                 
                 <li class="nav-item dropdown px-2">
                   <a class="nav-link dropdown-toggle text-secondary" href="javascript:;" id="whitepaperDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-text='$t("message.whitepaper")'></a>
                   <div class="dropdown-menu" aria-labelledby="whitepaperDropdown">
-                    <a class="dropdown-item" v-for="(item,index) in whitepaperList" :key="index" v-text="item.tab" :href="item.link"></a>
+                    <a class="dropdown-item" v-for="(item,index) in whitepaperList" :key="index" v-text="item.tab" target="_blank" :href="item.link"></a>
                   </div>
                 </li>
                 
@@ -246,7 +245,7 @@
         </div>
     </div>
 
-    <div class="section_partner py-5"  id="nav5">
+    <div class="section_partner py-5"  id="nav6">
       <div class="container">
         <div class="h4 text-center wow flipInY text-secondary pt-4" v-text='$t("message.partnerTitle")'></div>
         
@@ -443,7 +442,6 @@ export default {
 
       document.title =
         this.$t("message.usechaintitle") + "-" + this.$t("message.description");
-
     },
     clickMenuBtn(event) {
       this.navMenuShow = !this.navMenuShow;
