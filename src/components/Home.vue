@@ -108,7 +108,7 @@
         <div class="justify-content-center">
           <div class="m-auto" :style="{'width': device==='pc'?'80%':'100%'}">
             <Banner :videoHeight="videoHeight" :languageName="languageName"></Banner>
-
+            
             <div class="wow flipInX my-1 section_rate">
               <img src="https://icobench.com/rated/usechain?shape=horizontal&size=m"/>
               <img src="../assets/images/TrackICO.png"/>
