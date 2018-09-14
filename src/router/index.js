@@ -12,6 +12,7 @@ import PustBuy from '@/components/PustBuy'
 import PustUsechain from '@/components/PustUsechain'
 import Announcement from '@/components/Announcement'
 import Exchange from '@/components/Exchange'
+import News from '@/components/News'
 
 Vue.use(Router)
 
@@ -31,6 +32,11 @@ export default new Router({
       path: '/exchange',
       name: 'Exchange',
       component: Exchange
+    },
+    {
+      path: '/news',
+      name: 'News',
+      component: News
     },
     {
       path: '/pust',

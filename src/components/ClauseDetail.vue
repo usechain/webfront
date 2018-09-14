@@ -323,13 +323,7 @@ export default {
 </script>
 
 <style>
-.brand_nav{
-  line-height: 2rem;
-  padding: 3rem 0;
-}
-.brand_nav img{
-  width: 1.2rem;
-} 
+
 .tab_content{
   background: #f6f6f6;
   height: 60vh;

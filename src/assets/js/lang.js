@@ -8,7 +8,8 @@ const messages = {
         nav5:'团队',
         nav6:'合作伙伴',
         nav7:'代币销售',
-        nav8:'博客',        
+        nav8:'博客',      
+        newsmore:'新闻资讯',
 
         login:'登录/注册',
         home:'首页',
@@ -368,6 +369,7 @@ const messages = {
         nav6:'Partners',
         nav7:'Token Sale',
         nav8:'Blog',
+        newsmore:'News',        
 
         login:'loginIn/signUp',  
         home:'Home',        

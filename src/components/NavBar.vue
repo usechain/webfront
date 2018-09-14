@@ -16,7 +16,7 @@
           <div class="text-center d-lg-flex flex-wrap w-100">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item mx-2 text-capitalize" :class="{'active':index===navItemActive}" v-for="(item,index) in navList" :key="index">
-                <router-link class="nav-link text-secondary" 
+                <router-link class="nav-link text-secondary" :class="{'am-active':navActive==='news'&& index===1}"
                 :to="'/hrefto'+item" v-text='$t("message."+item)'></router-link>
               </li>
               <li class="nav-item  mx-2 text-capitalize">
