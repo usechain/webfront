@@ -2,6 +2,7 @@
   <div class="clausedetail">
       <nav-bar @chooseLanguage="chooseLanguage"></nav-bar>
       <div class="container">
+        <!-- 大分辨率下面包屑导航 -->
         <div class="brand_nav d-none d-md-block">
             <img src="../assets/images/home.png"/>
             <router-link to="/" class="text-primary" v-text='$t("message.home")'></router-link>
@@ -10,16 +11,19 @@
         </div>
         <div class="row">
           <div class="col-xs-12 col-md-3 col-lg-2 mb-md-4">
+            <!-- 大分辨率下左侧tab导航 -->
             <div class="d-none d-md-block">
               <div class="tab_nav text-center d-flex justify-content-center align-items-center " :class="{'active':index===defaultActive}" 
                   v-for="(item,index) in tabList" :key="index" @click="clickTabList(index)">
                 <div class="item" v-html="$t('message.'+item)"></div>
               </div>
             </div>
+            <!-- 小分辨率下二级导航 -->
             <div class="brand_nav d-md-none">  
               <img src="../assets/images/home.png"/>
               <router-link to="/" class="text-primary" v-text='$t("message.home")'></router-link>
               <span class="arrow text-secondary">></span>
+              <!-- 二级下拉菜单 -->
               <div class="dropdown d-inline my-3">
                 <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   {{$t('message.'+tabList[defaultActive])}}
@@ -32,6 +36,7 @@
               </div>
             </div>
           </div>
+          <!-- 条款内容 -->
           <div class="col-xs-12 col-md-8 col-lg-10">
             <div class="tab_content">
               <div class="clauseWrap">
@@ -269,7 +274,8 @@ Dated: January 18, 2018</p>
           </div>
         </div>
     
-    </div>
+    </div>         
+    <Telegram/>
   </div>
 </template>
 
@@ -277,7 +283,8 @@ Dated: January 18, 2018</p>
 import Vue from "vue";
 import VueI18n from "vue-i18n";
 import messages from '../assets/js/lang';
-import NavBar from './NavBar'
+import NavBar from './NavBar';
+import Telegram from "./Telegram";
 
 Vue.use(VueI18n);
 
@@ -289,7 +296,7 @@ var i18n = new VueI18n({
 export default {
   name:'clausedetail',
   components:{
-      NavBar
+      NavBar,Telegram
   },
   i18n,
     data(){

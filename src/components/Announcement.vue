@@ -1,9 +1,11 @@
 <template>
     <div class="container pb-5">
+        <!-- 切换语言 -->
         <div class="clearfix">
             <ChooseLanguage @chooseLanguage="chooseLanguage"></ChooseLanguage>
         </div>
-        <div class="text-secondary pust_wrap">     
+        <div class="text-secondary pust_wrap">  
+            <!-- title    -->
             <div class="h4  py-1 text-primary text_center">
                 <div class="text_title py-2" v-text='$t("announcement.title")'></div> 
             </div>
@@ -37,11 +39,6 @@ export default {
         ChooseLanguage,
     },  
     i18n,
-    data(){
-        return{
-
-        }
-    },
     created(){
         this.$i18n.locale=localStorage.local || "en";
     },

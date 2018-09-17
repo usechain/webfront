@@ -1,8 +1,8 @@
 <template>
   <div class="">
-     <nav-bar @chooseLanguage="chooseLanguage"></nav-bar>
-    <div v-text='$t("message.login")'></div>
-    <div class="">{{ $route.params.id }}</div>
+      <nav-bar @chooseLanguage="chooseLanguage"></nav-bar>
+      <div v-text='$t("message.login")'></div>
+      <div class="">{{ $route.params.id }}</div>
   </div>
 </template>
 
@@ -25,10 +25,6 @@ export default {
     NavBar,
   },
   i18n,
-  data(){
-      return {
-      }
-  },
   methods:{
     chooseLanguage(lang) {
       this.$i18n.locale = lang;

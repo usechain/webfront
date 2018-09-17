@@ -1,4 +1,5 @@
 <template>
+    <!-- 无NavBar页面语言切换组件 -->
     <div class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-text="language==='en'?'English':'中文'"></a>
       <div @click="chooseLanguage" class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -41,9 +42,6 @@ export default {
 
 <style scoped>
 .dropdown{
-    /* position: absolute;
-    right: 2rem;
-    top: 1rem; */
     float: right;
 }
 .dropdown-menu{

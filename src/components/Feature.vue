@@ -1,5 +1,6 @@
 <template>
   <div class="section section_feature text-center section_bottom">
+    <!-- 仅PC展示效果 -->
     <div class="d-none d-lg-block">
       <div class="row">
         <div class="col-3" v-for="(item,index) in featureList" :key="index">
@@ -13,6 +14,7 @@
         </div>
       </div>
     </div>
+    <!-- 除PC，滑动切换 -->
     <div class="d-lg-none">
       <swiper :options="swiperOption" ref="mySwiper">
         <swiper-slide v-for="(item,index) in featureList" :key="index">

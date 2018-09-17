@@ -2,6 +2,7 @@
   <div class="">
     <nav-bar @chooseLanguage="chooseLanguage" navActive="token"></nav-bar>
         <div class="d_jump pb-5"></div>    
+        <!-- 代币分配方案 -->
         <div class="h4 py-4 text-center wow flipInY text-secondary" v-text='$t("message.tokenTitle")'></div>
         <div class="container text-center">
             <div class="row d-flex align-items-center">
@@ -14,37 +15,39 @@
                 </div>
             </div>          
         </div>     
+        <!-- 代币销售计划 -->
         <div class="section section_plan">
             <div class="h4 py-4 text-center wow flipInY text-white" v-text='$t("message.planTitle")'></div>
             <div class="container text-center">
             <table class="table table-bordered text-white">
                 <thead>
                     <tr>
-                    <td v-text='$t("message.time1")'>基石</td>
-                    <td v-text='$t("message.time2")'>私募</td>
-                    <td v-text='$t("message.time3")'>公募</td>
+                      <td v-text='$t("message.time1")'>基石</td>
+                      <td v-text='$t("message.time2")'>私募</td>
+                      <td v-text='$t("message.time3")'>公募</td>
                     </tr>
                 </thead>
+                <!-- 表格主体内容 -->
                 <tbody>
-                    
                     <tr>
-                    <td v-text='$t("message.done")'></td>
-                    <td v-text='$t("message.done")'></td>
-                    <td v-text='$t("message.done")'></td>
+                      <td v-text='$t("message.done")'></td>
+                      <td v-text='$t("message.done")'></td>
+                      <td v-text='$t("message.done")'></td>
                     </tr>
                     <tr>
-                    <td>1BTC = 2,000,000USE</td>
-                    <td>1BTC = 1,700,000USE</td>
-                    <td>1ETH = 75,000USE</td>
+                      <td>1BTC = 2,000,000USE</td>
+                      <td>1BTC = 1,700,000USE</td>
+                      <td>1ETH = 75,000USE</td>
                     </tr>
                     <tr>
-                    <td colspan="2"  v-text='$t("message.plan")'>登陆交易所前解锁25%，之后每两个月解锁25%，6个月内全部解锁</td>
-                    <td  v-text='$t("message.nolockup")'></td>
+                      <td colspan="2"  v-text='$t("message.plan")'>登陆交易所前解锁25%，之后每两个月解锁25%，6个月内全部解锁</td>
+                      <td  v-text='$t("message.nolockup")'></td>
                     </tr>
                 </tbody>
             </table>
             </div>
         </div>
+        <!-- 私募登记 -->
         <!-- <div class="section mb-5 text-center">
             <div class="h4 py-4 wow flipInY text-secondary" v-text='$t("message.subTitle")'></div>
             <div class="container">
@@ -113,7 +116,7 @@ export default {
       this.$i18n.locale = lang;
       this.langChosen = lang;
 
-      $("#echart_ch").remove();
+      $("#echart_ch").remove();//切换语言时重绘图表
       $(".echart_wrapper").append(
         '<div id="echart_ch" style="width:100%;height:100%"></div>'
       );

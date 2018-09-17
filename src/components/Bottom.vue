@@ -1,6 +1,7 @@
 <template>
   <div class="bottom_wrapper py-5 wow slideInUp">
       <div class="container text-secondary">
+        <!-- 媒体列表 -->
         <div class="d-flex justify-content-center py-4">
             <div class="px-1 px-md-2" v-for="(item,index) in imgList" :key="index">
                 <a :href="item.href" target="_blank" class="d-block socialCon">
@@ -8,12 +9,15 @@
                 </a>
             </div>
         </div>
-        <div v-text='$t("message.copyright")' class="text-center text_small">Copyrig</div>
+        <!-- 版权 -->
+        <div v-text='$t("message.copyright")' class="text-center text_small"></div>
+        <!-- 条款 -->
         <div class="d-flex justify-content-center py-4 text_small text-center">
             <div class="px-3 px-md-5"><router-link to="/clausedetail0" v-text="$t('message.userteams')">Terms of User</router-link></div>
             <div class="px-3 px-md-5"><router-link to="/clausedetail1" v-text="$t('message.privacy')">Privacy Policy</router-link></div>
             <div class="px-3 px-md-5"><router-link to="/clausedetail2" v-text="$t('message.tokenagreement')">Token Purchase Agreement</router-link></div>
         </div> 
+        <!-- 备案信息 -->
         <a v-if="recorded" href="http://www.miitbeian.gov.cn" target="_blank" class="d-block text-center text_small">粤ICP备18037402号-1</a>
       </div>
   </div>
@@ -41,7 +45,6 @@ export default {
           imgList:[
               {href:'https://twitter.com/usechain',img:'twitter'},
               {href:'https://www.facebook.com/UsechainFoundation/',img:'facebook'},
-            //   {href:'https://t.me/usechain',img:'Telegram'},
               {href:'https://medium.com/@usechain/',img:'medium'},
               {href:'https://bitcointalk.org/index.php?topic=3432061.0',img:'bitciontalk'},
               {href:'mailto: contact@usechain.net',img:'email'},              

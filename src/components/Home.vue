@@ -3,9 +3,11 @@
     <nav class="navbar navbar-expand-lg px-0 py-1 py-md-0 z-index-10 w-100 scrollspy-nav" 
       data-am-scrollspynav="{offsetTop: 45}" data-am-sticky :class="{'navbar_border position-fixed':navBarFixed}">
       <div class="container">
+        <!-- logo -->
         <div class="navbar-brand pr-3 pl-3">
           <a data-am-smooth-scroll href="javascript:;" id="homelogo"><img class="p-md-1" src="../assets/images/logo.png"/></a>
         </div>
+        <!-- 菜单icon -->
         <button class="navbar-toggler menu_btn mr-4" type="button" id="close1" @click.self="clickMenuBtn" 
           data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,21 +17,23 @@
           <div class="wrapper">
             <div class="text-center d-lg-flex flex-wrap w-100">
               <ul class="navbar-nav mr-auto">
+                <!-- navList -->
                 <li class="nav-item mx-2 text-capitalize" v-for="(item,index) in navList" :key="index">
                   <a class="nav-link text-secondary" :class="{'am-active':index===navItemActive}"
                   :id='"hrefto"+(index+1)' :href='"#nav"+(index+1)' v-text='$t("message."+item)'></a>                  
                 </li>
-                 <li class="nav-item  mx-2 text-capitalize"><router-link to="/token" class="nav-link text-secondary" v-text='$t("message.nav7")'></router-link></li>
-                
+                <!-- 代币销售 -->
+                <li class="nav-item  mx-2 text-capitalize"><router-link to="/token" class="nav-link text-secondary" v-text='$t("message.nav7")'></router-link></li>
+                <!-- 白皮书 -->
                 <li class="nav-item dropdown px-2">
                   <a class="nav-link dropdown-toggle text-secondary" href="javascript:;" id="whitepaperDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-text='$t("message.whitepaper")'></a>
                   <div class="dropdown-menu" aria-labelledby="whitepaperDropdown">
                     <a class="dropdown-item" v-for="(item,index) in whitepaperList" :key="index" v-text="item.tab" target="_blank" :href="item.link"></a>
                   </div>
                 </li>
-                
+                <!-- 博客 -->
                 <li class="nav-item  mx-2 text-capitalize"><a href="https://medium.com/@usechain" target="_blank" class="nav-link text-secondary" v-text='$t("message.nav8")'></a></li>
-
+                <!-- 语言切换 -->
                 <li class="nav-item dropdown px-2">
                   <a class="nav-link dropdown-toggle text-secondary" href="javascript:;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-text="languageName==='en'?'English':'中文'"></a>
                   <div @click="chooseLanguage" class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -46,17 +50,18 @@
       <div class="container">
         <div class="row text-center">
           <div class="col-12 col-md-4 pt-5 pt-md-0">
+            <!-- 首屏简介 -->
             <h2 class="text-secondary py-3 pt-md-5 wow bounceInDown" v-text='$t("message.usechain")'></h2>
             <p class="h4 p-4 px-md-0 text-secondary long_text wow slideInDown" v-html='$t("message.description")'></p>
-              
-              <div :class='{"pl-3":(languageName === "en" ? false : true)}'>
-                <div class="advantage wow slideInRight nowrap" :class="'advantage'+item"
-                  v-for="item in 3" :key="item" :data-wow-delay="'.'+item+'s'">
-                  <img class="ml-5 ml-md-3 ml-lg-5" :src='"../assets/images/advantage"+item+".png"'/>
-                  <span v-html='$t("message.advantage"+item)'></span>
-                </div>
+            <!-- 三个优势 -->
+            <div :class='{"pl-3":(languageName === "en" ? false : true)}'>
+              <div class="advantage wow slideInRight nowrap" :class="'advantage'+item"
+                v-for="item in 3" :key="item" :data-wow-delay="'.'+item+'s'">
+                <img class="ml-5 ml-md-3 ml-lg-5" :src='"../assets/images/advantage"+item+".png"'/>
+                <span v-html='$t("message.advantage"+item)'></span>
               </div>
-
+            </div>
+              <!-- 倒计时板 -->
               <!-- <div class="border border-primary rounded p-4 text-center">
                 <p class="text-primary text-small pb-3 mb-0" v-html='$t("message.starttime")'></p>
                 <div class="pt-3 pb-4 border-top"  id="dateShow1">
@@ -83,6 +88,7 @@
               </div> -->
 
           </div>
+          <!-- 首屏动效 -->
           <div class="col-12 col-md-8 pl-0 pr-0 pt-3">
             <div class="hover_wrapper wow bounceInDown" @mouseenter="mouseEnterAnimate">
               <ul class="hover_animate position-relative">
@@ -98,11 +104,9 @@
         </div>
       </div>
     </div>
-    
+    <!-- 新闻板块 -->
     <div class="pt-5" id="nav2">
-      
       <div class="h4 pb-5 text-center text-secondary" v-text='$t("message.videoTitle")'></div>
-
       <div class="container">
          <!-- 评级 -->
         <div class="justify-content-center">
@@ -117,7 +121,6 @@
             </div>
           </div>
         </div>
-
         <!-- 视频 -->
         <div class="pb-5 section_video" v-show="languageName!=='en'">
           <iframe :width='videoWidth' :height="videoHeight" src='https://player.youku.com/embed/XMzc2MTE5OTc1Mg==' frameborder='0' allowfullscreen></iframe>
@@ -126,15 +129,14 @@
           <iframe :width="videoWidth" :height="videoHeight" src="https://www.youtube.com/embed/2KJXgSglaWY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-      
-
     </div>
-
+    <!-- 产品特点 -->
     <div class="container">
       <div class="pb-5" id="nav3"></div>  
       <div class="h4 text-center wow flipInY text-secondary" v-text='$t("message.featureTitle")'></div>
       <Feature :languageName="languageName"></Feature>
     </div>
+    <!-- 解决方案 -->
     <div class="section_work text-center">
       <div class="container">
         <div class="h4 text-center wow bounceIn pt-5 text-secondary solution_title" v-text='$t("message.solutionsTitle")'></div>        
@@ -152,8 +154,7 @@
           <div class="col-xs-12 col-md-6" @mouseenter="mouseEnterAnimate">
             <div class="hover_wrapper">
               <ul class="hover_animate position-relative wow zoomInLeft">
-                  <li v-for="item in 4" :key="item" 
-                      :class='"mwork"+item' :style='item===2?"z-index:4":"z-index:"+3'>
+                  <li v-for="item in 4" :key="item" :class='"mwork"+item' :style='item===2?"z-index:4":"z-index:"+3'>
                   <img :src='"../assets/images/mwork"+item+(languageName==="en"?"_en":"_en")+".png"'/></li>
               </ul>
             </div>
@@ -161,9 +162,8 @@
         </div>
       </div>
     </div>
-      
+    <!-- 路线图 -->
     <div class="d_jump" id="nav4"></div> 
-               
     <div class="container pt-5">
       <div class="h4 text-center wow flipInY text-secondary pt-4" v-text='$t("message.mapTitle")'></div>
       <div class="pt-5 section_map">
@@ -185,6 +185,7 @@
         </div>                
       </div>
     </div>
+    <!-- 核心团队 -->
     <div class="pt-5 mt-5 section_advisor" id="nav5">
       <div class="h4 text-center wow flipInY text-secondary" v-text='$t("message.teamTitle")'></div>
       <div class="section_team py-5">
@@ -192,21 +193,18 @@
             <li class="text-center col-lg-3 col-md-4 col-6 pt-4 transformLi" v-for="(item,index) in teamList" :key="index">
                 <div class="slide slide_front">
                   <div class="img_wrap position-relative">
-                    <img :src='"../assets/images/staff"+(index+1)+".png"' class="cursor_pointer" 
-                    @click="clickMemberImg"/>
-                    <a class="badgeIn position-absolute" :href='$t("message."+item+".linkin")'
-                    v-if='$t("message."+item+".linkin")!=="#"'>in</a>
+                    <img :src='"../assets/images/staff"+(index+1)+".png"' class="cursor_pointer" @click="clickMemberImg"/>
+                    <a class="badgeIn position-absolute" :href='$t("message."+item+".linkin")' v-if='$t("message."+item+".linkin")!=="#"'>in</a>
                   </div>
                   <div class="h5 pt-3" v-text='$t("message."+item+".name")'></div>
                   <div class="h6 pt-1 text-secondary" v-text='$t("message."+item+".staff")'></div>
-                  <div class="text-primary cursor_pointer text-capitalize readmore" 
-                    @click="showMemberBack">read more</div>
+                  <div class="text-primary cursor_pointer text-capitalize readmore" @click="showMemberBack">read more</div>
                   <div class="front_modal" @click="showMemberFront"></div>
                 </div>
                 <div class="slide slide_back">
                   <div class="wrapper">
-                   <p class="text-secondary" v-html='$t("message."+item+".description")'></p>
-                   </div>
+                    <p class="text-secondary" v-html='$t("message."+item+".description")'></p>
+                  </div>
                 </div>
                 <div class="slide_left"></div>
                 <div class="slide_right"></div>
@@ -214,7 +212,7 @@
           </ul>
       </div>
     </div>
-    
+    <!-- 顾问团队 -->
     <div class="section">
       <div class="h4 text-center wow flipInY text-secondary pt-4" v-text='$t("message.advisorTitle")'></div>
         <div class="container section_team pt-5">
@@ -222,15 +220,12 @@
             <li class="text-center col-lg-3 col-md-4 col-6 pt-4 transformLi" v-for="(item,index) in advisorList" :key="index">
                 <div class="slide slide_front">
                   <div class="img_wrap position-relative">
-                    <img :src='"../assets/images/investors"+(index+1)+".png"' class="cursor_pointer" 
-                    @click="clickMemberImg"/>
-                    <a class="badgeIn position-absolute" :href='$t("message."+item+".linkin")'
-                    v-if='$t("message."+item+".linkin")!=="#"'>in</a>
+                    <img :src='"../assets/images/investors"+(index+1)+".png"' class="cursor_pointer" @click="clickMemberImg"/>
+                    <a class="badgeIn position-absolute" :href='$t("message."+item+".linkin")' v-if='$t("message."+item+".linkin")!=="#"'>in</a>
                   </div>
                   <div class="h5 pt-3" v-text='$t("message."+item+".name")'></div>
                   <div class="h6 pt-1 text-secondary" v-text='$t("message."+item+".staff")'></div>
-                  <div class="text-primary cursor_pointer text-capitalize readmore" 
-                    @click="showMemberBack">read more</div>
+                  <div class="text-primary cursor_pointer text-capitalize readmore" @click="showMemberBack">read more</div>
                   <div class="front_modal" @click="showMemberFront"></div>
                 </div>
                 <div class="slide slide_back">
@@ -244,11 +239,10 @@
           </ul>
         </div>
     </div>
-
+    <!-- 合作伙伴 -->
     <div class="section_partner py-5"  id="nav6">
       <div class="container">
         <div class="h4 text-center wow flipInY text-secondary pt-4" v-text='$t("message.partnerTitle")'></div>
-        
         <div class="justify-content-center section">
           <div class="text-center row p-4 p-md-0">
             <div class="col-6 col-sm-4 col-lg-3" v-for="(item,index) in partnerList" :key="index">
@@ -258,7 +252,7 @@
         </div>    
       </div>    
     </div>
-
+    <!-- 媒体报道 -->
     <div class="container pt-5">
       <div class="h4 text-center text-secondary" v-text='$t("message.mediaTitle")'></div>
       <div class="section section_media justify-content-center">
@@ -275,12 +269,10 @@
     <Bottom :languageName="languageName"></Bottom>   
     <Telegram/>
    
-
     <!-- Modal -->
     <div class="modalOpacity modalOpacityNav" v-show="navMenuShow" @click="closeNavModal"></div>    
     <div class="modalOpacity" v-show="modalShow" @click="closeModal"></div>
   </div>
-
 </template>
 
 <script>
@@ -347,7 +339,6 @@ export default {
         { tab: "기술 백서  한국", link: "/usechain_tech_kr.pdf" },
       ],
       navList: ["nav1", "nav2", "nav3","nav4","nav5","nav6"],
-      navDefaultActive: 0,
       navItemActive: 0,
       navMenuShow: false,
       navBarFixed: false,

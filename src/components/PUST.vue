@@ -189,7 +189,6 @@ export default {
             epochList:localStorage.local==='ch'? pustEpoch : pustEpoch_en,
             selected:localStorage.local==='ch'? pustEpoch[0] : pustEpoch_en[0],
             language: localStorage.local || "en",
-
         }
     },
     watch:{
@@ -406,9 +405,7 @@ export default {
     text-align: center;
     white-space: nowrap;
 }
-
 @media screen and (max-width: 576px) {
-   
     .sm_left{
         text-align: left!important;
     }

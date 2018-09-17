@@ -2,7 +2,7 @@
     <div id="banner">
         <div class="shutter">
             <div class="shutter-img">
-                <router-link v-for="(item,index) in bannerList" :key="index"
+                <router-link v-for="(item,index) in bannerList" :key="index" 
                     :data-shutter-title="item.title" :to="item.href" >
                     <img :src='item.imgsrc' :alt="item.title">
                 </router-link>
@@ -12,7 +12,7 @@
                 <li class="next"></li>
             </ul>
             <div class="shutter-desc">
-                <p>Usechain交锋美国CNBC名嘴，解析让杀手级应用落地的区块链体系</p>
+                <p>USE登陆Kucoin 同步开启全球征程</p>
                 <router-link to="/news">更多新闻>></router-link>
             </div>
         </div>
@@ -31,6 +31,7 @@ export default {
     data(){
         return{
             bannerList:[
+                {title:'USE登陆Kucoin 同步开启全球征程',href:'https://mp.weixin.qq.com/s/Lyk-55cSo5V_Ae7rHjuUWg',imgsrc:require("../assets/images/news0914.jpeg")},                
                 {title:'Usechain交锋美国CNBC名嘴，解析让杀手级应用落地的区块链体系',href:'http://www.huoxing24.com/newsdetail/20180911170526001978.html',imgsrc:require("../assets/images/news0911.jpg")},
                 {title:'13岁读大学、如今50多岁的金融学教授欲借区块链颠覆华尔街',href:'http://www.huoxing24.com/newsdetail/20180907153015513905.html',imgsrc:require("../assets/images/news0907.jpg")},
                 {title:'Usechain曹辉宁：区块链社区真正的践行者',href:'http://www.xinmeti.com/internet/99792.html',imgsrc:require("../assets/images/news0830.jpg")},
@@ -48,7 +49,7 @@ export default {
             shutterH: bannerH, // 容器高度
             isAutoPlay: false, // 是否自动播放
             playInterval: 4000, // 自动播放时间
-            curDisplay: 1, // 当前显示页
+            curDisplay: 0, // 当前显示页
             fullPage: false // 是否全屏展示
         });
     }

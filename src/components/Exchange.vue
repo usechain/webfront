@@ -1,9 +1,11 @@
 <template>
     <div class="container pb-5">
+        <!-- 语言切换 -->
         <div class="clearfix">
             <ChooseLanguage @chooseLanguage="chooseLanguage"></ChooseLanguage>
         </div>
         <div class="text-secondary pust_wrap">      
+            <!-- title -->
             <div class="h4  py-1 text-primary text_center">
                 <div class="text_title py-2" v-text='$t("exchange.title")'></div> 
             </div>      
@@ -16,7 +18,6 @@
             <div>Email：<a href="vip@usechain.net" target="_blank"> vip@usechain.net</a></div>
             <div v-html='$t("announcement.team")' class="pb-3 text_black text-right"></div>            
             <div v-html='$t("exchange.intro")' class="pt-5 text-small"></div>
-            
         </div>
     </div>
 </template>
@@ -40,11 +41,6 @@ export default {
         ChooseLanguage,
     },  
     i18n,
-    data(){
-        return{
-
-        }
-    },
     created(){
         this.$i18n.locale=localStorage.local || "en";
     },

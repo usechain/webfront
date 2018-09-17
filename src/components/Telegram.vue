@@ -47,6 +47,7 @@ export default {
     height: 3rem;
     margin-top: 1.4rem;
     float: right;
+    cursor: pointer;
 }
 .tabimg img{
     width: 100%;

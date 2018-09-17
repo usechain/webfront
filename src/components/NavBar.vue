@@ -2,9 +2,11 @@
   <nav class="navbar navbar-expand-lg px-0 py-1 py-md-0 z-index-10 w-100 scrollspy-nav" 
     data-am-scrollspynav="{offsetTop: 45}" data-am-sticky :class="{'navbar_border position-fixed':navBarFixed}">
     <div class="container">
+      <!-- logo -->
       <router-link class="navbar-brand pr-5 pl-4" to="/">
         <img class="p-md-1" src="../assets/images/logo.png"/>
       </router-link>
+      <!-- 菜单icon -->
       <button class="navbar-toggler menu_btn mr-4" type="button" @click.self="clickMenuBtn"
               data-toggle="collapse" data-target="#navbarSupportedContent" 
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,22 +17,24 @@
         <div class="wrapper">
           <div class="text-center d-lg-flex flex-wrap w-100">
             <ul class="navbar-nav mr-auto">
+              <!-- navList -->
               <li class="nav-item mx-2 text-capitalize" :class="{'active':index===navItemActive}" v-for="(item,index) in navList" :key="index">
                 <router-link class="nav-link text-secondary" :class="{'am-active':navActive==='news'&& index===1}"
                 :to="'/hrefto'+item" v-text='$t("message."+item)'></router-link>
               </li>
+              <!-- 代币销售 -->
               <li class="nav-item  mx-2 text-capitalize">
                 <router-link to="/token" class="nav-link text-secondary" :class="{'am-active':navActive==='token'}" v-text='$t("message.nav7")'></router-link></li>
-              
+              <!-- 白皮书 -->
               <li class="nav-item dropdown px-2">
                 <a class="nav-link dropdown-toggle text-secondary" href="javascript:;" id="whitepaperDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-text='$t("message.whitepaper")'></a>
                 <div class="dropdown-menu" aria-labelledby="whitepaperDropdown">
                   <a class="dropdown-item" v-for="(item,index) in whitepaperList" :key="index" v-text="item.tab" :href="item.link"></a>
                 </div>
               </li>
-              
+              <!-- 博客 -->
               <li class="nav-item  mx-2 text-capitalize"><a href="https://medium.com/@usechain" target="_blank" class="nav-link text-secondary" v-text='$t("message.nav8")'></a></li>
-              
+              <!-- 选择语言 -->
               <li class="nav-item dropdown px-2">
                 <a class="nav-link dropdown-toggle text-secondary" href="javascript:;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-text="languageName==='en'?'English':'中文'"></a>
                 <div @click="chooseLanguage" class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -77,7 +81,6 @@ export default {
       navItemActive: 0,
       navMenuShow: false,
       navBarFixed: false,
-      hasShadow:false,
     };
   },
   i18n,  
@@ -98,12 +101,6 @@ export default {
       this.$i18n.locale = chosen;
       this.$emit("chooseLanguage", chosen);
       document.title =this.$t("message.usechaintitle")+'-'+this.$t('message.description');
-    },
-    shadowShow(){
-      this.hasShadow=true
-    },
-    shadowHidden(){
-      this.hasShadow=false
     },
     clickMenuBtn(event) {
       this.navMenuShow = !this.navMenuShow;

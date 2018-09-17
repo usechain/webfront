@@ -158,11 +158,28 @@
   .brand_nav img{
     width: 1.2rem;
   } 
+  .sub_title{
+    border-left: 3px solid #3685e9;
+    line-height: 1.2rem;
+    color: #3685e9;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    margin: 3rem 0 1rem;
+  }
+  .sub_title span{
+    font-style: italic;
+    padding: 0 1rem;
+    color: #333;
+    font-size: 1rem;
+  }
   @media screen and (max-width: 992px) {
     .nav-link{
        padding: .6rem 0;
      }
      .brand_nav{
       padding: 1rem 0;
+    }
+    .sub_title{
+      margin: 1rem 0;
     }
    }

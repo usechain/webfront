@@ -4,15 +4,16 @@
         <div class="container text-center">
             <div class="h2">Reach Us</div>
             <div class="justify-content-center">
-                <div class="text-center row p-4 p-md-0">
-                <div class="col-6 col-sm-4 col-lg-3" v-for="(item,index) in contactList" :key="index">
-                    <a :href="item.href" target="_blank" class="d-block w-100 cursor_pointer">
-                    <img class="px-md-4 py-1 py-lg-4 wow flipInX" :data-wow-delay="'.'+index+'s'" :src='"../assets/images/"+item.img+".png"'/>
-                    </a>
-                    <p v-html="item.text" class="text-secondary"></p>
-                </div>
+                <div class="text-center row p-4 p-md-2">
+                    <div class="col-6 col-sm-4 col-lg-3" v-for="(item,index) in contactList" :key="index">
+                        <a :href="item.href" target="_blank" class="d-block w-100 cursor_pointer">
+                            <img class="px-md-4 py-1 py-lg-3 wow flipInX" :data-wow-delay="'.'+index+'s'" :src='"../assets/images/"+item.img+".png"'/>
+                        </a>
+                        <p v-html="item.text" class="text-secondary"></p>
+                    </div>
                 </div>
             </div> 
+            <!-- 客服二维码 -->
             <div class="service position-relative">
                 <img src="../assets/images/service.png"/>
                 <p class="text-secondary text-small py-3">Customer Service</p>
@@ -80,7 +81,7 @@ img{
 }
 .h2{
     color:#4d86c6;
-    padding-top: 6rem;
+    padding-top: 5rem;
 }
 .back_top{
     width: 94vw;
