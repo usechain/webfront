@@ -26,7 +26,7 @@
                         <a :href="item.href" class="text_black news_title" target="_blank">
                             <span class="text-primary text-small">【{{item.from}}】</span> {{item.title}}
                         </a>
-                        <div class="text-small text-secondary pt-1 pt-md-3" v-html="'发布时间：'+item.time"></div>
+                        <div class="text-small text-secondary pt-1 pt-md-2" v-html="'发布时间：'+item.time"></div>
                     </div>
                     
                 </li>

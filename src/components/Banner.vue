@@ -2,10 +2,10 @@
     <div id="banner">
         <div class="shutter">
             <div class="shutter-img">
-                <router-link v-for="(item,index) in bannerList" :key="index" 
-                    :data-shutter-title="item.title" :to="item.href" >
+                <a v-for="(item,index) in bannerList" :key="index" target="_blank"
+                    :data-shutter-title="item.title" :href="item.href" >
                     <img :src='item.imgsrc' :alt="item.title">
-                </router-link>
+                </a>
             </div>
             <ul class="shutter-btn">
                 <li class="prev"></li>
