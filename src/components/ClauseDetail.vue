@@ -311,7 +311,6 @@ export default {
   methods:{
     chooseLanguage(lang) {
       this.$i18n.locale = lang;
-      this.langChosen = lang;
     },
     clickTabList(index){
       this.defaultActive=index;

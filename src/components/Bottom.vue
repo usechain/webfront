@@ -60,7 +60,7 @@ export default {
       this.$i18n.locale = val;   
     },
   },
-  created(){
+  created(){      
     var url=location.host.split('usechain.')[1];
     if(url==='cn' || url==='net.cn' || url==='com.cn' || url==='org.cn'){
         this.recorded=true;

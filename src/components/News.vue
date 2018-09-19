@@ -111,7 +111,7 @@ export default {
   methods: {
     chooseLanguage(lang) {
       this.$i18n.locale = lang;
-      this.langChosen = lang;
+      this.languageName = lang;
     }
   }
 };

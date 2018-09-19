@@ -103,6 +103,7 @@ export default {
          emailCorrect:false,
          email_error:false,
          input_focus:false,
+         languageName: localStorage.local || "en",
     };
   },
   created(){
@@ -114,7 +115,7 @@ export default {
   methods: {
     chooseLanguage(lang) {
       this.$i18n.locale = lang;
-      this.langChosen = lang;
+      this.languageName = lang;
 
       $("#echart_ch").remove();//切换语言时重绘图表
       $(".echart_wrapper").append(
