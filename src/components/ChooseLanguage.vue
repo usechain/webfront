@@ -58,4 +58,7 @@ export default {
     background: none;
     color: #3685e9;
 }
+.text-secondary a{
+    color: #3685e9;
+}
 </style>

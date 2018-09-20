@@ -357,6 +357,9 @@ const messages = {
         future:'<div class="text_indent2">未来USE(Usechain)将全面取代USE(Usechain)进行交易流通。</div>',
         spirit:'<div class="text_indent2">Usechain始终信奉区块链社区精神，以“无我”之态同社区用户共同成长。让我们携手见证Usechain的星辰大海！</div>',
         team:'Usechain团队',
+      },
+      cusePage:{
+        date:'日期',
       }
     },
     en: {
@@ -724,6 +727,9 @@ const messages = {
         future:'In the near future, USE(Usechain) will take place of USE(Usechain) to list on exchanges and circulate.',
         spirit:'Usechain embraces the idea of “No Me” in the development of blockchain and community. Thank you again for your supports and understanding. Usechain keeps on rocking!',
         team:'Usechain Team',
+      },
+      cusePage:{
+        date:'Date',
       }
     },
   };

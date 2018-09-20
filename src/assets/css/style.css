@@ -16,6 +16,9 @@
 .text_bold{
     font-weight: bold;
 }
+.text_ident{
+    text-indent: 2rem;
+}
 .word_break{
     word-break: break-all;
 }
@@ -63,4 +66,11 @@
 }
 .section_init .long_text{
     padding-bottom: 2rem;
+}
+
+.text_title.has_border{
+    border-top: 1px solid #3685e9;
+    border-bottom: 1px solid #3685e9;
+    display: inline-block;
+    font-weight:normal;
 }

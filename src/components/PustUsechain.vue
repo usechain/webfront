@@ -244,9 +244,6 @@ img{
 .pustqr{
     max-width: 10rem;
 }
-.text_ident{
-    text-indent: 2rem;
-}
 .pic75{
     width: 75%;
 }

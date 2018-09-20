@@ -13,6 +13,7 @@ import PustUsechain from '@/components/PustUsechain'
 import Announcement from '@/components/Announcement'
 import Exchange from '@/components/Exchange'
 import News from '@/components/News'
+import Cuse from '@/components/Cuse'
 
 Vue.use(Router)
 
@@ -27,6 +28,11 @@ export default new Router({
       path: '/announcement',
       name: 'Announcement',
       component: Announcement
+    },
+    {
+      path: '/cuse',
+      name: 'Cuse',
+      component: Cuse
     },
     {
       path: '/exchange',

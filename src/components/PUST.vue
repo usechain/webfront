@@ -3,9 +3,9 @@
         <div class="clearfix">
             <ChooseLanguage @chooseLanguage="chooseLanguage"></ChooseLanguage>
         </div>
-        <div class=" pb-5 pust_wrap">        
+        <div class="pb-5 pust_wrap">        
             <div class="h4  py-1 text-primary text_center">
-                <div class="text_title py-2" v-text='$t("pustPage.title")'></div> 
+                <div class="text_title py-2 has_border" v-text='$t("pustPage.title")'></div> 
             </div>
 
             <div class="text-center sm_left">
@@ -374,12 +374,6 @@ export default {
 .select_pust{
     border: none;
     background: none;
-}
-.text_title{
-    border-top: 1px solid #3685e9;
-    border-bottom: 1px solid #3685e9;
-    display: inline-block;
-    font-weight:normal;
 }
 .font_normal{
     font-weight: normal;

@@ -293,7 +293,7 @@ Vue.use(VueI18n);
 
 var i18n = new VueI18n({
   locale: localStorage.local || "en",
-  messages // set locale messages
+  messages 
 });
 
 export default {

@@ -7,7 +7,7 @@
         <div class="text-secondary pust_wrap">  
             <!-- title    -->
             <div class="h4  py-1 text-primary text_center">
-                <div class="text_title py-2" v-text='$t("announcement.title")'></div> 
+                <div class="text_title has_border py-2" v-text='$t("announcement.title")'></div> 
             </div>
             <div v-html='$t("announcement.dear")' class="pt-4 text_black"></div>
             <div v-html='$t("announcement.thanks")' class="py-3"></div>
@@ -51,12 +51,6 @@ export default {
 </script>
 
 <style scoped>
-.text_title{
-    border-top: 1px solid #3685e9;
-    border-bottom: 1px solid #3685e9;
-    display: inline-block;
-    font-weight:normal;
-}
 .text-secondary a {
     color: #3685e9;
 }
