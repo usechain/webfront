@@ -8,7 +8,8 @@
          </div>
         <div class="pt-3"><span class="text_black text_bold">* CUSE ERC20 地址：</span>0x6081dEd2d0a57fC4b63765B182D8773E72327fE2</div>
         <div><span class="text_black text_bold">* CUSE 行权合约地址：</span>0x85a18c688991e6181ebf5d53be90555527b1327f</div>
-        <div class="py-3">CUSE 合约是 USE 的期权，拥有 CUSE 的用户可以在行权的时间内，以一定的行权价格，使用 ETH 兑换相应的 USE。</div>
+        <div class="pt-3">CUSE 合约是 USE 的期权，拥有 CUSE 的用户可以在行权的时间内，以一定的行权价格，使用 ETH 兑换相应的 USE。</div>
+        <div class="py-3 text_black text-primary text-small" style="font-style:italic">*  注意：CUSE12为奖励期权，CUSE为认购期权，两者不同，目前上oax的是CUSE，CUSE12只能进行行权。</div>
         <div class="text_black text_bold">行权的价格如表：</div>
         <div class="px-5 py-2 mx-5">
             <table class="table table-sm table-striped text-center text-small text-secondary">
