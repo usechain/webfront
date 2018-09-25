@@ -1,22 +1,26 @@
 <template>
      <div class="container pb-5 text-secondary">
-        <div class="clearfix text-primary" style="opacity:0;">
+        <div class="clearfix text-primary">
             <ChooseLanguage @chooseLanguage="chooseLanguage"></ChooseLanguage>
         </div>
         <div class="py-1 text-primary text_center">
-            <div class="h4 py-2 text_title has_border">CUSE 行权合约</div>
+            <div class="h4 py-2 text_title has_border" v-text='$t("cusePage.title")'></div>
          </div>
-        <div class="pt-3"><span class="text_black text_bold">* CUSE ERC20 地址：</span>0x6081dEd2d0a57fC4b63765B182D8773E72327fE2</div>
-        <div><span class="text_black text_bold">* CUSE 行权合约地址：</span>0x85a18c688991e6181ebf5d53be90555527b1327f</div>
-        <div class="pt-3">CUSE 合约是 USE 的期权，拥有 CUSE 的用户可以在行权的时间内，以一定的行权价格，使用 ETH 兑换相应的 USE。</div>
-        <div class="py-3 text_black text-primary text-small" style="font-style:italic">*  注意：CUSE12为奖励期权，CUSE为认购期权，两者不同，目前上oax的是CUSE，CUSE12只能进行行权。</div>
-        <div class="text_black text_bold">行权的价格如表：</div>
+        <div class="pt-3">
+            <span class="text_black text_bold" v-text='$t("cusePage.addressERC")'></span>
+            0x6081dEd2d0a57fC4b63765B182D8773E72327fE2</div>
+        <div>
+            <span class="text_black text_bold" v-text='$t("cusePage.addressContract")'></span>
+            0x85a18c688991e6181ebf5d53be90555527b1327f</div>
+        <div class="pt-3" v-text='$t("cusePage.cuse")'></div>
+        <div class="py-3 text_black text-primary text-small" style="font-style:italic" v-text='$t("cusePage.note")'></div>
+        <div class="text_black text_bold" v-text='$t("cusePage.table")'></div>
         <div class="px-5 py-2 mx-5">
             <table class="table table-sm table-striped text-center text-small text-secondary">
                 <thead>
                     <tr>
                     <th scope="col" v-text='$t("cusePage.date")'></th>
-                    <th scope="col">价格</th>
+                    <th scope="col" v-text='$t("cusePage.price")'></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -26,56 +30,57 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="text-small"  v-text='$t("cusePage.future")'></div>            
         </div>
-        <div class="text_black text_bold">CUSE 获得的方法：</div>
+        <div class="text_black text_bold"  v-text='$t("cusePage.howget")'></div>
         <div class="text_ident">
-            <p>1：官方的奖励分发</p>
-            <p>2：在 OAX 交易所购买</p>
-            <p>3：用户之间的Transfer</p>
+            <p v-text='$t("cusePage.get1")'></p>
+            <p v-text='$t("cusePage.get2")'></p>
+            <p v-text='$t("cusePage.get3")'></p>
         </div>
-        <div class="text_black text_bold pt-3">CUSE 的行权方法：</div>
+        <div class="text_black text_bold pt-3"  v-text='$t("cusePage.howuse")'></div>
         <div class="text_ident">
-            <p>1：Myetherwallet</p>
-            <p>2：Chrome插件：Metamask + 官网网页 js 行权页面</p>
+            <p v-text='$t("cusePage.use1")'></p>
+            <p v-text='$t("cusePage.use2")'></p>
         </div>
-        <div class="pt-3 text_black">CUSE 行权具体方法： </div>
-        <div class="text-primary">使用 Myetherwallet 行权：</div>
-        <div class="pt-3 text_black">行权分为三步骤：</div>
+        <div class="pt-3 text_black" v-text='$t("cusePage.detail")'></div>
+        <div class="text-primary"  v-text='$t("cusePage.useMyetherwallet")'></div>
+        <div class="pt-3 text_black" v-text='$t("cusePage.threeSteps")'></div>
         <div class="text_ident">
-            <p>* 步骤1：导出 Imtoken / 其他钱包 地址的 keystore 到 Chrome 插件 Metamask中，硬件钱包不需要导出Keystore</p>
-            <p>* 步骤2：执行 CUSE 合约，授权  CUSE行权合约</p>
-            <p>* 步骤3: 转一定数量的ETH，以行权价格兑换 USE</p>
+            <p v-text='$t("cusePage.step1")'></p>
+            <p v-text='$t("cusePage.step2")'></p>
+            <p v-text='$t("cusePage.step3")'></p>
         </div>
-        <div class="text-primary pt-3">步骤一、导出Keystore </div>
-        <div class="text_black">导出 Keystore 的教程：</div>
+        <div class="text-primary pt-3" v-text='$t("cusePage.s1")'> </div>
+        <div class="text_black" v-text='$t("cusePage.export")'></div>
         <div><a href="http://note.youdao.com/noteshare?id=5d9203f1425af81f4b99aa727c2e7c97&sub=F3297678D6AC4F05B54246C686E2C9E5" target="_blank">http://note.youdao.com/noteshare?id=5d9203f1425af81f4b99aa727c2e7c97&sub=F3297678D6AC4F05B54246C686E2C9E5</a></div>
-        <div class="text_black text_bold py-1">如果使用硬件钱包，则不需要导出 keystore。<br/>解锁账户时选择 ledger wallet 或 Trezor.</div>
-        <div class="pt-3 text_black"> Metamask 导入 Keystore 的教程：</div>
+        <div class="text_black text_bold py-1" v-html='$t("cusePage.if")'></div>
+        <div class="pt-3 text_black" v-text='$t("cusePage.keystoreMetamask")'></div>
         <div><img src="../assets/images/cuse1.png" alt="" srcset=""></div>
-        <div class="py-3">直接载入上一步骤导出的 Keystore，输入密码解锁导入。  如果导出的是 私钥，则选择 Private Key，不用输入密码。</div>
+        <div class="py-3" v-text='$t("cusePage.load")'></div>
         <div><img src="../assets/images/cuse2.png" alt="" srcset=""></div>
-        <div class="text-primary pt-3">步骤二、Myetherwallet 授权 CUSE 行权合约</div>
-        <div class="text_black text_bold pt-3">步骤1：</div>
-        <div>打开：<a href="https://www.myetherwallet.com/#contracts" target="_blank">https://www.myetherwallet.com/#contracts</a></div>
+        <div class="text-primary pt-3" v-text='$t("cusePage.s2")'></div>
+        <div class="text_black text_bold pt-3" v-text='$t("cusePage.s21")'></div>
+        <div><span v-text='$t("cusePage.open")'></span><a href="https://www.myetherwallet.com/#contracts" target="_blank">https://www.myetherwallet.com/#contracts</a></div>
         <div><img src="../assets/images/cuse3.png" alt="" srcset=""></div>
-        <div>👆接上， CUSE 合约接口：</div>
+        <div v-html='$t("cusePage.api")'></div>
         <div><a href="https://etherscan.io/address/0x6081dEd2d0a57fC4b63765B182D8773E72327fE2#code" target="_blank">https://etherscan.io/address/0x6081dEd2d0a57fC4b63765B182D8773E72327fE2#code</a></div>
         <div><img src="../assets/images/cuse4.png" alt="" srcset=""></div>
-        <div class="text_black text_bold">步骤2：授权 CUSE 行权合约</div>
-        <div>👇  Access 后，选择approve，手动授权 CUSE 的行权合约能转移用户的 CUSE</div>
+        <div class="text_black text_bold" v-text='$t("cusePage.s22")'></div>
+        <div v-html='$t("cusePage.after")'></div>
         <div><img src="../assets/images/cuse5.png" alt="" srcset=""></div>
-        <div>👇 选择解锁的钱包</div>
+        <div v-html='$t("cusePage.choose")'></div>
         <div><img src="../assets/images/cuse6.png" alt="" srcset=""></div>
-        <div>👇 生成交易</div>
+        <div v-html='$t("cusePage.transaction")'></div>
         <div><img src="../assets/images/cuse7.png" alt="" srcset=""></div>
         <div><img src="../assets/images/cuse8.png" alt="" srcset=""></div>
-        <div>👇 Metamask 发送交易</div>
+        <div v-html='$t("cusePage.send")'></div>
         <div><img src="../assets/images/cuse9.png" alt="" srcset=""></div>
-        <div class="text_black text_bold pt-4 pb-1">步骤3：发送 ETH 兑换 USE</div>
-        <div>使用  拥有 CUSE 的地址，在 步骤 2 中授权后，向 CUSE 行权合约中转入一定数量的 ETH，就可以按照当时的行权价格，兑换相应数量的 USE。</div>
-        <div class="text-primary py-1">方法：直接使用 Metamask 或硬件钱包 向 CUSE 行权合约转 ETH。</div>
-        <div>from: 用户地址</div>
-        <div>to:  CUSE 行权合约地址：0x85a18c688991e6181ebf5d53be90555527b1327f</div>
+        <div class="text_black text_bold pt-4 pb-1" v-text='$t("cusePage.s23")'></div>
+        <div v-text='$t("cusePage.transfer")'></div>
+        <div class="text-primary py-1" v-text='$t("cusePage.method")'></div>
+        <div v-text='$t("cusePage.from")'></div>
+        <div v-text='$t("cusePage.to")'></div>
         <div><img src="../assets/images/cuse10.png" alt="" srcset=""></div>
         <div><img src="../assets/images/cuse11.png" alt="" srcset=""></div>
     </div>
