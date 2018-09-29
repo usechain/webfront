@@ -54,16 +54,16 @@
             <h2 class="text-secondary py-3 pt-md-5 wow bounceInDown" v-text='$t("message.usechain")'></h2>
             <p class="h4 p-4 px-md-0 text-secondary long_text wow slideInDown" v-html='$t("message.description")'></p>
             <!-- 三个优势 -->
-            <div :class='{"pl-3":(languageName === "en" ? false : true)}'>
+            <!-- <div :class='{"pl-3":(languageName === "en" ? false : true)}'>
               <div class="advantage wow slideInRight nowrap" :class="'advantage'+item"
                 v-for="item in 3" :key="item" :data-wow-delay="'.'+item+'s'">
                 <img class="ml-5 ml-md-3 ml-lg-5" :src='"../assets/images/advantage"+item+".png"'/>
                 <span v-html='$t("message.advantage"+item)'></span>
               </div>
-            </div>
+            </div> -->
               <!-- 倒计时板 -->
-              <!-- <div class="border border-primary rounded p-4 text-center">
-                <p class="text-primary text-small pb-3 mb-0" v-html='$t("message.starttime")'></p>
+              <div class="border border-primary rounded p-4 text-center">
+                <p class="text-primary pb-3 mb-0" v-html='$t("message.starttime")'></p>
                 <div class="pt-3 pb-4 border-top"  id="dateShow1">
                   <div class="row data-show-box text-primary">
                       <span class="date-tiem-span d h2 num">00</span>
@@ -84,8 +84,8 @@
                     <span class="num" v-html='$t("message.times")'></span>
                   </div>
                 </div>
-                <a href="https://www.leekico.com/#/projects/detail?id=109" target="_blank" class="btn btn-primary w-100 btn_buyust disabled" v-html='$t("message.buyust")'></a>
-              </div> -->
+                <!-- <a href="https://www.leekico.com/#/projects/detail?id=109" target="_blank" class="btn btn-primary w-100 btn_buyust disabled" v-html='$t("message.buyust")'></a> -->
+              </div>
 
           </div>
           <!-- 首屏动效 -->
@@ -509,18 +509,18 @@ export default {
     
   },
   mounted() {
-    // var unix=this.timestampToTime(1533729600);
-    // console.log('转化为',unix);
+    var unix=this.timestampToTime(1539021600);
+    console.log('转化为',unix);
 
-    // $.leftTime(unix,function(d){
-    //   if(d.status){
-    //     var $dateShow1=$("#dateShow1");
-    //     $dateShow1.find(".d").html(d.d);
-    //     $dateShow1.find(".h").html(d.h);
-    //     $dateShow1.find(".m").html(d.m);
-    //     $dateShow1.find(".s").html(d.s);
-    //   }
-    // });
+    $.leftTime(unix,function(d){
+      if(d.status){
+        var $dateShow1=$("#dateShow1");
+        $dateShow1.find(".d").html(d.d);
+        $dateShow1.find(".h").html(d.h);
+        $dateShow1.find(".m").html(d.m);
+        $dateShow1.find(".s").html(d.s);
+      }
+    });
     
     var videow=$('.container').width();
     

@@ -15,7 +15,7 @@
         <div class="pt-3" v-text='$t("cusePage.cuse")'></div>
         <div class="py-3 text_black text-primary text-small" style="font-style:italic" v-text='$t("cusePage.note")'></div>
         <div class="text_black text_bold" v-text='$t("cusePage.table")'></div>
-        <div class="px-5 py-2 mx-5">
+        <div class="px-5 py-2 mx-sm-5">
             <table class="table table-sm table-striped text-center text-small text-secondary">
                 <thead>
                     <tr>
