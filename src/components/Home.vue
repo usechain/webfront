@@ -169,7 +169,7 @@
       <div class="pt-5 section_map">
         <div class="wrapper position-relative">
           <ul class="position-relative">
-            <li class="row" v-for="(item,index) in 9" :key="index" 
+            <li class="row" v-for="(item,index) in 6" :key="index" 
                 :class="[{'active':mapItemActive===index},{'past':mapItemActive>index}]">
               <div class="col" v-if="index%2!==0 && device==='pc'"></div>                            
               <div class="col has_block wow position-relative" :data-wow-delay="'.'+index+'s'"
@@ -327,7 +327,7 @@ export default {
       partnerList:[
         'xiongan','keyin','fancheng','jrr','newdo','milestone','dcc','yingxin','dfg','jike','jikeziben','naba','junmu','capital'
       ],
-      mapItemActive: 6,
+      mapItemActive: 3,
       languageName: localStorage.local || "en",
       lanList: [{ tab: "中文", value: "ch" }, { tab: "English", value: "en" }],
       whitepaperList:[

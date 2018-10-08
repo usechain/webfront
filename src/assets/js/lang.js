@@ -65,62 +65,44 @@ const messages = {
         token4:'技术社区激励',
         token5:'核心团队',
         map1:{
-          time:'2016年',
-          event:'●&nbsp;确定区块链需要以身份为基础<br/>\
-          ●&nbsp;研究基于身份的区块链算法<br/>\
-          ●&nbsp;提出个性化身份通证概念'
-        },
-        map2:{
-          time:'2017年第一、二季度',
-          event:'●&nbsp;确定Usechain设计原则及目标<br/>\
-          ●&nbsp;确立Usechain开发规划<br/>\
-          ●&nbsp;Usechain项目正式启动'
-        },
-        map3:{
-          time:'2017年第三季度',
-          event:'●&nbsp;系统架构和基础协议设计<br/>\
-          ●&nbsp;生态整体规划'
-        },
-        map4:{
-          time:'2017年第四季度',
-          event:'●&nbsp;底层公有链开发<br/>\
-          ●&nbsp;与合作伙伴共同探索区块链应用场景'
-        },
-        map5:{
           time:'2018年第一季度',
           event:'●&nbsp;底层公有链基本功能开发<br/>\
           ●&nbsp;身份映射系统开发<br/>\
           ●&nbsp;CA认证中心服务'
         },
-        map6:{
+        map2:{
           time:'2018年第二季度',
           event:'●&nbsp;用户隐私保护功能开发<br/>\
           ●&nbsp;核心社群组建，社区突破5万人'
         },
-        map7:{
+        map3:{
           time:'2018年第三季度',
           event:'●&nbsp;基于软件的RPOW共识算法开发<br/>\
-          ●&nbsp;增强智能合约开发<br/>\
-          ●&nbsp;共识算法开发<br/>\
           ●&nbsp;公有链测试版上线<br/>\
-          ●&nbsp;核心社区突破10万人<br/>\
-          ●&nbsp;首个行业DApp上线'
+          ●&nbsp;核心社区突破10万人'
         },
-        map8:{
+        map4:{
           time:'2018年第四季度',
-          event:'●&nbsp;子链结构搭建<br/>\
-          ●&nbsp;跨子链通信开发<br/>\
-          ●&nbsp;Usechain生态基金建立，助推行业应用孵化<br/>\
-          ●&nbsp;多行业垂直社区建立<br/>\
-          ●&nbsp;公有链主网上线'
+          event:'●&nbsp;完成增强智能合约开发<br/>\
+          ●&nbsp;全球技术社区建设启动<br/>\
+          ●&nbsp;Usechain实验室成立<br/>\
+          ●&nbsp;Usechain生态Dapp正式上线'
         },
-        map9:{
-          time:'2019年',
+        map5:{
+          time:'2019年第一季度',
+          event:'●&nbsp;完成子链结构搭建<br/>\
+          ●&nbsp;跨子链通信开发<br/>\
+          ●&nbsp;公有链主网上线<br/>\
+          ●&nbsp;Usechain钱包上线<br/>\
+          ●&nbsp;全球见面会启动<br/>\
+          ●&nbsp;Usechain实验室孵化首个项目正式发布'
+        },
+        map6:{
+          time:'未来',
           event:'●&nbsp;智能地址行为分析<br/>\
           ●&nbsp;通证化多节点体系搭建<br/>\
           ●&nbsp;基于硬件的RPOW共识算法开发<br/>\
-          ●&nbsp;大量行业应用接入<br/>\
-          ●&nbsp;去中心化交易所上线'
+          ●&nbsp;大量行业应用接入'
         },
         teamTitle:'核心团队',
         caohuining:{
@@ -468,62 +450,44 @@ const messages = {
         token4:'Technical Community Rewards',
         token5:'Core Team',
         map1:{
-          time:'2016',
-          event:"●&nbsp;Determine identity-based blockchain.<br/>\
-          ●&nbsp;Research on algorithm of identity-based blockchain.<br/>\
-          ●&nbsp;Put forward the concept of identity tokenization."
-        },
-        map2:{
-          time:'Q1&Q2 2017',
-          event:'●&nbsp;Determine design principles and objectives.<br/>\
-          ●&nbsp;Compile development plan.<br/>\
-          ●&nbsp;Officially launch the Usechain project.'
-        },
-        map3:{
-          time:'Q3 2017',
-          event:'●&nbsp;Design system architecture and basic protocol.<br/>\
-          ●&nbsp;Integrated planning of ecosystem.<br/>'
-        },
-        map4:{
-          time:'Q4 2017',
-          event:'●&nbsp;Develop underlying public blockchain.<br/>\
-          ●&nbsp;Cooperate with partners to explore application scenarios.'
-        },
-        map5:{
           time:'Q1 2018',
           event:'●&nbsp;Develop fundamental functions of underlying public blockchain.<br/>\
           ●&nbsp;Develop address-identity mapping system.<br/>\
           ●&nbsp;Certification Authentication Center Service.'
         },
-        map6:{
+        map2:{
           time:'Q2 2018',
           event:'●&nbsp;Develop privacy protection system.<br/>\
           ●&nbsp;Form core community and achieve 50000+ people.'
         },
-        map7:{
+        map3:{
           time:'Q3 2018',
           event:'●&nbsp;Develop software-based RPOW consensus algorithm.<br/>\
-          ●&nbsp;Develop enhanced smart contracts.<br/>\
-          ●&nbsp;Develop consensus algorithm.<br/>\
           ●&nbsp;Usechain testnet release.<br/>\
-          ●&nbsp;Achieve 100000+ people in the community.<br/>\
-          ●&nbsp;Launch the first DApp.'
+          ●&nbsp;Achieve 100000+ people in the community.'
         },
-        map8:{
+        map4:{
           time:'Q4 2018',
-          event:'●&nbsp;Set up sub-chain structure.<br/>\
-          ●&nbsp;Develop cross sub-chain communication.<br/>\
-          ●&nbsp;Build Usechain eco-fund to accelerate ecosystem development.<br/>\
-          ●&nbsp;Develop multi-industry vertical community.<br/>\
-          ●&nbsp;Usechain mainnet release.'
+          event:'●&nbsp;Complete enhanced smart contracts development.<br/>\
+          ●&nbsp;Start global technical community.<br/>\
+          ●&nbsp;Build Usechain Labs.<br/>\
+          ●&nbsp;Usechain Ecosystem Dapp release.'
         },
-        map9:{
+        map5:{
+          time:'Q1 2019',
+          event:'●&nbsp;Complete sub-chain structure setting up.<br/>\
+          ●&nbsp;Complete cross sub-chain communication development.<br/>\
+          ●&nbsp;Usechain mainnet release.<br/>\
+          ●&nbsp;Usechain mainnet wallet release.<br/>\
+          ●&nbsp;Start global meetup.<br/>\
+          ●&nbsp;Usechain Labs first incubate project release.'
+        },
+        map6:{
           time:'2019',
           event:'●&nbsp;AI system of address behavior analysis.<br/>\
           ●&nbsp;Develop tokenized multi-node system.<br/>\
           ●&nbsp;Develop hardware-based RPOW consensus algorithm.<br/>\
-          ●&nbsp;More multi-industry identity-based DApps.<br/>\
-          ●&nbsp;Launch decentralized exchange.'
+          ●&nbsp;More multi-industry identity-based DApps.'
         },
         teamTitle:'Core Team',
         caohuining:{
