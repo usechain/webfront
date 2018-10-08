@@ -509,7 +509,7 @@ export default {
     
   },
   mounted() {
-    var unix=this.timestampToTime(1539021600);
+    var unix=this.timestampToTime(1539050400);
     console.log('转化为',unix);
 
     $.leftTime(unix,function(d){
