@@ -17,14 +17,17 @@
         <div class="wrapper">
           <div class="text-center d-lg-flex flex-wrap w-100">
             <ul class="navbar-nav mr-auto">
+              <li class="nav-item  mx-2 text-capitalize"><a :href='$t("message.mooneturl")' target="_blank" class="nav-link text-secondary" v-text='$t("message.nav_test")'></a></li>                              
               <!-- navList -->
-              <li class="nav-item mx-2 text-capitalize" :class="{'active':index===navItemActive}" v-for="(item,index) in navList" :key="index">
-                <router-link class="nav-link text-secondary" :class="{'am-active':navActive==='news'&& index===1}"
+              <!-- <li class="nav-item mx-2 text-capitalize" :class="{'active':index===navItemActive}"  -->
+              <li class="nav-item mx-2 text-capitalize"
+                v-for="(item,index) in navList" :key="index">
+                <router-link class="nav-link text-secondary" :class="{'am-active':navActive==='news'&& index===0}"
                 :to="'/hrefto'+item" v-text='$t("message."+item)'></router-link>
               </li>
               <!-- 代币销售 -->
-              <li class="nav-item  mx-2 text-capitalize">
-                <router-link to="/token" class="nav-link text-secondary" :class="{'am-active':navActive==='token'}" v-text='$t("message.nav7")'></router-link></li>
+              <!-- <li class="nav-item  mx-2 text-capitalize">
+                <router-link to="/token" class="nav-link text-secondary" :class="{'am-active':navActive==='token'}" v-text='$t("message.nav7")'></router-link></li> -->
               <!-- 白皮书 -->
               <li class="nav-item dropdown px-2">
                 <a class="nav-link dropdown-toggle text-secondary" href="javascript:;" id="whitepaperDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-text='$t("message.whitepaper")'></a>
@@ -33,7 +36,7 @@
                 </div>
               </li>
               <!-- 博客 -->
-              <li class="nav-item  mx-2 text-capitalize"><a href="https://medium.com/@usechain" target="_blank" class="nav-link text-secondary" v-text='$t("message.nav8")'></a></li>
+              <li class="nav-item  mx-2 text-capitalize"><a href="https://medium.com/@usechain" target="_blank" class="nav-link text-secondary" v-text='$t("message.nav6")'></a></li>
               <!-- 选择语言 -->
               <li class="nav-item dropdown px-2">
                 <a class="nav-link dropdown-toggle text-secondary" href="javascript:;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-text="languageName==='en'?'English':'中文'"></a>
@@ -77,8 +80,8 @@ export default {
         { tab: "技术白皮书  中文", link: "/usechain_tech_cn.pdf" },
         { tab: "기술 백서  한국", link: "/usechain_tech_kr.pdf" },
       ],
-      navList: ["nav1", "nav2", "nav3","nav4","nav5","nav6"],      
-      navItemActive: 0,
+      navList: ["nav1","nav2", "nav3","nav4","nav5"],      
+      // navItemActive: 0,
       navMenuShow: false,
       navBarFixed: false,
     };

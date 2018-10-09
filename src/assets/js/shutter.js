@@ -51,50 +51,50 @@
 		},
 		moveSwitch: function(randomNum, command, index) {
 			switch (randomNum) {
-			case 0:
-				this.gridWhole(index, 0);
-				break;
-			case 1:
-				this.gridWhole(index, 1);
-				break;
-			case 2:
-				this.gridWhole(index, 2);
-				break;
-			case 3:
-				this.gridWhole(index, 3);
-				break;
-			case 4:
-				this.gridTop(index, 0);
-				break;
-			case 5:
-				this.gridTop(index, 1);
-				break;
-			case 6:
-				this.gridTop(index, 2);
-				break;
-			case 7:
-				this.gridLeft(index, 0);
-				break;
-			case 8:
-				this.gridLeft(index, 1);
-				break;
-			case 9:
-				this.gridLeft(index, 2);
-				break;
-			case 10:
-				this.gridOpacity(index);
-				break;
-			case 11:
-				this.gridAccordion(index);
-				break;
-			case 12:
-				this.gridLittle(index);
-				break;
-			case 13:
-				this.gridSwitch(index);
-				break;
+			// case 0:
+			// 	this.gridWhole(index, 0);
+			// 	break;
+			// case 1:
+			// 	this.gridWhole(index, 1);
+			// 	break;
+			// case 2:
+			// 	this.gridWhole(index, 2);
+			// 	break;
+			// case 3:
+			// 	this.gridWhole(index, 3);
+			// 	break;
+			// case 4:
+			// 	this.gridTop(index, 0);
+			// 	break;
+			// case 5:
+			// 	this.gridTop(index, 1);
+			// 	break;
+			// case 6:
+			// 	this.gridTop(index, 2);
+			// 	break;
+			// case 7:
+			// 	this.gridLeft(index, 0);
+			// 	break;
+			// case 8:
+			// 	this.gridLeft(index, 1);
+			// 	break;
+			// case 9:
+			// 	this.gridLeft(index, 2);
+			// 	break;
+			// case 10:
+			// 	this.gridOpacity(index);
+			// 	break;
+			// case 11:
+			// 	this.gridAccordion(index);
+			// 	break;
+			// case 12:
+			// 	this.gridLittle(index);
+			// 	break;
+			// case 13:
+			// 	this.gridSwitch(index);
+			// 	break;
 			default:
-				this.gridTop(index, 0);
+				this.gridOpacity(index);
 				break;
 			}
 		},

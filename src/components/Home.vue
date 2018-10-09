@@ -17,13 +17,15 @@
           <div class="wrapper">
             <div class="text-center d-lg-flex flex-wrap w-100">
               <ul class="navbar-nav mr-auto">
+                <li class="nav-item  mx-2 text-capitalize"><a :href='$t("message.mooneturl")' target="_blank" class="nav-link text-secondary" v-text='$t("message.nav_test")'></a></li>                
                 <!-- navList -->
                 <li class="nav-item mx-2 text-capitalize" v-for="(item,index) in navList" :key="index">
-                  <a class="nav-link text-secondary" :class="{'am-active':index===navItemActive}"
+                  <!-- <a class="nav-link text-secondary" :class="{'am-active':index===navItemActive}" -->
+                  <a class="nav-link text-secondary"
                   :id='"hrefto"+(index+1)' :href='"#nav"+(index+1)' v-text='$t("message."+item)'></a>                  
                 </li>
                 <!-- 代币销售 -->
-                <li class="nav-item  mx-2 text-capitalize"><router-link to="/token" class="nav-link text-secondary" v-text='$t("message.nav7")'></router-link></li>
+                <!-- <li class="nav-item  mx-2 text-capitalize"><router-link to="/token" class="nav-link text-secondary" v-text='$t("message.nav7")'></router-link></li> -->
                 <!-- 白皮书 -->
                 <li class="nav-item dropdown px-2">
                   <a class="nav-link dropdown-toggle text-secondary" href="javascript:;" id="whitepaperDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-text='$t("message.whitepaper")'></a>
@@ -32,7 +34,7 @@
                   </div>
                 </li>
                 <!-- 博客 -->
-                <li class="nav-item  mx-2 text-capitalize"><a href="https://medium.com/@usechain" target="_blank" class="nav-link text-secondary" v-text='$t("message.nav8")'></a></li>
+                <li class="nav-item  mx-2 text-capitalize"><a href="https://medium.com/@usechain" target="_blank" class="nav-link text-secondary" v-text='$t("message.nav6")'></a></li>
                 <!-- 语言切换 -->
                 <li class="nav-item dropdown px-2">
                   <a class="nav-link dropdown-toggle text-secondary" href="javascript:;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-text="languageName==='en'?'English':'中文'"></a>
@@ -46,7 +48,7 @@
         </div>
       </div>
     </nav>
-    <div class="section_init" id="nav1">
+    <div class="section_init">
       <div class="container">
         <div class="row text-center">
           <div class="col-12 col-md-4 pt-5 pt-md-0">
@@ -65,7 +67,8 @@
               <div class="border border-primary rounded p-4 text-center">
                 <p class="text-primary pb-3 mb-0" v-html='$t("message.starttime")'></p>
                 <div class="pt-3 pb-4 border-top"  id="dateShow1">
-                  <div class="row data-show-box text-primary">
+                  <p class="text-primary h4" v-html='$t("message.welcome")'></p>
+                  <!-- <div class="row data-show-box text-primary">
                       <span class="date-tiem-span d h2 num">00</span>
                       <span class="h3 dot">:</span>
                       <span class="date-tiem-span h h2 num">00</span>
@@ -82,9 +85,9 @@
                     <span class="num" v-html='$t("message.timem")'></span>
                     <span class="dot"></span>                    
                     <span class="num" v-html='$t("message.times")'></span>
-                  </div>
+                  </div> -->
                 </div>
-                <!-- <a href="https://www.leekico.com/#/projects/detail?id=109" target="_blank" class="btn btn-primary w-100 btn_buyust disabled" v-html='$t("message.buyust")'></a> -->
+                <a :href='$t("message.mooneturl")' target="_blank" class="btn btn-primary w-100" v-html='$t("message.moonet")'></a>
               </div>
 
           </div>
@@ -105,7 +108,7 @@
       </div>
     </div>
     <!-- 新闻板块 -->
-    <div class="pt-5" id="nav2">
+    <div class="pt-5" id="nav1">
       <div class="h4 pb-5 text-center text-secondary" v-text='$t("message.videoTitle")'></div>
       <div class="container">
          <!-- 评级 -->
@@ -132,7 +135,7 @@
     </div>
     <!-- 产品特点 -->
     <div class="container">
-      <div class="pb-5" id="nav3"></div>  
+      <div class="pb-5" id="nav2"></div>  
       <div class="h4 text-center wow flipInY text-secondary" v-text='$t("message.featureTitle")'></div>
       <Feature :languageName="languageName"></Feature>
     </div>
@@ -163,7 +166,7 @@
       </div>
     </div>
     <!-- 路线图 -->
-    <div class="d_jump" id="nav4"></div> 
+    <div class="d_jump" id="nav3"></div> 
     <div class="container pt-5">
       <div class="h4 text-center wow flipInY text-secondary pt-4" v-text='$t("message.mapTitle")'></div>
       <div class="pt-5 section_map">
@@ -186,7 +189,7 @@
       </div>
     </div>
     <!-- 核心团队 -->
-    <div class="pt-5 mt-5 section_advisor" id="nav5">
+    <div class="pt-5 mt-5 section_advisor" id="nav4">
       <div class="h4 text-center wow flipInY text-secondary" v-text='$t("message.teamTitle")'></div>
       <div class="section_team py-5">
           <ul class="clear wow fadeInUp container">
@@ -240,7 +243,7 @@
         </div>
     </div>
     <!-- 合作伙伴 -->
-    <div class="section_partner py-5"  id="nav6">
+    <div class="section_partner py-5"  id="nav5">
       <div class="container">
         <div class="h4 text-center wow flipInY text-secondary pt-4" v-text='$t("message.partnerTitle")'></div>
         <div class="justify-content-center section">
@@ -338,8 +341,8 @@ export default {
         { tab: "技术白皮书  中文", link: "/usechain_tech_cn.pdf" },
         { tab: "기술 백서  한국", link: "/usechain_tech_kr.pdf" },
       ],
-      navList: ["nav1", "nav2", "nav3","nav4","nav5","nav6"],
-      navItemActive: 0,
+      navList: ["nav1", "nav2", "nav3","nav4","nav5"],
+      // navItemActive: 0,
       navMenuShow: false,
       navBarFixed: false,
       modalShow: false,
@@ -509,18 +512,18 @@ export default {
     
   },
   mounted() {
-    var unix=this.timestampToTime(1539050400);
-    console.log('转化为',unix);
+    // var unix=this.timestampToTime(1539050400);
+    // console.log('转化为',unix);
 
-    $.leftTime(unix,function(d){
-      if(d.status){
-        var $dateShow1=$("#dateShow1");
-        $dateShow1.find(".d").html(d.d);
-        $dateShow1.find(".h").html(d.h);
-        $dateShow1.find(".m").html(d.m);
-        $dateShow1.find(".s").html(d.s);
-      }
-    });
+    // $.leftTime(unix,function(d){
+    //   if(d.status){
+    //     var $dateShow1=$("#dateShow1");
+    //     $dateShow1.find(".d").html(d.d);
+    //     $dateShow1.find(".h").html(d.h);
+    //     $dateShow1.find(".m").html(d.m);
+    //     $dateShow1.find(".s").html(d.s);
+    //   }
+    // });
     
     var videow=$('.container').width();
     

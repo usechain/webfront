@@ -1,14 +1,13 @@
 const messages = {
     ch: {
       message: {
-        nav1:'首页',
-        nav2:'新闻',
-        nav3:'产品',
-        nav4:'路线图',
-        nav5:'团队',
-        nav6:'合作伙伴',
-        nav7:'代币销售',
-        nav8:'博客',      
+        nav_test:'Moonet',
+        nav1:'新闻',
+        nav2:'产品',
+        nav3:'路线图',
+        nav4:'团队',
+        nav5:'合作伙伴',
+        nav6:'博客',      
         newsmore:'新闻资讯',
 
         login:'登录/注册',
@@ -16,8 +15,10 @@ const messages = {
         usechaintitle:'Usechain',
         usechain:'Usechain',
         description:'全球首个隐身镜像区块链生态',
-        starttime:'测试网络即将上线',
-        buyust:'已结束',
+        starttime:'测试网 1.0 现已上线运行',
+        welcome:'欢迎来到 Moonet',
+        mooneturl:'http://moonet.usechain.net/#/',        
+        moonet:'加入 Moonet',
         timed:'天', 
         timeh:'小时', 
         timem:'分钟', 
@@ -91,7 +92,7 @@ const messages = {
         map5:{
           time:'2019年第一季度',
           event:'●&nbsp;完成子链结构搭建<br/>\
-          ●&nbsp;跨子链通信开发<br/>\
+          ●&nbsp;完成跨子链通信开发<br/>\
           ●&nbsp;公有链主网上线<br/>\
           ●&nbsp;Usechain钱包上线<br/>\
           ●&nbsp;全球见面会启动<br/>\
@@ -386,14 +387,13 @@ const messages = {
     },
     en: {
       message: {
-        nav1:'Home',        
-        nav2:'News',        
-        nav3:'Products',
-        nav4:'Roadmap',
-        nav5:'Team',
-        nav6:'Partners',
-        nav7:'Token Sale',
-        nav8:'Blog',
+        nav_test:'Moonet',        
+        nav1:'News',        
+        nav2:'Products',
+        nav3:'Roadmap',
+        nav4:'Team',
+        nav5:'Partners',
+        nav6:'Blog',
         newsmore:'News',        
 
         login:'loginIn/signUp',  
@@ -401,8 +401,10 @@ const messages = {
         usechaintitle:'USECHAIN',
         usechain:'Usechain',
         description:'THE FIRST MIRROR IDENTITY BLOCKCHAIN',
-        starttime:'Testnet coming after',
-        buyust:'Ended',       
+        starttime:'Testnet 1.0 is now live.',
+        welcome:'Welcome to Moonet',        
+        mooneturl:'http://moonet.usechain.net/#/',
+        moonet:'Join Moonet',       
         timed:'Days', 
         timeh:'Hours', 
         timem:'Minutes', 
@@ -483,7 +485,7 @@ const messages = {
           ●&nbsp;Usechain Labs first incubate project release.'
         },
         map6:{
-          time:'2019',
+          time:'Future',
           event:'●&nbsp;AI system of address behavior analysis.<br/>\
           ●&nbsp;Develop tokenized multi-node system.<br/>\
           ●&nbsp;Develop hardware-based RPOW consensus algorithm.<br/>\
