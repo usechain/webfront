@@ -190,19 +190,13 @@ const messages = {
           linkin:'#',   
           description:'Distributed Credit Chain创始人兼首席执行官。成功创办多家互联网和金融科技公司的企业家，曾任同牛科技CEO，带领团队将其一手打造成中国领先的消费金融SaaS系统服务商，每年帮助信托公司发放的贷款额迖数十亿美元资深学者，拥有牛津大学金融经济学硕士、耶鲁大学统计学硕士及南京大学统计学硕士及工程学士学位。'
         },
-        yujianfeng:{
-          name:'余剑锋',
-          staff:'资深顾问',
-          linkin:'#',   
-          description:'中国“千人计划”专家，宾夕法尼亚大学沃顿商学院博士，耶鲁大学硕士。现为清华大学五道口金融学院建树金融学讲席教授，清华大学国家金融研究院资产管理研究中心主任，曾任明尼苏达大学卡尔森管理学院Piper Jaffray讲席教授，香港中文大学（深圳）经管学院执行副院长。自2011年起任美国联邦储蓄银行（达拉斯）的研究员。主要从事行为金融和宏观金融的理论和实证研究，其研究成果曾获得多项奖项，其中包括Smith-Breeden一等奖。'
-        },
         caofeng:{
           name:'曹峰',
           staff:'资深顾问',
           linkin:'#',   
           description:'PCHAIN发起人，中国第一个区块链国际专利发明人，ChinaLedger共同发起人，CFLP中物联区块链协会首席科学家。他和团队成功完成全球第一笔区块链资产收益权转让暨中国第一笔区块链金融真实交易并获多项区块链金融创新大奖。他曾担任IBM全球下一代人机大战中国区负责人, 互联网金融首席科学家，专利评审委员会联合主席。他的创新成果已成功应用于中、美等150多个国家，曾3次获得IBM全球杰出技术成就奖，发表22篇国际顶级论文，30余项美国专利，并担任多个ACM IEEE顶级国际会议论坛主席。'
         },
-        copyright:'Copyright © 2018 UseChain Foundation LTD',
+        copyright:'Copyright © 2018 Usechain Foundation LTD',
         userteams:'用户条款',
         privacy:'隐私政策',
         tokenagreement:'代币购买协议',  
@@ -577,19 +571,13 @@ const messages = {
           linkin:'#',   
           description:'Founder & CEO, Distributed Credit Chain. Serial entrepreneur in the internet and Fintech industry. He led a team to develop internet-based credit systems for over a dozen of trusts with multibillion USD annual loan facilitation amount. Ph.D. candidate in Finance at The London School of Economics and Political Science with research focus on finance and cryptoeconomics. MS in Financial Economics from Oxford University, MS in Statistics from Yale University, and MA in Statistic as well as bachelor’s degree in Electrical Engineering from Nanjing University.'          
         },
-        yujianfeng:{
-          name:'Jianfeng YU',
-          staff:'Senior Advisor',
-          linkin:'#',   
-          description:'China National "Thousand Talents" Expert, PhD of the Wharton School at University of Pennsylvania. Master of Yale University. Current chair professor of finance in Tsinghua PBCSF. Director of financial asset management research center in National Finance Research Institute in Tsinghua University. Former chair professor of Carlson School of Management at University of Minnesota. Executive assistant dean of Economics and Management at The Chinese University of Hong Kong,Shen zhen.Researcher at the Federal Reserve Bank Dallas since 2011. Mainly engaged in  the theoretical and empirical research on behavioral finance and macro-finance. Research results achieved many awards, including the First Prize of Smith-Breeden.'
-        },
         caofeng:{
           name:'Jeff CAO',
           staff:'Senior Advisor',
           linkin:'#',   
           description:'PChain Founder. The inventor of the 1st International Blockchain patent from China, the Co-Founder of ChinaLedger, the most influential blockchain alliance of China.The Chief Scientist of Blockchain Application Committee in China Federation of Logistic and Purchasing (The 1st Gov Association in Industry), the Senior Fellow of the China Blockchain Research Alliance.Successfully accomplished the 1st blockchain based assets earning rights transfer in the world in September 2016, which is also the 1st Financial Blockchain Transaction in China.Ex-Chief Scientist of Internet Finance and cochair of the patent review board in IBM Research China，IBM Global Technical Achievement Awards three times.22 papers in ACM/IEEE top conference and 30+ international patents.'
         },
-        copyright:'Copyright © 2018 UseChain Foundation LTD',
+        copyright:'Copyright © 2018 Usechain Foundation LTD',
         userteams:'Terms of User',
         privacy:'Privacy Policy',
         tokenagreement:'Token Purchase Agreement',    

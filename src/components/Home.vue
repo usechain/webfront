@@ -220,10 +220,10 @@
       <div class="h4 text-center wow flipInY text-secondary pt-4" v-text='$t("message.advisorTitle")'></div>
         <div class="container section_team pt-5">
           <ul class="clear wow fadeInUp">
-            <li class="text-center col-lg-3 col-md-4 col-6 pt-4 transformLi" v-for="(item,index) in advisorList" :key="index">
+            <li class="text-center col-lg-3 col-md-4 col-6 pt-4 transformLi" v-for="item in advisorList" :key="'investors'+item">
                 <div class="slide slide_front">
                   <div class="img_wrap position-relative">
-                    <img :src='"../assets/images/investors"+(index+1)+".png"' class="cursor_pointer" @click="clickMemberImg"/>
+                    <img :src='"../assets/images/"+item+".png"' class="cursor_pointer" @click="clickMemberImg"/>
                     <a class="badgeIn position-absolute" :href='$t("message."+item+".linkin")' v-if='$t("message."+item+".linkin")!=="#"'>in</a>
                   </div>
                   <div class="h5 pt-3" v-text='$t("message."+item+".name")'></div>
@@ -324,8 +324,7 @@ export default {
         "weishangjin",
         "maqian",
         "yanfangjun",
-        "zhushengqing",
-        "yujianfeng","caofeng"
+        "zhushengqing","caofeng"
       ],
       partnerList:[
         'xiongan','keyin','fancheng','jrr','newdo','milestone','dcc','yingxin','dfg','jike','jikeziben','naba','junmu','capital'

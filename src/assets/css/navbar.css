@@ -98,8 +98,8 @@
     padding: 1rem 0;
   }
   .am-active{
-    border-top-color: #4693f8;
-    background-image: linear-gradient(to bottom, #d9e3f5 10%, white 80%);
+    /* border-top-color: #4693f8; */
+    /* background-image: linear-gradient(to bottom, #d9e3f5 10%, white 80%); */
   }
   .collapse.show,.collapsing {
       display: block;

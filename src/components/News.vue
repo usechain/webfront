@@ -66,6 +66,7 @@ export default {
         languageName: localStorage.local || "en",
         newsList:
         [
+            {"imgsrc":require("../assets/images/news1009.jpg"),"time":"9月14日","title":"Usechain(USE) Testnet Goes Live To Build A Legally Compliant Financial Services Blockchain","from":"YAHOO","href":"https://finance.yahoo.com/news/usechain-testnet-goes-live-build-023000921.html"},            
             {"imgsrc":require("../assets/images/news0914.jpeg"),"time":"9月14日","title":"USE登陆Kucoin 同步开启全球征程","from":"Usechain微信公众号","href":"https://mp.weixin.qq.com/s/Lyk-55cSo5V_Ae7rHjuUWg"},            
             {"imgsrc":require("../assets/images/news0911.jpg"),"time":"9月11日","title":"Usechain交锋美国CNBC名嘴，解析让杀手级应用落地的区块链体系","from":"火星财经","href":"http://www.huoxing24.com/newsdetail/20180911170526001978.html"},
             {"imgsrc":require("../assets/images/news0907.jpg"),"time":"9月7日","title":"13岁读大学、如今50多岁的金融学教授欲借区块链颠覆华尔街","from":"火星财经","href":"http://www.huoxing24.com/newsdetail/20180907153015513905.html"},
