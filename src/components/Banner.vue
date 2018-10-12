@@ -12,7 +12,7 @@
                 <li class="next"></li>
             </ul>
             <div class="shutter-desc">
-                <p>USE登陆Kucoin 同步开启全球征程</p>
+                <p>{{bannerList[0].title}}</p>
                 <router-link to="/news">更多新闻>></router-link>
             </div>
         </div>
@@ -31,13 +31,12 @@ export default {
     data(){
         return{
             bannerList:[
+                {title:"Usechain测试网上线，开启3Go全球战略计划",href:"https://url.cn/5ZBLimf?sf=uri",imgsrc:require("../assets/images/news1011.jpg")},                            
                 {title:"Usechain(USE) Testnet Goes Live To Build A Legally Compliant Financial Services Blockchain",href:"https://finance.yahoo.com/news/usechain-testnet-goes-live-build-023000921.html",imgsrc:require("../assets/images/news1009.jpg")},                            
                 {title:'USE登陆Kucoin 同步开启全球征程',href:'https://mp.weixin.qq.com/s/Lyk-55cSo5V_Ae7rHjuUWg',imgsrc:require("../assets/images/news0914.jpeg")},                
                 {title:'Usechain交锋美国CNBC名嘴，解析让杀手级应用落地的区块链体系',href:'http://www.huoxing24.com/newsdetail/20180911170526001978.html',imgsrc:require("../assets/images/news0911.jpg")},
                 {title:'13岁读大学、如今50多岁的金融学教授欲借区块链颠覆华尔街',href:'http://www.huoxing24.com/newsdetail/20180907153015513905.html',imgsrc:require("../assets/images/news0907.jpg")},
                 {title:'Usechain曹辉宁：区块链社区真正的践行者',href:'http://www.xinmeti.com/internet/99792.html',imgsrc:require("../assets/images/news0830.jpg")},
-                {title:'时代广场惊现粉丝打Call Usechain：区块链社区精神真正的践行者',href:'http://www.prcfe.com/finance/2018/0830/305620.html',imgsrc:require("../assets/images/news08302.jpg")},
-                {title:'曹辉宁：“区块链+”并不适用所有场景',href:'https://www.jinse.com/bitcoin/233789.html',imgsrc:require("../assets/images/news0828.jpg")},
             ]
         }
     },
