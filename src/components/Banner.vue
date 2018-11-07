@@ -17,7 +17,6 @@
             </div>
         </div>
     </div>
-        
 </template>
 
 <script>
@@ -31,14 +30,12 @@ export default {
     data(){
         return{
             bannerList:[
-                {title:"Usechain测试网上线，开启3Go全球战略计划",href:"https://url.cn/5ZBLimf?sf=uri",imgsrc:require("../assets/images/news1011.jpg")},                            
-                {title:"Usechain(USE) Testnet Goes Live To Build A Legally Compliant Financial Services Blockchain",href:"https://finance.yahoo.com/news/usechain-testnet-goes-live-build-023000921.html",imgsrc:require("../assets/images/news1009.jpg")},                            
-                {title:'USE登陆Kucoin 同步开启全球征程',href:'https://mp.weixin.qq.com/s/Lyk-55cSo5V_Ae7rHjuUWg',imgsrc:require("../assets/images/news0914.jpeg")},                
-                {title:'Usechain交锋美国CNBC名嘴，解析让杀手级应用落地的区块链体系',href:'http://www.huoxing24.com/newsdetail/20180911170526001978.html',imgsrc:require("../assets/images/news0911.jpg")},
-                {title:'13岁读大学、如今50多岁的金融学教授欲借区块链颠覆华尔街',href:'http://www.huoxing24.com/newsdetail/20180907153015513905.html',imgsrc:require("../assets/images/news0907.jpg")},
-                {title:'Usechain曹辉宁：区块链社区真正的践行者',href:'http://www.xinmeti.com/internet/99792.html',imgsrc:require("../assets/images/news0830.jpg")},
-            ]
-        }
+                {title:'区块链嫁接实体经济Usechain旗下iBlock Labs携众大咖开讲',href:'http://www.huoxing24.com/newsdetail/20181106114347530764.html?from=groupmessage',imgsrc:require("../assets/images/news1106.jpg")},
+                {title:'金融合规区块链Usechain亮相2018北京国际金博会',href:'https://blog.csdn.net/qadnmcrfxcn6c6h6661/article/details/83663169',imgsrc:require("../assets/images/news11022.jpg")},
+                {title:'金融合规区块链Usechain亮相2018北京国际金博会',href:'https://www.prnasia.com/story/227948-1.shtml',imgsrc:require("../assets/images/news1102.jpg")},
+                {title:'Usechain受邀参加韩国区块链世博会，开启3GO战略全球征程',href:'https://www.einpresswire.com/article/466283621/usechain-at-2018-korea-blockchain-expo-to-start-the-3go-program?r=paadAviktRxzidD_Qu',imgsrc:require("../assets/images/news1024.jpg")},
+                {title:'STO的未来：Usechain创始人引领群雄论辩火星区块链纽约峰会',href:'http://www.huoxing24.com/newsdetail/20181019232525959840.html',imgsrc:require("../assets/images/news1019.jpg")},
+            ]}
     },
     mounted(){
         var bannerW=$('#banner').width();

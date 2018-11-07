@@ -64,11 +64,16 @@ export default {
   data() {
     return {
         languageName: localStorage.local || "en",
-        newsList:
-        [
+        newsList:[
+            {"imgsrc":require("../assets/images/news1106.jpg"),"time":"11月6日","title":"区块链嫁接实体经济Usechain旗下iBlock Labs携众大咖开讲","from":"火星财经","href":"http://www.huoxing24.com/newsdetail/20181106114347530764.html?from=groupmessage"},            
+            {"imgsrc":require("../assets/images/news11022.jpg"),"time":"11月2日","title":"金融合规区块链Usechain亮相2018北京国际金博会","from":"CSDN","href":"https://blog.csdn.net/qadnmcrfxcn6c6h6661/article/details/83663169"},            
+            {"imgsrc":require("../assets/images/news1102.jpg"),"time":"11月2日","title":"金融合规区块链Usechain亮相2018北京国际金博会","from":"美通社","href":"https://www.prnasia.com/story/227948-1.shtml"},            
+            {"imgsrc":require("../assets/images/news10242.jpg"),"time":"10月24日","title":"Usechain受邀参加韩国区块链世博会，开启3GO战略全球征程","from":"EIN PRESSWIRE","href":"https://www.einpresswire.com/article/466283621/usechain-at-2018-korea-blockchain-expo-to-start-the-3go-program?r=paadAviktRxzidD_Qu"},            
+            {"imgsrc":require("../assets/images/news1024.jpg"),"time":"10月24日","title":"Usechain受邀参加韩国区块链世博会，开启3GO战略全球征程","from":"韩国经济日报","href":"http://news.hankyung.com/article/201810295722a"},            
+            {"imgsrc":require("../assets/images/news1019.jpg"),"time":"10月19日","title":"STO的未来：Usechain创始人引领群雄论辩火星区块链纽约峰会","from":"火星财经","href":"http://www.huoxing24.com/newsdetail/20181019232525959840.html"},            
             {"imgsrc":require("../assets/images/news1011.jpg"),"time":"10月11日","title":"Usechain测试网上线，开启3Go全球战略计划","from":"腾讯视频","href":"https://url.cn/5ZBLimf?sf=uri"},            
             {"imgsrc":require("../assets/images/news1009.jpg"),"time":"9月14日","title":"Usechain(USE) Testnet Goes Live To Build A Legally Compliant Financial Services Blockchain","from":"YAHOO","href":"https://finance.yahoo.com/news/usechain-testnet-goes-live-build-023000921.html"},            
-            {"imgsrc":require("../assets/images/news0914.jpeg"),"time":"9月14日","title":"USE登陆Kucoin 同步开启全球征程","from":"Usechain微信公众号","href":"https://mp.weixin.qq.com/s/Lyk-55cSo5V_Ae7rHjuUWg"},            
+            {"imgsrc":require("../assets/images/news0914.jpg"),"time":"9月14日","title":"USE登陆Kucoin 同步开启全球征程","from":"Usechain微信公众号","href":"https://mp.weixin.qq.com/s/Lyk-55cSo5V_Ae7rHjuUWg"},            
             {"imgsrc":require("../assets/images/news0911.jpg"),"time":"9月11日","title":"Usechain交锋美国CNBC名嘴，解析让杀手级应用落地的区块链体系","from":"火星财经","href":"http://www.huoxing24.com/newsdetail/20180911170526001978.html"},
             {"imgsrc":require("../assets/images/news0907.jpg"),"time":"9月7日","title":"13岁读大学、如今50多岁的金融学教授欲借区块链颠覆华尔街","from":"火星财经","href":"http://www.huoxing24.com/newsdetail/20180907153015513905.html"},
             {"imgsrc":require("../assets/images/news0830.jpg"),"time":"8月30日","title":"Usechain曹辉宁：区块链社区真正的践行者","from":"锌媒体","href":"http://www.xinmeti.com/internet/99792.html"},
@@ -103,8 +108,7 @@ export default {
             {"imgsrc":require("../assets/images/news0222.jpg"),"time":"2月22日","title":"长江商学院金融系主任曹辉宁：区块链对人类社会影响超过互联网","from":"火星财经","href":"http://www.huoxing24.com/newsdetail/2018022215062648962.html"},
             {"imgsrc":require("../assets/images/news0218.png"),"time":"2月18日","title":"长江金融系主任曹辉宁教授谈区块链与货币","from":"金色财经","href":"https://www.jinse.com/blockchain/150556.html"},
             {"imgsrc":require("../assets/images/news0119.png"),"time":"1月19日","title":"现在人们能适应互联网，20年后同样能适应区块链 | 中国国际电视台采访","from":"CGTN","href":"https://mp.weixin.qq.com/s/CZ3KnhP7fH2dyKv7FHWj8g"},
-        ]
-    };
+        ]};
   },
   i18n,
   created() {

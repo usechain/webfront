@@ -415,6 +415,26 @@ export default {
           img: "jinse",
           href:
             "https://www.jinse.com/blockchain/189488.html"
+        },
+        {
+          img: "hanguo",
+          href:
+            "http://news.hankyung.com/article/201810295722a"
+        },
+        {
+          img: "ein",
+          href:
+            "https://www.einpresswire.com/article/466283621/usechain-at-2018-korea-blockchain-expo-to-start-the-3go-program?r=paadAviktRxzidD_Qu"
+        },
+        {
+          img: "meitong",
+          href:
+            "https://www.prnasia.com/story/227948-1.shtml"
+        },
+        {
+          img: "csdn",
+          href:
+            "https://blog.csdn.net/qadnmcrfxcn6c6h6661/article/details/83663169"
         }
       ],
       videoWidth:'',
@@ -898,7 +918,7 @@ export default {
   display: inline-block;
   width: 25%;
   height: 100%;
-  padding: 0 2%;
+  padding: 0 2% 5px;
 }
 .mwork1 {
   width: 70%;
