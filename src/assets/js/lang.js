@@ -80,7 +80,8 @@ const messages = {
           time:'2018年第三季度',
           event:'●&nbsp;基于软件的RPOW共识算法开发<br/>\
           ●&nbsp;公有链测试版上线<br/>\
-          ●&nbsp;核心社区突破10万人'
+          ●&nbsp;核心社区突破10万人<br/>\
+          ●&nbsp;USE登陆全球顶级交易所'
         },
         map4:{
           time:'2018年第四季度',
@@ -460,7 +461,8 @@ const messages = {
           time:'Q3 2018',
           event:'●&nbsp;Develop software-based RPOW consensus algorithm.<br/>\
           ●&nbsp;Usechain testnet release.<br/>\
-          ●&nbsp;Achieve 100000+ people in the community.'
+          ●&nbsp;Achieve 100000+ people in the community.<br/>\
+          ●&nbsp;USE listed on global top exchanges.'
         },
         map4:{
           time:'Q4 2018',
