@@ -30,6 +30,7 @@ export default {
     data(){
         return{
             bannerList:[
+                {title:'数字货币打赏小费：纽约中餐厅感恩节开启USE支付通道',href:'https://www.huoxing24.com/newsdetail/20181122110900813373',imgsrc:require("../assets/images/news1122.jpg")},
                 {title:'区块链嫁接实体经济Usechain旗下iBlock Labs携众大咖开讲',href:'http://www.huoxing24.com/newsdetail/20181106114347530764.html?from=groupmessage',imgsrc:require("../assets/images/news1106.jpg")},
                 {title:'金融合规区块链Usechain亮相2018北京国际金博会',href:'https://blog.csdn.net/qadnmcrfxcn6c6h6661/article/details/83663169',imgsrc:require("../assets/images/news11022.jpg")},
                 {title:'金融合规区块链Usechain亮相2018北京国际金博会',href:'https://www.prnasia.com/story/227948-1.shtml',imgsrc:require("../assets/images/news1102.jpg")},
