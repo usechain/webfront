@@ -30,12 +30,11 @@ export default {
     data(){
         return{
             bannerList:[
-                {title:'数字货币打赏小费：纽约中餐厅感恩节开启USE支付通道',href:'https://www.huoxing24.com/newsdetail/20181122110900813373',imgsrc:require("../assets/images/news1122.jpg")},
-                {title:'区块链嫁接实体经济Usechain旗下iBlock Labs携众大咖开讲',href:'http://www.huoxing24.com/newsdetail/20181106114347530764.html?from=groupmessage',imgsrc:require("../assets/images/news1106.jpg")},
-                {title:'金融合规区块链Usechain亮相2018北京国际金博会',href:'https://blog.csdn.net/qadnmcrfxcn6c6h6661/article/details/83663169',imgsrc:require("../assets/images/news11022.jpg")},
-                {title:'金融合规区块链Usechain亮相2018北京国际金博会',href:'https://www.prnasia.com/story/227948-1.shtml',imgsrc:require("../assets/images/news1102.jpg")},
-                {title:'Usechain受邀参加韩国区块链世博会，开启3GO战略全球征程',href:'https://www.einpresswire.com/article/466283621/usechain-at-2018-korea-blockchain-expo-to-start-the-3go-program?r=paadAviktRxzidD_Qu',imgsrc:require("../assets/images/news1024.jpg")},
-                {title:'STO的未来：Usechain创始人引领群雄论辩火星区块链纽约峰会',href:'http://www.huoxing24.com/newsdetail/20181019232525959840.html',imgsrc:require("../assets/images/news1019.jpg")},
+                {title:'Usechain曹辉宁谈币的底线：不能实用的加密货币99%都会死掉 | 区块链大师课',href:'https://www.jinse.com/bitcoin/284189.html',imgsrc:require("../assets/images/news1204.jpg")},
+                {title:'科创板与STO会带来什么机遇？| 区块链三人行专访长江商学院曹辉宁',href:'https://www.jinse.com/bitcoin/284409.html',imgsrc:require("../assets/images/news12042.jpg")},
+                {title:'2018最后一个月的市场行情：主流币更主流 山寨币更山寨',href:'http://8btc.com/thread-258646-1-1.html',imgsrc:require("../assets/images/news1210.jpg")},
+                {title:'USE/USDT上线KuCoin',href:'https://i.bishijie.com/detail/193706',imgsrc:require("../assets/images/news1219.jpg")},
+                {title:'数字货币打赏小费：纽约中餐厅感恩节开启USE支付通道区块链+商业银行全剖析 | 曹辉宁教授X胡捷教授直播文字实录（上）',href:'https://www.odaily.com/post/5135653',imgsrc:require("../assets/images/news90116.jpg")},
             ]}
     },
     mounted(){

@@ -19,6 +19,9 @@
 .text_ident{
     text-indent: 2rem;
 }
+.text_ident2{
+    text-indent: 4rem;
+}
 .word_break{
     word-break: break-all;
 }

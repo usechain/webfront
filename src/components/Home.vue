@@ -435,6 +435,16 @@ export default {
           img: "csdn",
           href:
             "https://blog.csdn.net/qadnmcrfxcn6c6h6661/article/details/83663169"
+        },
+        {
+          img: "ke",
+          href:
+            "https://36kr.com/p/5150074.html"
+        },
+        {
+          img: "huoxing",
+          href:
+            "https://www.huoxing24.com/newsdetail/20181122110900813373"
         }
       ],
       videoWidth:'',
