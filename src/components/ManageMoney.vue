@@ -24,33 +24,14 @@
 
         <div class="text-primary text_bold pt-3">4、理财产品的周期设置和投资回报？</div>
         <div class="text_ident">
-            <p>USE分为3个月、6个月和12个月的理财产品。3个月的理财产品每年3，6，9，12月底分红。6个月的理财产品每年6，12月底分红，12月的理财产品每年12月底分红。每个季度公司利润和生态游戏中产生的USEPOWER 5%会打入3月理财产品池作为分红基础。每个投资者按照投资币*投资天数按比例参与分红。参与分红者的投资天数必须超过产品投资期限。分红的上限是投资币*投资天数/365。6月，12月产品每个投资周期各分到利润的10%和20%。分红机制和3月类似。也就是说，3月底，三月产品理财池分到5%，六月底，三月，六月产品池各分到5%，10%。九月底，三月产品分到5%。年底，各3，6，12各分到5，10，20%。剩余的分给USESHARE理财产品池。</p>
+            <p>USE分为3个月、6个月和12个月的理财产品。3个月的理财产品每年3，6，9，12月底分红。6个月的理财产品每年6，12月底分红，12月的理财产品每年12月底分红。每个季度会打入100,000,000（1亿）USEPOWER 进入3月理财产品池作为分红基础。每个投资者按照投资币*投资天数按比例参与分红。参与分红者的投资天数必须超过产品投资期限。分红的上限是投资币*投资天数/365。</p>
             <p class="pt-1"><span class="text_black text_bold">通俗描述：</span>Usechain理财产品，是根据持有理财产品的份额、时间的占比，享受分红收益；产品分为多个期限，不同的期限对应不同的分红时点、不同的分红池。</p>
             <p class="pt-1"><span class="text_black text_bold">收益计算：</span>投资收益 = 投资份额*投资天数 / Σ（投资份额*投资天数） * 当期分红池总金额</p>
             <p class="pt-1">其中：</p>
             <p class="pt-1"><span class="text_black text_bold">投资份额：</span>指购买产品的数额</p>
             <p class="pt-1"><span class="text_black text_bold">投资天数：</span>指购买日至产品截止日期为止的天数</p>
             <p class="pt-1"><span class="text_black text_bold">投资份额*投资天数 / Σ（投资份额*投资天数）：</span>指个人“投资额*投资天数”所占当期产品，所有参与者“投资额*投资天数”总额的权重比例</p>
-            <p class="pt-1"><span class="text_black text_bold">当期分红池总金额：</span>分红池金额，来源于Usechain生态游戏PowerBall沉淀奖池中的USEPOWER（可购买PowerBall彩票的代币），理财产品分为多个不同期限，如3个月、6个月、9个月、12个月，不同期限对应的不同的截止日期、不同的分红池，示例如下:</p>
-            <div class="px-sm-5 py-2 mx-sm-5">
-                <table class="table table-sm table-striped text-center text-small text-secondary">
-                    <thead>
-                        <tr>
-                        <th scope="col" >期限</th>
-                        <th scope="col" >到期日期</th>
-                        <th scope="col" >可分配分红池金额占PowerBall沉淀奖池比例</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="(item,index) in tableList" :key="index">
-                            <td v-html="item.period"></td>
-                            <td v-html="item.date"></td>
-                            <td v-html="item.percent"></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="text-small">分红池金额的确定，以产品到期日期当日沉淀奖池中的USEPOWER数额为基础值。</div>            
-            </div>
+            <p class="pt-1"><span class="text_black text_bold">当期分红池总金额：</span>100,000,000（1亿）USEPOWER</p>
             <p class="pt-1"><span class="text_black text_bold">产品购买、收益规则限制：</span></p>
             <p class="pt-1">1.购买限制：</p>
             <p>(1) 仅支持投资USE、USESHARE</p>
@@ -101,15 +82,6 @@ import Vue from "vue";
 
 export default {
     name: "ManageMoney",   
-    data(){
-        return{
-            tableList:[
-                {period:'3个月',date:'2019-06-30',percent:'5%'},
-                {period:'6个月',date:'2019-09-30',percent:'10%'},
-                {period:'12个月',date:'2020-02-28',percent:'20%'},
-            ]     
-        }
-    },
 }
 </script>
 
