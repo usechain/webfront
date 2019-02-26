@@ -30,11 +30,10 @@ export default {
     data(){
         return{
             bannerList:[
-                {title:'Usechain曹辉宁谈币的底线：不能实用的加密货币99%都会死掉 | 区块链大师课',href:'https://www.jinse.com/bitcoin/284189.html',imgsrc:require("../assets/images/news1204.jpg")},
-                {title:'科创板与STO会带来什么机遇？| 区块链三人行专访长江商学院曹辉宁',href:'https://www.jinse.com/bitcoin/284409.html',imgsrc:require("../assets/images/news12042.jpg")},
-                {title:'2018最后一个月的市场行情：主流币更主流 山寨币更山寨',href:'http://8btc.com/thread-258646-1-1.html',imgsrc:require("../assets/images/news1210.jpg")},
-                {title:'USE/USDT上线KuCoin',href:'https://i.bishijie.com/detail/193706',imgsrc:require("../assets/images/news1219.jpg")},
-                {title:'数字货币打赏小费：纽约中餐厅感恩节开启USE支付通道区块链+商业银行全剖析 | 曹辉宁教授X胡捷教授直播文字实录（上）',href:'https://www.odaily.com/post/5135653',imgsrc:require("../assets/images/news90116.jpg")},
+                {title:'Usechain创始人曹辉宁：积分通证化能帮助商家和客户之间做更好的匹配',href:'https://www.jinse.com/bitcoin/318396.html',imgsrc:require("../assets/images/news90220.png")},
+                {title:'2019年主流币会有牛市吗？ | 直播2期文字实录（下）',href:'https://www.jianshu.com/p/2e4ebd869d70',imgsrc:require("../assets/images/news90131.jpg")},
+                {title:' Blockchain in Korea | Usechain创始人兼CEO曹辉宁：传统金融精英的区块链之路',href:'https://www.huoxing24.com/newsdetail/20190131233117403107',imgsrc:require("../assets/images/news901312.png")},
+                {title:'通证经济：创新还是换汤不换药？ | 直播文字实录（下）',href:'https://www.jinse.com/bitcoin/284189.html',imgsrc:require("../assets/images/news90122.png")},
             ]}
     },
     mounted(){

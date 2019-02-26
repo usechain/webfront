@@ -65,6 +65,14 @@ export default {
     return {
         languageName: localStorage.local || "en",
         newsList:[
+            {"imgsrc":require("../assets/images/news90225.jpg"),"time":"2019年2月25日","title":"摩根币的诞生说明CEO杰米错了吗？","from":"星球日报","href":"https://www.odaily.com/post/5136158"},            
+            {"imgsrc":require("../assets/images/news90220.png"),"time":"2019年2月20日","title":"Usechain创始人曹辉宁：积分通证化能帮助商家和客户之间做更好的匹配","from":"金色财经","href":"https://www.jinse.com/bitcoin/318396.html"},            
+            {"imgsrc":require("../assets/images/news90219.jpg"),"time":"2019年1月19日","title":"Usechain构建线下支付生态 落地深圳为传统行业注入通证新力量","from":"AICoin","href":"https://www.aicoin.net.cn/article/64199.html"},            
+            {"imgsrc":require("../assets/images/news90201.jpg"),"time":"2019年2月1日","title":"DApp 生死局 下一站是什么？ | 曹辉宁与他的教授朋友们 第2期（下）","from":"金色财经","href":"https://www.jinse.com/bitcoin/313656.html"},            
+            {"imgsrc":require("../assets/images/news901312.png"),"time":"2019年1月31日","title":"Blockchain in Korea | Usechain创始人兼CEO曹辉宁：传统金融精英的区块链之路","from":"火星财经","href":"https://www.huoxing24.com/newsdetail/20190131233117403107"},            
+            {"imgsrc":require("../assets/images/news90131.jpg"),"time":"2019年1月31日","title":"2019年主流币会有牛市吗？ | 直播2期文字实录（下）","from":"星球日报","href":"https://www.jianshu.com/p/2e4ebd869d70"},
+            {"imgsrc":require("../assets/images/news90130.jpg"),"time":"2019年1月30日","title":"通证经济怎么做？不谈宏观谈实操 | 直播2期文字实录（上）","from":"金色财经","href":"https://www.jinse.com/bitcoin/313618.html"}, 
+            {"imgsrc":require("../assets/images/news90122.png"),"time":"2019年1月22日","title":"通证经济：创新还是换汤不换药？ | 直播文字实录（下）","from":"金色财经","href":"https://www.jinse.com/bitcoin/284189.html"},            
             {"imgsrc":require("../assets/images/news90116.jpg"),"time":"2019年1月16日","title":"区块链+商业银行全剖析 | 曹辉宁教授X胡捷教授直播文字实录（上）","from":"星球日报","href":"https://www.odaily.com/post/5135653"},            
             {"imgsrc":require("../assets/images/news1219.jpg"),"time":"2018年12月19日","title":"USE/USDT上线KuCoin","from":"币世界","href":"https://i.bishijie.com/detail/193706"},            
             {"imgsrc":require("../assets/images/news1210.jpg"),"time":"2018年12月10日","title":"2018最后一个月的市场行情：主流币更主流 山寨币更山寨","from":"巴比特","href":"http://8btc.com/thread-258646-1-1.html"},            

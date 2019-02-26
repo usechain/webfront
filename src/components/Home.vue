@@ -445,6 +445,16 @@ export default {
           img: "huoxing",
           href:
             "https://www.huoxing24.com/newsdetail/20181122110900813373"
+        },
+        {
+          img: "xingqiu",
+          href:
+            "https://www.odaily.com/post/5136158"
+        },
+        {
+          img: "alcoin",
+          href:
+            "https://www.aicoin.net.cn/article/64199.html"
         }
       ],
       videoWidth:'',

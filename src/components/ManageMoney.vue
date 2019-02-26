@@ -67,8 +67,8 @@
         </div>
 
         <div class="text-primary text_bold pt-3">6、购买理财产品后是否可以随时退出？ 是否可以分批退出？</div>
-            <p class="text_ident">答：●可以随时退出，中途退出即停止计算收益，过往收益作废。</p>
-            <p class="text_ident2">●可以分批退出，如同时购买不同时常理财产品，优先退出投资期限更短的理财产品。理财收益按照最后剩余本金计算全部周期收益。</p>
+            <p class="text_ident am-margin-bottom-0">答：●4月份产品迭代后可以随时退出，中途退出即停止计算收益，过往收益作废。</p>
+            <p class="text_ident2">●4月份产品迭代后可以分批退出，如同时购买不同时常理财产品，优先退出投资期限更短的理财产品。理财收益按照最后剩余本金计算全部周期收益。</p>
 
         <div class="text-primary text_bold pt-3">7、理财产品到期后本金和收益如何提取？是否有限制？提取到账时间是否有时间差？</div>
         <div class="text_ident">
