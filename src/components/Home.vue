@@ -551,18 +551,18 @@ export default {
     
   },
   mounted() {
-    // var unix=this.timestampToTime(1539050400);
-    // console.log('转化为',unix);
+    var unix=this.timestampToTime(1554033600);
+    console.log('转化为',unix);
 
-    // $.leftTime(unix,function(d){
-    //   if(d.status){
-    //     var $dateShow1=$("#dateShow1");
-    //     $dateShow1.find(".d").html(d.d);
-    //     $dateShow1.find(".h").html(d.h);
-    //     $dateShow1.find(".m").html(d.m);
-    //     $dateShow1.find(".s").html(d.s);
-    //   }
-    // });
+    $.leftTime(unix,function(d){
+      if(d.status){
+        var $dateShow1=$("#dateShow1");
+        $dateShow1.find(".d").html(d.d);
+        $dateShow1.find(".h").html(d.h);
+        $dateShow1.find(".m").html(d.m);
+        $dateShow1.find(".s").html(d.s);
+      }
+    });
     
     var videow=$('.container').width();
     
