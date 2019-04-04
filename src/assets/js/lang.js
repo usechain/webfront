@@ -1,7 +1,7 @@
 const messages = {
     ch: {
       message: {
-        nav_test:'Moonet',
+        // nav_test:'Moonet',
         nav1:'新闻',
         nav2:'产品',
         nav3:'路线图',
@@ -89,19 +89,40 @@ const messages = {
         },
         map5:{
           time:'2019年第一季度',
-          event:'●&nbsp;完成子链结构搭建<br/>\
-          ●&nbsp;完成跨子链通信开发<br/>\
-          ●&nbsp;公有链主网上线<br/>\
-          ●&nbsp;Usechain钱包上线<br/>\
-          ●&nbsp;全球见面会启动<br/>\
-          ●&nbsp;Usechain实验室孵化首个项目正式发布'
+          event:'●&nbsp;完成公有链主网alpha上线<br/>\
+          ●&nbsp;完成Usechain钱包android版本上线<br/>\
+          ●&nbsp;CA服务中心上线<br/>\
+          ●&nbsp;完成委员会多人签名验证身份<br/>\
+          ●&nbsp;完善身份体系标准化和上链隐私保护'
         },
         map6:{
+          time:'2019年第二季度',
+          event:'●&nbsp;公有链主网正式版上线<br/>\
+          ●&nbsp;启动主网USE原生代币映射<br/>\
+          ●&nbsp;实现多级账号体系<br/>\
+          ●&nbsp;完善委员会换届和监管功能开发<br/>\
+          ●&nbsp;各平台开源钱包上线'
+        },
+        map7:{
+          time:'2019年第三季度',
+          event:'●&nbsp;子链和闪电网络上线<br/>\
+          ●&nbsp;实现内置智能合约模板，简化金融操作<br/>\
+          ●&nbsp;完成Java和python版本的SDK<br/>\
+          ●&nbsp;委员会裁决投诉流程公开化<br/>\
+          ●&nbsp;等级身份认证(互相认证)'
+        },
+        map8:{
+          time:'2019年第四季度',
+          event:'●&nbsp;完成主网USE原生代币强制映射，已上线交易所切换到主网<br/>\
+          ●&nbsp;落地应用<br/>\
+          ●&nbsp;内置更多金融功能'
+        },
+        map9:{
           time:'未来',
-          event:'●&nbsp;智能地址行为分析<br/>\
-          ●&nbsp;通证化多节点体系搭建<br/>\
-          ●&nbsp;基于硬件的RPOW共识算法开发<br/>\
-          ●&nbsp;大量行业应用接入'
+          event:'●&nbsp;硬件矿机<br/>\
+          ●&nbsp;存储完善<br/>\
+          ●&nbsp;完善信用和身份接口<br/>\
+          ●&nbsp;提升安全和交易性能'
         },
         teamTitle:'核心团队',
         caohuining:{
@@ -379,7 +400,7 @@ const messages = {
     },
     en: {
       message: {
-        nav_test:'Moonet',        
+        // nav_test:'Moonet',        
         nav1:'News',        
         nav2:'Products',
         nav3:'Roadmap',
@@ -471,19 +492,40 @@ const messages = {
         },
         map5:{
           time:'Q1 2019',
-          event:'●&nbsp;Complete sub-chain structure setting up.<br/>\
-          ●&nbsp;Complete cross sub-chain communication development.<br/>\
-          ●&nbsp;Usechain mainnet release.<br/>\
-          ●&nbsp;Usechain mainnet wallet release.<br/>\
-          ●&nbsp;Start global meetup.<br/>\
-          ●&nbsp;Usechain Labs first incubate project release.'
+          event:"●&nbsp;Usechain mainnet alpha release<br/>\
+          ●&nbsp;Usechain wallet(android) release<br/>\
+          ●&nbsp;CA service release<br/>\
+          ●&nbsp;Complete the committee's multi-person signature verification identity<br/>\
+          ●&nbsp;Improve identity system standardization and onchain privacy protection"
         },
         map6:{
+          time:'Q2 2019',
+          event:'●&nbsp;Usechain mainnet official version release<br/>\
+          ●&nbsp;Start mainnet USE swap<br/>\
+          ●&nbsp;Implement a multi-level account system<br/>\
+          ●&nbsp;Improve committee change and supervision function development<br/>\
+          ●&nbsp;Open source mainnet wallet on full platforms release'
+        },
+        map7:{
+          time:'Q3 2019',
+          event:'●&nbsp;Subchain and Lightning Network release<br/>\
+          ●&nbsp;Implement built-in smart contract templates to simplify financial operations<br/>\
+          ●&nbsp;Complete SDK for jave and python<br/>\
+          ●&nbsp;Implement the transparency of committee complaint process<br/>\
+          ●&nbsp;Implement  the level identity authentication (mutual authentication)'
+        },
+        map8:{
+          time:'Q4 2019',
+          event:'●&nbsp;Complete mainnet USE forced swap and network swap on exchanges<br/>\
+          ●&nbsp;More Dapps release<br/>\
+          ●&nbsp;More built-in financial functions release'
+        },
+        map9:{
           time:'Future',
-          event:'●&nbsp;AI system of address behavior analysis.<br/>\
-          ●&nbsp;Develop tokenized multi-node system.<br/>\
-          ●&nbsp;Develop hardware-based RPOW consensus algorithm.<br/>\
-          ●&nbsp;More multi-industry identity-based DApps.'
+          event:'●&nbsp;Hardware mining machine<br/>\
+          ●&nbsp;Improve storage<br/>\
+          ●&nbsp;Improve credit and identity API<br/>\
+          ●&nbsp;Improve security and transaction performance'
         },
         teamTitle:'Core Team',
         caohuining:{

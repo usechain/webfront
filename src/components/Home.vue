@@ -17,7 +17,7 @@
           <div class="wrapper">
             <div class="text-center d-lg-flex flex-wrap w-100">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item  mx-2 text-capitalize"><a :href='$t("message.mooneturl")' target="_blank" class="nav-link text-secondary" v-text='$t("message.nav_test")'></a></li>                
+                <!-- <li class="nav-item  mx-2 text-capitalize"><a :href='$t("message.mooneturl")' target="_blank" class="nav-link text-secondary" v-text='$t("message.nav_test")'></a></li>                 -->
                 <!-- navList -->
                 <li class="nav-item mx-2 text-capitalize" v-for="(item,index) in navList" :key="index">
                   <!-- <a class="nav-link text-secondary" :class="{'am-active':index===navItemActive}" -->
@@ -172,7 +172,7 @@
       <div class="pt-5 section_map">
         <div class="wrapper position-relative">
           <ul class="position-relative">
-            <li class="row" v-for="(item,index) in 6" :key="index" 
+            <li class="row" v-for="(item,index) in 9" :key="index" 
                 :class="[{'active':mapItemActive===index},{'past':mapItemActive>index}]">
               <div class="col" v-if="index%2!==0 && device==='pc'"></div>                            
               <div class="col has_block wow position-relative" :data-wow-delay="'.'+index+'s'"
@@ -329,7 +329,7 @@ export default {
       partnerList:[
         'xiongan','keyin','fancheng','jrr','newdo','milestone','dcc','yingxin','dfg','jike','jikeziben','naba','junmu','capital'
       ],
-      mapItemActive: 3,
+      mapItemActive: 5,
       languageName: localStorage.local || "en",
       lanList: [{ tab: "中文", value: "ch" }, { tab: "English", value: "en" }],
       whitepaperList:[

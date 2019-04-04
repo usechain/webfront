@@ -17,7 +17,7 @@
         <div class="wrapper">
           <div class="text-center d-lg-flex flex-wrap w-100">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item  mx-2 text-capitalize"><a :href='$t("message.mooneturl")' target="_blank" class="nav-link text-secondary" v-text='$t("message.nav_test")'></a></li>                              
+              <!-- <li class="nav-item  mx-2 text-capitalize"><a :href='$t("message.mooneturl")' target="_blank" class="nav-link text-secondary" v-text='$t("message.nav_test")'></a></li>                               -->
               <!-- navList -->
               <!-- <li class="nav-item mx-2 text-capitalize" :class="{'active':index===navItemActive}"  -->
               <li class="nav-item mx-2 text-capitalize"

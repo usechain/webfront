@@ -16,6 +16,13 @@ import News from '@/components/News'
 import Cuse from '@/components/Cuse'
 import ManageMoney from '@/components/ManageMoney'
 
+import HelpCenter from '@/components/WalletApp/HelpCenter/HelpCenter'
+import CreateWallet from '@/components/WalletApp/HelpCenter/CreateWallet'
+import Upgrade from '@/components/WalletApp/HelpCenter/Upgrade'
+import AnonyAddress from '@/components/WalletApp/HelpCenter/AnonyAddress'
+import MainAddress from '@/components/WalletApp/HelpCenter/MainAddress'
+import CreditRating from '@/components/WalletApp/HelpCenter/CreditRating'
+
 Vue.use(Router)
 
 export default new Router({
@@ -99,6 +106,36 @@ export default new Router({
       path: '/wechat',
       name: 'Wechat',
       component: Wechat
+    },
+    {
+      path: '/helpcenter',
+      name: 'HelpCenter',
+      component: HelpCenter
+    },
+    {
+      path: '/createwallet',
+      name: 'CreateWallet',
+      component: CreateWallet
+    },
+    {
+      path: '/upgrade',
+      name: 'Upgrade',
+      component: Upgrade
+    },
+    {
+      path: '/anonyaddress',
+      name: 'AnonyAddress',
+      component: AnonyAddress
+    },
+    {
+      path: '/mainaddress',
+      name: 'MainAddress',
+      component: MainAddress
+    },
+    {
+      path: '/creditrating',
+      name: 'CreditRating',
+      component: CreditRating
     },
     {
       path:'*',
