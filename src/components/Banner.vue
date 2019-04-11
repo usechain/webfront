@@ -30,10 +30,10 @@ export default {
     data(){
         return{
             bannerList:[
-                {title:'Usechain创始人曹辉宁：积分通证化能帮助商家和客户之间做更好的匹配',href:'https://www.jinse.com/bitcoin/318396.html',imgsrc:require("../assets/images/news90220.png")},
-                {title:'2019年主流币会有牛市吗？ | 直播2期文字实录（下）',href:'https://www.jianshu.com/p/2e4ebd869d70',imgsrc:require("../assets/images/news90131.jpg")},
-                {title:' Blockchain in Korea | Usechain创始人兼CEO曹辉宁：传统金融精英的区块链之路',href:'https://www.huoxing24.com/newsdetail/20190131233117403107',imgsrc:require("../assets/images/news901312.png")},
-                {title:'通证经济：创新还是换汤不换药？ | 直播文字实录（下）',href:'https://www.jinse.com/bitcoin/284189.html',imgsrc:require("../assets/images/news90122.png")},
+                {title:'英国知名科技媒体Verdict全面解析Usechain隐身镜像协议',href:'https://www.verdict.co.uk/usechain-blockchain/',imgsrc:require("../assets/images/news90401.jpg")},
+                {title:'Usechain主网上线 真正做到“1 person 1 vote”去中心化',href:'https://www.jinse.com/blockchain/338804.html',imgsrc:require("../assets/images/news90402.jpg")},
+                {title:'捷克媒体Techsutram报道Usechain合规金融理念',href:'https://www.techsutram.com/2019/03/usechain-alpha-mainnet-is-live.html?m=1',imgsrc:require("../assets/images/news903312.jpg")},
+                {title:'韩国经济日报',href:'https://www.hankyung.com/article/201903268521g',imgsrc:require("../assets/images/news90331.jpg")},
             ]}
     },
     mounted(){

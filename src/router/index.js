@@ -15,6 +15,7 @@ import Exchange from '@/components/Exchange'
 import News from '@/components/News'
 import Cuse from '@/components/Cuse'
 import ManageMoney from '@/components/ManageMoney'
+import GuessRule from '@/components/GuessRule'
 
 import HelpCenter from '@/components/WalletApp/HelpCenter/HelpCenter'
 import CreateWallet from '@/components/WalletApp/HelpCenter/CreateWallet'
@@ -41,6 +42,11 @@ export default new Router({
       path: '/cuse',
       name: 'Cuse',
       component: Cuse
+    },
+    {
+      path: '/guess_rule',
+      name: 'GuessRule',
+      component: GuessRule
     },
     {
       path: '/manage_money',
@@ -139,7 +145,8 @@ export default new Router({
     },
     {
       path:'*',
-      redirect:'/',
+      redirect:'/notfound',
+      component:NotFound
     }
   ],
   mode:'history'

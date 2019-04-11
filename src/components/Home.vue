@@ -455,6 +455,26 @@ export default {
           img: "alcoin",
           href:
             "https://www.aicoin.net.cn/article/64199.html"
+        },
+        {
+          img: "finanzennet",
+          href:
+            "https://www.finanzen.net/nachricht/aktien/usechain-mainnet-goes-live-to-build-a-wall-street-on-chain-7316459"
+        },
+        {
+          img: "bitcoinist",
+          href:
+            "https://bitcoinist.com/randomized-proof-of-work-privacy-and-its-own-lightning-network-usechain-makes-bold-promises/"
+        },
+        {
+          img: "techsutram",
+          href:
+            "https://www.techsutram.com/2019/03/usechain-alpha-mainnet-is-live.html?m=1"
+        },
+        {
+          img: "verdict",
+          href:
+            "https://www.verdict.co.uk/usechain-blockchain/"
         }
       ],
       videoWidth:'',
@@ -551,18 +571,18 @@ export default {
     
   },
   mounted() {
-    var unix=this.timestampToTime(1554033600);
-    console.log('转化为',unix);
+    // var unix=this.timestampToTime(1554033600);
+    // console.log('转化为',unix);
 
-    $.leftTime(unix,function(d){
-      if(d.status){
-        var $dateShow1=$("#dateShow1");
-        $dateShow1.find(".d").html(d.d);
-        $dateShow1.find(".h").html(d.h);
-        $dateShow1.find(".m").html(d.m);
-        $dateShow1.find(".s").html(d.s);
-      }
-    });
+    // $.leftTime(unix,function(d){
+    //   if(d.status){
+    //     var $dateShow1=$("#dateShow1");
+    //     $dateShow1.find(".d").html(d.d);
+    //     $dateShow1.find(".h").html(d.h);
+    //     $dateShow1.find(".m").html(d.m);
+    //     $dateShow1.find(".s").html(d.s);
+    //   }
+    // });
     
     var videow=$('.container').width();
     

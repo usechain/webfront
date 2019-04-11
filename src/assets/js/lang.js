@@ -492,40 +492,40 @@ const messages = {
         },
         map5:{
           time:'Q1 2019',
-          event:"●&nbsp;Usechain mainnet alpha release<br/>\
-          ●&nbsp;Usechain wallet(android) release<br/>\
-          ●&nbsp;CA service release<br/>\
-          ●&nbsp;Complete the committee's multi-person signature verification identity<br/>\
-          ●&nbsp;Improve identity system standardization and onchain privacy protection"
+          event:"●&nbsp;Usechain mainnet alpha release.<br/>\
+          ●&nbsp;Usechain wallet(android) release.<br/>\
+          ●&nbsp;CA service release.<br/>\
+          ●&nbsp;Complete the committee's multi-person signature verification identity.<br/>\
+          ●&nbsp;Improve identity system standardization and onchain privacy protection."
         },
         map6:{
           time:'Q2 2019',
-          event:'●&nbsp;Usechain mainnet official version release<br/>\
-          ●&nbsp;Start mainnet USE swap<br/>\
-          ●&nbsp;Implement a multi-level account system<br/>\
-          ●&nbsp;Improve committee change and supervision function development<br/>\
-          ●&nbsp;Open source mainnet wallet on full platforms release'
+          event:'●&nbsp;Usechain mainnet official version release.<br/>\
+          ●&nbsp;Start mainnet USE swap.<br/>\
+          ●&nbsp;Implement a multi-level account system.<br/>\
+          ●&nbsp;Improve committee change and supervision function development.<br/>\
+          ●&nbsp;Open source mainnet wallet on full platforms release.'
         },
         map7:{
           time:'Q3 2019',
-          event:'●&nbsp;Subchain and Lightning Network release<br/>\
-          ●&nbsp;Implement built-in smart contract templates to simplify financial operations<br/>\
-          ●&nbsp;Complete SDK for jave and python<br/>\
-          ●&nbsp;Implement the transparency of committee complaint process<br/>\
-          ●&nbsp;Implement  the level identity authentication (mutual authentication)'
+          event:'●&nbsp;Subchain and Lightning Network release.<br/>\
+          ●&nbsp;Implement built-in smart contract templates to simplify financial operations.<br/>\
+          ●&nbsp;Complete SDK for java and python.<br/>\
+          ●&nbsp;Implement the transparency of committee complaint process.<br/>\
+          ●&nbsp;Implement  the level identity authentication (mutual authentication).'
         },
         map8:{
           time:'Q4 2019',
-          event:'●&nbsp;Complete mainnet USE forced swap and network swap on exchanges<br/>\
-          ●&nbsp;More Dapps release<br/>\
-          ●&nbsp;More built-in financial functions release'
+          event:'●&nbsp;Complete mainnet USE forced swap and network swap on exchanges.<br/>\
+          ●&nbsp;More Dapps release.<br/>\
+          ●&nbsp;More built-in financial functions release.'
         },
         map9:{
           time:'Future',
-          event:'●&nbsp;Hardware mining machine<br/>\
-          ●&nbsp;Improve storage<br/>\
-          ●&nbsp;Improve credit and identity API<br/>\
-          ●&nbsp;Improve security and transaction performance'
+          event:'●&nbsp;Hardware mining machine.<br/>\
+          ●&nbsp;Improve storage.<br/>\
+          ●&nbsp;Improve credit and identity API.<br/>\
+          ●&nbsp;Improve security and transaction performance.'
         },
         teamTitle:'Core Team',
         caohuining:{

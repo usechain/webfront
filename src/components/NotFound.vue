@@ -1,10 +1,10 @@
 <template>
   <div class="wrapper">
       <div class="code">
-        <p class="text h1 text1">Page Not Found~</p>
+        <p class="text h1 text1">Page Not Found.</p>
         <p class="text h3 pt-5 text2">Usechain</p>                                        
         <router-link to="/" class="logo"></router-link>
-			  <router-link to="/" class="text h2 text3">Go back Home</router-link>
+			  <router-link to="/" class="text h2 text3">Go Back Home</router-link>
 		</div>
   </div>
 </template>
