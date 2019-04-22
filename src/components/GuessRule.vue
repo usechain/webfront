@@ -3,9 +3,13 @@
         <div class="py-1 text-primary text_center">
             <div class="h4 py-2 text_title has_border">猜涨跌游戏教程</div>
          </div>
-        <div class="text_bold text_black pt-3">1、下载Usechain APP：
-            <a href="https://usechain.cn/wallet_app/" class="text-primary">https://usechain.cn/wallet_app/</a>
-            邀请码 fb5h打开APP，通过APP首页头部banner猜涨跌专属位置进入猜涨跌</div>
+        <div class="text_bold text_black pt-3">1、扫描二维码下载Usechain APP：
+            <!-- <a href="https://usechain.cn/wallet_app/" class="text-primary">https://usechain.cn/wallet_app/</a> -->
+            <img class="img_qrcode" src="../assets/images/guessruleqrcode.png" alt="" srcset="">
+
+            打开APP，通过APP首页头部banner猜涨跌专属位置进入猜涨跌
+            
+            </div>
         <div class="py-3"><img src="../assets/images/guessrule1.png" alt="" srcset=""></div>
         <div class="text_bold pt-3 text_black">2、进入猜涨跌后，通过上方导航栏可以切换USE/USEPOWER 专场。USE专场下注、奖励均为USE；USEPOWER专场下注、奖励均为USEPOWER。</div>
         <div class="py-3"><img src="../assets/images/guessrule2.png" alt="" srcset=""></div>
@@ -44,7 +48,7 @@
             <p class="py-1">游戏中设定了看涨价格、看跌价格，此价格会根据投注金额变化实时计算；此价格代表了竞猜不同结果的投注比例，看涨价格越高代表看涨投注越多，相反看跌价格越高代表开跌投注越多;</p>
             <p>竞猜当日的14:50至15:20，为竞猜开奖结算时间，无法投注;</p>
             <p class="py-1">投注时，可选择是否自动续投，如选择不自动续投，T日结算完毕后，将会把奖金自动发放至投注账号钱包；如选择自动续投，T日的15:20至24:00，为可退出时间段，此时间段可主动退出竞猜，如已获得奖金但未退出竞猜，剩余奖金将自动进入下一期竞猜，并且竞猜选择与本期相同;</p>
-            <p>购买成功后，将扣除1%投注金额作为手续费；如结算退出竞猜，赎回投注和奖金，将收取1%结算金额作为手续费。</p>
+            <p>如结算退出竞猜，赎回投注和奖金，将收取2%结算金额作为手续费。</p>
         </div>
 
         <div class="text-primary text_bold pt-3">四、开奖</div>
@@ -93,6 +97,9 @@ img{
 }
 tbody td{
     white-space: nowrap;
+}
+.img_qrcode{
+    width: 8rem;
 }
 </style>
 
