@@ -324,7 +324,7 @@ export default {
         "weishangjin",
         "maqian",
         "yanfangjun",
-        "zhushengqing","caofeng"
+        "caofeng"
       ],
       partnerList:[
         'xiongan','keyin','fancheng','jrr','newdo','milestone','dcc','yingxin','dfg','jike','jikeziben','naba','junmu','capital'

@@ -30,10 +30,10 @@ export default {
     data(){
         return{
             bannerList:[
-                {title:'英国知名科技媒体Verdict全面解析Usechain隐身镜像协议',href:'https://www.verdict.co.uk/usechain-blockchain/',imgsrc:require("../assets/images/news90401.jpg")},
-                {title:'Usechain主网上线 真正做到“1 person 1 vote”去中心化',href:'https://www.jinse.com/blockchain/338804.html',imgsrc:require("../assets/images/news90402.jpg")},
-                {title:'捷克媒体Techsutram报道Usechain合规金融理念',href:'https://www.techsutram.com/2019/03/usechain-alpha-mainnet-is-live.html?m=1',imgsrc:require("../assets/images/news903312.jpg")},
-                {title:'韩国经济日报',href:'https://www.hankyung.com/article/201903268521g',imgsrc:require("../assets/images/news90331.jpg")},
+                {title:'为什么各大交易所都要抢着做公链？ | 曹辉宁与他的教授朋友们 第6期（下）',href:'https://www.huoxing24.com/newsdetail/20190507145206428457',imgsrc:require("../assets/images/news/news90507.png")},
+                {title:'Usechain NBA 猜胜负上线 区块链+体育竞猜解决万亿市场痛点',href:'https://www.jinse.com/blockchain/356173.html',imgsrc:require("../assets/images/news/news90426.png")},
+                {title:'Usechain创始人曹辉宁出任三亚国际科技创新中心总负责人',href:'https://www.jinse.com/blockchain/352402.html',imgsrc:require("../assets/images/news/news0422.png")},
+                {title:'初夏虎说他跟V神吵架了 | 曹辉宁与他的教授朋友们 第5期（下）',href:'https://www.jinse.com/blockchain/362332.html',imgsrc:require("../assets/images/news/news04222.png")},
             ]}
     },
     mounted(){
