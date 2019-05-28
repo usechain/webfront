@@ -327,7 +327,7 @@ export default {
         "caofeng"
       ],
       partnerList:[
-        'xiongan','keyin','fancheng','jrr','newdo','milestone','dcc','yingxin','dfg','jike','jikeziben','naba','junmu','capital'
+        'xiongan','keyin','fancheng','jrr','newdo','milestone','yingxin','dfg','jike','jikeziben','naba','junmu','capital'
       ],
       mapItemActive: 5,
       languageName: localStorage.local || "en",
