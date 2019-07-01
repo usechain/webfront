@@ -30,10 +30,10 @@ export default {
     data(){
         return{
             bannerList:[
-                {title:'为什么各大交易所都要抢着做公链？ | 曹辉宁与他的教授朋友们 第6期（下）',href:'https://www.huoxing24.com/newsdetail/20190507145206428457',imgsrc:require("../assets/images/news/news90507.png")},
-                {title:'Usechain NBA 猜胜负上线 区块链+体育竞猜解决万亿市场痛点',href:'https://www.jinse.com/blockchain/356173.html',imgsrc:require("../assets/images/news/news90426.png")},
-                {title:'Usechain创始人曹辉宁出任三亚国际科技创新中心总负责人',href:'https://www.jinse.com/blockchain/352402.html',imgsrc:require("../assets/images/news/news0422.png")},
-                {title:'初夏虎说他跟V神吵架了 | 曹辉宁与他的教授朋友们 第5期（下）',href:'https://www.jinse.com/blockchain/362332.html',imgsrc:require("../assets/images/news/news04222.png")},
+                {title:'曹辉宁喊话腾讯阿里：要迎头赶上区块链浪潮，抢占海外市场',href:'https://www.aicoin.net.cn/article/75788.html',imgsrc:require("../assets/images/news/news90628.png")},
+                {title:'Libra面世，曹辉宁与HBUS傅圣芳怎么看？| 教授有约',href:'https://mp.weixin.qq.com/s/jQ6VZDDufM1Pm7uv_rflOQ',imgsrc:require("../assets/images/news/news90624.png")},
+                {title:'Usechain发布主网（Beta）正式上线公告 这些功能值得关注',href:'https://www.jinse.com/blockchain/391337.html',imgsrc:require("../assets/images/news/news90618.png")},
+                {title:'抢先体验！Usechain3分钟涨跌游戏「时时猜」玩出新花样',href:'https://www.jinse.com/blockchain/388357.html',imgsrc:require("../assets/images/news/news906132.png")},
             ]}
     },
     mounted(){
