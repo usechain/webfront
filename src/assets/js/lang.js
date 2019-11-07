@@ -5,9 +5,7 @@ const messages = {
         nav1:'新闻',
         nav2:'产品',
         nav3:'路线图',
-        // nav4:'团队',
-        nav4:'合作伙伴',
-        nav5:'博客',      
+        nav4:'博客',      
         newsmore:'新闻资讯',
 
         login:'登录/注册',
@@ -124,97 +122,7 @@ const messages = {
           ●&nbsp;完善信用和身份接口<br/>\
           ●&nbsp;提升安全和交易性能'
         },
-        teamTitle:'核心团队',
-        caohuining:{
-          name:'曹辉宁',
-          staff:'创始人，CEO',
-          linkin:'https://www.linkedin.com/in/huiningcao',
-          description:'长江商学院金融学教授，金融系主任，中国第一个金融MBA创始人，美国财务学会会员，中国区块链应用研究中心常务理事，曾任教于加州大学伯克利分校,北卡罗来纳大学Chapel Hill分校。13岁考入中国科学技术大学少年班，美国加州大学洛杉矶分校博士、耶鲁大学博士'
-        },
-        sunbaohong:{
-          name:'孙宝红',
-          staff:'联合创始人，首席战略官',
-          linkin:'https://www.linkedin.com/in/baohongsun',          
-          description:'长江商学院市场营销教授，杰出院长讲席教授，美洲市场副院长，前美国卡内基梅隆大学泰伯商学院卡内基-博世营销学讲席教授，美国市场营销学会和美国经济学委员会成员，《市场营销科学》，《市场营销学刊》和《市场营销》等专业学术期刊编委会成员，曾任世界经济论坛未来行为科学理事会理事。中国人民大学本科，美国南加州大学博士'
-        },
-        zhangfeng:{
-          name:'张峰',
-          staff:'资深金融专家',
-          linkin:'https://www.linkedin.com/in/feng-zhang1/',          
-          description:'国家“千人计划”专家，拥有近三十年国内外量化对冲经验，曾任花旗集团/摩根士丹利资产管理部董事总经理，博时基金管理有限公司股票投资部总经理、数量组、股票成长组投资总监、投资决策委员会成员，交银施罗德基金管理有限公司绝对收益投资总监，量化投资总监，清华大学经管学院第一届毕业生、美国加州大学博士'
-        },
-        xuzhiwen:{
-          name:'徐智文',
-          staff:'首席运营官',
-          linkin:'https://www.linkedin.com/in/erikxu/',          
-          description:'拥有近10年互联网行业、信息安全领域综合管理和市场经验，连续创业者，曾任北京云江科技有限公司副总裁，国家信息安全工程中心信息安全项目负责人，中国“十二五”重点科技攻关项目执行负责人，负责多项国家级信息安全和密钥管理（KMC）工程项目，国家信息安全标准化技术委员会和大数据安全工作组成员，长江商学院工商管理硕士（MBA）'
-        },
-        zhouhaihan:{
-          name:'周海汉',
-          staff:'首席技术官',
-          linkin:'https://www.linkedin.com/in/ablozhou/',                 
-          description:'拥有10多年的技术开发和管理经验，多次创业者，技术能力全面。对大数据处理，人工智能，网络分布式系统，架构设计有较深了解。2015年接触区块链技术，设计去中心化数字货币的形态。早在2005年开始基于P2P通信技术实现去中心化的通信软件和内容社区。此前曾在科大讯飞，华为等担任高级研发工程师职位，在北京荣之联科技有限公司、触控科技等公司担任技术总监职位。本科毕业于中国科学技术大学，双学士学位，中科院硕士。'
-        },
-        zhaolin:{
-          name:'赵林',
-          staff:'首席产品官',
-          linkin:'https://www.linkedin.com/in/neil-zhao-8b56a315b/',          
-          description:'拥有近10年互联网、新零售领域，多个大型综合电商、O2O、开放平台构建经验，覆盖从上游供应链到末端消费者，从垂直电商到无人便利新零售的整个消费生态圈，消费服务生态产品专家；曾任腾讯控股综合移动电商平台技术总监、中国领先O2O社区电商“爱鲜蜂”首席产品专家'
-        },
-        songgengnan:{
-          name:'宋庚男',
-          staff:'全球社区运营',
-          linkin:'https://www.linkedin.com/in/emeisy-song-745098163/',          
-          description:'拥有近10年互联网、社区运营和商务经验。8年腾讯社区运营经验，涵盖从早期PC端社区产品Discuz！到移动互联网腾讯微社区、腾讯兴趣部落等社区产品。中国知名餐饮服务赞赏平台“爱赞赏”商务总监。'
-        },
-        zhangliang:{
-          name:'张亮',
-          staff:'架构师',
-          linkin:'https://www.linkedin.com/in/%E4%BA%AE-%E5%BC%A0-95067015a/',          
-          description:'拥有多年的数字货币交易所和区块链开发经验，曾任微比特虚拟货币交易所和直布罗陀国家区块链交易所高级研发工程师。15年开始接触区块链项目，并对目前的主流的区块链技术进行过深入的研究与探索。中国科学技术大学硕士。'
-        },
-        luliang:{
-          name:'卢亮',
-          staff:'资深顾问',
-          linkin:'#',   
-          description:'资深区块链专家，5Miles创始人兼CEO，全球第一个电商公链Cybermiles（CMT）创始人兼CEO，曾任兰亭集势（LITB）联合创始人兼首席技术官、手机淘宝首任总经理、华数淘宝总经理，中国科学技术大学学士，南卫理公会大学（SMU）粒子物理学博士'
-        },
-        caoyin:{
-          name:'曹寅',
-          staff:'资深顾问',
-          linkin:'#',   
-          description:'2015年开始在国内研究推广区块链应用，能源互联⽹概念在中国的最早提出者之⼀，全球第一家能源区块链实验室创始合伙人，信达证券首席区块链专家，爱沙尼亚E-Residency的早期成员，Hyperledger Project中国工作组主要成员'
-        },
-        weishangjin:{
-          name:'魏尚进',
-          staff:'资深顾问',
-          linkin:'#',   
-          description:'哥伦比亚大学金融学经济学教授，国际事务教授，中国商务与经济学教授；2014-2016,，担任亚洲开发银行首席经济学家和经济研究与区域合作总负责人；2011-2014，哥伦比亚商学院查森国际工商研究院主任；经济政策研究中心研究员；美国外交关系协会成员；美国布鲁金斯研究所高级研究员、美国国民经济研究局中国经济研究组主任'
-        },
-        maqian:{
-          name:'马谦',
-          staff:'资深顾问',
-          linkin:'#',   
-          description:'北京商询科技有限公司（DataMesh）创始人/总裁，中促会大数据发展委员会主任，上海品赋投资管理有限公司创始人/执行董事，原东方汇富副总裁/投资总监，中国创新创业大赛决赛评委、黑马大赛年度总决赛评委'
-        },
-        yanfangjun:{
-          name:'闫方军',
-          staff:'资深顾问',
-          linkin:'#',   
-          description:'资深互联网商业专家，易传媒集团（AdChina）董事会主席兼CEO，悟空和Lakeshore创始人，麻省理工学院高层管理人员工商管理硕士（EMBA）'
-        },
-        zhushengqing:{
-          name:'朱晟卿',
-          staff:'资深顾问',
-          linkin:'#',   
-          description:'Distributed Credit Chain创始人兼首席执行官。成功创办多家互联网和金融科技公司的企业家，曾任同牛科技CEO，带领团队将其一手打造成中国领先的消费金融SaaS系统服务商，每年帮助信托公司发放的贷款额迖数十亿美元资深学者，拥有牛津大学金融经济学硕士、耶鲁大学统计学硕士及南京大学统计学硕士及工程学士学位。'
-        },
-        caofeng:{
-          name:'曹峰',
-          staff:'资深顾问',
-          linkin:'#',   
-          description:'PCHAIN发起人，中国第一个区块链国际专利发明人，ChinaLedger共同发起人，CFLP中物联区块链协会首席科学家。他和团队成功完成全球第一笔区块链资产收益权转让暨中国第一笔区块链金融真实交易并获多项区块链金融创新大奖。他曾担任IBM全球下一代人机大战中国区负责人, 互联网金融首席科学家，专利评审委员会联合主席。他的创新成果已成功应用于中、美等150多个国家，曾3次获得IBM全球杰出技术成就奖，发表22篇国际顶级论文，30余项美国专利，并担任多个ACM IEEE顶级国际会议论坛主席。'
-        },
+  
         copyright:'Copyright © 2018 Usechain Foundation LTD',
         userteams:'用户条款',
         privacy:'隐私政策',
@@ -404,9 +312,7 @@ const messages = {
         nav1:'News',        
         nav2:'Products',
         nav3:'Roadmap',
-        // nav4:'Team',
-        nav4:'Partners',
-        nav5:'Blog',
+        nav4:'Blog',
         newsmore:'News',        
 
         login:'loginIn/signUp',  
@@ -527,98 +433,7 @@ const messages = {
           ●&nbsp;Improve credit and identity API.<br/>\
           ●&nbsp;Improve security and transaction performance.'
         },
-        teamTitle:'Core Team',
-        caohuining:{
-          name:'Henry CAO',
-          staff:'Founder,CEO',
-          linkin:'https://www.linkedin.com/in/huiningcao',          
-          description:"Finance Professor at Cheung Kong Graduate School of Business, Head of the Department of Finance, Founder of the first Finance MBA program in China, Member of the Finance Society of America. Managing director of China Blockchain Application  Research Lab, taught at the University of California at Berkeley, the University of North Carolina, Chapel Hill, admitted to the USTC gifted class when he was 13 years old, Yale University/ UCLA PhDs."
-        },
-        sunbaohong:{
-          name:'Baohong SUN',
-          staff:'Co-founder, CSO',
-          linkin:'https://www.linkedin.com/in/baohongsun',          
-          description:'Marketing Professor at Cheung Kong Graduate School of Business, Dean’s Distinguished Chair Professor of Market, Associate Dean, Former Chaired Professor at Tepper Business School, Carnegie Mellon University, editorial board member of "Marketing Science", "Journal of Marketing" and "Journal of Marketing Research", The world economic forum on future behavior, Renmin University of China, BS, USC PhD.'
-        },
-        zhangfeng:{
-          name:'Feng ZHANG',
-          staff:'Senior Financial Specialist',
-          linkin:'https://www.linkedin.com/in/feng-zhang1/',                  
-          description:'"Thousand Talents" Expert, near 30 years of experience in QIHF globally, MD of Asset Management Dept of Citigroup/ Morgan Stanley, GM of Stock Investment Dept of Bosera Funds, Investment Director of BoCom-Schroders Fund, Tsinghua BS, UC Irvine, PhD.'
-        },
-        xuzhiwen:{
-          name:'Erik XU',
-          staff:'COO',
-          linkin:'https://www.linkedin.com/in/erikxu/',                 
-          description:'Near 10 years of experience in Internet and information security industry in General Management and Marketing, Serial entrepreneur, Served as Vice President for Beijing YunJiang Technology Limited, Head of information security project at National Information Security Engineering Center, Executive Director of the National Key Technology R&D program during the 12th Five-year Plan Period, responsible for a number of national information security and key manage center (KMC) projects, Member of National Information Security Standardization Technical Committee and Big Data Working Group, MBA from Cheung Kong Graduate School of Business.'
-        },
-        zhouhaihan:{
-          name:'Andy ZHOU',
-          staff:'CTO',
-          linkin:'https://www.linkedin.com/in/ablozhou/',                   
-          description:"More  than ten years of technical development experience.  Multiple entrepreneurs,  having comprehensive technical ability. Have a deep understanding of big data processing, AI,  distributed  network system and architecture design. In 2015, touched block chaining technology and designed the form of centralization of digital currency. As early as 2005, designed  and  architected  decentralized communication software and content communities  based on P2P communication technology.\
-          Previously in iFLYTEK, HUAWEI acted as senior research and development Engineer,  In Beijing United Electronics Co. and ChuKong Tech.  served as  Technical Director.  Double bachelor's degree from University of Science and Technology of China (USTC) and MS from Chinese Academy of Sciences (CAS)."
-        },
-        zhaolin:{
-          name:'Lin ZHAO',
-          staff:'CPO',
-          linkin:'https://www.linkedin.com/in/neil-zhao-8b56a315b/',          
-          description:'Near 10 years of experience in Internet and new retail industry, experienced in platform building for horizontal e-commerce, O2O, Eco-friendly product and service specialist, Chief Product Manager of the leading O2O E-commerce Bee Quick.'
-        },
-        songgengnan:{
-          name:'Gengnan SONG',
-          staff:'Global Community Developer',
-          linkin:'https://www.linkedin.com/in/emeisy-song-745098163/',          
-          description:'Nearly 10 years of professional experience in Internet, community operations and business. Over 8 years of community operations expereince at Tencent, covering products from early stage PC community product Discuz! to Tencent micro-communities on mobile Internet and Tencent Interest Tribes. She is the former Business Director at a well-known platform for evaluating catering services in China.'
-        },
-        zhangliang:{
-          name:'Liang ZHANG',
-          staff:'Technical Architect',
-          linkin:'https://www.linkedin.com/in/%E4%BA%AE-%E5%BC%A0-95067015a/',          
-          description:'Many years of experience in digital currency exchanges and blockchain development. He is the former Senior R&D Engineer at Microbit Cryptocurrency Exchange and the Gibraltar National Blockchain Exchange. He started to participate in blockchain projects since 2015, and he has had deep research of the current mainstream blockchain technology.'
-        },
-        luliang:{
-          name:'Lucas LU',
-          staff:'Senior Advisor',
-          linkin:'#',   
-          description:'Senior expert of Blockchain, Founder & CEO of 5Miles, Founder & CEO of Cybermiles (CMT), Served as Co-Founder & CTO for Lightinthebox (LITB), the first GM of Moible Taobao, China University of Science and Technology BS, SMU PhD.'
-        },
-        caoyin:{
-          name:'Yin CAO',
-          staff:'Senior Advisor',
-          linkin:'#',   
-          description:'Started to do research and promote blockchain application in 2015, was among the first to propose the concept of Energy Internet in China, Co-founder of the first Energy-Blockchain Lab in the world, Chief Blockchain Expert of Cinda Securities Co.,Ltd, Former member of E-residency of Estonia, Major member of the Technical Working Group China of Hyperledger Project.'
-        },
-        weishangjin:{
-          name:'Shangjin WEI',
-          staff:'Senior Advisor',
-          linkin:'#',   
-          description:'Professor of Finance and Economics, Professor of International Affairs, and N.T. Wang Professor of Chinese Business and Economy, Columbia University, Chief Economist and Director General of Economic Research and Regional Cooperation, Asian Development Bank, 2014-2016, Director, The Jerome A. Chazen Institute of International Business, Columbia Business School, 2011-2014, Research Associate, National Bureau of Economic Research (NBER), Research Fellow, Center for Economic Policy Research (CEPR), Member, Council on Foreign Relations Non-resident Senior Fellow, The Brookings Institution Director, NBER Working Group on the Chinese Economy.'
-        },
-        maqian:{
-          name:'Qian MA',
-          staff:'Senior Advisor',
-          linkin:'#',   
-          description:'Founder & President of DataMesh, Chairman of Central Big Data Development Committee, Founder/Director of Shanghai Pingfu Asset Management, Former Vice President of Fortune Link Venture Capital Co., Ltd, Over 10 years of experience in investment and business management.'
-        },
-        yanfangjun:{
-          name:'Allen YAN',
-          staff:'Senior Advisor',
-          linkin:'#',   
-          description:'Senior Internet Business Specialist, Chairman of the Board & CEO of AdChina, Founder of Lakeshore, Served for E-bay, Philips, and Alcatel-Lucent, MIT EMBA.'
-        },
-        zhushengqing:{
-          name:'Stewie Zhu',
-          staff:'Senior Advisor',
-          linkin:'#',   
-          description:'Founder & CEO, Distributed Credit Chain. Serial entrepreneur in the internet and Fintech industry. He led a team to develop internet-based credit systems for over a dozen of trusts with multibillion USD annual loan facilitation amount. Ph.D. candidate in Finance at The London School of Economics and Political Science with research focus on finance and cryptoeconomics. MS in Financial Economics from Oxford University, MS in Statistics from Yale University, and MA in Statistic as well as bachelor’s degree in Electrical Engineering from Nanjing University.'          
-        },
-        caofeng:{
-          name:'Jeff CAO',
-          staff:'Senior Advisor',
-          linkin:'#',   
-          description:'PChain Founder. The inventor of the 1st International Blockchain patent from China, the Co-Founder of ChinaLedger, the most influential blockchain alliance of China.The Chief Scientist of Blockchain Application Committee in China Federation of Logistic and Purchasing (The 1st Gov Association in Industry), the Senior Fellow of the China Blockchain Research Alliance.Successfully accomplished the 1st blockchain based assets earning rights transfer in the world in September 2016, which is also the 1st Financial Blockchain Transaction in China.Ex-Chief Scientist of Internet Finance and cochair of the patent review board in IBM Research China，IBM Global Technical Achievement Awards three times.22 papers in ACM/IEEE top conference and 30+ international patents.'
-        },
+        
         copyright:'Copyright © 2018 Usechain Foundation LTD',
         userteams:'Terms of User',
         privacy:'Privacy Policy',

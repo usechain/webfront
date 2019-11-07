@@ -36,7 +36,7 @@
                 </div>
               </li>
               <!-- 博客 -->
-              <li class="nav-item  mx-2 text-capitalize"><a href="https://medium.com/@usechain" target="_blank" class="nav-link text-secondary" v-text='$t("message.nav5")'></a></li>
+              <li class="nav-item  mx-2 text-capitalize"><a href="https://medium.com/@usechain" target="_blank" class="nav-link text-secondary" v-text='$t("message.nav4")'></a></li>
               <!-- 选择语言 -->
               <li class="nav-item dropdown px-2">
                 <a class="nav-link dropdown-toggle text-secondary" href="javascript:;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-text="languageName==='en'?'English':'中文'"></a>
@@ -82,7 +82,7 @@ export default {
         // { tab: "技术白皮书  中文", link: "/usechain_tech_cn.pdf" },
         // { tab: "기술 백서  한국", link: "/usechain_tech_kr.pdf" },
       ],
-      navList: ["nav1","nav2", "nav3","nav4"],      
+      navList: ["nav1","nav2", "nav3"],      
       // navItemActive: 0,
       navMenuShow: false,
       navBarFixed: false,

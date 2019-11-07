@@ -34,7 +34,7 @@
                   </div>
                 </li>
                 <!-- 博客 -->
-                <li class="nav-item  mx-2 text-capitalize"><a href="https://medium.com/@usechain" target="_blank" class="nav-link text-secondary" v-text='$t("message.nav5")'></a></li>
+                <li class="nav-item  mx-2 text-capitalize"><a href="https://medium.com/@usechain" target="_blank" class="nav-link text-secondary" v-text='$t("message.nav4")'></a></li>
                 <!-- 语言切换 -->
                 <li class="nav-item dropdown px-2">
                   <a class="nav-link dropdown-toggle text-secondary" href="javascript:;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-text="languageName==='en'?'English':'中文'"></a>
@@ -189,73 +189,6 @@
         </div>                
       </div>
     </div>
-    <!-- 核心团队 -->
-    <!-- <div class="pt-5 mt-5 section_advisor" id="nav4">
-      <div class="h4 text-center wow flipInY text-secondary" v-text='$t("message.teamTitle")'></div>
-      <div class="section_team py-5">
-          <ul class="clear wow fadeInUp container">
-            <li class="text-center col-lg-3 col-md-4 col-6 pt-4 transformLi" v-for="(item,index) in teamList" :key="index">
-                <div class="slide slide_front">
-                  <div class="img_wrap position-relative">
-                    <img :src='"../assets/images/staff"+(index+1)+".png"' class="cursor_pointer" @click="clickMemberImg"/>
-                    <a class="badgeIn position-absolute" :href='$t("message."+item+".linkin")' v-if='$t("message."+item+".linkin")!=="#"'>in</a>
-                  </div>
-                  <div class="h5 pt-3" v-text='$t("message."+item+".name")'></div>
-                  <div class="h6 pt-1 text-secondary" v-text='$t("message."+item+".staff")'></div>
-                  <div class="text-primary cursor_pointer text-capitalize readmore" @click="showMemberBack">read more</div>
-                  <div class="front_modal" @click="showMemberFront"></div>
-                </div>
-                <div class="slide slide_back">
-                  <div class="wrapper">
-                    <p class="text-secondary" v-html='$t("message."+item+".description")'></p>
-                  </div>
-                </div>
-                <div class="slide_left"></div>
-                <div class="slide_right"></div>
-            </li>
-          </ul>
-      </div>
-    </div> -->
-    <!-- 顾问团队 -->
-    <div class="section">
-      <div class="h4 text-center wow flipInY text-secondary pt-4" v-text='$t("message.advisorTitle")'></div>
-        <div class="container section_team pt-5">
-          <ul class="clear wow fadeInUp">
-            <li class="text-center col-lg-3 col-md-4 col-6 pt-4 transformLi" v-for="item in advisorList" :key="'investors'+item">
-                <div class="slide slide_front">
-                  <div class="img_wrap position-relative">
-                    <img :src='"../assets/images/"+item+".png"' class="cursor_pointer" @click="clickMemberImg"/>
-                    <a class="badgeIn position-absolute" :href='$t("message."+item+".linkin")' v-if='$t("message."+item+".linkin")!=="#"'>in</a>
-                  </div>
-                  <div class="h5 pt-3" v-text='$t("message."+item+".name")'></div>
-                  <div class="h6 pt-1 text-secondary" v-text='$t("message."+item+".staff")'></div>
-                  <div class="text-primary cursor_pointer text-capitalize readmore" @click="showMemberBack">read more</div>
-                  <div class="front_modal" @click="showMemberFront"></div>
-                </div>
-                <div class="slide slide_back">
-                  <div class="wrapper">
-                    <p class="text-secondary" v-html='$t("message."+item+".description")'></p>
-                  </div>
-                </div>
-                <div class="slide_left"></div>
-                <div class="slide_right"></div>
-            </li>
-          </ul>
-        </div>
-    </div>
-    <!-- 合作伙伴 -->
-    <div class="section_partner py-5"  id="nav4">
-      <div class="container">
-        <div class="h4 text-center wow flipInY text-secondary pt-4" v-text='$t("message.partnerTitle")'></div>
-        <div class="justify-content-center section">
-          <div class="text-center row p-4 p-md-0">
-            <div class="col-6 col-sm-4 col-lg-3" v-for="(item,index) in partnerList" :key="index">
-              <img class="w-100 px-md-4 py-1 py-lg-4 wow flipInX" :data-wow-delay="'.'+index+'s'" :src='"../assets/images/"+item+".png"'/>
-            </div>
-          </div>
-        </div>    
-      </div>    
-    </div>
     <!-- 媒体报道 -->
     <div class="container pt-5">
       <div class="h4 text-center text-secondary" v-text='$t("message.mediaTitle")'></div>
@@ -341,8 +274,8 @@ export default {
         // { tab: "技术白皮书  中文", link: "/usechain_tech_cn.pdf" },
         // { tab: "기술 백서  한국", link: "/usechain_tech_kr.pdf" },
       ],
-      // navList: ["nav1", "nav2", "nav3","nav4","nav5"],
-      navList: ["nav1", "nav2", "nav3","nav4"],
+      // navList: ["nav1", "nav2", "nav3","nav4"],
+      navList: ["nav1", "nav2", "nav3"],
       // navItemActive: 0,
       navMenuShow: false,
       navBarFixed: false,
