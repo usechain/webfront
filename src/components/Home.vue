@@ -34,7 +34,7 @@
                   </div>
                 </li>
                 <!-- 博客 -->
-                <li class="nav-item  mx-2 text-capitalize"><a href="https://medium.com/@usechain" target="_blank" class="nav-link text-secondary" v-text='$t("message.nav6")'></a></li>
+                <li class="nav-item  mx-2 text-capitalize"><a href="https://medium.com/@usechain" target="_blank" class="nav-link text-secondary" v-text='$t("message.nav5")'></a></li>
                 <!-- 语言切换 -->
                 <li class="nav-item dropdown px-2">
                   <a class="nav-link dropdown-toggle text-secondary" href="javascript:;" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-text="languageName==='en'?'English':'中文'"></a>
@@ -42,6 +42,7 @@
                     <div class="dropdown-item" v-for="(item,index) in lanList" name="languageName" :data-value="item.value" :key="index" v-text="item.tab"></div>
                   </div>
                 </li>
+                <li class="nav-item  mx-2 text-capitalize"><router-link to="/node" class="nav-link text-secondary">超级节点-预备节点</router-link></li>
               </ul>
             </div>
           </div>
@@ -51,23 +52,23 @@
     <div class="section_init">
       <div class="container">
         <div class="row text-center">
-          <div class="col-12 col-md-4 pt-5 pt-md-0">
+          <div class="col-12 col-md-4 pt-5">
             <!-- 首屏简介 -->
             <h2 class="text-secondary py-3 pt-md-5 wow bounceInDown" v-text='$t("message.usechain")'></h2>
             <p class="h4 p-4 px-md-0 text-secondary long_text wow slideInDown" v-html='$t("message.description")'></p>
             <!-- 三个优势 -->
-            <!-- <div :class='{"pl-3":(languageName === "en" ? false : true)}'>
+            <div :class='{"pl-3":(languageName === "en" ? false : true)}'>
               <div class="advantage wow slideInRight nowrap" :class="'advantage'+item"
                 v-for="item in 3" :key="item" :data-wow-delay="'.'+item+'s'">
                 <img class="ml-5 ml-md-3 ml-lg-5" :src='"../assets/images/advantage"+item+".png"'/>
                 <span v-html='$t("message.advantage"+item)'></span>
               </div>
-            </div> -->
+            </div>
               <!-- 倒计时板 -->
-              <div class="border border-primary rounded p-4 text-center">
+              <!-- <div class="border border-primary rounded p-4 text-center">
                 <p class="text-primary pb-3 mb-0" v-html='$t("message.starttime")'></p>
                 <div class="pt-3 pb-4 border-top"  id="dateShow1">
-                  <p class="text-primary h4" v-html='$t("message.welcome")'></p>
+                  <p class="text-primary h4" v-html='$t("message.welcome")'></p> -->
                   <!-- <div class="row data-show-box text-primary">
                       <span class="date-tiem-span d h2 num">00</span>
                       <span class="h3 dot">:</span>
@@ -86,9 +87,9 @@
                     <span class="dot"></span>                    
                     <span class="num" v-html='$t("message.times")'></span>
                   </div> -->
-                </div>
+                <!-- </div>
                 <a :href='$t("message.mooneturl")' target="_blank" class="btn btn-primary w-100" v-html='$t("message.moonet")'></a>
-              </div>
+              </div> -->
 
           </div>
           <!-- 首屏动效 -->
@@ -189,7 +190,7 @@
       </div>
     </div>
     <!-- 核心团队 -->
-    <div class="pt-5 mt-5 section_advisor" id="nav4">
+    <!-- <div class="pt-5 mt-5 section_advisor" id="nav4">
       <div class="h4 text-center wow flipInY text-secondary" v-text='$t("message.teamTitle")'></div>
       <div class="section_team py-5">
           <ul class="clear wow fadeInUp container">
@@ -214,7 +215,7 @@
             </li>
           </ul>
       </div>
-    </div>
+    </div> -->
     <!-- 顾问团队 -->
     <div class="section">
       <div class="h4 text-center wow flipInY text-secondary pt-4" v-text='$t("message.advisorTitle")'></div>
@@ -243,7 +244,7 @@
         </div>
     </div>
     <!-- 合作伙伴 -->
-    <div class="section_partner py-5"  id="nav5">
+    <div class="section_partner py-5"  id="nav4">
       <div class="container">
         <div class="h4 text-center wow flipInY text-secondary pt-4" v-text='$t("message.partnerTitle")'></div>
         <div class="justify-content-center section">
@@ -327,7 +328,7 @@ export default {
         "caofeng"
       ],
       partnerList:[
-        'xiongan','keyin','fancheng','jrr','newdo','milestone','yingxin','dfg','jike','jikeziben','naba','junmu','capital'
+        'xiongan','keyin','fancheng','jrr','newdo','milestone','yingxin','dfg','jike','jikeziben','naba','junmu','capital','jinniu'
       ],
       mapItemActive: 5,
       languageName: localStorage.local || "en",
@@ -340,7 +341,8 @@ export default {
         // { tab: "技术白皮书  中文", link: "/usechain_tech_cn.pdf" },
         // { tab: "기술 백서  한국", link: "/usechain_tech_kr.pdf" },
       ],
-      navList: ["nav1", "nav2", "nav3","nav4","nav5"],
+      // navList: ["nav1", "nav2", "nav3","nav4","nav5"],
+      navList: ["nav1", "nav2", "nav3","nav4"],
       // navItemActive: 0,
       navMenuShow: false,
       navBarFixed: false,

@@ -13,6 +13,7 @@ import PustUsechain from '@/components/PustUsechain'
 import Announcement from '@/components/Announcement'
 import Exchange from '@/components/Exchange'
 import News from '@/components/News'
+import Node from '@/components/Node'
 import Cuse from '@/components/Cuse'
 import ManageMoney from '@/components/ManageMoney'
 import GuessRule from '@/components/GuessRule'
@@ -62,6 +63,11 @@ export default new Router({
       path: '/news',
       name: 'News',
       component: News
+    },
+    {
+      path: '/node',
+      name: 'Node',
+      component: Node
     },
     {
       path: '/pust',
